@@ -1,61 +1,101 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import {
+	HeadContent,
+	Outlet,
+	Scripts,
+	createRootRouteWithContext,
+} from "@tanstack/react-router";
+import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import type { QueryClient } from "@tanstack/react-query";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
-import appCss from '../styles.css?url'
+import appCss from "../styles.css?url";
+import { Providers } from "#/providers";
 
-const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'auto';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;var root=document.documentElement;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;}catch(e){}})();`
+export const Route = createRootRouteWithContext<{
+	queryClient: QueryClient;
+}>()({
+	head: () => ({
+		meta: [
+			{
+				charSet: "utf-8",
+			},
+			{
+				name: "color-scheme",
+				content: "dark",
+			},
+			{
+				name: "viewport",
+				content: "width=device-width, initial-scale=1",
+			},
+			{
+				title:
+					"Cosden Code: Your Career in Full-Stack React Development Starts Here",
+			},
+			{
+				description:
+					"The complete beginner-to-advanced roadmap to becoming a full-stack React developer",
+			},
+			{
+				property: "og:title",
+				content:
+					"Cosden Code: Your Career in Full-Stack React Development Starts Here",
+			},
+			{
+				property: "og:description",
+				content:
+					"The complete beginner-to-advanced roadmap to becoming a full-stack React developer",
+			},
+			{
+				property: "og:image",
+				content: "/opengraph-image.jpg",
+			},
+		],
+		links: [
+			{
+				rel: "stylesheet",
+				href: appCss,
+			},
+			{
+				rel: "icon",
+				type: "image/png",
+				href: "/icon.png",
+				sizes: "32x32",
+			},
+		],
+	}),
+	component: RootDocument,
+});
 
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      {
-        charSet: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'TanStack Start Starter',
-      },
-    ],
-    links: [
-      {
-        rel: 'stylesheet',
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootDocument,
-})
-
-function RootDocument({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
-        <HeadContent />
-      </head>
-      <body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(79,184,178,0.24)]">
-        <Header />
-        {children}
-        <Footer />
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        />
-        <Scripts />
-      </body>
-    </html>
-  )
+function RootDocument() {
+	return (
+		<html lang="en" className="dark" suppressHydrationWarning>
+			<head>
+				<HeadContent />
+			</head>
+			<body>
+				<Providers>
+					<Outlet />
+				</Providers>
+				<TanStackDevtools
+					config={{
+						position: "bottom-right",
+					}}
+					plugins={[
+						{
+							name: "Tanstack Router",
+							render: <TanStackRouterDevtoolsPanel />,
+						},
+						{
+							name: "Tanstack Query",
+							render: <ReactQueryDevtoolsPanel />,
+						},
+					]}
+				/>
+				<Scripts />
+			</body>
+		</html>
+	);
 }
