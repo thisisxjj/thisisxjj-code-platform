@@ -8,8 +8,6 @@ import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import type { QueryClient } from "@tanstack/react-query";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 import appCss from "../styles.css?url";
 import { Providers } from "#/providers";
