@@ -14,24 +14,60 @@
 /* =========================================
    3. 主题变量层级 (开发者定义与 Shadcn 映射)
    ========================================= */
-@layer theme {
-  :root, :host {
-    /* 字体定义 (供下方的 base 标签调用) */
-    --default-font-family: "Geist Variable", sans-serif;
-    --default-mono-font-family: "JetBrains Mono Variable", monospace;
+@theme {
+	/* 字体定义 (供下方的 base 标签调用) */
+	--default-font-family: "Geist Variable", sans-serif;
+	--default-mono-font-family: "JetBrains Mono Variable", monospace;
 
-    /* 开发者自定义的静态业务变量 */
-    --color-primary-500: #faf5cf;
-    --color-secondary-500: #a37d54;
-    --header-height: 56px;
-    --footer-height: 200px;
+	/* Tailwind 字体映射 */
+	--font-sans: var(--default-font-family);
+	--font-mono: var(--default-mono-font-family);
 
-    /* Shadcn UI 主题颜色映射给 Tailwind 引擎 */
-    --color-background: var(--background);
-    --color-input: var(--input);
-    --color-secondary: var(--secondary);
-    --color-primary: var(--primary);
-  }
+	/* 开发者自定义的静态业务变量 */
+	--color-primary-500: #faf5cf;
+	--color-secondary-500: #a37d54;
+	--header-height: 56px;
+	--footer-height: 200px;
+
+	/* Shadcn UI 基础圆角映射 */
+	--radius-lg: var(--radius);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-sm: calc(var(--radius) - 4px);
+
+	/* Shadcn UI 主题颜色映射给 Tailwind 引擎 */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+
+	/* 图表与侧边栏 */
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
 }
 
 /* =========================================
@@ -110,6 +146,11 @@
    5. 基础标签与覆盖层 (@layer base)
    ========================================= */
 @layer base {
+	* {
+		border-color: var(--border);
+		outline-color: var(--ring);
+	}
+
   html, :host {
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
