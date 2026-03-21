@@ -1,16 +1,17 @@
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import type { QueryClient } from "@tanstack/react-query";
+import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
 import {
 	HeadContent,
 	Outlet,
 	Scripts,
 	createRootRouteWithContext,
 } from "@tanstack/react-router";
-import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import { TanStackDevtools } from "@tanstack/react-devtools";
-import type { QueryClient } from "@tanstack/react-query";
 
-import appCss from "../styles.css?url";
+import { Toaster } from "#/components/ui/sonner";
 import { Providers } from "#/providers";
+import appCss from "../styles.css?url";
 
 export const Route = createRootRouteWithContext<{
 	queryClient: QueryClient;
@@ -74,6 +75,20 @@ function RootDocument() {
 				<HeadContent />
 			</head>
 			<body>
+				<Toaster
+					theme="dark"
+					toastOptions={{
+						unstyled: true,
+						classNames: {
+							toast:
+								"bg-background text-foreground text-sm border border-border shadow-lg rounded-lg p-4 flex flex-row gap-2 items-center",
+							success: "[&_svg]:text-green-600",
+							error: "[&_svg]:text-destructive",
+							info: "[&_svg]:text-blue-600",
+							warning: "[&_svg]:text-yellow-600",
+						},
+					}}
+				/>
 				<Providers>
 					<Outlet />
 				</Providers>

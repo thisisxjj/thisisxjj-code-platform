@@ -1,5 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
-import crypto from "crypto";
+import crypto from "node:crypto";
 import { z } from "zod";
 
 export const AuthInputSchema = z.object({

@@ -1,7 +1,7 @@
 import { Image } from "@unpic/react";
 import { LucideBookOpen, LucideHammer, LucideMap } from "lucide-react";
 import { Suspense } from "react";
-import { ButtonSkeleton } from "./NavbarMobileMenu";
+import { ButtonSkeleton, UserInfoContainer } from "./NavbarMobileMenu";
 import { Badge } from "./ui/badge";
 import {
 	DropdownMenu,
@@ -30,56 +30,58 @@ export default function Header() {
 						Code
 					</span>
 				</h2>
-				<div className="col-span-1 hidden items-center justify-center gap-6 lg:flex">
-					<DropdownMenu>
-						<DropdownMenuTrigger asChild>
-							<span className="flex items-center gap-1 hover:cursor-pointer hover:opacity-70">
-								Learn
-							</span>
-						</DropdownMenuTrigger>
-						<DropdownMenuContent align="start">
-							<DropdownMenuItem asChild>
-								<TextLink to="/roadmap" variant="ghost" className="w-full">
-									<LucideMap className="size-4" />
-									Roadmap
-									<Badge variant="outline" size="sm">
-										Start Here
-									</Badge>
-								</TextLink>
-							</DropdownMenuItem>
-							<DropdownMenuItem asChild>
-								<TextLink to="/courses" variant="ghost" className="w-full">
-									<LucideBookOpen className="size-4" />
-									Courses
-								</TextLink>
-							</DropdownMenuItem>
-							<DropdownMenuItem asChild disabled>
-								<TextLink className="w-full" variant="ghost" to="/" disabled>
-									<LucideHammer className="size-4" />
-									Projects
-									<Badge variant="outline" size="sm">
-										Early 2026
-									</Badge>
-								</TextLink>
-							</DropdownMenuItem>
-						</DropdownMenuContent>
-					</DropdownMenu>
-					<SmoothHashLink
-						to="/"
-						hash="pricing"
-						variant="ghost"
-						className="hover:opacity-70"
-					>
-						Pricing
-					</SmoothHashLink>
-					<PathLink to="/leaderboards">Leaderboards</PathLink>
-				</div>
-				<div className="col-span-1 flex items-center justify-end gap-2 md:gap-4">
-					<div className="hidden items-center gap-2 lg:flex">
-						<Suspense fallback={<ButtonSkeleton />}></Suspense>
-					</div>
-				</div>
 			</TextLink>
+			<div className="col-span-1 hidden items-center justify-center gap-6 lg:flex">
+				<DropdownMenu>
+					<DropdownMenuTrigger asChild>
+						<span className="flex items-center gap-1 hover:cursor-pointer hover:opacity-70">
+							Learn
+						</span>
+					</DropdownMenuTrigger>
+					<DropdownMenuContent align="start">
+						<DropdownMenuItem asChild>
+							<TextLink to="/roadmap" variant="ghost" className="w-full">
+								<LucideMap className="size-4" />
+								Roadmap
+								<Badge variant="outline" size="sm">
+									Start Here
+								</Badge>
+							</TextLink>
+						</DropdownMenuItem>
+						<DropdownMenuItem asChild>
+							<TextLink to="/courses" variant="ghost" className="w-full">
+								<LucideBookOpen className="size-4" />
+								Courses
+							</TextLink>
+						</DropdownMenuItem>
+						<DropdownMenuItem asChild disabled>
+							<TextLink className="w-full" variant="ghost" to="/" disabled>
+								<LucideHammer className="size-4" />
+								Projects
+								<Badge variant="outline" size="sm">
+									Early 2026
+								</Badge>
+							</TextLink>
+						</DropdownMenuItem>
+					</DropdownMenuContent>
+				</DropdownMenu>
+				<SmoothHashLink
+					to="/"
+					hash="pricing"
+					variant="ghost"
+					className="hover:opacity-70"
+				>
+					Pricing
+				</SmoothHashLink>
+				<PathLink to="/leaderboards">Leaderboards</PathLink>
+			</div>
+			<div className="col-span-1 flex items-center justify-end gap-2 md:gap-4">
+				<div className="hidden items-center gap-2 lg:flex">
+					<Suspense fallback={<ButtonSkeleton />}>
+						<UserInfoContainer />
+					</Suspense>
+				</div>
+			</div>
 		</div>
 	);
 }

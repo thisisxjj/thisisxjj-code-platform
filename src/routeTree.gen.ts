@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PlatformRouteImport } from './routes/_platform'
 import { Route as PlatformIndexRouteImport } from './routes/_platform/index'
+import { Route as AuthLoginRouteImport } from './routes/auth/login'
+import { Route as ApiAuthCallbackRouteImport } from './routes/api/auth/callback'
 
 const PlatformRoute = PlatformRouteImport.update({
   id: '/_platform',
@@ -21,28 +23,51 @@ const PlatformIndexRoute = PlatformIndexRouteImport.update({
   path: '/',
   getParentRoute: () => PlatformRoute,
 } as any)
+const AuthLoginRoute = AuthLoginRouteImport.update({
+  id: '/auth/login',
+  path: '/auth/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiAuthCallbackRoute = ApiAuthCallbackRouteImport.update({
+  id: '/api/auth/callback',
+  path: '/api/auth/callback',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof PlatformIndexRoute
+  '/auth/login': typeof AuthLoginRoute
+  '/api/auth/callback': typeof ApiAuthCallbackRoute
 }
 export interface FileRoutesByTo {
+  '/auth/login': typeof AuthLoginRoute
   '/': typeof PlatformIndexRoute
+  '/api/auth/callback': typeof ApiAuthCallbackRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_platform': typeof PlatformRouteWithChildren
+  '/auth/login': typeof AuthLoginRoute
   '/_platform/': typeof PlatformIndexRoute
+  '/api/auth/callback': typeof ApiAuthCallbackRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/auth/login' | '/api/auth/callback'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/_platform' | '/_platform/'
+  to: '/auth/login' | '/' | '/api/auth/callback'
+  id:
+    | '__root__'
+    | '/_platform'
+    | '/auth/login'
+    | '/_platform/'
+    | '/api/auth/callback'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   PlatformRoute: typeof PlatformRouteWithChildren
+  AuthLoginRoute: typeof AuthLoginRoute
+  ApiAuthCallbackRoute: typeof ApiAuthCallbackRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -61,6 +86,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlatformIndexRouteImport
       parentRoute: typeof PlatformRoute
     }
+    '/auth/login': {
+      id: '/auth/login'
+      path: '/auth/login'
+      fullPath: '/auth/login'
+      preLoaderRoute: typeof AuthLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/auth/callback': {
+      id: '/api/auth/callback'
+      path: '/api/auth/callback'
+      fullPath: '/api/auth/callback'
+      preLoaderRoute: typeof ApiAuthCallbackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -78,6 +117,8 @@ const PlatformRouteWithChildren = PlatformRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   PlatformRoute: PlatformRouteWithChildren,
+  AuthLoginRoute: AuthLoginRoute,
+  ApiAuthCallbackRoute: ApiAuthCallbackRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
