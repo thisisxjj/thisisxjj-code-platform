@@ -18,7 +18,10 @@ export default function SocialProof() {
 		<div className="flex flex-row items-center justify-center gap-2">
 			<div className="flex -space-x-2">
 				{userAvatars.map((avatar, index) => (
-					<Avatar className="border-background size-6 border-2 ring-2 ring-neutral-800">
+					<Avatar
+						key={avatar}
+						className="border-background size-6 border-2 ring-2 ring-neutral-800"
+					>
 						<AvatarImage src={avatar} alt={`User ${index + 1}`} />
 					</Avatar>
 				))}

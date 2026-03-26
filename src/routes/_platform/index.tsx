@@ -1,4 +1,4 @@
-import LaunchAiLanding from "#/features/platform/LaunchAiLanding";
+import LaunchAiLanding from "#/features/landing/LaunchAiLanding";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_platform/")({
