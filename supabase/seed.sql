@@ -1,0 +1,4922 @@
+-- ==========================================
+-- 自动生成的 Master Seed 数据
+-- 生成时间: 2026-03-30T13:55:47.485Z
+-- 警告: 请勿手动修改此文件，它由 scripts/generate-seed.ts 自动生成
+-- ==========================================
+
+BEGIN;
+
+-- 清理旧数据，保证幂等性
+TRUNCATE TABLE public.courses, public.modules, public.lessons CASCADE;
+
+-- === 插入 Courses 业务域数据 ===
+-- ------------------------------------------------------
+-- 插入课程: JavaScript (javascript)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'javascript',
+  'JavaScript',
+  'Learn JavaScript fundamentals from basic syntax to modern ES6+ features, asynchronous programming, and DOM manipulation',
+  '## Course Overview
+
+JavaScript is the foundation of modern web development, powering everything from simple interactive websites to complex full-stack applications. While it''s possible to jump straight into frameworks like React or Vue, understanding JavaScript deeply is what separates developers who can build anything from those who struggle when things don''t work as expected.
+
+This course takes you from absolute beginner to confident JavaScript developer through a comprehensive, structured approach. You''ll learn not just the syntax, but how JavaScript actually works—the execution model, the quirks, and the patterns that professional developers rely on every day. By the end of this course, you''ll have the solid foundation needed to tackle any JavaScript framework, build your own projects, and understand the code you encounter in the real world.
+
+## What You''ll Learn
+
+This course is structured into eight comprehensive modules that progressively build your JavaScript knowledge from the ground up.
+
+### Module 1: Getting Started
+
+We begin by establishing what JavaScript is and why it''s become the language of the web. You''ll set up your development environment, learn to use the JavaScript console effectively, and understand the fundamental coding conventions that make your code readable and professional. This module ensures you have the proper foundation and tools before diving into the language itself.
+
+### Module 2: Data Types and Operations
+
+Here you''ll master JavaScript''s type system—strings, numbers, booleans, null, and undefined. You''ll learn how to work with template literals for string manipulation, understand type conversion and coercion, and master the mathematical and logical operators that form the building blocks of all programming logic. These fundamentals are crucial for everything that follows.
+
+### Module 3: Control Flow and Looping
+
+Take control of your program''s execution flow by mastering conditional statements and switch cases. You''ll understand truthy and falsy values—a JavaScript concept that trips up many developers. Then you''ll become proficient with all loop types (for, while, do-while), learn loop control with break and continue, and tackle nested loops for handling complex iteration scenarios.
+
+### Module 4: Functions and Scope
+
+Functions are the heart of JavaScript, and this module covers them comprehensively. You''ll learn function creation, parameters, and return values, then dive into advanced concepts like hoisting, closures, and lexical scope that explain how JavaScript actually executes your code. You''ll master callback functions for asynchronous operations and explore immediately invoked function expressions (IIFEs) for advanced patterns.
+
+### Module 5: Arrays, Objects, and Classes
+
+Master JavaScript''s essential data structures. You''ll work extensively with arrays, learning both basic operations and advanced methods like map, filter, and reduce that are used constantly in modern JavaScript. Objects become second nature as you learn to create and manipulate complex data structures. Finally, you''ll explore object-oriented programming with classes, understanding methods, properties, and the often-confusing ''this'' keyword.
+
+### Module 6: Core JavaScript Concepts
+
+This is where you level up from beginner to intermediate developer. You''ll understand pass-by-value versus pass-by-reference—crucial knowledge that prevents countless bugs. You''ll master immutability and data copying patterns, learn proper error handling with try-catch blocks, and understand JavaScript''s synchronous execution model. Then you''ll dive into asynchronous programming with timers, promises, and the Fetch API for HTTP requests.
+
+### Module 7: JavaScript in the Browser
+
+Bring your JavaScript knowledge to life by learning to create interactive web experiences. You''ll master the Document Object Model (DOM), learning to select and manipulate elements, handle user events, and create dynamic applications. You''ll understand event propagation, learn to prevent default behaviors, and build the kind of interactive experiences that make the web engaging.
+
+### Module 8: ES6 and Modern Syntax
+
+Complete your JavaScript education by mastering modern syntax and features. You''ll learn modern variable declarations with let and const, destructuring assignment for cleaner code, arrow functions for concise syntax, the spread and rest operators, enhanced object literals, and async/await for elegant asynchronous programming. These modern features are used in every professional JavaScript codebase.
+
+## Who This Course Is For
+
+This course is designed for anyone who wants to learn JavaScript properly, from the ground up.
+
+**This course is perfect for you if:**
+
+✅ You''re completely new to programming and want to start with JavaScript
+
+✅ You''ve dabbled in JavaScript but have gaps in your understanding
+
+✅ You''re learning a framework like React but realize you need stronger JavaScript fundamentals
+
+✅ You''re transitioning from another programming language and want to understand JavaScript''s unique characteristics
+
+✅ You want a comprehensive, structured approach rather than scattered tutorials
+
+**You might want to start elsewhere if:**
+
+❌ You''re already proficient in JavaScript and looking for advanced patterns (try our Design Patterns course instead)
+
+❌ You want to jump straight into a framework without learning the underlying language
+
+❌ You''re looking for quick shortcuts rather than deep understanding
+
+## How You''ll Learn
+
+Every concept in this course is taught with a clear, consistent approach: you''ll understand what it is, why it matters, and how to use it correctly. We don''t just show you syntax—we explain how JavaScript actually works so you can reason about your code and debug problems effectively.
+
+Each lesson includes hands-on practice with real examples. You''ll write actual JavaScript code, not just read about it. This practical approach ensures the concepts stick and you can immediately apply what you learn to your own projects.
+
+## What You''ll Walk Away With
+
+By completing this course, you''ll have a comprehensive understanding of JavaScript that serves as the foundation for your entire development career. You''ll be able to read and understand JavaScript code you encounter, write clean and effective code yourself, and have the confidence to tackle any JavaScript framework or library.
+
+More importantly, you''ll understand how JavaScript actually works—not just memorizing syntax, but understanding the execution model, scope, asynchronous behavior, and the patterns that make JavaScript unique. This deep understanding means you''ll be able to debug problems, learn new concepts quickly, and grow as a developer.
+
+The JavaScript knowledge you gain here is fundamental to modern web development. Whether you''re building frontend applications with React, backend services with Node.js, mobile apps with React Native, or desktop applications with Electron, the JavaScript fundamentals you learn in this course will be essential. This isn''t just about learning a language—it''s about building the foundation for your entire development career.',
+  'beginner',
+  20,
+  'published',
+  0,
+  1,
+  5
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '4d0c584f-2694-4960-aed4-278f38d3518a',
+  '1-getting-started',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Getting Started',
+  'Learn JavaScript fundamentals including variables, syntax, and best coding practices',
+  0
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '89c4282b-7051-4fab-a4bb-2d073c18aafa',
+  '1-1-what-is-javascript',
+  '4d0c584f-2694-4960-aed4-278f38d3518a',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'What is JavaScript?',
+  'Learn about JavaScript''s history, its role in web development, and explore real-world applications',
+  'In this lesson, you''ll discover JavaScript''s fascinating history and understand its crucial role in modern web development. We''ll explore how JavaScript works alongside `HTML` and `CSS` to create the web experiences you use every day.
+
+Your coding tasks will be to explore the code editor and console to get familiar with the platform, as there are no specific code requirements for this introductory lesson.
+  ',
+  'd1392998-921d-4d84-abea-c2e9a4eb610d',
+  true,
+  0,
+  '[{"name":"Learn about the origins and evolution of JavaScript"},{"name":"Understand JavaScript''s place in web technology alongside HTML and CSS"},{"name":"Explore real-world JavaScript use cases (e.g., interactive websites, games, mobile apps) at a high level without getting into the details or code"}]'::jsonb,
+  '[{"id":"1-1-what-is-javascript-task-1","name":"Sumbit the code editor – no code required"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Sumbit the code editor – no code required\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '34321ab9-1552-4878-bb20-f9f28e922750',
+  '1-2-the-javascript-console',
+  '4d0c584f-2694-4960-aed4-278f38d3518a',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'The JavaScript Console',
+  'Learn about the JavaScript console and how to use different console methods to log messages',
+  'In this lesson, you''ll learn about the browser''s developer console and its various purposes from debugging and testing to logging information and experimenting with code snippets. We''ll explore different console methods including `console.log()`, `console.error()`, `console.warn()`, and `console.info()`.
+
+Your coding tasks will be using different console methods to log various types of messages, starting with the classic ''Hello, World!'' message and exploring info, warning, and error messages.
+  ',
+  'b3f9116e-d7b4-4994-a647-9c51a90b2f67',
+  true,
+  1,
+  '[{"name":"Learn about what the JavaScript console is (use example in platform console, but mention that it''s also available in the browser)"},{"name":"Understand the console''s purpose for debugging, testing, logging, and experimentation"},{"name":"Explore the different console methods like `console.log()`, `console.error()`, `console.warn()`, and `console.info()`"}]'::jsonb,
+  '[{"id":"1-2-the-javascript-console-task-1","name":"Use the `console.log()` method to log `\"Hello, World!\"` to the console"},{"id":"1-2-the-javascript-console-task-2","name":"Use the `console.info()` method to log `\"This is an info message\"` to the console"},{"id":"1-2-the-javascript-console-task-3","name":"Use the `console.warn()` method to log `\"This is a warning message\"` to the console"},{"id":"1-2-the-javascript-console-task-4","name":"Use the `console.error()` method to log `\"This is an error message\"` to the console"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Use the console.log() method to log \"Hello, World!\" to the console\nconsole.log();\n\n// Task: Use the console.info() method to log \"This is an info message\" to the console\nconsole.info();\n\n// Task: Use the console.warn() method to log \"This is a warning message\" to the console\nconsole.warn();\n\n// Task: Use the console.error() method to log \"This is an error message\" to the console\nconsole.error();\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2ce2b3b1-712e-4546-bc0e-f9a522034b99',
+  '1-3-introduction-to-variables',
+  '4d0c584f-2694-4960-aed4-278f38d3518a',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Introduction to Variables',
+  'Learn how to create and use variables to store data in JavaScript',
+  'In this lesson, you''ll learn about variables and how to declare them in JavaScript using `var`, `let`, and `const`. You''ll understand the differences between these keywords and their rules about when and how stored values can be changed.
+
+Your coding tasks will be declaring variables with the `let` keyword, reassigning values, and using `console.log()` to display your variables in the console.
+  ',
+  '9183b599-b306-4f59-9b09-fcd7de94e5b7',
+  false,
+  2,
+  '[{"name":"Understand what variables are and why they are essential in JavaScript programming (basic level, no need to talk about scope and hoisting)"},{"name":"Understand how to declare variables with each of the three keywords (practical examples)"},{"name":"Learn the differences between `var`, `let`, and `const` declarations and when to use each (basic level, brief mention of scope and hoisting, but mention that we''ll cover hoisting and stuff in depth in later lessons)"}]'::jsonb,
+  '[{"id":"1-3-introduction-to-variables-task-1","name":"Create a variable `myVariable` with the `let` keyword and assign it the value `\"Hello\"`"},{"id":"1-3-introduction-to-variables-task-2","name":"Reassign the variable `myVariable` to the value `\"World\"`"},{"id":"1-3-introduction-to-variables-task-3","name":"Use `console.log()` to log the value of `myVariable`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Create a variable myVariable with the let keyword and assign it the value \"Hello\"\n\n// Task: Reassign the variable myVariable to the value \"World\"\n\n// Task: Use console.log() to log the value of myVariable\nconsole.log();\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2930113d-d018-4982-8ee8-9aa95a84042c',
+  '1-4-variable-syntax',
+  '4d0c584f-2694-4960-aed4-278f38d3518a',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Variable Syntax',
+  'Learn JavaScript''s variable syntax rules and learn to identify and fix common syntax errors',
+  'In this lesson, you''ll learn JavaScript''s variable syntax rules and how to correctly declare and initialize variables. You''ll discover common syntax errors that trip up beginners, from missing variable declarations to incorrect variable names and forgotten quotes.
+
+Your coding tasks will be debugging code that contains intentional syntax errors, giving you hands-on practice identifying and fixing common mistakes in JavaScript code.
+  ',
+  'd0d4a77c-1e38-43a4-bae0-d1364211133c',
+  false,
+  3,
+  '[{"name":"Recognize the difference between statements and expressions and understand how JavaScript code is structured"},{"name":"Identify common syntax errors made by beginners (e.g., missing variable declarations, incorrect variable names, using reserved keywords, missing quotes)"}]'::jsonb,
+  '[{"id":"1-4-variable-syntax-task-1","name":"Fix the `name` variable syntax error by adding a `=` sign"},{"id":"1-4-variable-syntax-task-2","name":"Fix the `let` variable syntax error by renaming the variable to `letName`"},{"id":"1-4-variable-syntax-task-3","name":"Fix the `message` variable syntax error by adding a closing quote"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Fix the name variable syntax error by adding a = sign\nvar name \"Cosden\";\n\n// Task: Fix the let variable syntax error by renaming the variable to letName\nlet let = \"Code\";\n\n// Task: Fix the message variable syntax error by adding a closing quote\nconst message = \"Hello world; \n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b08b967c-a5f1-4193-89cc-9fc7ceb87fab',
+  '1-5-variable-best-practices',
+  '4d0c584f-2694-4960-aed4-278f38d3518a',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Variable Best Practices',
+  'Learn professional coding best practices for writing clean, readable JavaScript variables',
+  'In this lesson, you''ll learn the coding best practices that professional developers follow to write clean, readable JavaScript variables. You''ll discover naming conventions like `camelCase` for variables, `PascalCase` for classes, and `SCREAMING_SNAKE_CASE` for constants, plus formatting principles for indentation and spacing.
+
+Your coding tasks will be fixing code that violates these best practices, giving you practical experience transforming messy code into professional-quality JavaScript that follows established standards.
+  ',
+  '42bcbe28-3069-4097-8b04-c224b92cdc90',
+  false,
+  4,
+  '[{"name":"Learn about variable naming conventions (e.g., `camelCase` for variables, `PascalCase` for classes, `SCREAMING_SNAKE_CASE` for constants)"},{"name":"Learn about JavaScript variable best practices (e.g. use `let` only when reassignment is needed, consistent quote usage, descriptive variable names)"}]'::jsonb,
+  '[{"id":"1-5-variable-best-practices-task-1","name":"Fix the `course_name` variable code convention error by using `camelCase`"},{"id":"1-5-variable-best-practices-task-2","name":"Fix the `someGlobalConstant` variable code convention error by using `SCREAMING_SNAKE_CASE`"},{"id":"1-5-variable-best-practices-task-3","name":"Fix the `MY_CLASS` class code convention error by using `PascalCase`"},{"id":"1-5-variable-best-practices-task-4","name":"Fix the `unchangingVariable` variable code convention error by using `const`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Fix the course_name variable code convention error by using camelCase\nconst course_name = \"Introduction to JavaScript\";\n\n// Task: Fix the someGlobalConstant variable code convention error by using SCREAMING_SNAKE_CASE\nconst someGlobalConstant = \"I am used in the whole project\";\n\n// Task: Fix the MY_CLASS class code convention error by using PascalCase\nclass MY_CLASS {}\n\n// Task: Fix the unchangingVariable variable code convention error by using const\nlet unchangingVariable = \"I will never change\";\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'bc83823a-0d7c-4699-9de7-773e24a769a8',
+  '1-6-comments-and-documentation',
+  '4d0c584f-2694-4960-aed4-278f38d3518a',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Comments and Documentation',
+  'Learn how to use comments to document your code and understand their importance in JavaScript development',
+  'In this lesson, you''ll learn about comments and documenting your code. Comments are an essential part of programming that help you and other developers understand what code does and why it exists. There are two types of comments in JavaScript: single-line comments using `//` and multi-line comments using `/* */`.
+
+Your coding tasks will be adding comments to the existing code in the code editor to explain what the code does. You''ll be using both single-line and multi-line comments to explain the code. You''ll understand when to use each type and practice writing clear, helpful comments that explain your code''s purpose and functionality.
+  ',
+  '85a648b1-83e3-4aaa-b778-d32e71979f00',
+  false,
+  5,
+  '[{"name":"Understand what comments are and why they are essential for code documentation and readability"},{"name":"Learn the difference between single-line comments `//` and multi-line comments `/* */` and when to use each"},{"name":"Recognize that comments have been used throughout the course to provide task instructions in the code editor"}]'::jsonb,
+  '[{"id":"1-6-comments-and-documentation-task-1","name":"Add a single-line comment above the `greeting` variable explaining what it stores"},{"id":"1-6-comments-and-documentation-task-2","name":"Add a multi-line comment above the `firstName` variable explaining what it stores"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Add a single-line comment above the greeting variable explaining what it stores\n\nconst greeting = \"Hello, JavaScript!\";\n\n// Task: Add a multi-line comment above the firstName variable explaining what it stores\n\nconst firstName = \"John\";\n\n// Do not change the code below\n\nconsole.log(\"greeting:\", greeting);\nconsole.log(\"name:\", firstName);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '04078662-e2f8-48c7-8bb3-bf269bfe8770',
+  '2-data-types-and-operations',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Data Types & Operations',
+  'Master JavaScript data types, operators, and type conversion for effective programming',
+  1
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '8e1d7e49-9065-4169-aa4b-46278b16fce9',
+  '2-1-strings-and-string-methods',
+  '04078662-e2f8-48c7-8bb3-bf269bfe8770',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Strings and String Methods',
+  'Learn how to work with strings and their main methods for text manipulation',
+  'In this lesson, you''ll learn about strings as a data type and discover fundamental string methods including the `length` property, `concat()` method, `+` operator for concatenation, and `toUpperCase()` method for text transformation.
+
+Your coding tasks will be using different string methods to concatenate names, convert text to uppercase, and get the length of strings, giving you practical experience with text manipulation in JavaScript.
+  ',
+  '46a5ee27-b086-47fb-b347-f97871b5c3c8',
+  true,
+  0,
+  '[{"name":"Basic understanding of strings as a data type, their use cases in JavaScript and general programming"},{"name":"Understand how strings are represented and manipulated in JavaScript"},{"name":"Learn basic string methods including `length` property, `concat()` method, `+` operator, and `toUpperCase()` method (with simple examples)"}]'::jsonb,
+  '[{"id":"2-1-strings-and-string-methods-task-1","name":"Use the `+` operator to concatenate the `firstName` and `lastName` variables together"},{"id":"2-1-strings-and-string-methods-task-2","name":"Use the `concat()` method to concatenate the `firstName` and `lastName` variables together"},{"id":"2-1-strings-and-string-methods-task-3","name":"Use the `toUpperCase()` method to convert the `firstName` to uppercase"},{"id":"2-1-strings-and-string-methods-task-4","name":"Use the `length` property to get the length of `lastName`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const firstName = \"John\";\nconst lastName = \"Doe\";\n\n// Do not change the code above\n\n// Task: Use the + operator to concatenate the firstName and lastName variables together\nlet fullNamePlus;\n\n// Task: Use the concat() method to concatenate the firstName and lastName variables together\nlet fullNameConcat;\n\n// Task: Use the toUpperCase() method to convert the firstName to uppercase\nlet firstNameUppercase;\n\n// Task: Use the length property to get the length of lastName\nlet lastNameLength;\n\n// Do not change the code below\n\nconsole.log(\"fullNamePlus:\", fullNamePlus);\nconsole.log(\"fullNameConcat:\", fullNameConcat);\nconsole.log(\"firstNameUppercase:\", firstNameUppercase);\nconsole.log(\"lastNameLength:\", lastNameLength);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '69937c7e-683e-40a7-bb5b-c061129fc786',
+  '2-2-numbers-and-mathematical-operators',
+  '04078662-e2f8-48c7-8bb3-bf269bfe8770',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Numbers and Mathematical Operators',
+  'Master working with numbers and mathematical operators for calculations',
+  'In this lesson, you''ll learn about numbers as a data type and discover arithmetic operators including addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), modulus (`%`), increment (`++`), decrement (`--`), and compound assignment operators.
+
+Your coding tasks will be performing real-world calculations like adding fruits together, calculating prices, and adding taxes to demonstrate practical mathematical operations in JavaScript.
+  ',
+  '661f8acd-1f67-40e8-946a-4ba2edff9e5b',
+  true,
+  1,
+  '[{"name":"Basic understanding of numbers as a data type, their use cases in JavaScript and general programming"},{"name":"Understand how numbers are represented in JavaScript, including integers and floating-point numbers (basic level, no need to talk about binary, octal, hexadecimal, etc.)"},{"name":"Learn arithmetic operators: `+`, `-`, `*`, `/`, `%`, `++`, `--`, `+=`, `-=`, `*=`, `/=`, `%=`"}]'::jsonb,
+  '[{"id":"2-2-numbers-and-mathematical-operators-task-1","name":"Add the `apples` and `oranges` variables together and assign the result to `totalFruits`"},{"id":"2-2-numbers-and-mathematical-operators-task-2","name":"Each fruit costs $2, calculate the total price of the fruits and assign the result to `totalPrice`"},{"id":"2-2-numbers-and-mathematical-operators-task-3","name":"Add $5 tax to the `totalPrice` and assign the result to `totalPriceWithTax`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const apples = 20;\nconst oranges = 10;\n\n// Do not change the code above\n\n// Task: Add the apples and oranges variables together and assign the result to totalFruits\nlet totalFruits;\n\n// Task: Each fruit costs $2, calculate the total price of the fruits and assign the result to totalPrice\nlet totalPrice;\n\n// Task: Add $5 tax to the totalPrice and assign the result to totalPriceWithTax\nlet totalPriceWithTax;\n\n// Do not change the code below\n\nconsole.log(\"totalFruits:\", totalFruits);\nconsole.log(\"totalPrice:\", totalPrice);\nconsole.log(\"totalPriceWithTax:\", totalPriceWithTax);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '7ecf2f70-2c5f-4e95-9989-522fbd56bcb7',
+  '2-3-booleans-and-logical-operators',
+  '04078662-e2f8-48c7-8bb3-bf269bfe8770',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Booleans and Logical Operators',
+  'Understand boolean values and logical operators for decision-making in code',
+  'In this lesson, you''ll learn about booleans as a data type that represent true or false values, and discover logical operators including `&&` (AND), `||` (OR), and `!` (NOT) for combining boolean expressions. You''ll also explore comparison operators for creating boolean results.
+
+Your coding tasks will be using comparison operators to check age requirements and logical operators to combine multiple boolean conditions, giving you practical experience with decision-making logic in JavaScript.
+  ',
+  'aa58f0f5-2538-4319-957c-8b40c38a265e',
+  false,
+  2,
+  '[{"name":"Basic understanding of booleans as a data type, their use cases in JavaScript and general programming"},{"name":"Understand boolean data type and how `true` and `false` values work in JavaScript (basic level, no need to talk about type coercion)"},{"name":"Explore logical operators: `===` (EQUALS), `!==` (NOT EQUALS), `&&` (AND), `||` (OR), `!` (NOT) for combining boolean expressions (basic level, no need to talk about short-circuit evaluation)"}]'::jsonb,
+  '[{"id":"2-3-booleans-and-logical-operators-task-1","name":"Use the `>=` operator to check if the `age` is greater than or equal to the `minimumAge` and assign the result to `isOldEnough`"},{"id":"2-3-booleans-and-logical-operators-task-2","name":"Use the `&&` operator to check if the `isLoggedIn` and `hasPermission` are both `true` and assign the result to `canAccess`"},{"id":"2-3-booleans-and-logical-operators-task-3","name":"Use the `||` operator to check if the `isLoggedIn` or `hasPermission` is `true` and assign the result to `canEnter`"},{"id":"2-3-booleans-and-logical-operators-task-4","name":"Use the `!` operator to check if the `isLoggedIn` is `false` and assign the result to `isBlocked`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const isLoggedIn = true;\nconst hasPermission = false;\nconst age = 25;\nconst minimumAge = 18;\n\n// Do not change the code above\n\n// Task: Use the >= operator to check if the age is greater than or equal to the minimumAge and assign the result to isOldEnough\nlet isOldEnough;\n\n// Task: Use the && operator to check if the isLoggedIn and hasPermission are both true and assign the result to canAccess\nlet canAccess;\n\n// Task: Use the || operator to check if the isLoggedIn or hasPermission is true and assign the result to canEnter\nlet canEnter;\n\n// Task: Use the ! operator to check if the isLoggedIn is false and assign the result to isBlocked\nlet isBlocked;\n\n// Do not change the code above\n\nconsole.log(\"isLoggedIn:\", isLoggedIn);\nconsole.log(\"hasPermission:\", hasPermission);\nconsole.log(\"isOldEnough:\", isOldEnough);\nconsole.log(\"canAccess:\", canAccess);\nconsole.log(\"canEnter:\", canEnter);\nconsole.log(\"isBlocked:\", isBlocked);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9f8ff486-6846-4770-828e-a45e1fab35a2',
+  '2-4-null-and-undefined',
+  '04078662-e2f8-48c7-8bb3-bf269bfe8770',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Null and Undefined',
+  'Learn the difference between null and undefined values and how to work with them',
+  'In this lesson, you''ll learn about two special data types that represent "nothingness" in JavaScript: `null` (intentionally empty) and `undefined` (uninitialized or missing). You''ll discover when JavaScript automatically assigns `undefined` and when to use `null` explicitly, plus how to check for these values using comparison operators.
+
+Your coding tasks will be using `===`, `==`, and `typeof` operators to compare and check `null` and `undefined` values, giving you practical experience understanding how these special values behave in JavaScript.
+  ',
+  'f9e1d858-f8d3-4c29-bdc8-fa4614077b54',
+  false,
+  3,
+  '[{"name":"Understand the difference between `null` (intentionally empty) and `undefined` (uninitialized or missing)"},{"name":"Learn when JavaScript automatically assigns `undefined` and when to use `null` explicitly"},{"name":"Explore how to check for `null` and `undefined` values using comparison operators and the `typeof` operator (introduction to `==` and `===`, mention that will be expanded on in the next lesson)"}]'::jsonb,
+  '[{"id":"2-4-null-and-undefined-task-1","name":"Use the `===` operator to check if the `explicitNull` is `null` and assign the result to `isProfileNull`"},{"id":"2-4-null-and-undefined-task-2","name":"Use the `===` operator to check if the `explicitUndefined` is `undefined` and assign the result to `isNameUndefined`"},{"id":"2-4-null-and-undefined-task-3","name":"Use the `==` operator to check if the `explicitNull` is equal to `undefined` and assign the result to `looseComparison`"},{"id":"2-4-null-and-undefined-task-4","name":"Use the `typeof` operator with `===` to check if the `explicitNull` is \"object\" and assign the result to `isTypeOfObject`"},{"id":"2-4-null-and-undefined-task-5","name":"Use the `typeof` operator with `===` to check if the `explicitUndefined` is \"undefined\" and assign the result to `isTypeOfUndefined`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"let uninitializedVariable;\nconst explicitNull = null;\nconst explicitUndefined = undefined;\n\n// Do not change the code above\n\n// Task: Use the === operator to check if the explicitNull is null and assign the result to isProfileNull\nlet isProfileNull;\n\n// Task: Use the === operator to check if the explicitUndefined is undefined and assign the result to isNameUndefined\nlet isNameUndefined;\n\n// Task: Use the == operator to check if the explicitNull is equal to undefined and assign the result to looseComparison\nlet looseComparison;\n\n// Task: Use the typeof operator with === to check if the explicitNull is \"object\" and assign the result to isTypeOfObject\nlet isTypeOfObject;\n\n// Task: Use the typeof operator with === to check if the explicitUndefined is \"undefined\" and assign the result to isTypeOfUndefined\nlet isTypeOfUndefined;\n\n// Do not change the code below\n\nconsole.log(\"isProfileNull:\", isProfileNull);\nconsole.log(\"isNameUndefined:\", isNameUndefined);\nconsole.log(\"looseComparison:\", looseComparison);\nconsole.log(\"isTypeOfObject:\", isTypeOfObject);\nconsole.log(\"isTypeOfUndefined:\", isTypeOfUndefined);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ba6909d6-a7bd-49ce-b9f3-c32622b0e228',
+  '2-5-type-conversion-and-coercion',
+  '04078662-e2f8-48c7-8bb3-bf269bfe8770',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Type Conversion and Coercion',
+  'Understand how JavaScript automatically converts between data types and comparison operators',
+  'In this lesson, you''ll learn about type conversion and coercion in JavaScript, understanding how the language automatically converts between different data types during operations. You''ll discover the crucial difference between loose equality (`==`) and strict equality (`===`) operators and see examples of type coercion in action.
+
+Your coding tasks will be comparing different data types using both loose and strict equality operators, adding strings with numbers to see coercion, and converting strings to numbers using the `Number()` function.
+  ',
+  'd27bb8c5-b777-4524-ad06-860f4836d578',
+  false,
+  4,
+  '[{"name":"Learn how type coercion works in JavaScript and when it occurs automatically (`==` vs `===` covered in previous lesson with booleans only, worth expanding here with other data type examples)"},{"name":"See examples of type coercion in action (e.g., strings with numbers, booleans with other types, `null` with `undefined`)"}]'::jsonb,
+  '[{"id":"2-5-type-conversion-and-coercion-task-1","name":"Use the `==` operator to compare the `numberValue` and `stringValue` variables and assign the result to `looseComparison`"},{"id":"2-5-type-conversion-and-coercion-task-2","name":"Use the `===` operator to compare the `numberValue` and `stringValue` variables and assign the result to `strictComparison`"},{"id":"2-5-type-conversion-and-coercion-task-3","name":"Add `numberValue` and `stringValue` together using the `+` operator and assign the result to `sumStringCoersion`"},{"id":"2-5-type-conversion-and-coercion-task-4","name":"Convert `stringValue` to a number using the `Number()` function and add it to `numberValue`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const numberValue = 5;\nconst stringValue = \"5\";\n\n// Do not change the code above\n\n// Task: Use the == operator to compare the numberValue and stringValue variables and assign the result to looseComparison\nlet looseComparison;\n\n// Task: Use the === operator to compare the numberValue and stringValue variables and assign the result to strictComparison\nlet strictComparison;\n\n// Task: Add numberValue and stringValue together using the + operator and assign the result to sumStringCoersion\nlet sumStringCoersion;\n\n// Task: Convert stringValue to a number using the Number() function and add it to numberValue\nlet sumNumberCoersion;\n\n// Do not change the code below\n\nconsole.log(\"looseComparison:\", looseComparison);\nconsole.log(\"strictComparison:\", strictComparison);\nconsole.log(\"sumStringCoersion:\", sumStringCoersion);\nconsole.log(\"sumNumberCoersion:\", sumNumberCoersion);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '061fa005-511c-4ad6-94d6-e574a2752c0b',
+  '2-6-template-literals',
+  '04078662-e2f8-48c7-8bb3-bf269bfe8770',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Template Literals',
+  'Master template literals for modern string creation with embedded variables and expressions',
+  'In this lesson, you''ll learn about template literals, a modern way to create strings that include variables and expressions using backticks (``) and `${}` syntax. You''ll discover how template literals compare to traditional string concatenation and explore features like multi-line strings and expression evaluation.
+
+Your coding tasks will be converting traditional string concatenation to template literals, giving you practical experience with this modern approach to creating dynamic strings in JavaScript.
+  ',
+  'b1185116-0acc-457c-9dba-946be1a1a73c',
+  false,
+  5,
+  '[{"name":"Understand template literal syntax using backticks (``) and `${}` for variable interpolation"},{"name":"See examples of the differences between template literals and traditional string concatenation with `+` operator (also good to mention when to use template literals over concatenation, and some advantages and disadvantages of each)"},{"name":"Explore template literal features like multi-line strings and expression evaluation"}]'::jsonb,
+  '[{"id":"2-6-template-literals-task-1","name":"Convert the `greeting` to template literals using `${}` syntax and assign the result to `templateGreeting`"},{"id":"2-6-template-literals-task-2","name":"Convert the `traditionalPercentage` to template literals using `${}` syntax and assign the result to `templatePercentage`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const firstName = \"John\";\nconst lastName = \"Doe\";\nconst greeting = \"Hello, my name is \" + firstName + \" \" + lastName + \".\";\nconst score = 85;\nconst maxScore = 100;\nconst traditionalPercentage =\n  \"Your score is \" + (score / maxScore) * 100 + \"%.\";\n\n// Do not change the code above\n\n// Task: Convert the greeting to template literals using ${} syntax and assign the result to templateGreeting\nlet templateGreeting;\n\n// Task: Convert the traditionalPercentage to template literals using ${} syntax and assign the result to templatePercentage\nlet templatePercentage;\n\n// Do not change the code below\n\nconsole.log(\"Template greeting:\", templateGreeting);\nconsole.log(\"Template percentage:\", templatePercentage);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '3-control-flow-and-looping',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Control Flow & Looping',
+  'Control program flow with conditionals, loops, and decision-making logic',
+  2
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '94760a57-b75a-4636-bad4-7de3a32cf448',
+  '3-1-conditional-statements-if-else-and-else-if',
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Conditional Statements: if, else, and else if',
+  'Learn to make decisions in your code using if, else if, and else statements',
+  'In this lesson, you''ll learn about conditional statements including `if`, `else if`, and `else` that form the backbone of decision-making in JavaScript. You''ll discover how these statements evaluate boolean expressions to determine which path your code should take.
+
+Your coding tasks will be creating conditional statements to check age requirements and assign boolean values based on different age categories, giving you practical experience with program logic and decision-making.
+  ',
+  'c236f40e-4fc8-487e-a054-e49a8db3a6ed',
+  true,
+  0,
+  '[{"name":"Understand control flow and how to make decisions in your code, and why it''s important"},{"name":"Understand the syntax and structure of `if`, `else if`, and `else` statements"},{"name":"Learn how code execution branches based on boolean expressions and conditions"}]'::jsonb,
+  '[{"id":"3-1-conditional-statements-if-else-and-else-if-task-1","name":"Create an `if` statement that checks if the `age` is greater or equal to `18` and assign the result to `isAdult`"},{"id":"3-1-conditional-statements-if-else-and-else-if-task-2","name":"Create an `else if` statement that checks if the `age` is greater or equal to `12` and assign the result to `isTeenager`"},{"id":"3-1-conditional-statements-if-else-and-else-if-task-3","name":"Create an `else` statement that assigns `true` to `isChild`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const age = 20;\n\n// Do not change the code above\n\nlet isAdult;\nlet isTeenager;\nlet isChild;\n\n// Task: Create an if statement that checks if the age is greater or equal to 18 and assign the result to isAdult\n// Task: Create an else if statement that checks if the age is greater or equal to 12 and assign the result to isTeenager\n// Task: Create an else statement that assigns true to isChild\n\n// Do not change the code below\n\nconsole.log(\"isAdult:\", isAdult);\nconsole.log(\"isTeenager:\", isTeenager);\nconsole.log(\"isChild:\", isChild);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '03184277-25a3-47fc-b3df-4fe146e4faad',
+  '3-2-the-switch-statement',
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'The switch Statement',
+  'Master the switch statement for handling multiple conditions elegantly',
+  'In this lesson, you''ll learn about the `switch` statement, an elegant solution for handling multiple conditions when comparing a single value against many possible options. You''ll discover the essential components including `case` labels, `break` statements, and the `default` case.
+
+Your coding tasks will be converting a multi-branch `if...else` statement into a clean `switch` statement, giving you hands-on experience with this powerful control structure for handling multiple conditions.
+  ',
+  '39942043-c06c-4c04-8e61-8d491a85ae4b',
+  true,
+  1,
+  '[{"name":"Understand the purpose of the switch statement and the drawbacks of if...else chains"},{"name":"Understand when and how to use the `switch` statement versus `if...else` chains"},{"name":"Learn the syntax for `switch`, `case`, `break`, and `default` keywords"},{"name":"Understand the importance of `break` statements and fall-through behavior"},{"name":"Brief mention of the use of brackets and why (very brief and simple)"}]'::jsonb,
+  '[{"id":"3-2-the-switch-statement-task-1","name":"Rewrite the `if...else` statement as a `switch` statement"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const fruit = \"apple\";\n\n// Do not change the code above\n\n// Task: Rewrite the if...else statement as a switch statement\nif (fruit === \"orange\") {\n  console.log(\"This is an orange\");\n} else if (fruit === \"apple\") {\n  console.log(\"This is an apple\");\n} else {\n  console.log(\"This is not an orange or an apple\");\n}\n\n// Do not change the code below\n\nconsole.log(\"fruit:\", fruit);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ae33884d-eb2f-4a39-bd9f-9f6269539f79',
+  '3-3-truthy-and-falsy-values',
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Truthy and Falsy Values',
+  'Understand how JavaScript evaluates different values as true or false in conditionals',
+  'In this lesson, you''ll learn about truthy and falsy values in JavaScript, understanding how every value has an inherent "truthiness" or "falsiness" that determines how it behaves in boolean contexts. You''ll discover which values are falsy (`false`, `0`, `''''`, `null`, `undefined`, `NaN`) and which are truthy (everything else).
+
+Your coding tasks will be assigning different falsy and truthy values to variables, giving you hands-on experience understanding how different data types behave in conditional statements.
+  ',
+  '7d387772-b7a9-451a-a31a-825706ce46f4',
+  false,
+  2,
+  '[{"name":"Understand the concept of truthy and falsy values in JavaScript and how they affect conditional logic (mention booleans learnt in previous lesson)"},{"name":"Explore how different data types (strings, numbers, arrays, objects) behave in boolean contexts with practical examples"},{"name":"Learn which values are falsy (`false`, `0`, `''''`, `null`, `undefined`, `NaN`) and which are truthy (everything else)"}]'::jsonb,
+  '[{"id":"3-3-truthy-and-falsy-values-task-1","name":"Assign a falsy boolean value to the `falsyBoolean` variable"},{"id":"3-3-truthy-and-falsy-values-task-2","name":"Assign a falsy number value to the `falsyNumber` variable"},{"id":"3-3-truthy-and-falsy-values-task-3","name":"Assign a falsy string value to the `falsyString` variable"},{"id":"3-3-truthy-and-falsy-values-task-4","name":"Assign a truthy boolean value to the `truthyBoolean` variable"},{"id":"3-3-truthy-and-falsy-values-task-5","name":"Assign a truthy number value to the `truthyNumber` variable"},{"id":"3-3-truthy-and-falsy-values-task-6","name":"Assign a truthy string value to the `truthyString` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Assign a falsy boolean value to the falsyBoolean variable\nlet falsyBoolean;\n\n// Task: Assign a falsy number value to the falsyNumber variable\nlet falsyNumber;\n\n// Task: Assign a falsy string value to the falsyString variable\nlet falsyString;\n\n// Task: Assign a truthy boolean value to the truthyBoolean variable\nlet truthyBoolean;\n\n// Task: Assign a truthy number value to the truthyNumber variable\nlet truthyNumber;\n\n// Task: Assign a truthy string value to the truthyString variable\nlet truthyString;\n\n// Do not change the code below\n\nconsole.log(\"falsyBoolean:\", falsyBoolean);\nconsole.log(\"falsyNumber:\", falsyNumber);\nconsole.log(\"falsyString:\", falsyString);\nconsole.log(\"truthyBoolean:\", truthyBoolean);\nconsole.log(\"truthyNumber:\", truthyNumber);\nconsole.log(\"truthyString:\", truthyString);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c64aa4c4-82fd-407e-a658-f71ee795a5d9',
+  '3-4-the-ternary-operator',
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'The Ternary Operator',
+  'Learn to write concise conditional statements using the ternary operator',
+  'In this lesson, you''ll learn about the ternary operator, a concise way to write conditional statements in just one line of code. The ternary operator follows the pattern `condition ? valueIfTrue : valueIfFalse` and is perfect for assigning values based on simple conditions.
+
+Your coding tasks will be simple conversions from `if...else` statements to ternary operators, helping you understand this elegant shorthand for conditional logic that you''ll see frequently in JavaScript code.
+  ',
+  '3ff8bd7c-2aa5-48ea-9e8d-9bdb00c3af7f',
+  false,
+  3,
+  '[{"name":"Understand the syntax and structure of the ternary operator `condition ? valueIfTrue : valueIfFalse`"},{"name":"Learn when to use the ternary operator versus traditional `if...else` statements (simple conditions vs complex logic)"}]'::jsonb,
+  '[{"id":"3-4-the-ternary-operator-task-1","name":"Convert the `if...else` statement that assigns `discount` to use the ternary operator and assign it to `discountWithTernary`"},{"id":"3-4-the-ternary-operator-task-2","name":"Use the ternary operator to assign `greeting` based on whether `isLoggedIn` is `true` or `false`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const age = 20;\nconst isPremiumMember = true;\nconst isLoggedIn = false;\n\nlet discount;\nif (isPremiumMember) {\n  discount = 20;\n} else {\n  discount = 0;\n}\n\n// Do not change the code above\n\n// Task: Convert the if...else statement that assigns discount to use the ternary operator and assign it to discountWithTernary\nlet discountWithTernary;\n\n// Task: Use the ternary operator to assign greeting based on whether isLoggedIn is true or false\n// If logged in: \"Welcome back!\", if not logged in: \"Please log in\"\nlet greeting;\n\n// Do not change the code below\n\nconsole.log(\"discount:\", discount);\nconsole.log(\"discountWithTernary:\", discountWithTernary);\nconsole.log(\"greeting:\", greeting);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'f567a169-1e42-4149-82ab-97f8091935c5',
+  '3-5-introduction-to-loops-for-while-do-while',
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Introduction to Loops: for, while, do...while',
+  'Learn to repeat actions efficiently using for, while, and do-while loops',
+  'In this lesson, you''ll learn about loops, which allow your code to repeat actions and eliminate the need to write the same code over and over again. You''ll discover the three main types: `for` loops, `while` loops, and `do...while` loops, each designed for different scenarios.
+
+Your coding tasks will be writing all three types of loops to increment counters, helping you understand their syntax, differences, and appropriate use cases through hands-on practice.
+  ',
+  '94461390-7f76-428a-85d0-f7f5f14076d0',
+  false,
+  4,
+  '[{"name":"Understand the concept of loops and why they''re essential for avoiding code repetition and programming in general"},{"name":"Explore practical applications like iterating through numbers, processing arrays, and repeating actions until conditions are met"},{"name":"Learn the syntax and use cases for `for`, `while`, and `do...while` loops (with examples and when to use each, best practices)"}]'::jsonb,
+  '[{"id":"3-5-introduction-to-loops-for-while-do-while-task-1","name":"Write a `for` loop that increments the `forLoopCount` 10 times"},{"id":"3-5-introduction-to-loops-for-while-do-while-task-2","name":"Write a `while` loop that increments the `whileLoopCount` 10 times"},{"id":"3-5-introduction-to-loops-for-while-do-while-task-3","name":"Write a `do...while` loop that increments the `doWhileLoopCount` 10 times"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"let forLoopCount = 0;\nlet whileLoopCount = 0;\nlet doWhileLoopCount = 0;\n\n// Do not change the code above\n\n// Task: Write a for loop that increments the forLoopCount 10 times\n\n// Task: Write a while loop that increments the whileLoopCount 10 times\n\n// Task: Write a do...while loop that increments the doWhileLoopCount 10 times\n\n// Do not change the code below\n\nconsole.log(\"forLoopCount:\", forLoopCount);\nconsole.log(\"whileLoopCount:\", whileLoopCount);\nconsole.log(\"doWhileLoopCount:\", doWhileLoopCount);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '58c20d6e-7094-4196-88cd-a294c65a5840',
+  '3-6-loop-control-break-and-continue',
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Loop Control: break and continue',
+  'Master break and continue statements for precise control over loop execution',
+  'In this lesson, you''ll learn about loop control statements including `break` and `continue` that give you precise control over loop execution. The `break` statement immediately terminates the entire loop, while `continue` skips the current iteration and jumps to the next one.
+
+Your coding tasks will be implementing both `break` and `continue` statements in practical scenarios, including stopping loops early, skipping specific iterations, and combining both statements for complex logic.
+  ',
+  '006274b4-4710-40bc-8f1a-f57e2ca95ea8',
+  false,
+  5,
+  '[{"name":"Understand how the `break` statement immediately exits a loop and when to use it effectively"},{"name":"Learn how the `continue` statement skips the current iteration and jumps to the next one"},{"name":"Explore practical scenarios where breaking or skipping loop iterations is useful (e.g., searching, filtering, validation)"}]'::jsonb,
+  '[{"id":"3-6-loop-control-break-and-continue-task-1","name":"Use the `break` statement in a `for` loop to stop when `i` equals `breakAtCount`"},{"id":"3-6-loop-control-break-and-continue-task-2","name":"Use the `continue` statement in a `for` loop to skip when `i` equals `continueAtCount`"},{"id":"3-6-loop-control-break-and-continue-task-3","name":"Implement a loop that uses both `break` and `continue` to find the first number greater than `10` that is divisible by `3` and assign the result to `targetNumber`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const breakAtCount = 5;\nconst continueAtCount = 3;\nlet targetNumber;\n\n// Do not change the code above\n\n// Task: Use the break statement inside the for loop to stop when i equals breakAtCount\nfor (let i = 1; i <= 10; i++) {}\n\n// Task: Use the continue statement inside the for loop to skip when i equals continueAtCount\nfor (let i = 1; i <= 10; i++) {}\n\n// Task: Implement a for loop that uses both break and continue to find the first number greater than 10 that is divisible by 3 and assign the result to targetNumber\nfor (let i = 1; i <= 20; i++) {}\n\n// Do not change the code below\n\nconsole.log(\"breakAtCount:\", breakAtCount);\nconsole.log(\"continueAtCount:\", continueAtCount);\nconsole.log(\"targetNumber:\", targetNumber);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'e0b3380a-937b-4ab2-9e93-b1a5a02e02e7',
+  '3-7-nested-loops',
+  '7be1da06-9a73-430f-9cbe-5ecf7da85cca',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Nested Loops',
+  'Understand how loops work inside other loops and their execution patterns',
+  'In this lesson, you''ll learn about nested loops, which are simply loops inside other loops. The key concept is that for every single time the outer loop runs, the inner loop runs completely from start to finish.
+
+Your coding tasks will be creating a nested loop structure and incrementing counters to see exactly how many times each loop runs, helping you understand the relationship between outer and inner loop iterations.
+  ',
+  'c0229767-3e17-4fa3-9ddc-ac17b94f27f7',
+  false,
+  6,
+  '[{"name":"Understand that loops can be nested inside other loops, and the inner loop completes all its iterations for each single iteration of the outer loop"},{"name":"Learn to write the basic syntax for nested loops"},{"name":"See how many times each loop runs in a nested structure"}]'::jsonb,
+  '[{"id":"3-7-nested-loops-task-1","name":"Create a nested loop that runs `3` times on the outside and `2` times on the inside"},{"id":"3-7-nested-loops-task-2","name":"Increment `outerCount` by `1` each time the outer loop runs"},{"id":"3-7-nested-loops-task-3","name":"Increment `innerCount` by `1` each time the inner loop runs"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"let outerCount = 0;\nlet innerCount = 0;\n\n// Do not change the code above\n\n// Task: Create a nested loop that runs 3 times on the outside and 2 times on the inside\n// Task: Increment outerCount by 1 each time the outer loop runs\n// Task: Increment innerCount by 1 each time the inner loop runs\n\n// Do not change the code below\n\nconsole.log(\"outerCount:\", outerCount);\nconsole.log(\"innerCount:\", innerCount);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '4-functions-and-scope',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Functions & Scope',
+  'Write reusable code with functions and understand variable scope and closures',
+  3
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '1d0dacb9-ef86-46a4-9593-c79be1cfd470',
+  '4-1-introduction-to-functions',
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Introduction to Functions',
+  'Learn to create reusable blocks of code with functions for better organization',
+  'In this lesson, you''ll learn about functions, which allow you to package code into reusable blocks that you can call whenever needed. Functions help you avoid repeating yourself and keep your code organized by defining a set of instructions once and executing them whenever you need that specific functionality.
+
+Your coding tasks will be creating a simple function that displays a message and then calling that function, giving you hands-on experience with fundamental function syntax and invocation.
+  ',
+  'a8ce948c-333b-4d7a-8ecc-cb747bd02d4c',
+  true,
+  0,
+  '[{"name":"Understand what functions are, their purpose, and how they help you avoid repeating yourself"},{"name":"Learn when and why to use functions for code organization and reusability"},{"name":"Understand function declaration syntax and how to invoke (call) functions"}]'::jsonb,
+  '[{"id":"4-1-introduction-to-functions-task-1","name":"Create a `greet` function that logs `\"Hello, World!\"` to the console"},{"id":"4-1-introduction-to-functions-task-2","name":"Call the `greet` function"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Create a greet function that logs \"Hello, World!\" to the console\n\n// Task: Call the greet function\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b5381a73-13f3-46d0-9f14-3f6e122f02b6',
+  '4-2-function-hoisting',
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Function Hoisting',
+  'Understand how JavaScript moves function declarations and why order matters',
+  'In this lesson, you''ll learn about hoisting, JavaScript''s behavior of moving function and variable declarations to the top of their scope during compilation. You''ll discover that function declarations behave differently from function expressions when it comes to hoisting, which can significantly impact how you structure your code.
+
+Your coding tasks will be experimenting with calling functions before they''re declared to see hoisting in action, comparing how function declarations and function expressions behave differently in hoisting scenarios.
+  ',
+  '87d2cd03-a737-465d-9017-e6682ec15f7d',
+  true,
+  1,
+  '[{"name":"Understand the concept of hoisting in JavaScript and how it affects function availability (only functions, since variables are covered later. but do mention variables)"},{"name":"Differentiate hoisting effects on function declarations vs. function expressions"},{"name":"Explore use cases for function expressions vs declarations"},{"name":"Briefly show name and unnamed function expressions"}]'::jsonb,
+  '[{"id":"4-2-function-hoisting-task-1","name":"Call the `hoistedFunction` before its declaration to demonstrate function hoisting"},{"id":"4-2-function-hoisting-task-2","name":"Attempt to call the `notHoistedExpression` function expression before its declaration"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Call the hoistedFunction before its declaration to demonstrate function hoisting\n\n// Task: Attempt to call the notHoistedExpression function expression before its declaration (will throw an error)\n\n// Do not change the code below\n\nfunction hoistedFunction() {\n  console.log(\"I was called before I was declared!\");\n}\n\nconst notHoistedExpression = function () {\n  console.log(\"I cannot be called before I am declared!\");\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ce3587b4-5896-4808-9d42-d05332d84d91',
+  '4-3-function-parameters-and-return-values',
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Function Parameters and Return Values',
+  'Make functions flexible by passing data in and getting results back',
+  'In this lesson, you''ll learn how to make functions flexible by passing data into them with parameters and getting results back with return values. You''ll discover how parameters work as placeholders that receive values, and how return values allow functions to send data back to the code that called them.
+
+Your coding tasks will be creating functions that accept input parameters, process them, and return meaningful results, including implementing functions with default parameters that provide fallback values when no argument is provided.
+  ',
+  'c0cb01e3-6207-4c7b-b7a4-9c1fbad469f3',
+  false,
+  2,
+  '[{"name":"Learn how to define and use parameters to pass data into functions"},{"name":"Understand default parameters and how they provide fallback values"},{"name":"Understand return values to send data back from functions (with practical examples)"}]'::jsonb,
+  '[{"id":"4-3-function-parameters-and-return-values-task-1","name":"Implement the `addTen` function that takes a `value` parameter, adds `10` to it, and returns the result"},{"id":"4-3-function-parameters-and-return-values-task-2","name":"Call the `addTen` function with a parameter of `5`, and assign the result to a variable called `addTenResult`"},{"id":"4-3-function-parameters-and-return-values-task-3","name":"Implement the `addDefault` function that takes an optional `value` parameter with a default value of `10`, adds `5` to it, and returns the result"},{"id":"4-3-function-parameters-and-return-values-task-4","name":"Call the `addDefault` function without specifying a parameter, and assign the result to a variable called `addDefaultResult`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Implement the addTen function that takes a value parameter, adds 10 to it, and returns the result\nfunction addTen() {}\n\n// Task: Call the addTen function with a parameter of 5, and assign the result to a variable called addTenResult\nlet addTenResult;\n\n// Task: Implement the addDefault function that takes an optional value parameter with a default value of 10, adds 5 to it, and returns the result\nfunction addDefault() {}\n\n// Task: Call the addDefault function without specifying a parameter, and assign the result to a variable called addDefaultResult\nlet addDefaultResult;\n\n// Do not change the code below\n\nconsole.log(\"addTenResult:\", addTenResult);\nconsole.log(\"addDefaultResult:\", addDefaultResult);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '55aa41d3-07e1-4230-9088-39cb1ed3142c',
+  '4-4-understanding-scope',
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Understanding Scope',
+  'Master where variables can be accessed with global, function, and block scope',
+  'In this lesson, you''ll learn about scope, which determines where your variables and functions can be accessed in your code. You''ll explore the three main types: global scope, function scope, and block scope, plus how `var`, `let`, and `const` behave differently regarding scope.
+
+Your coding tasks will be creating variables with different scoping behaviors inside blocks, demonstrating how `var` and `let` variables behave differently when declared within conditional statements.
+  ',
+  'c348c3f0-4f82-4c49-bab1-276379dee3d4',
+  false,
+  3,
+  '[{"name":"Differentiate between global, function, and block scope and understand their accessibility rules (variables and functions, with practical examples)"},{"name":"Understand how `let`, `const`, and `var` behave differently regarding scope (with practical examples)"},{"name":"Explore scope within functions"}]'::jsonb,
+  '[{"id":"4-4-understanding-scope-task-1","name":"Use `console.log` to log the value of `varVariable` before it is declared"},{"id":"4-4-understanding-scope-task-2","name":"Use `console.log` to log the value of `letVariable` before it is declared"},{"id":"4-4-understanding-scope-task-3","name":"Use `console.log` to log the value of `constVariable` before it is declared"},{"id":"4-4-understanding-scope-task-4","name":"Create a new `var` variable named `varVariable` in the `if` block with the value `\"I am the same\"`"},{"id":"4-4-understanding-scope-task-5","name":"Create a new `let` variable named `letVariable` in the `if` block with the value `\"I am different\"`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Use console.log to log the value of varVariable before it is declared (will output undefined)\n\n// Task: Use console.log to log the value of letVariable before it is declared\n// Note: Since we''re using CodeSandbox for the console, the value of letVariable will be undefined instead of throwing an error\n\n// Task: Use console.log to log the value of constVariable before it is declared\n// Note: Since we''re using CodeSandbox for the console, the value of constVariable will be undefined instead of throwing an error\n\nfunction varScope() {\n  var varVariable = \"I am a var variable\";\n\n  // Task: Create a new varVariable in the if block with the value \"I am the same\"\n  if (true) {\n  }\n\n  return varVariable;\n}\n\nfunction letScope() {\n  let letVariable = \"I am a let variable\";\n\n  // Task: Create a new letVariable in the if block with the value \"I am different\"\n  if (true) {\n  }\n\n  return letVariable;\n}\n\n// Do not change the code below\n\nvar varVariable = 10;\nlet letVariable = 20;\nconst constVariable = 30;\n\nconsole.log(\"varScope:\", varScope());\nconsole.log(\"letScope:\", letScope());\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '["Standard JavaScript Behavior\nIn a typical modern JavaScript environment (like a browser console or Node.js running a script as a module), let and const declarations exhibit a behavior called the Temporal Dead Zone (TDZ).\nVariables declared with let and const are hoisted, but they are not initialized with a default value like var (which gets initialized to undefined). Instead, they remain in an uninitialized state within the TDZ from the beginning of their scope until the declaration line is executed. Attempting to access them in the TDZ results in a ReferenceError: Cannot access ''x'' before initialization.\nSo, in a standard environment, your code would throw a ReferenceError.\nCode Sandbox Behavior\nCode Sandbox might be handling the execution in a way that avoids the standard TDZ behavior for global-scoped code:\nREPL Environment: The code might be running in a Read-Evaluate-Print-Loop (REPL) environment that processes each line differently, or in a way that treats the entire block as a single input where the declaration of x is available to the console.log statement, but simply hasn''t been assigned a value yet at the moment the log is evaluated. In this case, it might default to undefined instead of throwing a ReferenceError.\nLegacy/Non-Strict Mode: The environment might not be running in strict mode or using modern module scoping by default, which could affect variable scoping and hoisting behavior, defaulting back to var-like behavior in some specific internal execution contexts.\nInternal Scoping: Code Sandbox might wrap your code in a function or another scope, and the hoisting behavior is different within that specific, non-global, scope.\nThe key takeaway is that Code Sandbox''s execution environment has specific nuances that cause it to deviate from the standard ReferenceError for code in the TDZ, instead returning undefined. This highlights a difference in how online editors can handle code execution compared to a local development setup or browser console.\n"]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '1f9a2063-a15d-464d-afd7-0e30b7932910',
+  '4-5-closures',
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Closures',
+  'Discover how functions remember variables from their creation environment',
+  'In this lesson, you''ll learn about closures, which are created when a function "remembers" and can access variables from its outer scope, even after that outer function has finished executing. Closures emerge naturally from JavaScript''s lexical scoping rules and create powerful patterns for data privacy and maintaining state.
+
+Your coding tasks will be creating practical examples of closures, including a function that generates customized greeting functions and a counter that maintains its state between calls, demonstrating how closures enable data encapsulation.
+  ',
+  '92f1e80a-393b-45d6-87a3-25104b17ccaa',
+  false,
+  4,
+  '[{"name":"Explain what a closure is and how it relates to lexical scope"},{"name":"Describe scenarios where closures are useful (data privacy, function factories, maintaining state)"}]'::jsonb,
+  '[{"id":"4-5-closures-task-1","name":"Implement the `createGreeting` function to return a closure that combines and returns the `greeting` parameter with the `name` parameter using a template literal"},{"id":"4-5-closures-task-2","name":"Implement the `createCounter` function to return a closure that increments and returns the `count` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Implement the createGreeting function to return a closure that combines and returns the greeting parameter with the name parameter using a template literal\n// The inner function should return `${greeting}, ${name}!`\nfunction createGreeting(greeting) {\n  return function (name) {};\n}\n\n// Task: Implement the createCounter function to return a closure that increments and returns the count variable\nfunction createCounter() {\n  let count = 0;\n\n  return function () {};\n}\n\n// Do not change the code below\n\nlet sayHello = createGreeting(\"Hello\");\nlet sayGoodbye = createGreeting(\"Goodbye\");\nconsole.log(\"sayHello(''Alice''):\", sayHello(\"Alice\"));\nconsole.log(\"sayGoodbye(''Bob''):\", sayGoodbye(\"Bob\"));\n\nlet counter = createCounter();\nconsole.log(\"counter:\", counter());\nconsole.log(\"counter:\", counter());\n\nlet anotherCounter = createCounter();\nconsole.log(\"anotherCounter:\", anotherCounter());\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2204e61f-aa2d-493b-9394-45f021e516dc',
+  '4-6-callback-functions',
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Callback Functions',
+  'Learn to pass functions as parameters for flexible and reusable code patterns',
+  'In this lesson, you''ll learn about callback functions, which are simply functions that get passed as parameters to other functions and executed at specific times. Callbacks are widely used in JavaScript for handling user interactions, managing timing with functions like `setTimeout()`, and processing data.
+
+Your coding tasks will be implementing your own callback functions and learning to recognize callback patterns, including creating functions that accept and execute callback parameters with specific data.
+  ',
+  'f8c9f3b3-c558-40b1-b02f-523950e2f077',
+  false,
+  5,
+  '[{"name":"Understand the concept of callback functions and how they work as parameters (tie it to function parameters learnt in previous lessons)"},{"name":"Recognize common uses of callbacks, including `setTimeout()` and event handling, or just general passing functions as parameters (with practical examples)"}]'::jsonb,
+  '[{"id":"4-6-callback-functions-task-1","name":"Implement the `functionWithCallback` function to take in a `callback` function parameter"},{"id":"4-6-callback-functions-task-2","name":"Call the `functionWithCallback` function with the `callbackFunction` and assign the result to a variable called `result`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"function callbackFunction(message) {\n  return `Callback message: ${message}`;\n}\n\n// Do not change the code above\n\n// Task: Implement the functionWithCallback function to take in a callback function parameter\n// Return the result of calling the callback function with the message \"Hello, World!\"\nfunction functionWithCallback() {}\n\n// Task: Call the functionWithCallback function with the callbackFunction and assign the result to a variable called result\nlet result;\n\n// Do not change the code below\n\nconsole.log(\"result:\", result);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '17c9905e-0e75-42cf-a1c5-5704aa85190b',
+  '4-7-immediately-invoked-function-expressions',
+  '83b1c69a-aeee-46b8-872b-d85f21875fe3',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Immediately Invoked Function Expressions (IIFE)',
+  'Create private scope and avoid global pollution with self-executing functions',
+  'In this lesson, you''ll learn about Immediately Invoked Function Expressions (IIFE), which are functions that execute automatically as soon as they''re defined. IIFEs create their own private scope, preventing variables from polluting the global namespace and avoiding naming conflicts with other code, making them essential for maintaining clean and organized JavaScript applications.
+
+Your coding tasks will be creating both anonymous and named IIFEs to see how they execute immediately and create private scope, demonstrating how variables inside an IIFE remain isolated from the global scope and don''t interfere with external code.
+  ',
+  '7eab2450-e292-4abf-9b5a-cb626ca3ab40',
+  false,
+  6,
+  '[{"name":"Understand what an IIFE is and the syntax pattern `(function() { /* code */ })()`"},{"name":"Learn how IIFEs create private scope and prevent global namespace pollution (tie back to scope concepts from previous lessons)"},{"name":"Explore the differences between anonymous and named IIFEs and their use cases"}]'::jsonb,
+  '[{"id":"4-7-immediately-invoked-function-expressions-task-1","name":"Create an anonymous IIFE that logs `\"Anonymous IIFE executed!\"` to the console"},{"id":"4-7-immediately-invoked-function-expressions-task-2","name":"Create a named IIFE called `namedIIFE` that logs `\"Named IIFE executed!\"` to the console"},{"id":"4-7-immediately-invoked-function-expressions-task-3","name":"Create an anonymous IIFE that declares a variable `myVariable` with the value `\"I am function scoped\"` and logs it to the console"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"var myVariable = \"I am global\";\n\n// Do not change the code above\n\n// Task: Create an anonymous IIFE that logs \"Anonymous IIFE executed!\" to the console\n\n// Task: Create a named IIFE called namedIIFE that logs \"Named IIFE executed!\" to the console\n\n// Task: Create an anonymous IIFE that declares a variable myVariable with the value \"I am function scoped\" and logs it to the console\n\n// Do not change the code below\n\nconsole.log(\"myVariable:\", myVariable);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '5-arrays-objects-and-classes',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Arrays, Objects, and Classes',
+  'Work with JavaScript''s essential data structures: arrays, objects, and classes',
+  4
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '05a8c5ce-e354-4bdd-81ba-133aef0f65c9',
+  '5-1-introduction-to-arrays',
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Introduction to Arrays',
+  'Learn to store and manage collections of related data with JavaScript arrays',
+  'In this lesson, you''ll learn about arrays, which allow you to store and manage collections of related data as ordered lists where each item has a specific position called an index. Arrays are everywhere in programming, from shopping carts to playlists, providing the perfect solution for handling multiple pieces of related data.
+
+Your coding tasks will be creating an array of numbers and accessing its elements using zero-based indexing, giving you hands-on experience with fundamental array operations and understanding how the first item is at position 0.
+  ',
+  '8796537d-f9ad-4286-8312-2d41a4096e15',
+  true,
+  0,
+  '[{"name":"Understand what arrays are and their purpose for storing ordered collections of data"},{"name":"Recognize common use cases for arrays in real-world programming"},{"name":"Learn how to access array elements using zero-based indexing"},{"name":"Connect arrays to loop concepts from previous lessons for processing multiple items"}]'::jsonb,
+  '[{"id":"5-1-introduction-to-arrays-task-1","name":"Create an array of numbers from `1` to `5` and assign it to the `numbers` variable"},{"id":"5-1-introduction-to-arrays-task-2","name":"Access the first element of the `numbers` array and assign it to the `firstNumber` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Create an array of numbers from 1 to 5 and assign it to the numbers variable\nlet numbers;\n\n// Task: Access the first element of the numbers array and assign it to the firstNumber variable\nlet firstNumber;\n\n// Do not change the code below\n\nconsole.log(\"numbers:\", numbers);\nconsole.log(\"firstNumber:\", firstNumber);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'a252e096-1cb2-4c05-8700-b621741d10fa',
+  '5-2-basic-array-methods',
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Basic Array Methods',
+  'Master essential array methods for searching, checking, and validating array data',
+  'In this lesson, you''ll learn about powerful built-in array methods that make searching and checking arrays both efficient and elegant. You''ll discover essential methods like `indexOf()` to get positions, `includes()` to check for existence, `find()` to locate specific values, and `every()` and `some()` methods for testing array contents.
+
+Your coding tasks will be using these array methods to search for elements, check for existence, and validate array contents, giving you hands-on experience with practical array operations that solve common programming problems.
+  ',
+  '919d7a7d-297d-4cb7-ab2a-996965a4ae7b',
+  true,
+  1,
+  '[{"name":"Learn how to add and remove elements from an array using `push`, `pop`, `shift`, and `unshift` methods"},{"name":"Master array search methods: `indexOf`, `includes`, and `find` with practical examples"},{"name":"Learn array validation methods: `every` and `some` for testing array contents"},{"name":"Understand when to use each method based on the type of search or validation needed"}]'::jsonb,
+  '[{"id":"5-2-basic-array-methods-task-1","name":"Use the `indexOf` method to find the index of the number `3` in the `numbers` array and assign it to the `indexOfThree` variable"},{"id":"5-2-basic-array-methods-task-2","name":"Use the `includes` method to check if the `numbers` array contains the number `5` and assign it to the `includesFive` variable"},{"id":"5-2-basic-array-methods-task-3","name":"Use the `find` method to find the first number greater than `3` in the `numbers` array and assign it to the `findNumberGreaterThanThree` variable"},{"id":"5-2-basic-array-methods-task-4","name":"Use the `every` method to check if all numbers in the `numbers` array are greater than `0` and assign it to the `everyGreaterThanZero` variable"},{"id":"5-2-basic-array-methods-task-5","name":"Use the `some` method to check if any number in the `numbers` array is greater than `4` and assign it to the `someGreaterThanFour` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const numbers = [1, 2, 3, 4, 5];\n\n// Do not change the code above\n\n// Task: Use the indexOf method to find the index of the number 3 in the numbers array and assign it to the indexOfThree variable\nlet indexOfThree;\n\n// Task: Use the includes method to check if the numbers array contains the number 5 and assign it to the includesFive variable\nlet includesFive;\n\n// Task: Use the find method to find the first number greater than 3 in the numbers array and assign it to the findNumberGreaterThanThree variable\nlet findNumberGreaterThanThree;\n\n// Task: Use the every method to check if all numbers in the numbers array are greater than 0 and assign it to the everyGreaterThanZero variable\nlet everyGreaterThanZero;\n\n// Task: Use the some method to check if any number in the numbers array is greater than 4 and assign it to the someGreaterThanFour variable\nlet someGreaterThanFour;\n\n// Do not change the code below\n\nconsole.log(\"indexOfThree:\", indexOfThree);\nconsole.log(\"includesFive:\", includesFive);\nconsole.log(\"findNumberGreaterThanThree:\", findNumberGreaterThanThree);\nconsole.log(\"everyGreaterThanZero:\", everyGreaterThanZero);\nconsole.log(\"someGreaterThanFour:\", someGreaterThanFour);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '1ac4dc9d-1d5e-40f6-b4aa-01151cb82ebd',
+  '5-3-advanced-array-methods',
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Advanced Array Methods',
+  'Transform and process array data with powerful iteration methods like map, filter, and reduce',
+  'In this lesson, you''ll learn about advanced array methods that transform how you process and manipulate data, going beyond simple searching to iterate, transform, filter, and combine values. You''ll discover `forEach()`, `map()`, `filter()`, and `reduce()` methods that leverage callback functions for sophisticated data processing.
+
+Your coding tasks will be using these advanced array methods to iterate through arrays, create transformed copies, filter elements based on criteria, and combine all elements into single values, demonstrating how these methods revolutionize data processing.
+  ',
+  'ab6a4435-4623-48da-8e9e-3e5eb899ebe5',
+  false,
+  2,
+  '[{"name":"Master `forEach()` for executing functions on each array element without creating new arrays (link to loops lesson)"},{"name":"Learn `map()` for transforming arrays and creating new arrays from existing data (link to loops lesson)"},{"name":"Understand `filter()` for creating new arrays containing only elements that meet specific criteria"},{"name":"Explore `reduce()` for combining array elements into single values through accumulation"}]'::jsonb,
+  '[{"id":"5-3-advanced-array-methods-task-1","name":"Use the `forEach` method on the `numbers` array and add each element using the `push` method to the `forEachResult` array"},{"id":"5-3-advanced-array-methods-task-2","name":"Use the `map` method to create a new array with all the numbers doubled and assign the result to the `mapDoubled` variable"},{"id":"5-3-advanced-array-methods-task-3","name":"Use the `filter` method to create a new array containing only numbers greater than `2` and assign the result to the `filterGreaterThanTwo` variable"},{"id":"5-3-advanced-array-methods-task-4","name":"Use the `reduce` method to calculate the sum of all numbers in the array and assign the result to the `reduceSum` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const numbers = [1, 2, 3, 4, 5];\n\n// Do not change the code above\n\n// Task: Use the forEach method on the numbers array and add each element using the push method to the forEachResult array\nconst forEachResult = [];\n\n// Task: Use the map method to create a new array with all the numbers doubled and assign the result to the mapDoubled variable\nlet mapDoubled;\n\n// Task: Use the filter method to create a new array containing only numbers greater than 2 and assign the result to the filterGreaterThanTwo variable\nlet filterGreaterThanTwo;\n\n// Task: Use the reduce method to calculate the sum of all numbers in the array and assign the result to the reduceSum variable\nlet reduceSum;\n\n// Do not change the code below\n\nconsole.log(\"numbers:\", numbers);\nconsole.log(\"forEachResult:\", forEachResult);\nconsole.log(\"mapDoubled:\", mapDoubled);\nconsole.log(\"filterGreaterThanTwo:\", filterGreaterThanTwo);\nconsole.log(\"reduceSum:\", reduceSum);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ab41252c-3e8f-43b9-95ab-69e812be47cf',
+  '5-4-introduction-to-objects',
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Introduction to Objects',
+  'Organize related data with meaningful names using JavaScript objects and key-value pairs',
+  'In this lesson, you''ll learn about objects, JavaScript''s solution for organizing related information using meaningful names instead of numeric positions. Unlike arrays where you access items by position, objects let you access data by meaningful names, making your code more readable and maintainable.
+
+Your coding tasks will be creating objects with key-value pairs, accessing their properties using both dot notation and bracket notation, giving you hands-on experience with structured data organization and property access methods.
+  ',
+  '3ae9fff0-2872-4484-a378-339a1739791c',
+  false,
+  3,
+  '[{"name":"Understand what objects are and their purpose for storing structured, keyed data collections with real-world use cases"},{"name":"Master property access using dot notation and bracket notation, understanding the differences and when to use each"},{"name":"Compare objects to arrays, understanding when to use structured data versus ordered lists"}]'::jsonb,
+  '[{"id":"5-4-introduction-to-objects-task-1","name":"Create an object representing a person with a key `firstName` with the value `\"John\"` and a key `lastName` with the value `\"Doe\"` and assign it to the `person` variable"},{"id":"5-4-introduction-to-objects-task-2","name":"Access the `firstName` property of the `person` object using dot notation and assign it to the `firstName` variable"},{"id":"5-4-introduction-to-objects-task-3","name":"Access the `lastName` property of the `person` object using bracket notation and assign it to the `lastName` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Create an object with a key firstName with the value \"John\" and a key lastName with the value \"Doe\" and assign it to the person variable\nlet person;\n\n// Task: Access the firstName property of the person object using dot notation and assign it to the firstName variable\nlet firstName;\n\n// Task: Access the lastName property of the person object using bracket notation and assign it to the lastName variable\nlet lastName;\n\n// Do not change the code below\n\nconsole.log(\"person:\", person);\nconsole.log(\"firstName:\", firstName);\nconsole.log(\"lastName:\", lastName);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'bfd4e683-f772-429a-98cc-c5311946bae9',
+  '5-5-object-methods',
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Object Methods',
+  'Dynamically modify objects and work with built-in object methods for data manipulation',
+  'In this lesson, you''ll learn how to dynamically modify objects and work with JavaScript''s powerful built-in object methods. You''ll master techniques for adding, updating, and deleting object properties, plus discover `Object.keys()`, `Object.values()`, and `Object.entries()` methods for extracting and working with object data.
+
+Your coding tasks will be dynamically manipulating object properties using dot and bracket notation, then using built-in object methods to extract keys, values, and entries, giving you comprehensive experience with object manipulation techniques.
+  ',
+  '086667c5-05bd-4548-8101-96dce1f0c40b',
+  false,
+  4,
+  '[{"name":"Learn how to dynamically add, update, and delete properties on objects using dot notation and bracket notation with practical examples"},{"name":"Master built-in object methods: `Object.keys()`, `Object.values()`, and `Object.entries()` with examples of how to iterate over object properties using loops"}]'::jsonb,
+  '[{"id":"5-5-object-methods-task-1","name":"Add an `age` property to the `person` object with the value `30` using dot notation"},{"id":"5-5-object-methods-task-2","name":"Update the `firstName` property to the `person` object with the value `\"James\"` using bracket notation"},{"id":"5-5-object-methods-task-3","name":"Delete the `lastName` property from the `person` object using the `delete` operator"},{"id":"5-5-object-methods-task-4","name":"Use `Object.keys` to access the keys of the `person` object and assign it to the `objectKeys` variable"},{"id":"5-5-object-methods-task-5","name":"Use `Object.values` to access the values of the `person` object and assign it to the `objectValues` variable"},{"id":"5-5-object-methods-task-6","name":"Use `Object.entries` to access the entries of the `person` object and assign it to the `objectEntries` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const person = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n};\n\n// Do not change the code above\n\n// Task: Add an age property to the person object with the value 30 using dot notation\n\n// Task: Update the firstName property to the person object with the value \"James\" using bracket notation\n\n// Task: Delete the lastName property from the person object using the delete operator\n\n// Task: Use Object.keys to access the keys of the person object and assign it to the objectKeys variable\nlet objectKeys;\n\n// Task: Use Object.values to access the values of the person object and assign it to the objectValues variable\nlet objectValues;\n\n// Task: Use Object.entries to access the entries of the person object and assign it to the objectEntries variable\nlet objectEntries;\n\n// Do not change the code below\n\nconsole.log(\"person:\", person);\nconsole.log(\"objectKeys:\", objectKeys);\nconsole.log(\"objectValues:\", objectValues);\nconsole.log(\"objectEntries:\", objectEntries);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '01a85849-b708-46bf-9bcc-2dfefc056972',
+  '5-6-introduction-to-classes',
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Introduction to Classes',
+  'Create blueprints for objects with classes and constructors for organized code structure',
+  'In this lesson, you''ll learn about classes, which are blueprints for creating objects with shared structure and behavior. Classes build on the object concepts you''ve learned, providing a cleaner way to create multiple objects with the same properties and methods, making your code more organized and reusable.
+
+Your coding tasks will be creating a simple class with a constructor, then creating instances of that class, giving you hands-on experience with class syntax and understanding how classes serve as templates for object creation.
+  ',
+  'fd388cf5-6e2a-438c-a905-4f7f404edd34',
+  false,
+  5,
+  '[{"name":"Understand what classes are and how they serve as blueprints for creating objects (building on object concepts from previous lessons)"},{"name":"Learn the basic class syntax including the `class` keyword and constructor method"},{"name":"Understand the concept of instances with the new keyword"}]'::jsonb,
+  '[{"id":"5-6-introduction-to-classes-task-1","name":"Create a `Person` class with a `constructor` method that takes `firstName` and `lastName` parameters and assigns them to `this.firstName` and `this.lastName`"},{"id":"5-6-introduction-to-classes-task-2","name":"Create an instance of the `Person` class with firstName `\"John\"` and lastName `\"Doe\"` and assign it to the `person1` variable"},{"id":"5-6-introduction-to-classes-task-3","name":"Create another instance of the `Person` class with firstName `\"Jane\"` and lastName `\"Smith\"` and assign it to the `person2` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Create a Person class with a constructor that takes firstName and lastName parameters and assigns them to this.firstName and this.lastName\n\n// Task: Create an instance of the Person class with firstName \"John\" and lastName \"Doe\" and assign it to the person1 variable\nlet person1;\n\n// Task: Create another instance of the Person class with firstName \"Jane\" and lastName \"Smith\" and assign it to the person2 variable\nlet person2;\n\n// Do not change the code below\n\nconsole.log(\"person1:\", person1);\nconsole.log(\"person2:\", person2);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '0f5a66b3-ca04-4753-995e-8f1e11c97e0d',
+  '5-7-class-methods-and-properties',
+  '71a0d6e3-74fb-4384-bcc6-5d9b74c7b706',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Class Methods and Properties',
+  'Add behavior to classes with methods and understand how `this` works in class context',
+  'In this lesson, you''ll learn how to add methods to classes, which are functions that belong to the class and can access the class''s properties using the `this` keyword. Methods allow your classes to have behavior, not just data, making them powerful tools for organizing both data and the actions that work with that data.
+
+Your coding tasks will be adding methods to a class that can access and manipulate the class''s properties, demonstrating how `this` refers to the specific instance of the class and how methods can perform actions using the object''s data.
+  ',
+  '326e4aa6-86c2-4159-9eb6-6b7ae94cdf00',
+  false,
+  6,
+  '[{"name":"Learn how to define methods inside classes and understand their purpose for adding behavior to objects"},{"name":"Understand how the `this` keyword works in class methods to access instance properties"}]'::jsonb,
+  '[{"id":"5-7-class-methods-and-properties-task-1","name":"Add a `getFullName` method to the `Person` class that returns the full name by combining `this.firstName` and `this.lastName` using a template literal"},{"id":"5-7-class-methods-and-properties-task-2","name":"Add a `greet` method to the `Person` class that returns a greeting message using `this.firstName`"},{"id":"5-7-class-methods-and-properties-task-3","name":"Call the `getFullName` method on the `person` instance and assign the result to the `fullName` variable"},{"id":"5-7-class-methods-and-properties-task-4","name":"Call the `greet` method on the `person` instance and assign the result to the `greeting` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"class Person {\n  constructor(firstName, lastName) {\n    this.firstName = firstName;\n    this.lastName = lastName;\n  }\n\n  // Task: Add a getFullName method to the Person class that returns the full name by combining this.firstName and this.lastName using a template literal\n\n  // Task: Add a greet method to the Person class that returns a greeting message using this.firstName\n  // Return the greeting message `Hello, ${this.firstName}!`\n}\n\nconst person = new Person(\"John\", \"Doe\");\n\n// Task: Call the getFullName method on the person instance and assign the result to the fullName variable\nlet fullName;\n\n// Task: Call the greet method on the person instance and assign the result to the greeting variable\nlet greeting;\n\n// Do not change the code below\n\nconsole.log(\"person:\", person);\nconsole.log(\"fullName:\", fullName);\nconsole.log(\"greeting:\", greeting);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '6-core-javascript-concepts',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Core JavaScript Concepts',
+  'Master advanced concepts including error handling, asynchronous programming, and HTTP requests',
+  5
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '96b5e071-9ce5-41cf-ab72-b111ef7f4bad',
+  '6-1-pass-by-value-vs-pass-by-reference',
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Pass by Value vs. Pass by Reference',
+  'Understand how JavaScript handles data differently for primitives and objects when copying and passing',
+  'In this lesson, you''ll learn how JavaScript handles data differently when copying or passing primitive values (numbers, strings, booleans) versus reference values (objects, arrays). Primitive values are copied by value with independent copies, while reference values are copied by reference where multiple variables can point to the same object in memory.
+
+Your coding tasks will be experimenting with copying different data types to observe how changes to copied primitives don''t affect the original, while changes to copied objects do affect the original, demonstrating these fundamental JavaScript behaviors.
+  ',
+  '7a36b670-e500-448a-ab75-645b3dddef9a',
+  true,
+  0,
+  '[{"name":"Understand the distinction between pass by value and pass by reference (variables, objects, arrays) (with practical examples and use cases)"},{"name":"Understand how primitive values are copied by value and reference values are copied by reference (with practical examples)"}]'::jsonb,
+  '[{"id":"6-1-pass-by-value-vs-pass-by-reference-task-1","name":"Assign the `originalNumber` variable to the `copiedNumber` variable"},{"id":"6-1-pass-by-value-vs-pass-by-reference-task-2","name":"Update the `copiedNumber` variable to have a value of `20`"},{"id":"6-1-pass-by-value-vs-pass-by-reference-task-3","name":"Assign the `originalPerson` variable to the `copiedPerson` variable"},{"id":"6-1-pass-by-value-vs-pass-by-reference-task-4","name":"Update the `copiedPerson` object `age` property to have a value of `30`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const originalNumber = 10;\nconst originalPerson = {\n  name: \"John\",\n  age: 20,\n};\n\n// Do not change the code above\n\n// Task: Assign the originalNumber variable to the copiedNumber variable\nlet copiedNumber;\n\n// Task: Update the copiedNumber variable to have a value of 20\n\n// Task: Assign the originalPerson variable to the copiedPerson variable\nlet copiedPerson;\n\n// Task: Update the copiedPerson object age property to have a value of 30\n\n// Do not change the code below\n\nconsole.log(\"originalNumber:\", originalNumber);\nconsole.log(\"copiedNumber:\", copiedNumber);\nconsole.log(\"originalPerson:\", originalPerson);\nconsole.log(\"copiedPerson:\", copiedPerson);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c6e3daa0-4275-495e-94f2-1a661a3a15ec',
+  '6-2-immutability-and-copying-data',
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Immutability and Copying Data',
+  'Learn to create safe copies of data using immutability principles and modern JavaScript techniques',
+  'In this lesson, you''ll learn about immutability and safe data copying, understanding how to create independent copies of your data to prevent unexpected side effects. Immutability is the practice of never changing existing data, instead creating new copies with your desired modifications using methods like spread syntax and `Object.assign()`.
+
+Your coding tasks will be using spread syntax to create shallow copies of arrays and objects, then modifying the copies to demonstrate how proper copying prevents unintended changes to the original data structures.
+  ',
+  'c663784e-e88a-4306-bd18-edd7f54fc715',
+  true,
+  1,
+  '[{"name":"Explain why immutability is important in JavaScript (with practical examples and use cases, pitfalls, junior mistakes, etc.)"},{"name":"Learn methods for shallow copying arrays and objects (with practical examples and use cases, pitfalls, junior mistakes, etc.)"}]'::jsonb,
+  '[{"id":"6-2-immutability-and-copying-data-task-1","name":"Use the spread syntax (`...`) to create a shallow copy of the `originalArray` array and assign it to the `copiedArray` variable"},{"id":"6-2-immutability-and-copying-data-task-2","name":"Use the `push` method to add the number `6` to the `copiedArray` array"},{"id":"6-2-immutability-and-copying-data-task-3","name":"Use the spread syntax (`...`) to create a shallow copy of the `originalUser` object and assign it to the `copiedUser` variable"},{"id":"6-2-immutability-and-copying-data-task-4","name":"Update the `copiedUser` object `age` property to have a value of `30`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const originalArray = [1, 2, 3, 4, 5];\nconst originalUser = {\n  name: \"John\",\n  age: 20,\n};\n\n// Do not change the code above\n\n// Task: Use the spread syntax ... to create a shallow copy of the originalArray array and assign it to the copiedArray variable\nlet copiedArray;\n\n// Task: Use the push method to add the number 6 to the copiedArray array\n\n// Task: Use the spread syntax ... to create a shallow copy of the originalUser object and assign it to the copiedUser variable\nlet copiedUser;\n\n// Task: Update the copiedUser object age property to have a value of 30\n\n// Do not change the code below\n\nconsole.log(\"originalArray:\", originalArray);\nconsole.log(\"copiedArray:\", copiedArray);\nconsole.log(\"originalUser:\", originalUser);\nconsole.log(\"copiedUser:\", copiedUser);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ee8754e7-15e7-4588-8031-079ed79d8e74',
+  '6-3-error-handling-with-try-catch',
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Error Handling with try...catch',
+  'Master robust error handling with try-catch blocks for bulletproof applications',
+  'In this lesson, you''ll learn how to make your code robust by handling errors gracefully using `try...catch` statements. You''ll discover how to "try" potentially problematic code and "catch" any errors that occur, plus use the optional `finally` block for cleanup code that runs regardless of success or failure.
+
+Your coding tasks will be implementing `try...catch` blocks to handle functions that throw errors, setting variables to track which blocks of code execute, demonstrating how proper error handling prevents crashes and creates smooth user experiences.
+  ',
+  '573270c1-9e96-4f3c-bdb8-4c9ced6ad2bd',
+  false,
+  2,
+  '[{"name":"Understand why error handling is essential for robust applications and better user experiences (practical examples of throwing errors, junior mistakes, etc.)"},{"name":"Understand the error instance in JS and how to use it/when it can occur"},{"name":"Understand the syntax and usage of `try...catch` and `finally` blocks (with practical examples and use cases)"},{"name":"Understand how to access the error message from the error object and what the error object is (and how it can differ based on the type of error)"}]'::jsonb,
+  '[{"id":"6-3-error-handling-with-try-catch-task-1","name":"Call the `willThrowError` function in a `try...catch` block"},{"id":"6-3-error-handling-with-try-catch-task-2","name":"Set the `hasReachedTryBlock` variable to `true` when the code reaches the `try` block (before the `willThrowError` function is called)"},{"id":"6-3-error-handling-with-try-catch-task-3","name":"Set the `hasReachedCatchBlock` variable to `true` when the code reaches the `catch` block"},{"id":"6-3-error-handling-with-try-catch-task-4","name":"Set the `errorMessage` variable to `error.message` when the code reaches the `catch` block"},{"id":"6-3-error-handling-with-try-catch-task-5","name":"Set the `hasReachedFinallyBlock` variable to `true` when the code reaches the `finally` block"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"function willThrowError() {\n  throw new Error(\"I am an error\");\n}\n\n// Do not change the code above\n\nlet hasReachedTryBlock;\nlet hasReachedCatchBlock;\nlet errorMessage;\nlet hasReachedFinallyBlock;\n\n// Task: Call the willThrowError function in a try...catch block\n// Task: Set the hasReachedTryBlock to true when the code reaches the try block (before the willThrowError function is called)\n// Task: Set the hasReachedCatchBlock to true when the code reaches the catch block\n// Task: Set the errorMessage to error.message when the code reaches the catch block\n// Task: Set the hasReachedFinallyBlock to true when the code reaches the finally block\n\n// Do not change the code below\n\nconsole.log(\"hasReachedTryBlock:\", hasReachedTryBlock);\nconsole.log(\"hasReachedCatchBlock:\", hasReachedCatchBlock);\nconsole.log(\"errorMessage:\", errorMessage);\nconsole.log(\"hasReachedFinallyBlock:\", hasReachedFinallyBlock);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'f12bd978-3456-489f-98e1-524567c42c1b',
+  '6-4-understanding-synchronous-javascript',
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Understanding Synchronous JavaScript',
+  'Explore how JavaScript executes code line by line and the blocking nature of synchronous operations',
+  'In this lesson, you''ll learn about synchronous JavaScript execution, understanding how JavaScript''s single-threaded nature means it can only execute one piece of code at a time. Synchronous code runs line by line, blocking execution until each operation completes, which can make applications unresponsive during long-running operations.
+
+Your coding tasks will be calling functions that execute thread blocking operations to observe how synchronous code blocks execution, demonstrating the limitations that lead to the need for asynchronous programming techniques.
+  ',
+  '653f1633-6b18-4ea8-9c6f-d3b7d357ef99',
+  false,
+  3,
+  '[{"name":"Understand synchronous code execution in JavaScript''s single-threaded environment (mention asynchronous but not covered in this lesson)"},{"name":"Recognize and demonstrate blocking operations with practical examples (with practical examples and use cases)"}]'::jsonb,
+  '[{"id":"6-4-understanding-synchronous-javascript-task-1","name":"Call the `synchronousFunction` function to see how it blocks the execution of the code"}]'::jsonb,
+  '{"template":"vanilla","files":{"sandbox.config.json":{"code":"{\"infiniteLoopProtection\":false}","hidden":true},"index.js":{"code":"function formatTime(date) {\n  const hours = String(date.getHours()).padStart(2, \"0\");\n  const minutes = String(date.getMinutes()).padStart(2, \"0\");\n  const seconds = String(date.getSeconds()).padStart(2, \"0\");\n  return `${hours}:${minutes}:${seconds}`;\n}\n\nfunction synchronousFunction() {\n  const start = new Date();\n  console.log(\"Starting function execution at\", formatTime(start));\n\n  // This will block JavaScript execution for exactly 3 seconds\n  while (Date.now() - start.getTime() < 3000) {\n    // JavaScript is completely blocked during this time\n    // No other code can run until this loop finishes\n  }\n\n  const end = new Date();\n  console.log(\"Function execution completed at\", formatTime(end));\n}\n\n// Do not change the code above\n\n// Task: Call the synchronousFunction function to see how it blocks the execution of the code\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ecdc347b-ce2b-46f8-9eb9-39b4ddba01ac',
+  '6-5-timeouts-and-intervals',
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Timeouts and Intervals',
+  'Discover asynchronous programming with setTimeout and setInterval for non-blocking code execution',
+  'In this lesson, you''ll learn about asynchronous programming with timers using `setTimeout()` and `setInterval()` functions that allow you to schedule code execution for later without blocking your program. Timers work by leveraging JavaScript''s event loop and use callback functions to execute code when timers expire.
+
+Your coding tasks will be using `setTimeout()` for delayed execution, `setInterval()` for repeated execution, and `clearInterval()` to stop intervals, demonstrating how timers solve blocking problems and enable non-blocking asynchronous operations.
+  ',
+  'fcf81b29-215b-4121-94e1-c1717e00d856',
+  false,
+  4,
+  '[{"name":"Understand the concept of asynchronous programming (compare to synchronous programming in previous lesson)"},{"name":"Learn how to use `setTimeout()` to delay code execution without blocking the main thread"},{"name":"Learn how to use `setInterval()` and `clearInterval()` to execute code repeatedly (with practical examples and use cases)"},{"name":"Understand the concept of the event loop and how it works (mention the event loop and how it ties into the callback queue, but keep it simple and beginner)"}]'::jsonb,
+  '[{"id":"6-5-timeouts-and-intervals-task-1","name":"Update the `displayDelayedMessage` function to use `setTimeout()` to log `delayedMessage` using `console.log()` after `2` seconds without blocking the rest of the code"},{"id":"6-5-timeouts-and-intervals-task-2","name":"Use `setInterval()` to decrement the `countdown` variable by `1` every `1` second and assign the interval to the `countdownInterval` variable"},{"id":"6-5-timeouts-and-intervals-task-3","name":"Use `setTimeout()` to clear the `countdownInterval` variable after `5` seconds using the `clearInterval()` function"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"let countdown = 5;\n\n// Do not change the code above\n\n// Task: Update the displayDelayedMessage function to use setTimeout() to log delayedMessage using console.log() after 2 seconds without blocking the rest of the code\nfunction displayDelayedMessage() {\n  const returnMessage = \"I am not blocked\";\n\n  const delayedMessage = \"I am delayed\";\n\n  return returnMessage;\n}\n\n// Task: Use setInterval() to decrement the countdown variable by 1 every second and assign the interval to the countdownInterval variable\nlet countdownInterval;\n\n// Task: Use setTimeout() to clear the countdownInterval variable after 5 seconds using the clearInterval() function\n\n// Do not change the code below\n\nconsole.log(\"countdown:\", countdown);\nconsole.log(\"displayDelayedMessage:\", displayDelayedMessage());\nconsole.log(\"countdownInterval:\", countdownInterval);\nsetTimeout(() => console.log(\"countdown after 5 seconds:\", countdown), 5000);\nsetTimeout(() => console.log(\"countdown after 10 seconds:\", countdown), 10000);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '8d36e81f-9d95-4a23-a1a8-ddf32ccc2823',
+  '6-6-introduction-to-promises',
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Introduction to Promises',
+  'Master JavaScript Promises for elegant handling of asynchronous operations that can succeed or fail',
+  'In this lesson, you''ll learn about Promises, JavaScript''s elegant solution for handling complex asynchronous operations that can either succeed or fail. A Promise represents the eventual completion or failure of an asynchronous operation with three states: pending, fulfilled, and rejected.
+
+Your coding tasks will be creating Promises using the Promise constructor with `setTimeout()`, then consuming them using `.then()` and `.catch()` methods to handle successful results and errors gracefully.
+  ',
+  '85440be2-1926-4217-b66b-35c0c480d6f5',
+  false,
+  5,
+  '[{"name":"Understand what Promises are and what their purpose is (mention how they are used to handle asynchronous operations and how they are different from callbacks and how they are different than synchronous code)"},{"name":"Understand the three states of a Promise: pending, fulfilled, and rejected (with practical examples and use cases)"},{"name":"Use `.then()` and `.catch()` methods to handle Promise results and errors gracefully (with practical examples and use cases)"}]'::jsonb,
+  '[{"id":"6-6-introduction-to-promises-task-1","name":"Implement the `resolvePromise` Promise that resolves after `2` seconds with a success message `\"Success\"` using `setTimeout()`"},{"id":"6-6-introduction-to-promises-task-2","name":"Implement the `rejectPromise` Promise that rejects after `2` seconds with an error message `\"Error\"` using `setTimeout()`"},{"id":"6-6-introduction-to-promises-task-3","name":"Use `.then()` to handle the `resolvePromise` Promise and assign the result to the `resolvePromiseResult` variable"},{"id":"6-6-introduction-to-promises-task-4","name":"Use `.catch()` to handle the `rejectPromise` Promise and assign the result to the `rejectPromiseError` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Implement the resolvePromise Promise that resolves after 2 seconds with a success message \"Success\" using setTimeout()\nlet resolvePromise;\n\n// Task: Implement the rejectPromise Promise that rejects after 2 seconds with an error message \"Error\" using setTimeout()\nlet rejectPromise;\n\n// Task: Use .then() to handle the resolvePromise Promise and assign the result to the resolvePromiseResult variable\nlet resolvePromiseResult;\n\n// Task: Use .catch() to handle the rejectPromise Promise and assign the result to the rejectPromiseError variable\nlet rejectPromiseError;\n\n// Do not change the code below\n\nsetTimeout(\n  () => console.log(\"resolvePromiseResult:\", resolvePromiseResult),\n  2500,\n);\nsetTimeout(() => console.log(\"rejectPromiseError:\", rejectPromiseError), 2500);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '165693f7-5079-4f87-85f6-29ebec3166b0',
+  '6-7-fetch-api-and-http-requests',
+  '50646b97-07c5-4e9f-b1bf-e379a0ea6868',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Fetch API and HTTP Requests',
+  'Make HTTP requests to servers and APIs using the modern Fetch API with async/await',
+  'In this lesson, you''ll learn about the Fetch API, JavaScript''s modern Promise-based solution for making HTTP requests to servers and APIs. The `fetch()` function returns a Promise that resolves with a Response object, making it perfect for async/await patterns, and requires a two-step process of getting the response and then extracting the data.
+
+Your coding tasks will be making real HTTP requests using `fetch()` with async/await syntax, extracting JSON data using the `.json()` method, and handling network errors using `try...catch` blocks to demonstrate practical API communication.
+  ',
+  '9777356f-dbc0-46ce-aab3-a4408811b4ff',
+  false,
+  6,
+  '[{"name":"Understand what the Fetch API is and how it uses Promises to handle HTTP requests (no async/await)"},{"name":"Learn to make GET requests using `fetch()` and extract data using `.json()` and `.text()` methods (.then() chaining)"},{"name":"Understand errors that can occur when making HTTP requests and how to handle/access them (.catch())"}]'::jsonb,
+  '[{"id":"6-7-fetch-api-and-http-requests-task-1","name":"Implement the `fetchPostData` function that uses `fetch()` to make a GET request to the API endpoint"},{"id":"6-7-fetch-api-and-http-requests-task-2","name":"Use `.then()` to extract JSON data from the response using the `.json()` method"},{"id":"6-7-fetch-api-and-http-requests-task-3","name":"Use `.then()` to set the `postData` variable to the JSON data"},{"id":"6-7-fetch-api-and-http-requests-task-4","name":"Use `.catch()` to catch any error and use `console.error()` to log the error message"},{"id":"6-7-fetch-api-and-http-requests-task-5","name":"Call the `fetchPostData` function"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const API_URL = \"https://jsonplaceholder.typicode.com/posts/1\";\nlet postData;\n\n// Do not change the code above\n\n// Task: Implement the fetchPostData function that uses fetch() to make a GET request to the API_URL endpoint\n// Task: Use .then() to extract JSON data from the response using the .json() method\n// Task: Use .then() to set the postData variable to the JSON data\n// Task: Use .catch() to catch any error and use console.error() to log the error message\nfunction fetchPostData() {}\n\n// Task: Call the fetchPostData function and assign the result to the postData variable\n\n// Do not change the code below\n\nsetTimeout(() => console.log(\"postData:\", postData), 2000);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '7-javascript-in-the-browser',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'JavaScript in the Browser',
+  'Create interactive web experiences with DOM manipulation and event handling',
+  6
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '5115f53d-da3b-4b7a-a227-b5d4cc33a8f5',
+  '7-1-the-document-object-model-dom',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'The Document Object Model (DOM)',
+  'Discover how HTML elements become JavaScript objects that you can manipulate and control',
+  'In this lesson, you''ll learn about the Document Object Model (DOM), which represents your HTML document as a tree of JavaScript objects that you can navigate, modify, and control. Every HTML element becomes a programmable object with properties and methods, making the DOM your JavaScript''s window into the web page.
+
+Your coding tasks will be connecting JavaScript to HTML using the `<script>` tag and understanding how to link external JavaScript files, giving you the foundation for making web pages interactive and dynamic.
+  ',
+  '977fb656-a969-4aa3-b2e0-1d45c06b2d49',
+  true,
+  0,
+  '[{"name":"Understand what the DOM is and its crucial role in connecting JavaScript to web pages"},{"name":"Understand the practical applications of embedding JavaScript in HTML"},{"name":"Understand how the `<script>` tag works and its different attributes to connect JavaScript to HTML"},{"name":"Learn about internal and external JavaScript scripts (inline code, internal scripts, external files)"}]'::jsonb,
+  '[{"id":"7-1-the-document-object-model-dom-task-1","name":"Add the `index.js` file to the `src` attribute of the `script` tag"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"console.log(\"Hello from JavaScript!\");\n","hidden":false,"active":false,"readOnly":false,"asset":false},"index.html":{"code":"<!doctype html>\n<html>\n  <head>\n    <title>Cosden Code</title>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"stylesheet\" href=\"/styles.css\" />\n  </head>\n  <body>\n    <h1>Cosden Code</h1>\n\n    <!-- Task: Add the index.js file to the src attribute of the script tag -->\n    <script src=\"\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '735b3316-2532-40d0-a473-4591b9a7446c',
+  '7-2-selecting-dom-elements',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Selecting DOM Elements',
+  'Master the essential methods for finding and selecting specific HTML elements in the DOM',
+  'In this lesson, you''ll learn the essential skill of selecting DOM elements using both modern methods like `querySelector()` and `querySelectorAll()` (which use CSS selector syntax) and traditional methods like `getElementById()` and `getElementsByClassName()`. Understanding when to use each method is crucial since some return single elements while others return collections.
+
+Your coding tasks will be selecting elements using various criteria including IDs, classes, and CSS selectors, giving you hands-on practice with the different selection methods and their specific use cases.
+  ',
+  '42425587-0872-45c2-abe0-a7c3e3f427ad',
+  true,
+  1,
+  '[{"name":"Understand how we can use JavaScript to select and manipulate HTML elements (since we have script tag now in the HTML, we can access everything in that HTML)"},{"name":"Master modern selection methods: `querySelector()` and `querySelectorAll()` alongside traditional methods like `getElementById()` and `getElementsByClassName()`"},{"name":"Understand the differences between single element selection and collection-based selection methods"}]'::jsonb,
+  '[{"id":"7-2-selecting-dom-elements-task-1","name":"Get the first nav link that has the `\"nav-link\"` class using `querySelector()` and assign it to the `firstNavLink` variable"},{"id":"7-2-selecting-dom-elements-task-2","name":"Get all nav links that have the `\"nav-link\"` class using `querySelectorAll()` and assign it to the `allNavLinks` variable"},{"id":"7-2-selecting-dom-elements-task-3","name":"Get the header element with the `\"page-header\"` ID using `getElementById()` and assign it to the `header` variable"},{"id":"7-2-selecting-dom-elements-task-4","name":"Get all paragraphs that have the `\"paragraph\"` class using `getElementsByClassName()` and assign it to the `allParagraphs` variable"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"// Task: Get the first nav link that has the \"nav-link\" class using querySelector() and assign it to the firstNavLink variable\nlet firstNavLink;\n\n// Task: Get all nav links that have the \"nav-link\" class using querySelectorAll() and assign it to the allNavLinks variable\nlet allNavLinks;\n\n// Task: Get the header element with the \"page-header\" ID using getElementById() and assign it to the header variable\nlet header;\n\n// Task: Get all paragraphs that have the \"paragraph\" class using getElementsByClassName() and assign it to the allParagraphs variable\nlet allParagraphs;\n\n// Do not change the code below\n\nconsole.log(\"firstNavLink:\", firstNavLink);\nconsole.log(\"allNavLinks:\", allNavLinks);\nconsole.log(\"header:\", header);\nconsole.log(\"allParagraphs:\", allParagraphs);\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.html":{"code":"<!doctype html>\n<html>\n  <head>\n    <title>Cosden Code</title>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"stylesheet\" href=\"/styles.css\" />\n  </head>\n  <body>\n    <header id=\"page-header\">\n      <nav>\n        <a href=\"#\" class=\"nav-link\">Home</a>\n        <a href=\"#\" class=\"nav-link\">About</a>\n        <a href=\"#\" class=\"nav-link\">Contact</a>\n      </nav>\n    </header>\n\n    <main>\n      <p class=\"paragraph\">Hello, World!</p>\n      <p class=\"paragraph\">Hello, World!</p>\n    </main>\n\n    <script src=\"index.js\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '06130f2d-6e1d-4e66-b026-b8e403c345fa',
+  '7-3-manipulating-element-content-and-styles',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Manipulating Element Content and Styles',
+  'Learn to dynamically change element content and appearance using JavaScript DOM properties',
+  'In this lesson, you''ll learn to manipulate element content and styles using JavaScript properties like `textContent` for plain text, `innerHTML` for HTML markup, and `innerText` for visible text. You''ll also discover how to modify element styles using the `style` property for direct CSS changes and class manipulation with `classList`.
+
+Your coding tasks will be changing element content using different properties, modifying styles directly, and applying CSS classes, giving you hands-on experience with the fundamental techniques for creating dynamic user interfaces.
+  ',
+  '7ffe943d-d54f-418f-b5bc-4f292e0ee55e',
+  false,
+  2,
+  '[{"name":"Understand the differences between `textContent`, `innerHTML`, and `innerText` properties for content manipulation (and when to use each, how to use each)"},{"name":"Understand how to modify element styles using the `style` property and CSS class manipulation with `classList`"}]'::jsonb,
+  '[{"id":"7-3-manipulating-element-content-and-styles-task-1","name":"Change the text of `heading` to `\"changed\"` using the `textContent` property"},{"id":"7-3-manipulating-element-content-and-styles-task-2","name":"Change the HTML inside `description` to `\"<strong>changed</strong>\"` using the `innerHTML` property"},{"id":"7-3-manipulating-element-content-and-styles-task-3","name":"Change the inner text of `innerText` to `\"changed\"` using the `innerText` property"},{"id":"7-3-manipulating-element-content-and-styles-task-4","name":"Change the `color` of `heading` to `\"red\"` using the `style` property"},{"id":"7-3-manipulating-element-content-and-styles-task-5","name":"Add the `\"highlight\"` class to `heading` using the `classList` property"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"const heading = document.getElementById(\"heading\");\nconst description = document.getElementById(\"description\");\nconst innerText = document.getElementById(\"inner-text\");\n\n// Do not change the code above\n\n// Task: Change the text of heading to \"changed\" using the textContent property\n\n// Task: Change the HTML inside description to \"<strong>changed</strong>\" using the innerHTML property\n\n// Task: Change the inner text of innerText to \"changed\" using the innerText property\n\n// Task: Change the color of heading to \"red\" using the style property\n\n// Task: Add the \"highlight\" class to heading using the classList property\n\n// Do not change the code below\n\nconsole.log(\"heading:\", heading);\nconsole.log(\"description:\", description);\nconsole.log(\"innerText:\", innerText);\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.html":{"code":"<!doctype html>\n<html>\n  <head>\n    <head>\n      <title>Cosden Code</title>\n      <meta charset=\"UTF-8\" />\n      <link rel=\"stylesheet\" href=\"/styles.css\" />\n    </head>\n    <style>\n      .highlight {\n        background-color: yellow;\n      }\n    </style>\n  </head>\n  <body>\n    <h1 id=\"heading\">Hello, World!</h1>\n    <p id=\"description\">This is a description</p>\n    <div>\n      <span id=\"inner-text\">Original content</span>\n    </div>\n\n    <script src=\"index.js\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '442fad6c-8b0e-4fc4-8700-e74124cac0d6',
+  '7-4-working-with-element-attributes',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Working with Element Attributes',
+  'Control element behavior and functionality by manipulating HTML attributes with JavaScript',
+  'In this lesson, you''ll learn to control element behavior and functionality by manipulating HTML attributes using JavaScript methods like `getAttribute()`, `setAttribute()`, `hasAttribute()`, and `removeAttribute()`. You''ll also discover data attributes (`data-*`) for storing custom information and understand the distinction between HTML attributes and DOM properties.
+
+Your coding tasks will be manipulating various attribute types including standard HTML attributes like `src` and `href`, boolean attributes like `disabled`, and custom data attributes, giving you comprehensive experience with attribute manipulation techniques.
+  ',
+  'c0674f98-ac68-4744-b667-2451a08adf6b',
+  false,
+  3,
+  '[{"name":"Understand the four core attribute methods: `getAttribute()`, `setAttribute()`, `hasAttribute()`, and `removeAttribute()`"},{"name":"Understand the difference between HTML attributes and DOM properties in JavaScript"},{"name":"Learn about data attributes (`data-*`) and how to use them to store custom information on elements (use cases and examples)"}]'::jsonb,
+  '[{"id":"7-4-working-with-element-attributes-task-1","name":"Get the `src` attribute of `demoImage` using `getAttribute()` and assign it to the `imageSrc` variable"},{"id":"7-4-working-with-element-attributes-task-2","name":"Change the `href` attribute of `demoLink` to `\"https://google.com\"` using `setAttribute()`"},{"id":"7-4-working-with-element-attributes-task-3","name":"Check if `textInput` has a `\"disabled\"` attribute using `hasAttribute()` and assign it to the `inputIsDisabled` variable"},{"id":"7-4-working-with-element-attributes-task-4","name":"Remove the \"target\" attribute from `demoLink` using `removeAttribute()`"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"const demoImage = document.getElementById(\"demo-image\");\nconst demoLink = document.getElementById(\"demo-link\");\nconst textInput = document.getElementById(\"text-input\");\n\n// Do not change the code above\n\n// Task: Get the src attribute of demoImage using getAttribute() and assign it to the imageSrc variable\nlet imageSrc;\n\n// Task: Change the href attribute of demoLink to \"https://google.com\" using setAttribute()\n\n// Task: Check if textInput has a \"disabled\" attribute using hasAttribute() and assign it to the inputIsDisabled variable\nlet inputIsDisabled;\n\n// Task: Remove the \"target\" attribute from demoLink using removeAttribute()\n\n// Do not change the code below\n\nconsole.log(\"imageSrc:\", imageSrc);\nconsole.log(\"demoLink:\", demoLink);\nconsole.log(\"inputIsDisabled:\", inputIsDisabled);\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.html":{"code":"<!doctype html>\n<html>\n  <head>\n    <title>Cosden Code</title>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"stylesheet\" href=\"/styles.css\" />\n  </head>\n  <body>\n    <img id=\"demo-image\" src=\"placeholder.jpg\" />\n    <a id=\"demo-link\" href=\"https://example.com\" target=\"_blank\"\n      >Example Link</a\n    >\n    <input id=\"text-input\" type=\"text\" value=\"\" disabled />\n\n    <script src=\"index.js\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '8ef04327-6920-4085-96c3-27e12469e60f',
+  '7-5-creating-and-removing-elements',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Creating and Removing Elements',
+  'Build dynamic web applications by programmatically creating and removing HTML elements',
+  'In this lesson, you''ll learn to create entirely new HTML elements and remove existing ones using JavaScript''s `createElement()` method to build elements programmatically, `appendChild()` to add them to the page, and the `remove()` method to delete elements from the DOM.
+
+Your coding tasks will be creating new elements with properties and content, adding them to the page structure, and removing existing elements, giving you hands-on experience building dynamic interfaces that adapt based on user actions.
+  ',
+  'fd8cd690-3396-4a60-97dd-567627a2f81d',
+  false,
+  4,
+  '[{"name":"Understand how to create new elements using `createElement()` and add them to the page with `appendChild()`"},{"name":"Understand how to remove elements from the DOM using the `remove()` method"}]'::jsonb,
+  '[{"id":"7-5-creating-and-removing-elements-task-1","name":"Create a new paragraph element using `createElement()` and assign it to the `newParagraph` variable"},{"id":"7-5-creating-and-removing-elements-task-2","name":"Set the text content of `newParagraph` to `\"This is a new paragraph\"` using `textContent`"},{"id":"7-5-creating-and-removing-elements-task-3","name":"Add `newParagraph` to `container` using `appendChild()` (we can use `appendChild()` to add the new paragraph to the container)"},{"id":"7-5-creating-and-removing-elements-task-4","name":"Remove `existingParagraph` from the DOM using `remove()`"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"const container = document.getElementById(\"container\");\nconst existingParagraph = document.getElementById(\"existing-paragraph\");\n\n// Do not change the code above\n\n// Task: Create a new paragraph element using createElement() and assign it to the newParagraph variable\nlet newParagraph;\n\n// Task: Set the text content of newParagraph to \"This is a new paragraph\"\n\n// Task: Add newParagraph to container using appendChild()\n\n// Task: Remove existingParagraph from the DOM using remove()\n\n// Do not change the code below\n\nconsole.log(\"container:\", container);\nconsole.log(\"newParagraph:\", newParagraph);\nconsole.log(\"existingParagraph:\", existingParagraph);\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.html":{"code":"\n<!doctype html>\n<html>\n  <head>\n    <title>Cosden Code</title>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"stylesheet\" href=\"/styles.css\" />\n  </head>\n  <body>\n    <div id=\"container\">\n      <p id=\"existing-paragraph\">This paragraph will be removed</p>\n    </div>\n\n    <script src=\"index.js\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '65be0f7f-14dd-45ef-8c0b-e39846592c84',
+  '7-6-handling-events',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Handling Events',
+  'Transform static web pages into interactive applications by responding to user interactions',
+  'In this lesson, you''ll learn event handling, which transforms static web pages into interactive applications by making elements respond to user interactions. The `addEventListener()` method allows you to attach functions to elements that execute when specific events like `click`, `mouseover`, and `mouseout` occur.
+
+Your coding tasks will be adding event listeners to elements for different interaction types, creating dynamic responses to user actions like clicks and mouse hovers, demonstrating how event handlers work as callbacks that execute when events fire.
+  ',
+  '42c58e0a-fd34-4268-8860-ace23784814b',
+  false,
+  5,
+  '[{"name":"Learn about events (what are events, how do they work, what are the different types of events)"},{"name":"Understand the use and importance of listening to events and running code when events occur"},{"name":"Learn to use `addEventListener()` to make elements respond to user interactions"}]'::jsonb,
+  '[{"id":"7-6-handling-events-task-1","name":"Add a `\"click\"` event listener using `addEventListener()` to `demoButton` that changes the text of `demoParagraph` to `\"Button clicked!\"` using `textContent`"},{"id":"7-6-handling-events-task-2","name":"Add a `\"mouseover\"` event listener using `addEventListener()` to `demoButton` that changes the background color of `demoButton` to `\"blue\"` using `style.backgroundColor`"},{"id":"7-6-handling-events-task-3","name":"Add a `\"mouseout\"` event listener using `addEventListener()` to `demoButton` that resets the background color of `demoButton` to `\"\"` (empty string to reset) using `style.backgroundColor`"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"const demoButton = document.getElementById(\"demo-button\");\nconst demoParagraph = document.getElementById(\"demo-paragraph\");\n\n// Do not change the code above\n\n// Task: Add a \"click\" event listener to demoButton using addEventListener() that changes the text of demoParagraph to \"Button was clicked!\" using textContent\n\n// Task: Add a \"mouseover\" event listener to demoButton using addEventListener() that changes the background color of demoButton to \"blue\" using style.backgroundColor\n\n// Task: Add a \"mouseout\" event listener to demoButton using addEventListener() that resets the background color of demoButton to \"\" (empty string to reset) using style.backgroundColor\n\n// Do not change the code below\n\nconsole.log(\"demoButton:\", demoButton);\nconsole.log(\"demoParagraph:\", demoParagraph);\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.html":{"code":"<!doctype html>\n<html>\n  <head>\n    <title>Cosden Code</title>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"stylesheet\" href=\"/styles.css\" />\n  </head>\n  <body>\n    <button id=\"demo-button\">Click me!</button>\n    <p id=\"demo-paragraph\">This text will change when you click the button</p>\n\n    <script src=\"index.js\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '5c1a5f1d-94ab-4324-abb8-40d7f5ff2479',
+  '7-7-event-object-and-event-propagation',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Event Object and Event Propagation',
+  'Master advanced event handling with event objects and control event flow through DOM propagation',
+  'In this lesson, you''ll learn about the event object, which contains detailed information about user interactions including which element triggered the event, and event propagation, which describes how events "travel" through the DOM tree. You''ll discover event bubbling and how to control event flow using methods like `stopPropagation()`.
+
+Your coding tasks will be accessing event object properties like `type` and `target`, working with nested elements to understand event bubbling, and using `stopPropagation()` to control event flow through the DOM tree.
+  ',
+  '304be613-eb04-44cd-9cec-32375fd183aa',
+  false,
+  6,
+  '[{"name":"Expand on events learnt in the previous lesson (we did not cover accessing the event object, just adding simple event listeners)"},{"name":"Learn to access event object properties like `target` and `type`"},{"name":"Understand event bubbling and how to control it with `stopPropagation()`"}]'::jsonb,
+  '[{"id":"7-7-event-object-and-event-propagation-task-1","name":"Add a `\"click\"` event listener to `parentDiv` using `addEventListener()` that sets the text content of `demoParagraph` to `\"Event type: ${event.type}, Target: ${event.target.tagName}\"` using `textContent`"},{"id":"7-7-event-object-and-event-propagation-task-2","name":"Add a `\"click\"` event listener to `childButton` using `addEventListener()` that sets the text content of `demoParagraph` to `\"Child button clicked\"` using `textContent` and use `event.stopPropagation()` to prevent the event from bubbling up"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"const parentDiv = document.getElementById(\"parent-div\");\nconst childButton = document.getElementById(\"child-button\");\nconst demoParagraph = document.getElementById(\"demo-paragraph\");\n\n// Do not change the code above\n\n// Task: Add a \"click\" event listener to parentDiv using addEventListener() that sets the text content of demoParagraph to \"Event type: ${event.type}, Target: ${event.target.tagName}\" using textContent\n\n// Task: Add a \"click\" event listener to childButton using addEventListener() that sets the text content of demoParagraph to \"Child button clicked\" using textContent\n// Use event.stopPropagation() to prevent the event from bubbling up\n// Notice: When you use stopPropagation(), the parent div click listener above won''t fire!\n\n// Do not change the code below\n\nconsole.log(\"parentDiv:\", parentDiv);\nconsole.log(\"childButton:\", childButton);\nconsole.log(\"demoParagraph:\", demoParagraph);\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.html":{"code":"<!doctype html>\n<html>\n  <head>\n    <title>Cosden Code</title>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"stylesheet\" href=\"/styles.css\" />\n  </head>\n  <body>\n    <div id=\"parent-div\">\n      Parent Div (click me)\n      <button id=\"child-button\">Child Button (click me)</button>\n    </div>\n    <p id=\"demo-paragraph\">Event info will appear here</p>\n\n    <script src=\"index.js\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b9f94d1a-61cd-472f-a182-4c1cd89ba74d',
+  '7-8-default-events-and-preventing-defaults',
+  '1d4d1095-e65f-4529-86b9-2fa9bbdb82e4',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Default Events and Preventing Defaults',
+  'Take complete control of user interactions by overriding default browser behaviors with preventDefault',
+  'In this lesson, you''ll learn to take complete control of user interactions by overriding default browser behaviors using the `preventDefault()` method. This allows you to implement custom logic for form submissions, link navigation, and other browser actions instead of relying on default behaviors.
+
+Your coding tasks will be using `preventDefault()` to stop forms from submitting normally and prevent links from navigating, giving you hands-on experience implementing custom handling for standard browser interactions.
+  ',
+  '0e8498bf-1b12-452c-a068-8c30d769a976',
+  false,
+  7,
+  '[{"name":"Expand on events and propagation learnt in the previous lesson, to now include preventing default behavior"},{"name":"Learn to use `preventDefault()` to override default browser behaviors"}]'::jsonb,
+  '[{"id":"7-8-default-events-and-preventing-defaults-task-1","name":"Add a `\"submit\"` event listener to `demoForm` using `addEventListener()` that prevents the form from submitting using `event.preventDefault()` and sets the text content of `demoParagraph` to `\"Form submission prevented\"` using `textContent`"},{"id":"7-8-default-events-and-preventing-defaults-task-2","name":"Add a `\"click\"` event listener to `demoLink` using `addEventListener()` that prevents the link from navigating using `event.preventDefault()` and sets the text content of `demoParagraph` to `\"Link navigation prevented\"` using `textContent`"}]'::jsonb,
+  '{"template":"static","files":{"index.js":{"code":"const demoForm = document.getElementById(\"demo-form\");\nconst demoLink = document.getElementById(\"demo-link\");\nconst demoParagraph = document.getElementById(\"demo-paragraph\");\n\n// Do not change the code above\n\n// Task: Add a \"submit\" event listener to demoForm using addEventListener() that prevents the form from submitting using event.preventDefault() and sets the text content of demoParagraph to \"Form submission prevented\" using textContent\n\n// Task: Add a \"click\" event listener to demoLink using addEventListener() that prevents the link from navigating using event.preventDefault() and sets the text content of demoParagraph to \"Link navigation prevented\" using textContent\n\n// Do not change the code below\n\nconsole.log(\"demoForm:\", demoForm);\nconsole.log(\"demoLink:\", demoLink);\nconsole.log(\"demoParagraph:\", demoParagraph);\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.html":{"code":"<!doctype html>\n<html>\n  <head>\n    <title>Cosden Code</title>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"stylesheet\" href=\"/styles.css\" />\n  </head>\n  <body>\n    <form id=\"demo-form\">\n      <input type=\"text\" placeholder=\"Enter your name\" />\n      <button type=\"submit\">Submit</button>\n    </form>\n    <a href=\"https://example.com\" id=\"demo-link\">Click this link</a>\n    <p id=\"demo-paragraph\">Messages will appear here</p>\n\n    <script src=\"index.js\"></script>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '62bba0c4-232c-497a-90b0-3391f602d5ba',
+  '8-es6-and-modern-syntax',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'ES6+ & Modern Syntax',
+  'Learn modern JavaScript features including destructuring, arrow functions, and enhanced syntax',
+  7
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6a9f74ee-fb32-49b5-9581-a3873def3390',
+  '8-1-modern-declarations',
+  '62bba0c4-232c-497a-90b0-3391f602d5ba',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Modern Declarations',
+  'Master the differences between const and let declarations for writing safer, more predictable code',
+  'In this lesson, you''ll learn about modern variable declarations, understanding the key differences between `const` and `let` and when to choose each one. The `const` keyword creates variables that cannot be reassigned, preventing bugs and making code more predictable, while `let` allows reassignment when needed.
+
+Your coding tasks will be identifying when variables should be `const` versus `let` based on whether they''ll be reassigned, and understanding that `const` objects can still have their properties modified even though the variable itself cannot be reassigned.
+  ',
+  '6762f76f-7f56-423a-8494-4acd8dd5e4e6',
+  true,
+  0,
+  '[{"name":"Learn that `var` is not used in modern JavaScript, it is still used in old JavaScript, but it is not recommended to use it, and why (refer back to scope lesson) and why we now use either `let` or `const`"},{"name":"Understand when to use `const` versus `let` based on whether variables will be reassigned (we''ve already covered changing variables in other lessons, now we just look at `const` and `let` specifically)"},{"name":"Learn that `const` prevents reassignment but allows modification of object/array contents (we''ve already covered this in other lessons)"}]'::jsonb,
+  '[{"id":"8-1-modern-declarations-task-1","name":"Change the `firstName` variable to use `const` instead of `let`"},{"id":"8-1-modern-declarations-task-2","name":"Change the `age` variable to use `let` instead of `const`"},{"id":"8-1-modern-declarations-task-3","name":"Change the value of `age` to `30`"},{"id":"8-1-modern-declarations-task-4","name":"Change the `person` object to use `const`"},{"id":"8-1-modern-declarations-task-5","name":"Modify the `age` property of the `person` object to `30`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"// Task: Change the firstName variable to use const instead of let\nlet firstName = \"John\";\n\n// Task: Change the age variable to use let instead of const\nconst age = 20;\n\n// Task: Change the value of age to 30\n\n// Task: Change the person object to use const\nlet person = {\n  name: \"John\",\n  age: 20,\n};\n\n// Task: Modify the age property of the person object to 30\n\n// Do not change the code below\n\nconsole.log(\"firstName:\", firstName);\nconsole.log(\"age:\", age);\nconsole.log(\"person:\", person);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'f4ea85cc-ed28-4013-9fac-a00655117a2e',
+  '8-2-destructuring-assignment',
+  '62bba0c4-232c-497a-90b0-3391f602d5ba',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Destructuring Assignment',
+  'Extract values from arrays and objects with elegant ES6 destructuring syntax',
+  'In this lesson, you''ll learn about destructuring assignment, a powerful ES6 syntax that allows you to extract values from arrays and objects in a clean, readable way. Instead of multiple assignment lines, destructuring lets you extract multiple values in a single elegant statement, and it works beautifully with `const` declarations.
+
+Your coding tasks will be using object destructuring to extract properties from objects, array destructuring to extract elements from arrays, and the rest operator to capture remaining elements, demonstrating how destructuring makes code cleaner and more maintainable.
+  ',
+  '661c67a7-2f06-493f-be83-e2926c1d3187',
+  true,
+  1,
+  '[{"name":"Learn the ES6 destructuring syntax for arrays and objects with practical examples (refer back to arrays lessons and objects lessons and how we copied just by referencing the object)"},{"name":"Master the rest operator (`...rest`) and understand how it captures remaining elements from arrays and objects"},{"name":"Understand when destructuring makes code cleaner, more readable, and more maintainable than traditional property access"}]'::jsonb,
+  '[{"id":"8-2-destructuring-assignment-task-1","name":"Use object destructuring to extract the `firstName` and `lastName` from the `person` object and assign them to the `firstNameDestructured` and `lastNameDestructured` variables"},{"id":"8-2-destructuring-assignment-task-2","name":"Use array destructuring with the rest operator to get the first element and remaining elements of the `numbers` array and assign them to the `firstDestructured` and `restDestructured` variables"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const person = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n};\n\nconst numbers = [1, 2, 3, 4, 5];\n\n// Do not change the code above\n\n// Task: Use object destructuring to access the firstName and lastName properties of the person object and assign them to the firstNameDestructured and lastNameDestructured variables\nlet firstNameDestructured;\nlet lastNameDestructured;\n\n// Task: Use array destructuring to access the first and rest of the numbers array and assign them to the firstDestructured and restDestructured variables\nlet firstDestructured;\nlet restDestructured;\n\n// Do not change the code below\n\nconsole.log(\"firstNameDestructured:\", firstNameDestructured);\nconsole.log(\"lastNameDestructured:\", lastNameDestructured);\nconsole.log(\"firstDestructured:\", firstDestructured);\nconsole.log(\"restDestructured:\", restDestructured);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '03da24a3-aa42-449a-a812-bb423ffb4a25',
+  '8-3-arrow-functions',
+  '62bba0c4-232c-497a-90b0-3391f602d5ba',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Arrow Functions',
+  'Write more concise and elegant functions with ES6 arrow function syntax',
+  'In this lesson, you''ll learn about arrow functions, one of ES6''s most beloved features that offers a more concise, elegant way to write functions. Arrow functions are perfect for callback functions, array methods, and event handlers, with their concise syntax making common patterns much more readable.
+
+Your coding tasks will be converting traditional functions to arrow function syntax, understanding both single-line and multi-line arrow functions, and learning how arrow functions compare to traditional functions.
+  ',
+  'b8b76e0e-0d59-4e90-a5e9-5320e66ea630',
+  false,
+  2,
+  '[{"name":"Master the syntax for both single-line and multi-line arrow functions with practical examples (compare to normal functions already covered in other lessons) (also cover not explicitly returning values)"},{"name":"Understand when arrow functions should and should not be used, especially regarding `this` binding"},{"name":"Learn how the `this` keyword behaves differently in arrow functions compared to traditional functions"}]'::jsonb,
+  '[{"id":"8-3-arrow-functions-task-1","name":"Rewrite the `greet` function to an ES6 arrow function `greetModern`"},{"id":"8-3-arrow-functions-task-2","name":"Rewrite the `addTen` function to an ES6 arrow function `addTenModern`"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"function greet() {\n  return \"Hello, world!\";\n}\n\nfunction addTen(number) {\n  return number + 10;\n}\n\n// Do not change the code above\n\n// Task: Rewrite the greet function to an ES6 arrow function greetModern\nlet greetModern;\n\n// Task: Rewrite the addTen function to an ES6 arrow function addTenModern\nlet addTenModern;\n\n// Do not change the code below\n\nconsole.log(\"greetModern:\", greetModern);\nconsole.log(\"addTenModern:\", addTenModern);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2363417e-a960-4104-8578-81e61b2c07b0',
+  '8-4-enhanced-object-literals',
+  '62bba0c4-232c-497a-90b0-3391f602d5ba',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Enhanced Object Literals',
+  'Create more elegant and powerful objects with ES6 enhanced object literal syntax',
+  'In this lesson, you''ll learn about enhanced object literals, ES6 features that make object creation more elegant and powerful. Enhanced object literals include property shorthand, method shorthand, and computed property names, which work beautifully with destructuring and arrow functions.
+
+Your coding tasks will be creating objects using property shorthand when variable names match property names, method shorthand for cleaner object methods, and computed properties for dynamic object creation, demonstrating how these enhancements eliminate redundancy and improve code readability.
+  ',
+  '7bd35ab4-8afb-479d-9e62-eca65556fea6',
+  false,
+  3,
+  '[{"name":"Master the three key enhancements to object literals in ES6: property shorthand, method shorthand, and computed properties"},{"name":"Understand when and why to use shorthand methods and computed properties in real-world scenarios"}]'::jsonb,
+  '[{"id":"8-4-enhanced-object-literals-task-1","name":"Create an object `person` with a shorthand property `name` using the `firstName` variable"},{"id":"8-4-enhanced-object-literals-task-2","name":"Create an object `actions` with a shorthand method `greet` using the `greet` function"},{"id":"8-4-enhanced-object-literals-task-3","name":"Create an object `person2` with a computed property `age` of `30` using the `key` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"const firstName = \"John\";\nconst greet = () => {\n  console.log(\"Hello, world!\");\n};\nconst key = \"age\";\n\n// Do not change the code above\n\n// Task: Create an object person with a shorthand property name using the firstName variable\nlet person;\n\n// Task: Create an object actions with a shorthand method greet using the greet function\nlet actions;\n\n// Task: Create an object person2 with a computed property age of 30 using the key variable\nlet person2;\n\n// Do not change the code below\n\nconsole.log(\"person: \", person);\nconsole.log(\"actions: \", actions);\nconsole.log(\"person2: \", person2);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '95afd3ad-6dc3-48c1-b958-e4cb4e245104',
+  '8-5-async-await-syntax',
+  '62bba0c4-232c-497a-90b0-3391f602d5ba',
+  '10015f22-09ec-49b7-9338-2099e5da2bd3',
+  'Async/Await Syntax',
+  'Write clean asynchronous code with modern async/await syntax that reads like synchronous code',
+  'In this lesson, you''ll learn about async/await, the modern syntax that makes asynchronous code look and feel like synchronous code you''re already comfortable with. The `async` keyword transforms functions to automatically return Promises, while `await` pauses function execution until a Promise resolves without blocking the entire program.
+
+Your coding tasks will be converting Promise-based code to async/await syntax and handling errors using `try...catch` blocks, demonstrating how this approach eliminates Promise chains and makes complex asynchronous operations incredibly readable.
+  ',
+  '0437b158-5dd9-476c-961d-bc78faa20542',
+  false,
+  4,
+  '[{"name":"Understand how `async`/`await` syntax works with Promises to create readable asynchronous code (refer back to promises lessons with .then() and .catch())"},{"name":"Understand the differences/advantages of async await over .then() and .catch() (with practical examples and use cases)"},{"name":"Also explore example of fetch with .json() in traditional way and then compare to async await way"}]'::jsonb,
+  '[{"id":"8-5-async-await-syntax-task-1","name":"Implement the `runAsyncFunctions` function that runs the `asyncFunction` function twice with `await` and stores the results in the `asyncFunctionResult1` and `asyncFunctionResult2` variables"},{"id":"8-5-async-await-syntax-task-2","name":"Implement the `runAsyncFunctionsError` function that runs the `asyncFunctionError` function with `await` and uses a try catch block to handle the error and store it in the `asyncFunctionErrorResult` variable"}]'::jsonb,
+  '{"template":"vanilla","files":{"index.js":{"code":"async function asyncFunctionSuccess() {\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve(\"Success\");\n    }, 2000);\n  });\n}\n\nasync function asyncFunctionError() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      reject(\"Error\");\n    }, 2000);\n  });\n}\n\n// Do not change the code above\n\nlet asyncFunctionSuccessResult1;\nlet asyncFunctionSuccessResult2;\n\n// Task: Implement the runAsyncFunctions function that runs the asyncFunction function twice with await and stores the results in the asyncFunctionResult1 and asyncFunctionResult2 variables\nasync function runAsyncFunctionsSuccess() {}\n\nlet asyncFunctionErrorResult;\n\n// Task: Implement the runAsyncFunctionsError function that runs the asyncFunctionError function with await and uses a try catch block to handle the error and store it in the asyncFunctionErrorResult variable\nasync function runAsyncFunctionsError() {}\n\n// Do not change the code below\n\nrunAsyncFunctionsSuccess();\nrunAsyncFunctionsError();\n\nsetTimeout(\n  () =>\n    console.log(\"asyncFunctionSuccessResult1:\", asyncFunctionSuccessResult1),\n  2000,\n);\nsetTimeout(\n  () =>\n    console.log(\"asyncFunctionSuccessResult2:\", asyncFunctionSuccessResult2),\n  5000,\n);\nsetTimeout(\n  () => console.log(\"asyncFunctionErrorResult:\", asyncFunctionErrorResult),\n  2000,\n);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+-- ------------------------------------------------------
+-- 插入课程: React Fundamentals (react-fundamentals)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'react-fundamentals',
+  'React Fundamentals',
+  'Learn the fundamentals of React from components and JSX, to state and event handlers, effects and data fetching, hooks and performance',
+  '## Course Overview
+
+React has become the most popular library for building user interfaces, powering everything from small interactive components to massive applications at companies like Facebook, Netflix, and Airbnb. But React''s popularity also means there''s a lot of outdated information, conflicting advice, and confusion about the "right" way to build React applications.
+
+This course cuts through the noise and teaches you modern React fundamentals the way they''re actually used in production applications today. You''ll learn the core concepts that every React developer needs to master—components, state, effects, and hooks—with a focus on understanding not just how to use these features, but when and why to use them. By the end of this course, you''ll have the solid foundation needed to build real React applications and the understanding to continue learning more advanced patterns and libraries.
+
+## What You''ll Learn
+
+This course is structured into four comprehensive modules that take you from React basics to performance optimization and advanced hooks.
+
+### Module 1: Introduction to React
+
+We start by establishing what React is and why it''s become the dominant choice for building user interfaces. You''ll understand how React works under the hood—the virtual DOM, reconciliation, and the component lifecycle. You''ll set up a modern React application, then dive into JSX, learning how to write declarative UI code, iterate over data, and handle conditional rendering.
+
+From there, you''ll master components and props—the building blocks of every React application. You''ll learn how to break down UIs into reusable components, pass data through props, use the special children prop for composition, and work with fragments for cleaner markup. The module concludes with styling approaches and the crucial concept of "thinking in React"—the mental model that helps you architect React applications effectively.
+
+### Module 2: State and Event Handlers
+
+This module focuses on making your components interactive. You''ll master the useState hook, understanding how state works in React and how it differs from regular JavaScript variables. You''ll learn about the component lifecycle and how React re-renders components when state changes.
+
+You''ll explore state initializers for performance, understand how to update state correctly (including the common pitfalls), and master event handlers in React. You''ll work extensively with form handling—change events, submit events, and the important distinction between controlled and uncontrolled components. These patterns form the foundation of interactive React applications.
+
+### Module 3: Effects and Data Fetching
+
+Effects are one of the most misunderstood parts of React, and this module gives you a complete understanding. You''ll learn what useEffect is for, how the setup function works, and the crucial role of dependency arrays in controlling when effects run.
+
+You''ll master cleanup functions for preventing memory leaks, understand when to use effects without dependency arrays, and learn to avoid common problems like stale values and unnecessary dependencies. The useRef hook is covered for accessing DOM elements and storing mutable values.
+
+The module then focuses on the practical application of effects: data fetching. You''ll learn to fetch and display data, handle loading states properly, manage errors gracefully, and implement request cancellation to prevent race conditions. These patterns are essential for building real-world React applications that interact with APIs.
+
+### Module 4: Hooks and Performance
+
+The final module covers essential React hooks and performance optimization techniques. You''ll start by understanding how component re-renders work—what triggers them and how to reason about rendering behavior.
+
+You''ll learn the performance hooks—useMemo for expensive calculations, memo for preventing unnecessary component re-renders, and useCallback for stable function references. You''ll understand when to use these hooks and, importantly, when not to use them (premature optimization is a common mistake).
+
+The module covers useContext for sharing state across your component tree without prop drilling, useReducer for managing complex state logic, and React 19''s new useActionState hook for handling form submissions and async actions. You''ll also learn useLayoutEffect for DOM measurements and synchronous effects.
+
+These hooks and patterns give you the tools to build performant React applications and handle complex state management scenarios.
+
+## Who This Course Is For
+
+This course is designed for developers who are comfortable with JavaScript and ready to learn React.
+
+**This course is perfect for you if:**
+
+✅ You know JavaScript and want to learn React the right way from the start
+
+✅ You''ve tried learning React from scattered tutorials and want a structured approach
+
+✅ You''ve used React but have gaps in your understanding of core concepts
+
+✅ You want to understand modern React (hooks, functional components) rather than outdated class-based patterns
+
+✅ You''re preparing for a React job and need to solidify your fundamentals
+
+**You might want to start elsewhere if:**
+
+❌ You''re not comfortable with JavaScript yet (take our JavaScript course first)
+
+❌ You''re already proficient with React fundamentals and looking for advanced patterns (try our Design Patterns course instead)
+
+❌ You want to learn a specific library like Next.js or React Router before understanding React itself
+
+## How You''ll Learn
+
+Every concept in this course is taught with a focus on understanding, not just memorization. You''ll learn what each feature does, why it exists, and when to use it. We emphasize the mental models that help you reason about React applications—understanding how React works makes everything else easier.
+
+Each lesson includes hands-on practice with real examples. You''ll build actual React components and applications, not just read about them. This practical approach ensures you can immediately apply what you learn to your own projects.
+
+## What You''ll Walk Away With
+
+By completing this course, you''ll have a solid understanding of React fundamentals that prepares you for building real applications. You''ll know how to structure components, manage state effectively, handle side effects properly, and optimize performance when needed.
+
+More importantly, you''ll understand how React works—not just memorizing APIs, but understanding the rendering model, the component lifecycle, and the patterns that make React applications maintainable. This deep understanding means you''ll be able to debug problems, learn new React features quickly, and make good architectural decisions.
+
+The React fundamentals you learn here are the foundation for everything else in the React ecosystem. Whether you''re building applications with Next.js, managing state with Redux or Zustand, handling forms with React Hook Form, or fetching data with React Query, the core concepts you learn in this course will be essential. This isn''t just about learning a library—it''s about building the foundation for your React development career.',
+  'beginner',
+  12,
+  'published',
+  1,
+  1,
+  5
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '1-introduction-to-react',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Introduction to React',
+  'Learn the core concepts of React including how it works, components, JSX, props, and styling',
+  0
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'e7539cbf-c7e5-444f-ac99-b6a4611cce92',
+  '1-1-what-is-react',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'What is React?',
+  'Learn what React is, why it was created, and its role in building modern user interfaces',
+  '
+In this lesson, you''ll learn about the origins of React, its declarative approach to building user interfaces, and why it became an essential tool for modern web development. You''ll understand how React''s component-based architecture simplifies building complex applications.
+
+Your coding tasks will be exploring a pre-built React component to see React in action and observing how changes to the code affect the rendered output in the browser preview.
+  ',
+  'fb22c383-cc39-4c00-a647-9b8297753b58',
+  true,
+  0,
+  '[{"name":"Learn the origins of React and the problems it was created to solve (e.g., efficient DOM updates compared to vanilla JavaScript and jQuery, component reusability)"},{"name":"Learn the core concept of a declarative UI and how it differs from an imperative approach (used in vanilla JavaScript and jQuery)"},{"name":"Recognize the benefits of a component-based architecture for building and maintaining large-scale applications compared to traditional approaches"},{"name":"Explore real-world applications and companies that use React (e.g., Facebook, Instagram, Netflix, Airbnb)"}]'::jsonb,
+  '[{"id":"1-1-what-is-react-task-1","name":"Submit the code editor – no code required"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// This is a basic React component that displays \"Welcome to React!\"\n// You''ll learn how to create and modify components like this in upcoming lessons\n\n// Task: Submit the code editor – no code required\n\nexport default function App() {\n  return <h1>Welcome to React!</h1>;\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '731d26e3-62f9-4249-8c26-284132ba1082',
+  '1-2-how-react-works',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'How does React work?',
+  'Understand React''s internal workings including the Virtual DOM, reconciliation algorithm, and efficient rendering',
+  '
+In this lesson, you''ll dive deep into React''s architecture and understand how it efficiently updates the DOM. We''ll explore the Virtual DOM concept, React''s reconciliation process, and how React optimizes performance through its diffing algorithm.
+
+This conceptual lesson will give you a solid foundation for understanding React''s efficiency and why it''s so powerful for building complex user interfaces.
+  ',
+  '7b6aeb2f-ff6e-426f-a30c-675301314c34',
+  true,
+  1,
+  '[{"name":"Understand the Virtual DOM concept and how it differs from the real DOM"},{"name":"Learn React''s reconciliation algorithm and how it determines what needs to be updated"},{"name":"Explore how React''s diffing process optimizes DOM updates for better performance"}]'::jsonb,
+  '[]'::jsonb,
+  '{}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9071f2ab-ae0e-4e18-a4f2-fe342b631fb4',
+  '1-3-setting-up-a-react-application',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Setting up a React Application',
+  'Learn how to set up a basic React application with the main entry point and root element',
+  '
+In this lesson, you''ll learn how a React application is set up and initialized. You''ll understand the role of the main `index.js` file that imports your root component and renders it into the DOM using `ReactDOM.render()`, and how the `index.html` file provides the root element where your React app mounts.
+
+Your coding tasks will be importing the App component in the main index file, rendering it to the DOM using `ReactDOM.render()`, and observing how React connects to the root div element in the HTML file.
+  ',
+  '4b495a35-1761-4ede-8b4e-6b29f1c70bb9',
+  false,
+  2,
+  '[{"name":"Understand the role of the main `index.js` file as the entry point of a React application"},{"name":"Learn how to use `ReactDOM.render()` to mount a React component to the DOM"},{"name":"Recognize how the `index.html` file provides the root element where React renders the application"}]'::jsonb,
+  '[{"id":"1-3-setting-up-a-react-application-task-1","name":"Import the `App` component from `App.jsx` in the `index.js` file"},{"id":"1-3-setting-up-a-react-application-task-2","name":"Use `createRoot` to render the `App` component into the element with id `root`"}]'::jsonb,
+  '{"template":"react","files":{"index.js":{"code":"import React from \"react\";\nimport { createRoot } from \"react-dom/client\";\nimport \"./styles.css\";\n\n// Task: Import the App component from App.jsx\n\n// Task: Use createRoot() to render the App component into the element with id root\n// Create a root element using createRoot() and pass the element with id root as the argument using document.getElementById(\"root\")\n// Render the App component into the root element using the root.render() method\n","hidden":false,"active":true,"readOnly":false,"asset":false},"App.jsx":{"code":"export default function App() {\n  return (\n    <div>\n      <h1>Welcome to React!</h1>\n      <p>Your React application is now running.</p>\n    </div>\n  );\n}\n","hidden":false,"active":false,"readOnly":false,"asset":false},"index.html":{"code":"<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>React App</title>\n  </head>\n  <body>\n    <!-- The root div is where the React app will be mounted -->\n    <div id=\"root\"></div>\n  </body>\n</html>\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '46146e75-64a6-4809-80d6-fea6ac46e73c',
+  '1-4-jsx-overview',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'JSX Overview',
+  'Learn the syntax rules of JSX and how to write basic React elements',
+  '
+In this lesson, you''ll learn about JSX, a syntax extension that combines HTML-like syntax with JavaScript power. You''ll see how JSX differs from standard HTML by allowing direct JavaScript injection and how it compiles to JavaScript function calls for creating React elements.
+
+Your coding tasks will be applying JSX syntax rules, converting HTML attributes to JSX equivalents, and embedding JavaScript expressions to create dynamic content.
+  ',
+  '77ddf88f-882a-4235-a76b-5dd6ff375e75',
+  false,
+  3,
+  '[{"name":"Understand how JSX blends HTML-like syntax with JavaScript functionality"},{"name":"Compare JSX attributes to HTML attributes (e.g., `className` vs `class`, `htmlFor` vs `for`)"},{"name":"Learn how to embed JavaScript expressions in JSX using curly braces `{}`"},{"name":"Recognize JSX requirements like single parent element (similar to how JavaScript functions return one value) and self-closing tags"}]'::jsonb,
+  '[{"id":"1-4-jsx-overview-task-1","name":"Change the `class` attribute to `className` in the `div` element"},{"id":"1-4-jsx-overview-task-2","name":"Change the `for` attribute to `htmlFor` in the `label` element"},{"id":"1-4-jsx-overview-task-3","name":"Embed the `jsVariable` variable in the `h2` element using curly braces"},{"id":"1-4-jsx-overview-task-4","name":"Close the `img` element by making it self-closing with `/>`"},{"id":"1-4-jsx-overview-task-5","name":"Nest the `p` element inside the `div` element to return a single parent element"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"const jsVariable = \"JSX\";\n\nconst imageSrc = \"https://i.pravatar.cc/100?img=1\";\n\nexport default function App() {\n  return (\n    // Task: Change the class attribute to className in the div element\n    <div class=\"container\">\n      <h1>JSX Overview</h1>\n      {/* Task: Change the for attribute to htmlFor in the label element */}\n      <label for=\"username\">Username:</label>\n      <input type=\"text\" id=\"username\" />\n\n      {/* Task: Embed the jsVariable variable in the h2 element using curly braces */}\n      <h2>This is {}.</h2>\n\n      {/* Task: Close the img element by making it self-closing with /> */}\n      <img src={imageSrc}>\n\n    </div>\n\n    // Task: Nest the p element inside the div element to return a single parent element. JSX can only return one parent element\n    <p>Welcome to Cosden Code!</p>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '87154df5-bde6-414f-ad1f-0a9ef64599a2',
+  '1-5-jsx-iteration',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'JSX Iteration',
+  'Learn how to render lists of data dynamically using JavaScript array methods in JSX',
+  'In this lesson, you''ll learn how to work with arrays and lists in JSX by using JavaScript''s built-in array methods like `map()` to dynamically render multiple elements. You''ll understand why iteration is essential for displaying collections of data in React applications and how it makes your UI responsive to changing data.
+
+Your coding tasks will be using array methods to transform data arrays into JSX elements, practicing with different iteration patterns, and observing how React efficiently updates lists when data changes.',
+  '475faad1-fb0f-4b3e-bd70-1395cb1267f1',
+  false,
+  4,
+  '[{"name":"Understand how to use the `map()` method to transform arrays of data into arrays of JSX elements (and how it''s just JavaScript functions that can work with JSX elements)"},{"name":"Learn the importance of providing unique `key` props to list items for React''s rendering optimization (including the risks of using index as key and how it''s better to use a unique value when available)"},{"name":"Explore other array methods like `filter()` and `slice()` that can be combined with `map()` for more complex list rendering"}]'::jsonb,
+  '[{"id":"1-5-jsx-iteration-task-1","name":"Use the `map()` method to render each item from the `numbers` array into an `<li>` element inside the `ul` tag"},{"id":"1-5-jsx-iteration-task-2","name":"Add a unique `key` prop to each `<li>` element using the number itself as the key value"},{"id":"1-5-jsx-iteration-task-3","name":"Use the `slice()` method to render only the first half of the `numbers` array"},{"id":"1-5-jsx-iteration-task-4","name":"Use the `filter()` method to only render the even items from the `numbers` array"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"export default function App() {\n  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n\n  return (\n    <div>\n      <h1>JSX Iteration</h1>\n      <p>Numbers list</p>\n      <ul>\n        {/* Task: Use the map method to render each item from the numbers array into an li element inside the ul tag */}\n        {/* Task: Add a unique key prop to each li element using the number itself as the key value */}\n      </ul>\n\n      <p>First half list</p>\n      <ul>\n        {/* Task: Use the slice method to render only the first half of the numbers array */}\n      </ul>\n\n      <p>Even list</p>\n      <ul>\n        {/* Task: Use the filter method to only render the even items from the numbers array */}\n      </ul>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '66835802-951c-468b-9ed1-264b3ceff71d',
+  '1-6-jsx-conditional-rendering',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'JSX Conditional Rendering',
+  'Learn how to conditionally render content in JSX using different JavaScript patterns',
+  '
+In this lesson, you''ll learn how to conditionally render content in JSX using JavaScript''s logical operators and conditional statements. You''ll understand how to show or hide elements based on application state and user interactions, which is essential for creating dynamic user interfaces in React.
+
+Your coding tasks will be practicing different conditional rendering patterns, including logical AND, ternary operators, and if-else statements to control what gets displayed in your React components.
+  ',
+  'ebbc3b07-3804-447c-8af1-4ab4a45cc111',
+  false,
+  5,
+  '[{"name":"Understand how to use the logical AND (`&&`) operator for conditional rendering in JSX"},{"name":"Learn how to implement conditional rendering using the ternary operator (`? :`) in JSX"},{"name":"Explore different patterns for conditional rendering including if-else statements and early returns"}]'::jsonb,
+  '[{"id":"1-6-jsx-conditional-rendering-task-1","name":"Use the logical AND (`&&`) operator to conditionally render the welcome message when `isLoggedIn` is `true`"},{"id":"1-6-jsx-conditional-rendering-task-2","name":"Use a ternary operator to display `\"Hot\"` when `temperature` is above `30` and `\"Cold\"` when it''s below or equal to `30`"},{"id":"1-6-jsx-conditional-rendering-task-3","name":"Use an if-else statement to render `<p>The list is empty</p>` if the items array is empty, or render the list of items inside the `<ul>` element if it''s not empty"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"export default function App() {\n  const isLoggedIn = true;\n  const temperature = 25;\n\n  return (\n    <div>\n      <h1>JSX Conditional Rendering</h1>\n\n      <div>\n        {/* Task: Use the logical AND (&&) operator to conditionally render the welcome message when isLoggedIn is true */}\n        {<p>Welcome Message</p>}\n      </div>\n\n      <div>\n        <p>Current temperature: {temperature}°C</p>\n        {/* Task: Use a ternary operator to display \"Hot\" when temperature is above 30 and \"Cold\" when it''s below or equal to 30 */}\n        <p>Current status: {}</p>\n      </div>\n\n      <ItemList />\n    </div>\n  );\n}\n\nfunction ItemList() {\n  const items = [\"Item 1\", \"Item 2\", \"Item 3\"];\n\n  // Task: Use an if-else statement to render different content based on the items array\n  // Return <p>The list is empty</p> if the items array is empty\n  // Return a <ul> element with the list of items as <li> elements if it''s not empty (don''t forget the key prop!)\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '77734bbb-d621-4052-b3dd-422e2b887cd1',
+  '1-7-components',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Components',
+  'Learn how to create simple React components and render them in your app',
+  '
+In this lesson, you''ll learn how to create React components, which are reusable pieces of UI that can be composed together to build complex interfaces. You''ll understand that components are just JavaScript functions that return JSX, and how multiple components can be rendered together to structure your application.
+
+Your coding tasks will be creating simple components from scratch and rendering them as siblings inside the main App component to see how components work together in React.
+  ',
+  '59b15f4e-e6ab-41b4-bbcb-62cc28989ac6',
+  false,
+  6,
+  '[{"name":"Understand what React components are and how they are just JavaScript functions that return JSX"},{"name":"Learn how to create simple functional components with descriptive names using proper naming conventions (PascalCase)"},{"name":"Explore how to render multiple components as siblings in JSX and how they compose together to build UIs"}]'::jsonb,
+  '[{"id":"1-7-components-task-1","name":"Create a `Header` component that returns an `<p>` element with the text `\"Welcome to React\"`"},{"id":"1-7-components-task-2","name":"Create a `Footer` component that returns a `<p>` element with the text `\"Built with React\"`"},{"id":"1-7-components-task-3","name":"Render the `Header` component inside the `div` element in the `App` component"},{"id":"1-7-components-task-4","name":"Render the `Footer` component as a sibling below the `Header` component inside the `div` element"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Create a Header component that returns an <p> element with the text \"Welcome to React\"\n\n// Task: Create a Footer component that returns a <p> element with the text \"Built with React\"\n\nexport default function App() {\n  return (\n    <div>\n      <h1>Components</h1>\n      {/* Task: Render the Header component inside the div element in the App component */}\n\n      {/* Task: Render the Footer component as a sibling below the Header component inside the div element */}\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '772ad899-adce-4485-a2d8-d1fa4fdfcb8d',
+  '1-8-component-props',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Component Props',
+  'Learn how to pass and use props to make components dynamic and reusable',
+  '
+In this lesson, you''ll learn about React props and how they allow you to pass data from parent components to child components. You''ll understand how props make components reusable and dynamic by enabling them to receive external information and render accordingly.
+
+Your coding tasks will be passing different types of props to components, accessing those props within the component''s JSX, and observing how changes in props affect the rendered output.
+  ',
+  'a2732f3f-52fe-4a19-b575-5687a1f3b667',
+  false,
+  7,
+  '[{"name":"Understand what props are and how to pass them from parent components to child components (just like arguments to a function in JavaScript, which components are functions after all)"},{"name":"Learn how to access and use props inside a component''s JSX rendering logic (using both `props.` syntax and destructuring)"},{"name":"Explore different types of props including strings, numbers, booleans, and objects"}]'::jsonb,
+  '[{"id":"1-8-component-props-task-1","name":"Pass a `name` prop with the value `\"John\"` to the `WelcomeMessage` component"},{"id":"1-8-component-props-task-2","name":"Pass an `age` prop with the value `25` to the `UserInfo` component"},{"id":"1-8-component-props-task-3","name":"Pass an `isStudent` prop with the value `true` to the `StatusIndicator` component"},{"id":"1-8-component-props-task-4","name":"Access the `name` prop inside the `WelcomeMessage` component and render it in the curly brackets"},{"id":"1-8-component-props-task-5","name":"Access the `age` prop inside the `UserInfo` component and render it in the curly brackets"},{"id":"1-8-component-props-task-6","name":"Render a `p` element with the message `\"You are a student.\"` when `isStudent` prop is `true`"},{"id":"1-8-component-props-task-7","name":"Render a `p` element with the message `\"You are a not student.\"` when `isStudent` prop is `false`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"export default function App() {\n  return (\n    <div>\n      <h1>Component Props</h1>\n\n      {/* Task: Pass a name prop with the value \"John\" to the WelcomeMessage component */}\n      <WelcomeMessage />\n\n      {/* Task: Pass an age prop with the value 25 to the UserInfo component */}\n      <UserInfo />\n\n      {/* Task: Pass an isStudent prop with the value true to the StatusIndicator component */}\n      <StatusIndicator />\n    </div>\n  );\n}\n\n/* Task: Access the name prop and render it in the curly brackets */\nfunction WelcomeMessage({}) {\n  return <p>Welcome, {}!</p>;\n}\n\n/* Task: Access the age prop and render it in the curly brackets */\nfunction UserInfo({}) {\n  return <p>You are {} years old.</p>;\n}\n\nfunction StatusIndicator({ isStudent }) {\n  /* Task: Render a p element with the message \"You are a student.\" when isStudent prop is true */\n  if (isStudent) {\n  }\n\n  /* Task: Render a p element with the message \"You are not a student.\" when isStudent prop is false */\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'cc1e42cd-93a6-441a-82e0-93acf5716761',
+  '1-9-children-props',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Children Props',
+  'Learn how to use the children prop to pass content between component tags',
+  '
+In this lesson, you''ll learn about the special `children` prop in React, which allows you to pass content between the opening and closing tags of a component. This makes components more flexible and reusable by letting parent components control what content is displayed inside them.
+
+Your coding tasks will be passing content as children to components and accessing the `children` prop to render that content inside the component.
+  ',
+  '57c66304-6786-4d03-8c48-518c93c83124',
+  false,
+  8,
+  '[{"name":"Understand what the `children` prop is and how it differs from regular props"},{"name":"Learn how to pass content between component opening and closing tags"},{"name":"Explore how to access and render the `children` prop inside a component"}]'::jsonb,
+  '[{"id":"1-9-children-props-task-1","name":"Pass the `children` variable as the `children` prop to the `Card` component"},{"id":"1-9-children-props-task-2","name":"Access the `children` prop in the `Card` component parameters"},{"id":"1-9-children-props-task-3","name":"Render the `children` prop inside the `div` in the `Card` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"export default function App() {\n  const children = \"Welcome to React!\";\n\n  return (\n    <div>\n      <h1>Children Props</h1>\n\n      {/* Task: Pass the children variable as children to the Card component */}\n      <Card></Card>\n    </div>\n  );\n}\n\n// Task: Access the children prop in the Card component parameters\n// Task: Render the children prop inside the div in the Card component\nfunction Card({}) {\n  return <div></div>;\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ab7a0f8f-25b0-4724-8ef6-5d25efd4a334',
+  '1-10-fragments',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Fragments',
+  'Learn how to use React Fragments to group elements without adding extra DOM nodes',
+  '
+In this lesson, you''ll learn about React Fragments, which allow you to group multiple elements together without adding an extra wrapper element to the DOM. This is useful when you need to return multiple elements from a component but don''t want unnecessary `div` elements cluttering your HTML structure.
+
+Your coding tasks will be using both the `Fragment` component from React and the shorthand empty bracket syntax `<></>` to group elements without adding extra DOM nodes.
+  ',
+  '1fd670d7-2449-4faf-ab96-4b25989e1682',
+  false,
+  9,
+  '[{"name":"Understand why Fragments are needed when returning multiple elements from a component"},{"name":"Learn the two syntaxes for Fragments: the `<Fragment>` component and the shorthand `<></>` syntax"},{"name":"Recognize that Fragments don''t create actual DOM elements, keeping the HTML structure clean"}]'::jsonb,
+  '[{"id":"1-10-fragments-task-1","name":"Import `Fragment` from React"},{"id":"1-10-fragments-task-2","name":"Wrap the two `p` elements in the `UserInfo` component with a `Fragment`"},{"id":"1-10-fragments-task-3","name":"Wrap the two `p` elements in the `ProductInfo` component with the shorthand `<></>` syntax"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Import Fragment from React\n\nexport default function App() {\n  return (\n    <div>\n      <h1>Fragments</h1>\n\n      <UserInfo />\n      <ProductInfo />\n    </div>\n  );\n}\n\nfunction UserInfo() {\n  // Task: Wrap the two p elements in the UserInfo component with a Fragment\n  return (\n    <div>\n      <p>Name: John Doe</p>\n      <p>Age: 30</p>\n    </div>\n  );\n}\n\nfunction ProductInfo() {\n  // Task: Wrap the two p elements in the ProductInfo component with the shorthand <></> syntax\n  return (\n    <div>\n      <p>Product: React Course</p>\n      <p>Price: $49</p>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c950e753-1073-47b9-a260-790f5efd6b94',
+  '1-11-styling-components',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Styling Components',
+  'Learn different methods to style React components including CSS, CSS Modules, and inline styles',
+  '
+In this lesson, you''ll learn different methods to style React components, including traditional CSS, CSS Modules for scoped styles, and inline styles using the `style` prop. You''ll understand the advantages and use cases for each approach in modern React development.
+
+Your coding tasks will be applying styles to paragraphs using each of the three methods, practicing with class names, CSS Modules, and inline style objects to see how each method works in practice.
+  ',
+  '0805a56e-e4f6-4202-a4c7-1c91181c1763',
+  false,
+  10,
+  '[{"name":"Learn how to import CSS files into React components for global styling"},{"name":"Understand how to use the `className` attribute (instead of `class`) in JSX to apply CSS classes"},{"name":"Learn how to use CSS Modules for scoped and modular styling in React components"},{"name":"Explore how to apply inline styles using the `style` prop with JavaScript objects"}]'::jsonb,
+  '[{"id":"1-11-styling-components-task-1","name":"Style the first paragraph with the class name `\"red-text\"` to make it red using traditional CSS"},{"id":"1-11-styling-components-task-2","name":"Style the second paragraph with the CSS Module class `styles.greenText` to make it green"},{"id":"1-11-styling-components-task-3","name":"Style the third paragraph with the `style` prop to make it blue using `{{ color: \"blue\" }}`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import \"./App.css\";\nimport styles from \"./App.module.css\";\n\nfunction App() {\n  return (\n    <div>\n      <h1>Styling Components</h1>\n\n      {/* Task: Style this paragraph with the class name \"red-text\" */}\n      <p>I''m red</p>\n\n      {/* Task: Style this paragraph with the CSS Module class styles.greenText */}\n      <p>I''m green</p>\n\n      {/* Task: Style this paragraph with the style prop to make it blue */}\n      <p>I''m blue</p>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"App.css":{"code":".red-text {\n    color: red;\n}\n","hidden":false,"active":false,"readOnly":false,"asset":false},"App.module.css":{"code":".greenText {\n    color: green;\n}\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c215a93f-7db1-447d-ace2-9bcd4b181e1c',
+  '1-12-thinking-in-react',
+  'd13ed7b6-a633-4d31-92d6-628e34d40d41',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Thinking in React',
+  'Learn how to approach building React applications by breaking down UI into components and passing data through props',
+  '
+In this lesson, you''ll learn the React mindset for building user interfaces by breaking them down into components. You''ll practice completing simple components that receive data through props and render that data, applying all the concepts you''ve learned in this module.
+
+Your coding tasks will be completing components for a sandwich builder application, passing data through props, and composing components together to build a simple UI without state management.
+  ',
+  '000136d5-1fd0-4d4b-b763-4dbca90d804e',
+  false,
+  11,
+  '[{"name":"Understand how to break down a UI into reusable components based on single responsibility"},{"name":"Learn how to pass data between components using props"},{"name":"Learn the importance of adopting the React mental model of composing the application UI together using multiple small components and hooks"}]'::jsonb,
+  '[{"id":"1-12-thinking-in-react-task-1","name":"Add `ingredients` to the props of `IngredientList`"},{"id":"1-12-thinking-in-react-task-2","name":"Use the `ingredients` from props to render a list of ingredients using `ul` and `li` tags"},{"id":"1-12-thinking-in-react-task-3","name":"Add `selectedIngredients` to the props of `SandwichPreview`"},{"id":"1-12-thinking-in-react-task-4","name":"Use the `selectedIngredients` from props to access and render the selected vegetable, meat and condiment"},{"id":"1-12-thinking-in-react-task-5","name":"Render the `IngredientList` component with the `ingredients` prop"},{"id":"1-12-thinking-in-react-task-6","name":"Render the `SandwichPreview` component with the `selectedIngredients` prop"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Add ingredients to the props of IngredientList\nexport function IngredientList({}) {\n  return (\n    <div>\n      <h3>Available Ingredients</h3>\n      {/*\n       * Task: Use the ingredients from props to render a list of\n       * ingredients using ul and li tags (don''t forget the key!)\n       */}\n    </div>\n  );\n}\n\n// Task: Add selectedIngredients to the props of SandwichPreview\nexport function SandwichPreview({}) {\n  return (\n    <div>\n      <h3>Your Sandwich</h3>\n\n      {/* Task: Use the selectedIngredients object from props to access and render the selected vegetable */}\n      <div>Vegetable: {}</div>\n\n      {/* Task: Use the selectedIngredients object from props to access and render the selected meat */}\n      <div>Meat: {}</div>\n\n      {/* Task: Use the selectedIngredients object from props to access and render the selected condiment */}\n      <div>Condiment: {}</div>\n    </div>\n  );\n}\n\nexport default function App() {\n  const ingredients = [\n    { id: 1, name: \"Lettuce\", type: \"vegetable\" },\n    { id: 2, name: \"Tomato\", type: \"vegetable\" },\n    { id: 3, name: \"Ham\", type: \"meat\" },\n    { id: 4, name: \"Turkey\", type: \"meat\" },\n    { id: 5, name: \"Mayo\", type: \"condiment\" },\n    { id: 6, name: \"Mustard\", type: \"condiment\" },\n  ];\n\n  const selectedIngredients = {\n    vegetable: ingredients[0],\n    meat: ingredients[2],\n    condiment: ingredients[4],\n  };\n\n  return (\n    <div>\n      <h1>Thinking in React</h1>\n\n      {/* Task: Render the IngredientList component with the ingredients prop */}\n\n      {/* Task: Render the SandwichPreview component with the selectedIngredients prop */}\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '2-state-and-event-handlers',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'State and Event Handlers',
+  'Learn how to manage component state and handle events in React',
+  1
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '98ca5a5b-1896-4b17-b825-7d4e7836935a',
+  '2-1-the-usestate-hook',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useState Hook',
+  'Learn how to use the useState hook to add state to functional components',
+  '
+In this lesson, you''ll learn about the `useState` hook, which allows you to add state to functional components. `useState` is the hook that enables components to store values and update the UI when the values change.
+
+Your coding tasks will be declaring state variables using the `useState` hook in a counter component, practicing the basic syntax and understanding how state declarations work in functional components.
+  ',
+  '42d4cfb6-5e87-4ce2-b9e7-eee820f7475c',
+  true,
+  0,
+  '[{"name":"Understand the purpose of the `useState` hook and how it enables state in functional components"},{"name":"Learn the basic syntax of `useState` for declaring state variables and their setter functions"},{"name":"Recognize how `useState` is used in components like counters and toggle components"}]'::jsonb,
+  '[{"id":"2-1-the-usestate-hook-task-1","name":"Declare the `count` state variable using the `useState` hook and initialize it with a value of `0`"},{"id":"2-1-the-usestate-hook-task-2","name":"Render the `count` state variable inside the curly braces"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nexport default function App() {\n  // Task: Declare the count state variable using the useState hook and initialize it with a value of 0\n\n  return (\n    <div>\n      <h1>The useState Hook</h1>\n      {/* Task: Render the count state variable inside the curly braces */}\n      <p>Counter: {}</p>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'e56cf62d-db3c-44a8-80a7-2123e9201ef2',
+  '2-2-component-lifecycle',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Component Lifecycle',
+  'Understand the React component lifecycle including mounting, updating, and unmounting phases',
+  '
+In this lesson, you''ll learn about the React component lifecycle and how components go through different phases during their existence. You''ll understand the mounting phase when components are first created, the updating phase when they re-render due to state or prop changes, and the unmounting phase when they''re removed from the DOM.
+
+Your whiteboard exploration will be visualizing the component lifecycle phases and understanding how state changes, prop updates, and effects fit into this lifecycle flow.
+  ',
+  'ee22ecfd-5b38-4f76-9998-923b61b1f2d2',
+  true,
+  1,
+  '[{"name":"Understand the three main phases of a React component lifecycle: mounting, updating, and unmounting"},{"name":"Learn how state changes trigger component re-renders and updates"},{"name":"Explore how prop changes from parent components cause child components to update"},{"name":"Understand the role of effects in managing side effects during different lifecycle phases"}]'::jsonb,
+  '[]'::jsonb,
+  '{}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b6f559c9-f039-4b2e-8e7c-01ac9fbd3db5',
+  '2-3-state-initializers',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'State Initializers',
+  'Learn different ways to initialize state in React components using useState',
+  '
+In this lesson, you''ll learn different ways to initialize state in React components using the `useState` hook. You''ll understand when to use direct values, function references, or anonymous functions for state initialization, and how to avoid common pitfalls like recreating initial state on every render.
+
+Your coding tasks will be implementing different state initialization patterns in separate counter components, practicing each approach to understand their use cases and performance implications.
+  ',
+  'b02224d4-fcb5-4b1b-92b7-a88ffe2f085c',
+  false,
+  2,
+  '[{"name":"Understand the different ways to initialize state in React components: direct values, function references, and anonymous functions"},{"name":"Learn when to use each initialization approach based on performance considerations and use cases"},{"name":"Recognize and avoid common pitfalls like recreating initial state on every render"}]'::jsonb,
+  '[{"id":"2-3-state-initializers-task-1","name":"Initialize the `count` state by passing an anonymous arrow function"},{"id":"2-3-state-initializers-task-2","name":"Initialize the `count` state by passing the `getInitialValue` function reference as a callback"},{"id":"2-3-state-initializers-task-3","name":"Fix the `count` state initialization to avoid calling the `getInitialValue` function unnecessarily"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nfunction getInitialValue() {\n  return 0;\n}\n\nfunction CounterA() {\n  // Task: Initialize the count state by passing an anonymous arrow function\n  // The anonymous arrow function should call and return the value of the getInitialValue function\n  const [count] = useState();\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n    </div>\n  );\n}\n\nfunction CounterB() {\n  // Task: Initialize the count state by passing the getInitialValue function reference as a callback\n  const [count] = useState();\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n    </div>\n  );\n}\n\nfunction CounterC() {\n  // Task: Fix the count state initialization to avoid calling the `getInitialValue` function unnecessarily\n  const [count] = useState(getInitialValue());\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  return (\n    <div>\n      <h1>State Initializers</h1>\n      <CounterA />\n      <CounterB />\n      <CounterC />\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2a8edf71-df44-4202-b93b-f5d8c3fdf291',
+  '2-4-updating-state',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Updating State',
+  'Learn different patterns for updating state in React components',
+  '
+In this lesson, you''ll learn different patterns for updating state in React components using the `useState` hook. You''ll understand when to use direct values versus functional updates, how to handle multiple state variables, and best practices for state updates based on previous state.
+
+Your coding tasks will be implementing different state update patterns in a counter component, practicing each approach to understand when and why to use different update strategies.
+  ',
+  'ef380d41-cd31-45b9-aa95-a328839ee331',
+  false,
+  3,
+  '[{"name":"Understand the difference between direct value updates and functional updates in React state"},{"name":"Learn when to use functional updates based on previous state values"},{"name":"Explore patterns for updating objects and arrays in state without mutation"},{"name":"Recognize common pitfalls with state updates and how to avoid them"}]'::jsonb,
+  '[{"id":"2-4-updating-state-task-1","name":"Update the count state with a direct value of `0` using the `setCount` function"},{"id":"2-4-updating-state-task-2","name":"Increase the `count` state by passing an anonymous arrow function"},{"id":"2-4-updating-state-task-3","name":"Update the `user` state by passing an anonymous arrow function"},{"id":"2-4-updating-state-task-4","name":"Update the `languages` state by passing an anonymous arrow function"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const reset = () => {\n    // Task: Update the count state with a direct value of 0 using the setCount function\n  };\n\n  const increment = () => {\n    // Task: Increase the count state by passing an anonymous arrow function\n    // The anonymous arrow function should receive the previous count value and increments it by 1\n  };\n\n  return (\n    <div>\n      <p>Counter: {count}</p>\n      <button onClick={reset}>Reset</button>\n      <button onClick={increment}>Increment</button>\n    </div>\n  );\n}\n\nfunction UserProfile() {\n  const [user, setUser] = useState({ name: \"Cosden\", level: \"senior\" });\n\n  const updateName = () => {\n    // Task: Update the user state by passing an anonymous arrow function\n    // The anonymous arrow should receive the previous object and set the name property to \"Solutions\" without mutating it\n  };\n\n  return (\n    <div>\n      <p>\n        User: {user.name}, {user.level}\n      </p>\n      <button onClick={updateName}>Update Name</button>\n    </div>\n  );\n}\n\nfunction ProgrammingLanguages() {\n  const [languages, setLanguages] = useState([\n    \"JavaScript\",\n    \"TypeScript\",\n    \"Go\",\n  ]);\n\n  const addLanguage = () => {\n    // Task: Update the languages state by passing an anonymous arrow function\n    // The anonymous arrow function should create a new array with the previous array first and \"Rust\" at the end without mutating it\n  };\n\n  return (\n    <div>\n      <p>Popular Programming Languages: {languages.join(\", \")}</p>\n      <button onClick={addLanguage}>Add Rust</button>\n    </div>\n  );\n}\n\nexport default function App() {\n  return (\n    <div>\n      <h1>Updating State</h1>\n      <Counter />\n      <UserProfile />\n      <ProgrammingLanguages />\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '90d0cb70-3847-4ea2-9510-766d09e912bf',
+  '2-5-event-handlers',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Event Handlers',
+  'Learn how to handle events in React and the differences from traditional DOM event handling',
+  '
+In this lesson, you''ll learn about event handling in React with a focus on the `onClick` event handler. You''ll also  understand the key differences between React event handling and traditional HTML/JavaScript approaches, including naming conventions and how to access event information.
+
+Your coding tasks will be implementing different `onClick` handler patterns in React components, practicing with inline functions and separate handler functions, and understanding React''s synthetic event system.
+  ',
+  'e393ca1f-1962-432a-a572-5d66c2750a61',
+  false,
+  4,
+  '[{"name":"Learn how to access event information in React using the synthetic event object instead of DOM properties like `this`"},{"name":"Learn how to apply different patterns for handling click events: inline functions and separate handler functions"}]'::jsonb,
+  '[{"id":"2-5-event-handlers-task-1","name":"Implement the `handleButtonClick` function to set the `value` state with the button''s `id`"},{"id":"2-5-event-handlers-task-2","name":"Pass the `handleButtonClick` function as a callback reference to the first button''s `onClick` handler"},{"id":"2-5-event-handlers-task-3","name":"Pass an anonymous arrow function to the second button''s `onClick` handler that calls the `handleButtonClick` function and passes the `event` object as an argument"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nexport default function App() {\n  const [value, setValue] = useState(\"\");\n\n  // Task: Implement the handleButtonClick function to set the value state with the button''s id\n  // The event object is passed as an argument to the function\n  // Access the button''s id from the event object using event.target.id\n  const handleButtonClick = () => {};\n\n  return (\n    <div>\n      <h1>Event Handlers</h1>\n\n      <p>Value: {value}</p>\n\n      {/* Task: Pass the handleButtonClick function as a callback reference to the first button''s onClick handler */}\n      <button id=\"reference\">Reference</button>\n\n      {/* Task: Pass an anonymous arrow function to the second button''s onClick handler that calls the handleButtonClick function and passes the event object as an argument */}\n      <button id=\"function\">Function</button>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd49ff1f1-2443-4014-9d59-6fc7a4a1252e',
+  '2-6-handling-change-events',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Handling Change Events',
+  'Learn how to handle change events in React inputs to create controlled components',
+  '
+In this lesson, you''ll learn about the `onChange` event handler in React for input elements and how it enables you to create controlled components. You''ll understand the importance of synchronizing the input''s value with React state to ensure proper data flow.
+
+Your coding tasks will be adding an `onChange` handler to capture input changes, updating state to reflect the current value, and adding the `value` prop to complete the controlled component pattern.
+  ',
+  '633cfb42-6177-43b8-97ad-da1a0140dc26',
+  false,
+  5,
+  '[{"name":"Understand how to use the `onChange` prop with input elements to handle user input changes"},{"name":"Learn the role of the `value` prop in creating controlled components and preventing inconsistent state"},{"name":"Recognize the behavior when `onChange` is used without `value` and how to correct it"}]'::jsonb,
+  '[{"id":"2-6-handling-change-events-task-1","name":"Implement the `handleChange` function to update the `value` state with the `event` object"},{"id":"2-6-handling-change-events-task-2","name":"Add the `handleChange` function to the input''s `onChange` handler"},{"id":"2-6-handling-change-events-task-3","name":"Add `value` to the `value` prop of the `input` element"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nexport default function HandlingChangeEvents() {\n  const [value, setValue] = useState(\"\");\n\n  // Task: Implement the handleChange function to update the value state with the event object\n  // The event object is passed as an argument to the function\n  // Access the input value from the event object using event.target.value\n  const handleChange = () => {};\n\n  return (\n    <div>\n      <h1>Handling Change Events</h1>\n\n      {/* Task: Add the handleChange function to the input''s onChange handler */}\n      {/* Task: Add value to the value prop of the input element  */}\n      <input type=\"text\" />\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6aa99470-bd53-4f77-ba79-caf3f0971cf3',
+  '2-7-handling-submit-events',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Handling Submit Events',
+  'Learn how to handle form submission events in React and access input values',
+  '
+In this lesson, you''ll learn how to handle form submission events in React, including how to prevent the default browser behavior and access form data directly from the event object. Understanding form handling is crucial for building interactive web applications.
+
+Your coding tasks will be implementing form event handlers, preventing default behaviors, and extracting input values from forms using event object.
+  ',
+  '49fd05de-30ac-4a55-a494-4d682b4b1059',
+  false,
+  6,
+  '[{"name":"Understand how to use the `onSubmit` prop with form elements to handle submission events"},{"name":"Learn the importance of preventing default form submission behavior using `preventDefault()`"},{"name":"Recognize how to access input values from form elements using `event.target` properties"}]'::jsonb,
+  '[{"id":"2-7-handling-submit-events-task-1","name":"Implement the `handleSubmit` function that handles the form submission event"},{"id":"2-7-handling-submit-events-task-2","name":"Add the `handleSubmit` function to the form''s `onSubmit` handler"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nexport default function App() {\n  const [value, setValue] = useState(\"\");\n\n  // Task: Implement the handleSubmit function that handles the form submission event\n  // The event object is passed as an argument to the function\n  // Call event.preventDefault to prevent default form submission behavior\n  const handleSubmit = () => {};\n\n  return (\n    <div>\n      <h1>Handling Submit Events</h1>\n\n      {/* Task: Add the handleSubmit function to the form''s onSubmit handler */}\n      <form>\n        <input\n          type=\"text\"\n          name=\"username\"\n          value={value}\n          onChange={(event) => setValue(event.target.value)}\n        />\n        <button type=\"submit\">Submit</button>\n      </form>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'edc67681-299e-43e4-bbc2-c2aaff7915ad',
+  '2-8-uncontrolled-components',
+  '6bfeaa53-4b5f-47ba-b8b4-1687b0dcf0ad',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Uncontrolled Components',
+  'Learn about uncontrolled components in React and when to use them instead of controlled components',
+  '
+In this lesson, you''ll focus on uncontrolled components in React. While most of this module has focused on controlled components (where React manages the state), uncontrolled components let the DOM handle the input value directly using `defaultValue` and are accessed through form submission events.
+
+Your coding tasks will be observing the completed example of an uncontrolled component to understand its implementation and use cases compared to controlled components.
+  ',
+  'e70e61c3-6a5c-4dc8-a375-da5c79d08d99',
+  false,
+  7,
+  '[{"name":"Understand the key differences between controlled and uncontrolled components in React"},{"name":"Recognize when to use uncontrolled components for simpler form handling and performance benefits (with examples and use cases)"},{"name":"Know how to access values from uncontrolled components using form submission events and `event.target`"}]'::jsonb,
+  '[{"id":"2-8-uncontrolled-components-task-1","name":"Access the `\"username\"` field value using `FormData` and set it to the `value` state"},{"id":"2-8-uncontrolled-components-task-2","name":"Add the `handleSubmit` function to the form''s `onSubmit` handler"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nexport default function App() {\n  const [value, setValue] = useState(\"\");\n\n  const handleSubmit = (event) => {\n    event.preventDefault();\n\n    // Task: Access the username field value using FormData and set it to the value state\n    // Pass the event object to the FormData constructor\n    // Access the username field value using the get method of FormData and set it to the value state\n  };\n\n  return (\n    <div>\n      <h1>Uncontrolled Components</h1>\n\n      <p>Value: {value}</p>\n\n      {/* Task: Add the handleSubmit function to the form''s onSubmit handler */}\n      <form>\n        <input type=\"text\" name=\"username\" />\n        <button type=\"submit\">Submit</button>\n      </form>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '3-effects-and-data-fetching',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Effects and Data Fetching',
+  'Learn how to handle effects and data fetching in React',
+  2
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '657d3828-7a02-44fc-9c9c-9c4cf629efcd',
+  '3-1-introduction-to-useeffect',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Introduction to Effects',
+  'Learn about side effects in React and the basic syntax of the useEffect hook',
+  '
+In this lesson, you''ll learn about side effects in software development, which are operations that interact with the outside world beyond the React component''s scope, such as API calls, timers, or DOM manipulations. You''ll also learn the syntax of the `useEffect` hook, React''s primary tool for managing side effects in functional components, including the effect function, optional cleanup function, and dependencies array.
+
+Your coding tasks will be observing a completed example that demonstrates the basic `useEffect` syntax structure, showing the three key parts: the effect function, optional cleanup function, and dependencies array.
+  ',
+  '820289ad-3c48-49e3-b7e6-f09498ecf5af',
+  true,
+  0,
+  '[{"name":"Understand what side effects are in software development and React applications (e.g., API calls, DOM updates, subscriptions)"},{"name":"Learn the basic syntax structure of the `useEffect` hook with its effect function parameter and optional cleanup function"},{"name":"Recognize the optional dependencies array as the second parameter and its purpose in controlling effect execution"},{"name":"Understand the three-part structure of useEffect: effect function, cleanup function, and dependencies array"}]'::jsonb,
+  '[{"id":"3-1-introduction-to-useeffect-task-1","name":"Submit the code editor – no code required"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect } from \"react\";\n\nexport default function App() {\n  useEffect(() => {\n    // Code that runs\n\n    // Optional cleanup function\n    return () => {};\n  }, []); // Dependency array\n\n  return (\n    <div>\n      <h1>Introduction to Effects</h1>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '822597f5-a1c2-472d-ad2e-a4da7a39fc3b',
+  '3-2-setup-function-in-useeffect',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Setup Function in useEffect',
+  'Learn how the setup function works in useEffect',
+  '
+In this lesson, you''ll learn about the setup function in the `useEffect` hook, which is the main function that contains the side effect logic. The setup function runs after the component renders and can respond to changes in the dependencies array. Understanding how the setup function works is fundamental to mastering React''s effect system.
+
+Your coding tasks will be adding a setup function that logs the count value to the console inside of the useEffect hook.
+  ',
+  '2e662221-e7db-44a6-9c51-79ac11609a94',
+  true,
+  1,
+  '[{"name":"Understand what the setup function is in `useEffect` and how it contains the main side effect logic"},{"name":"Learn how the setup function runs after component rendering"},{"name":"Recognize how the setup function can be used to perform actions in response to state changes"},{"name":"See practical examples of setup functions executing code when specific dependencies change"}]'::jsonb,
+  '[{"id":"3-2-setup-function-in-useeffect-task-1","name":"Add a console log that will log the `count` value inside of the useEffect hook"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nexport default function App() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    // Task: Add a console log that will log the count value inside of the useEffect hook\n  }, []); // For this lesson, the dependency array is intentionally left empty\n\n  return (\n    <div>\n      <h1>Setup Function in useEffect</h1>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6a1a06c4-73e7-4a37-bcf2-5e85a5b72ea1',
+  '3-3-dependency-arrays-in-useeffect',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Dependency Arrays in useEffect',
+  'Learn how to properly use the dependencies array in useEffect to avoid common pitfalls',
+  '
+In this lesson, you''ll learn about the dependencies array in the `useEffect` hook and its role in controlling when effects run. You''ll explore common pitfalls like missing reactive dependencies or including unstable references (functions or objects) that change on every render, which can lead to unnecessary effect runs or stale closures.
+
+Your coding tasks will be fixing these pitfalls by adding missing dependencies, moving unstable references inside the effect, or defining them outside the component to stabilize them.
+  ',
+  '7e996b03-12e3-4421-b57d-7b2657ca8cf8',
+  false,
+  2,
+  '[{"name":"Understand the role of the dependencies array in controlling when `useEffect` runs"},{"name":"Recognize common pitfalls with dependencies, such as missing reactive values or including unstable references"},{"name":"Learn how to fix dependency issues by moving unstable references inside effects or outside components"}]'::jsonb,
+  '[{"id":"3-3-dependency-arrays-in-useeffect-task-1","name":"Add the missing `count` dependency to the dependencies array"},{"id":"3-3-dependency-arrays-in-useeffect-task-2","name":"Move the `unstableFunction` inside the setup function of the `useEffect` to avoid it being a dependency"},{"id":"3-3-dependency-arrays-in-useeffect-task-3","name":"Remove the `unstableFunction` dependency since it''s no longer needed and add the `count` state variable to the dependencies array"},{"id":"3-3-dependency-arrays-in-useeffect-task-4","name":"Move the `unstableObject` outside the component to avoid it being recreated on every render"},{"id":"3-3-dependency-arrays-in-useeffect-task-5","name":"Remove the `unstableObject` dependency from the dependencies array since it''s no longer needed"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nfunction Component() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    console.log(\"Count changed:\", count);\n    // Task: Add the missing count dependency to the dependencies array\n  }, []);\n\n  // Task: Move the unstableFunction inside the setup function of the useEffect to avoid it being a dependency\n  const unstableFunction = () => {\n    console.log(\"Unstable function count:\", count);\n  };\n\n  useEffect(() => {\n    unstableFunction();\n\n    // Task: Remove the unstableFunction dependency since it''s no longer needed and add the count state variable to the dependencies array\n  }, [unstableFunction]);\n\n  // Task: Move the unstableObject outside the component to avoid it being recreated on every render\n  const unstableObject = { message: \"I''m an unstable object\" };\n\n  useEffect(() => {\n    console.log(\"Object value:\", unstableObject.message);\n\n    // Task: Remove the unstableObject dependency from the dependencies array since it''s no longer needed\n  }, [unstableObject]);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n    </div>\n  );\n}\n\nexport default function App() {\n  return (\n    <div>\n      <h1>Dependency Arrays in useEffect</h1>\n      <Component />\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '5071a9f2-ce45-43ff-8f89-a9a8bee34cda',
+  '3-4-cleanup-function-in-useeffect',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Cleanup Function in useEffect',
+  'Learn about the cleanup function in useEffect and why it''s important for preventing memory leaks',
+  '
+In this lesson, you''ll learn about the cleanup function in the `useEffect` hook, which is essential for preventing memory leaks and unnecessary behavior in React components. Cleanup functions run when the component unmounts or before the effect re-runs, allowing you to cancel subscriptions, invalidate timers, or remove event listeners.
+
+Your coding task will be adding a cleanup function to an effect that uses the `removeEventListener()` method to remove an event listener, ensuring proper resource management when the component is removed from the DOM.
+  ',
+  '73731e37-b0e5-4976-b62b-9c4a662c1b32',
+  false,
+  3,
+  '[{"name":"Understand why cleanup functions are necessary in `useEffect` to prevent memory leaks and unwanted behavior"},{"name":"Learn how to implement cleanup functions to cancel ongoing operations and remove event listeners"},{"name":"Recognize common use cases for cleanup functions, such as aborting API requests or removing DOM event listeners"}]'::jsonb,
+  '[{"id":"3-4-cleanup-function-in-useeffect-task-1","name":"Add a cleanup function that calls the `removeEventListener()` method of the document object"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nexport default function App() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    const handleClick = () => {\n      console.log(\"Count on click:\", count);\n    };\n\n    document.addEventListener(\"click\", handleClick);\n\n    // Task: Add a cleanup function that calls the removeEventListener() method of the document object\n    // Pass \"click\" as the event and the handleClick function as the callback argument\n  }, [count]);\n\n  return (\n    <div>\n      <h1>Cleanup Function in useEffect</h1>\n\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'a87ae480-1414-472f-b0e7-6f14d60c9af1',
+  '3-5-useeffect-with-no-dependency-array',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'useEffect with No Dependency Array',
+  'Learn what happens when useEffect has no dependency array and when this pattern is useful',
+  '
+In this lesson, you''ll learn about using `useEffect` without a dependency array, which causes the effect to run after every render of the component. This is different from an empty dependency array (which runs once) or a dependency array with values (which runs when those values change). Understanding this behavior is important for knowing when effects run and avoiding unintended side effects.
+
+Your coding task will be creating a `useEffect` hook with no dependency array that logs whenever the component renders, and observing how it runs on every render including when state changes.
+  ',
+  '38f271a6-9392-4be4-9cab-aa76c651296a',
+  false,
+  4,
+  '[{"name":"Understand that omitting the dependency array causes the effect to run after every render"},{"name":"Learn the difference between no dependency array, an empty dependency array `[]`, and a dependency array with values"},{"name":"Recognize that effects without dependency arrays run even when nothing in the component has changed"}]'::jsonb,
+  '[{"id":"3-5-useeffect-with-no-dependency-array-task-1","name":"Create a `useEffect` hook with no dependency array that logs `\"Component rendered\"` to the console"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nexport default function App() {\n  const [count, setCount] = useState(0);\n\n  // Task: Create a useEffect hook with no dependency array that logs \"Component rendered\" to the console\n\n  return (\n    <div>\n      <h1>useEffect with No Dependency Array</h1>\n\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd10575f8-e260-413d-8150-58c70d1d7ef2',
+  '3-6-stale-values',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Stale Values',
+  'Learn how stale values occur in effects and how to avoid them using state setter callbacks',
+  '
+In this lesson, you''ll learn about stale values in React effects, which happen when effects capture old values of state or props due to missing dependencies. This can lead to bugs where state updates use outdated values. You''ll understand how to fix this by using state setter functions that receive the previous state value, eliminating the need for those values in the dependency array.
+
+Your coding task will be fixing a stale value issue in an interval counter by replacing a direct state update with a state setter callback function, ensuring the count updates correctly without needing the state variable in dependencies.
+  ',
+  '7deb349b-f42a-4205-ab08-af07fcd8005f',
+  false,
+  5,
+  '[{"name":"Understand why updating state directly from effects can create unnecessary dependencies and performance issues"},{"name":"Learn how to use state setter functions (`setCount(c => c + 1)`) to update state without dependencies"},{"name":"Recognize when to use state setter functions in effects to optimize performance and prevent infinite loops"},{"name":"Understand what stale values are and how they occur in useEffect due to missing dependencies"}]'::jsonb,
+  '[{"id":"3-6-stale-values-task-1","name":"Replace the direct state update `setCount(count + 1)` with an anonymous arrow function"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nexport default function App() {\n  const [isCounterRunning, setIsCounterRunning] = useState(false);\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    if (!isCounterRunning) {\n      return;\n    }\n\n    const intervalId = setInterval(() => {\n      // Task: Replace the direct state update setCount(count + 1) by passing an anonymous arrow function\n      // Have the anonymous arrow function receive the previous state value and increments it by 1\n      setCount(count + 1);\n    }, 1000);\n\n    return () => {\n      clearInterval(intervalId);\n    };\n  }, [isCounterRunning]);\n\n  return (\n    <div>\n      <h1>Stale Values</h1>\n\n      <p>Counter: {count}</p>\n\n      <button onClick={() => setIsCounterRunning(true)}>Start counter</button>\n      <button onClick={() => setIsCounterRunning(false)}>Stop counter</button>\n      <button onClick={() => setCount(0)}>Reset counter</button>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6227e8bd-d19c-4661-8ee4-a7845d4b468b',
+  '3-7-the-useref-hook',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useRef Hook',
+  'Learn how to use the useRef hook to create mutable references that persist across renders',
+  '
+In this lesson, you''ll learn about the `useRef` hook in React, which allows you to create mutable references that persist across component renders without triggering re-renders. Unlike state variables, changes to refs don''t cause component updates, making them ideal for storing values that need to persist but don''t affect the visual output. And unlike normal `let` variables which get reinitialized on every render, refs maintain their values across renders while being mutable.
+
+Your coding tasks will be using `useRef` to create persistent references, accessing DOM elements directly, and storing values that need to persist between renders without causing unnecessary re-renders.
+  ',
+  '930b4e43-2e37-4b4f-a028-e87c71909523',
+  false,
+  6,
+  '[{"name":"Understand what the `useRef` hook is and how it differs from `useState` and normal `let` variables"},{"name":"Learn how to create and use refs to store mutable values that persist across renders unlike `let` variables"},{"name":"Recognize common use cases for `useRef`, such as accessing DOM elements and storing values not needed in the render or UI"},{"name":"Understand how refs can be used to avoid unnecessary re-renders when storing non-visual data while maintaining persistence"}]'::jsonb,
+  '[{"id":"3-7-the-useref-hook-task-1","name":"Create a ref using the `useRef` hook to store the input element reference in the `inputRef` variable"},{"id":"3-7-the-useref-hook-task-2","name":"Implement the `focusInput` function to call the `focus()` method on the `inputRef.current` property"},{"id":"3-7-the-useref-hook-task-3","name":"Assign the `inputRef` to the `ref` prop of the input element to capture the DOM reference"},{"id":"3-7-the-useref-hook-task-4","name":"Create a ref using the `useRef` hook to store the count value in the `countRef` variable"},{"id":"3-7-the-useref-hook-task-5","name":"Implement the `increment` function to increment the count value by `1` using the `countRef.current` property"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useRef } from \"react\";\n\nfunction Input() {\n  // Task: Create a ref using the useRef hook to store the input element reference in the inputRef variable\n\n  const focusInput = () => {\n    // Task: Implement the focusInput function to call the focus() method on the inputRef.current property\n  };\n\n  return (\n    <div>\n      {/* Task: Assign the inputRef to the ref prop of the input element to capture the DOM reference */}\n      <input type=\"text\" placeholder=\"Focus me!\" />\n\n      <button onClick={focusInput}>Focus Input</button>\n    </div>\n  );\n}\n\nfunction Counter() {\n  // Task: Create a ref using the useRef hook to store the count value in the countRef variable\n\n  const increment = () => {\n    // Task: Implement the increment function to increment the count value by 1 using the countRef.current property\n  };\n\n  return (\n    <div>\n      <button onClick={increment}>Increment</button>\n    </div>\n  );\n}\n\nexport default function App() {\n  return (\n    <div>\n      <h1>The useRef Hook</h1>\n      <Input />\n      <Counter />\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '0f4fb69a-7251-46cb-8759-61c0a8039c97',
+  '3-8-data-fetching-and-displaying-data',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Data Fetching and Displaying Data',
+  'Learn how to fetch data from APIs and display it in React components using effects and state',
+  '
+In this lesson, you''ll learn how to fetch data from external APIs in React applications, connecting the concepts of side effects from previous lessons. Data fetching in React touches every stage of the component lifecycle - from mounting (when data is initially fetched) to updating (when data changes trigger re-renders) and unmounting (when cleanup is needed). In this lesson, you''ll focus on the mounting stage, where data is fetched when the component first renders.
+
+Your coding tasks will be implementing the data fetching logic using the Fetch API, storing the retrieved data in state, and displaying it through React components, completing the data flow from API to UI during the component''s initial mounting phase.
+  ',
+  '4eefc7e1-eab6-4bb0-99c5-aa0b44f93095',
+  false,
+  7,
+  '[{"name":"Understand how data fetching connects to side effects and the `useEffect` hook in React across the component lifecycle"},{"name":"Learn how to use the Fetch API to retrieve data from external APIs during the component mounting stage"},{"name":"Recognize the pattern of storing fetched data in state and displaying it through component rendering"},{"name":"Understand the complete data flow from API fetching to UI display in React applications, starting with the mounting stage"}]'::jsonb,
+  '[{"id":"3-8-data-fetching-and-displaying-data-task-1","name":"Reset the `todo` state variable to null using `setTodo` before making the API call"},{"id":"3-8-data-fetching-and-displaying-data-task-2","name":"Fetch data from `API_URL` using the Fetch API inside the `fetchData` function"},{"id":"3-8-data-fetching-and-displaying-data-task-3","name":"Parse the response body as JSON using `await response.json()` and store the result in the `todo` state using the `setTodo` function"},{"id":"3-8-data-fetching-and-displaying-data-task-4","name":"Call the `fetchData` function inside the `useEffect` to trigger the data fetching when the component mounts"},{"id":"3-8-data-fetching-and-displaying-data-task-5","name":"Conditionally render the `Todo` component only when `todoData` is not `null`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nconst API_URL = \"https://jsonplaceholder.typicode.com/todos/1\";\n\nfunction Todo({ todo }) {\n  return (\n    <div>\n      <h2>Todo #{todo.id}</h2>\n      <p>\n        <strong>Title:</strong> {todo.title}\n      </p>\n      <p>\n        <strong>Completed:</strong> {todo.completed ? \"Yes\" : \"No\"}\n      </p>\n      <p>\n        <strong>User ID:</strong> {todo.userId}\n      </p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [todo, setTodo] = useState(null);\n\n  useEffect(() => {\n    const fetchData = async () => {\n      // Task: Reset the todo state variable to null using setTodo before making the API call\n\n      // Task: Fetch data from API_URL using the Fetch API inside the fetchData function\n\n      // Task: Parse the response body as JSON using await response.json() and store the result in the todo state using the setTodo function\n    };\n\n    // Task: Call the fetchData function inside the useEffect to trigger the data fetching when the component mounts\n  }, []);\n\n  return (\n    <div>\n      <h1>Data Fetching and Displaying Data</h1>\n      {/* Task: Conditionally render the Todo component only when todo is not null */}\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'bb293f07-6171-4824-a6ee-126e75b6db65',
+  '3-9-data-fetching-and-handling-loading-state',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Data Fetching and Handling Loading State',
+  'Learn how to handle loading states during data fetching to provide better user feedback',
+  '
+In this lesson, you''ll learn how to handle loading states in React applications when fetching data from APIs. Building on the previous data fetching lesson, you''ll understand the importance of providing user feedback during asynchronous operations. Loading states help users understand that data is being retrieved and improve the overall user experience. This lesson continues focusing on the mounting stage of the component lifecycle, where loading states are crucial for indicating that data is being fetched during the initial render.
+
+Your coding tasks will be implementing loading state management by setting loading flags before and after data fetching operations, and conditionally rendering loading indicators to keep users informed during API requests in the mounting phase.
+  ',
+  '43bf8709-7262-43cc-94a7-58218b64b873',
+  false,
+  8,
+  '[{"name":"Understand why loading states are important for user experience during data fetching operations in the mounting stage"},{"name":"Learn how to implement loading state management using React state hooks during component mounting"},{"name":"Recognize the pattern of setting loading states before and after asynchronous operations in the useEffect hook"},{"name":"Understand how to conditionally render loading indicators based on the loading state during the initial render"},{"name":"Learn the traditional promise handling pattern using `then` and `catch` methods before implementing modern `async/await` syntax"}]'::jsonb,
+  '[{"id":"3-9-data-fetching-and-handling-loading-state-task-1","name":"Set the loading state to `true` using `setIsLoading` at the beginning of the `fetchData` function before making the API call"},{"id":"3-9-data-fetching-and-handling-loading-state-task-2","name":"Set the loading state back to `false` using `setIsLoading` after the data has been fetched and stored in state"},{"id":"3-9-data-fetching-and-handling-loading-state-task-3","name":"Conditionally render the loading message `<p>Loading todo data...</p>` when `isLoading` is `true` to provide user feedback during data fetching"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nconst API_URL = \"https://jsonplaceholder.typicode.com/todos/1\";\n\nfunction Todo({ todo }) {\n  return (\n    <div>\n      <h2>Todo #{todo.id}</h2>\n      <p>\n        <strong>Title:</strong> {todo.title}\n      </p>\n      <p>\n        <strong>Completed:</strong> {todo.completed ? \"Yes\" : \"No\"}\n      </p>\n      <p>\n        <strong>User ID:</strong> {todo.userId}\n      </p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [todo, setTodo] = useState(null);\n  const [isLoading, setIsLoading] = useState(false);\n\n  useEffect(() => {\n    const fetchTodo = async () => {\n      setTodo(null);\n\n      // Task: Set the loading state to true using setIsLoading at the beginning of the fetchTodo function before making the API call\n\n      const response = await fetch(API_URL);\n      const data = await response.json();\n      setTodo(data);\n\n      // Task: Set the loading state back to false using setIsLoading after the todo has been fetched and stored in state\n    };\n\n    fetchTodo();\n  }, []);\n\n  return (\n    <div>\n      <h1>Todo Fetching and Handling Loading State</h1>\n\n      {/* Task: Conditionally render the loading message <p>Loading todo todo...</p> when isLoading is true to provide user feedback during todo fetching */}\n      {todo && <Todo todo={todo} />}\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '72bdbd76-e892-4544-a641-8d6247704687',
+  '3-10-data-fetching-and-handling-errors',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Data Fetching and Handling Errors',
+  'Learn how to handle errors during data fetching from both client and server side',
+  '
+In this lesson, you''ll learn how to handle errors in React applications when fetching data from APIs. Building on the previous data fetching lessons, you''ll understand how to catch and manage both client-side and server-side errors. Proper error handling ensures your application remains stable and provides meaningful feedback to users when things go wrong.
+
+Your coding tasks will be implementing error state management, using try-catch blocks to handle exceptions, checking response status codes, and displaying appropriate error messages to users when API requests fail.
+  ',
+  'd20306c7-974b-410f-a944-e68540e77b8f',
+  false,
+  9,
+  '[{"name":"Understand how to handle both client-side errors (e.g., network failures, CORS issues, invalid URLs) and server-side errors (e.g., 404 Not Found, 500 Internal Server Error, 403 Forbidden) during data fetching operations"},{"name":"Learn how to use try-catch blocks to catch exceptions and manage error states in React, and understand their equivalence to promise `then` and `catch` methods for error handling"},{"name":"Recognize the importance of checking HTTP response status codes for server errors"},{"name":"Understand how to provide meaningful error messages to users when API requests fail"}]'::jsonb,
+  '[{"id":"3-10-data-fetching-and-handling-errors-task-1","name":"Reset the error state to `null` using `setError` at the beginning of the `fetchData` function before making the API call"},{"id":"3-10-data-fetching-and-handling-errors-task-2","name":"Wrap the API fetching logic in a try-catch block to handle potential errors"},{"id":"3-10-data-fetching-and-handling-errors-task-3","name":"Check if the response is not OK using `!response.ok` and throw an error with the message `\"Server error: ${response.status} ${response.statusText}\"`"},{"id":"3-10-data-fetching-and-handling-errors-task-4","name":"Catch any errors in the catch block and set the error message using `setError`"},{"id":"3-10-data-fetching-and-handling-errors-task-5","name":"Use a finally block to ensure the loading state is set to `false` using `setIsLoading` whether the request succeeds or fails"},{"id":"3-10-data-fetching-and-handling-errors-task-6","name":"Conditionally render `<p>Error: {error}</p>` when the error state is not `null`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState } from \"react\";\n\nconst API_URL = \"https://jsonplaceholder.typicode.com/todos/1\";\n\nfunction Todo({ todo }) {\n  return (\n    <div>\n      <h2>Todo #{todo.id}</h2>\n      <p>\n        <strong>Title:</strong> {todo.title}\n      </p>\n      <p>\n        <strong>Completed:</strong> {todo.completed ? \"Yes\" : \"No\"}\n      </p>\n      <p>\n        <strong>User ID:</strong> {todo.userId}\n      </p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [todo, setTodo] = useState(null);\n  const [isLoading, setIsLoading] = useState(false);\n  const [error, setError] = useState(null);\n\n  useEffect(() => {\n    const fetchData = async () => {\n      setTodo(null);\n      setIsLoading(true);\n\n      // Task: Reset the error state variable to null using setError at the beginning of the fetchData function before making the API call\n\n      // Task: Wrap the API fetching logic in a try-catch block to handle potential errors\n      const response = await fetch(API_URL);\n\n      // Task: Check if the response is not OK using !response.ok and throw an error with the message \"Server error: ${response.status} ${response.statusText}\"\n\n      const data = await response.json();\n      setTodo(data);\n      // Task: Catch any errors in the catch block and set the error message using setError\n\n      // Task: Use a finally block to ensure the loading state is set to false using setIsLoading whether the request succeeds or fails\n      setIsLoading(false);\n    };\n\n    fetchData();\n  }, []);\n\n  return (\n    <div>\n      <h1>Data Fetching and Handling Errors</h1>\n\n      {/* Task: Conditionally render <p>Error: {error}</p> when the error state is not null */}\n      {isLoading && <p>Loading todo data...</p>}\n\n      {todo && <Todo todo={todo} />}\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '34aaf749-81b6-4e56-b935-b398747f9931',
+  '3-11-data-fetching-and-handling-request-cancellation',
+  'b004c2a9-cc25-4734-b82d-24ac9a74a257',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Data Fetching and Handling Request Cancellation',
+  'Learn how to cancel ongoing API requests when components unmount to prevent memory leaks and race conditions',
+  '
+In this lesson, you''ll learn how to handle request cancellation in React applications when fetching data from APIs. Building on the previous data fetching lessons, you''ll understand how to cancel ongoing requests when components unmount to prevent memory leaks, avoid updating state on unmounted components, and prevent race conditions where slower responses overwrite more recent ones. This is crucial for applications with dynamic content where users might navigate away before requests complete or trigger multiple rapid requests.
+
+Your coding tasks will be implementing request cancellation using the AbortController API, passing the abort signal to fetch requests, and cleaning up ongoing requests in the useEffect cleanup function to ensure proper resource management and prevent race conditions.
+  ',
+  'e268e80a-b7d6-43b2-b703-2ba8cf6bb99a',
+  false,
+  10,
+  '[{"name":"Understand why request cancellation is important for preventing memory leaks, state updates on unmounted components, and race conditions in data fetching"},{"name":"Learn how to use the `AbortController` API to cancel ongoing fetch requests and prevent outdated responses from overwriting current state"},{"name":"Recognize how to pass the `abortController.signal` object to the `signal` property of the fetch request options to make it cancellable"},{"name":"Understand how to implement proper cleanup of ongoing requests in the useEffect cleanup function to prevent race conditions and ensure only the most relevant data is displayed"}]'::jsonb,
+  '[{"id":"3-11-data-fetching-and-handling-request-cancellation-task-1","name":"Create a ref to store the `AbortController` instance called `abortControllerRef` using the `useRef` hook"},{"id":"3-11-data-fetching-and-handling-request-cancellation-task-2","name":"Create a new `AbortController` instance and assign it to the `abortControllerRef.current` variable"},{"id":"3-11-data-fetching-and-handling-request-cancellation-task-3","name":"Pass the `abortControllerRef.current.signal` object to the `signal` property of the fetch request options to make it cancellable"},{"id":"3-11-data-fetching-and-handling-request-cancellation-task-4","name":"Check if the error is an `AbortError` using `e.name === ''AbortError''` and if so, return early"},{"id":"3-11-data-fetching-and-handling-request-cancellation-task-5","name":"Return a cleanup function that calls `abortControllerRef.current.abort()` to cancel the request when the component unmounts"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useState, useRef } from \"react\";\n\nconst API_URL = \"https://jsonplaceholder.typicode.com/todos/1\";\n\nfunction Todo({ todo }) {\n  return (\n    <div>\n      <h2>Todo #{todo.id}</h2>\n      <p>\n        <strong>Title:</strong> {todo.title}\n      </p>\n      <p>\n        <strong>Completed:</strong> {todo.completed ? \"Yes\" : \"No\"}\n      </p>\n      <p>\n        <strong>User ID:</strong> {todo.userId}\n      </p>\n    </div>\n  );\n}\n\nfunction TodoFetcher() {\n  const [todo, setTodo] = useState(null);\n  const [isLoading, setIsLoading] = useState(false);\n  const [error, setError] = useState(null);\n\n  // Task: Create a ref to store the AbortController instance called abortControllerRef using the useRef hook\n\n  useEffect(() => {\n    const fetchData = async () => {\n      setTodo(null);\n      setIsLoading(true);\n      setError(null);\n\n      // Task: Create a new AbortController instance and assign it to the abortControllerRef.current variable\n\n      try {\n        const response = await fetch(API_URL, {\n          // Task: Pass the abortControllerRef.current.signal to the signal property of the fetch request options to make it cancellable\n        });\n\n        if (!response.ok) {\n          throw new Error(\n            `Server error: ${response.status} ${response.statusText}`,\n          );\n        }\n\n        const data = await response.json();\n        setTodo(data);\n      } catch (e) {\n        // Task: Check if the error is an AbortError using e.name === \"AbortError\" and if so, return early\n\n        setError(e.message);\n      } finally {\n        setIsLoading(false);\n      }\n    };\n\n    fetchData();\n\n    // Task: Return a cleanup function that calls abortControllerRef.current.abort() to cancel the request when the component unmounts\n  }, []);\n\n  return (\n    <div>\n      {error && <p>Error: {error}</p>}\n      {isLoading && <p>Loading todo data...</p>}\n      {todo && <Todo todo={todo} />}\n    </div>\n  );\n}\n\nexport default function App() {\n  const [showTodo, setShowTodo] = useState(false);\n\n  return (\n    <div>\n      <h1>Data Fetching and Handling Request Cancellation</h1>\n\n      <button onClick={() => setShowTodo(!showTodo)}>\n        {showTodo ? \"Hide Todo\" : \"Show Todo\"}\n      </button>\n\n      {showTodo && <TodoFetcher />}\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '4-hooks-and-performance',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Hooks and Performance',
+  'Learn essential React hooks and performance optimization techniques for building efficient applications.',
+  3
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '64d36dab-a14f-4b71-af20-a027634ddfec',
+  '4-1-component-re-renders',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Component Re-Renders Deep Dive',
+  'Understand when and why React components re-render and how re-renders propagate through the component tree',
+  '
+In this lesson, you''ll dive deep into React''s re-rendering behavior and understand the fundamental rules that govern when components update. You''ll learn what triggers a re-render, how re-renders cascade through parent and child components, and why understanding this mechanism is crucial for building performant React applications.
+
+Your whiteboard exploration will be visualizing component re-render scenarios, understanding the relationship between state changes and re-renders, and exploring how React''s rendering process affects the entire component tree.
+  ',
+  'd3a04e6e-6814-402e-8af2-5aca6805f9ec',
+  true,
+  0,
+  '[{"name":"Understand the three main triggers for component re-renders: state changes, prop changes, and parent component re-renders"},{"name":"Learn how re-renders cascade through the component tree and why child components re-render when parents do"},{"name":"Explore the difference between re-rendering and re-mounting components"},{"name":"Recognize why understanding re-render behavior is essential for performance optimization with hooks like `useMemo`, `useCallback`, and `memo`"}]'::jsonb,
+  '[]'::jsonb,
+  '{}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'a3ebd4fe-bf7b-4645-b073-e95a6d6c4f78',
+  '4-2-the-usememo-hook',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useMemo Hook',
+  'Learn how to use the useMemo hook to optimize expensive calculations in React',
+  '
+In this lesson, you''ll learn about the `useMemo` hook in React, which helps optimize performance by memoizing expensive calculations. When dependencies haven''t changed, `useMemo` returns the cached value instead of recalculating, which can significantly improve performance for computationally intensive operations.
+
+Your coding tasks will be refactoring a filter operation to use `useMemo`, demonstrating how to prevent unnecessary recalculations when unrelated state changes occur in your component.
+  ',
+  '374b66bb-6e90-4d07-9fa4-53fd956d7272',
+  true,
+  1,
+  '[{"name":"Understand how `useMemo` optimizes performance by caching expensive calculations and preventing unnecessary recomputations"},{"name":"Recognize when to use `useMemo` for operations that don''t need to run on every render"},{"name":"Understand how dependency arrays control when memoized values should be recalculated versus returned from cache"},{"name":"Talk about and show examples of when `useMemo` is not needed and provides no benefits (non-expensive computations, values passed to bare html elements, etc)"}]'::jsonb,
+  '[{"id":"4-2-the-usememo-hook-task-1","name":"Wrap the `filteredThemes` filter operation with `useMemo` to memoize its value"},{"id":"4-2-the-usememo-hook-task-2","name":"Add the `darkMode` state variable to the `useMemo` dependencies array of `filteredThemes`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useMemo } from \"react\";\n\nconst themes = [\n  {\n    id: 1,\n    name: \"Catppuccin Latte\",\n    darkMode: false,\n  },\n  {\n    id: 2,\n    name: \"Catppuccin Frappé\",\n    darkMode: true,\n  },\n  {\n    id: 3,\n    name: \"Catppuccin Macchiato\",\n    darkMode: true,\n  },\n  {\n    id: 4,\n    name: \"Catppuccin Mocha\",\n    darkMode: true,\n  },\n];\n\nexport default function App() {\n  const [count, setCount] = useState(0);\n  const [darkMode, setDarkMode] = useState(false);\n\n  // Task: Wrap the filteredThemes filter operation with useMemo to memoize its value\n  // Task: Add the darkMode state variable to the useMemo dependencies array of filteredThemes\n  const filteredThemes = themes.filter((t) => t.darkMode === darkMode);\n\n  return (\n    <div>\n      <h1>The useMemo Hook</h1>\n\n      <p>Count: {count}</p>\n      {/* Incrementing the count will re-render the component, and re-compute every variable. That''s why we need useMemo! */}\n      <button onClick={() => setCount(count + 1)}>Increment Count</button>\n\n      <p>Dark Mode: {darkMode ? \"On\" : \"Off\"}</p>\n      <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>\n\n      <p>Available themes:</p>\n      <ul>\n        {filteredThemes\n          ? filteredThemes.map((t) => <li key={t.id}>{t.name}</li>)\n          : null}\n      </ul>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'aa7f11f0-9ef7-45f8-a276-acafd3ae2fb1',
+  '4-3-memoizing-components',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Memoizing Components',
+  'Learn how to use memo to optimize component re-renders in React',
+  '
+In this lesson, you''ll learn about `memo` in React, which helps optimize performance by preventing unnecessary re-renders. `memo` wraps a component and memoizes its result, allowing React to skip re-rendering the component when its props haven''t changed. This is particularly useful for components that render often with the same props or when re-rendering is computationally expensive.
+
+Your coding tasks will be wrapping a component with `memo` and implementing a custom comparison function to control when the component should re-render based on specific prop changes.
+  ',
+  '2c66f76b-8592-46ab-92ae-d7caf5f6defa',
+  false,
+  2,
+  '[{"name":"Understand how `memo` optimizes performance by memoizing component results and preventing unnecessary re-renders"},{"name":"Learn how to wrap components with `memo` to enable prop-based rendering optimization"},{"name":"Recognize when to use custom comparison functions to control component re-rendering behavior"},{"name":"Understand how to implement equality check functions that compare specific prop values"}]'::jsonb,
+  '[{"id":"4-3-memoizing-components-task-1","name":"Create a function named `memoEquality` that receives `prevProps` and `nextProps` and returns whether the `username` property within the `state` prop of each is equal"},{"id":"4-3-memoizing-components-task-2","name":"Create a new component named `MemoizedHello` that wraps the `Hello` component using `memo`"},{"id":"4-3-memoizing-components-task-3","name":"Pass the `memoEquality` function as the second argument to `memo`"},{"id":"4-3-memoizing-components-task-4","name":"Replace `Hello` component with `MemoizedHello`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, memo } from \"react\";\n\nexport default function App() {\n  const [state, setState] = useState({\n    username: \"\",\n    count: 0,\n  });\n\n  function handleUsernameChange(e) {\n    setState((prev) => ({\n      ...prev,\n      username: e.target.value,\n    }));\n  }\n\n  function handleIncrement() {\n    setState((prev) => ({\n      ...prev,\n      count: prev.count + 1,\n    }));\n  }\n\n  return (\n    <div>\n      <h1>Memoizing Components</h1>\n\n      <input\n        type=\"text\"\n        placeholder=\"Enter username\"\n        value={state.username}\n        onChange={handleUsernameChange}\n      />\n\n      <button onClick={handleIncrement}>Count: {state.count}</button>\n\n      {/* Task: Replace Hello component with MemoizedHello */}\n      <Hello state={state} />\n    </div>\n  );\n}\n\nconst Hello = ({ state }) => {\n  console.log(\"Hello component rendered\");\n\n  return <div>Hello {state.username}</div>;\n};\n\n// Task: Create a function named memoEquality that receives prevProps and nextProps\n// The function should return whether the username property within the state prop of each is equal\n\n// Task: Create a new component named MemoizedHello that wraps the Hello component using memo\n// Task: Pass the memoEquality function as the second argument to memo\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '12fb66af-7608-4543-97b3-18afe2a1b40c',
+  '4-4-the-usecallback-hook',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useCallback Hook',
+  'Learn how to use the useCallback hook to optimize function references in React',
+  '
+In this lesson, you''ll learn about the `useCallback` hook in React, which helps optimize performance by memoizing function references. Unlike `useMemo` which caches values, `useCallback` caches functions themselves, preventing unnecessary recreations of functions that are passed as props to child components. This is particularly useful when working with memoized components to prevent unnecessary re-renders.
+
+Your coding tasks will be refactoring a regular function to use `useCallback`, demonstrating how to maintain stable function references across re-renders to optimize component performance.
+  ',
+  '713f2a27-10a3-46d1-9faf-af092919008f',
+  false,
+  3,
+  '[{"name":"Understand that in React, functions declared inside components are not stable by default. And that will cause an equality check to fail, which will cause components to re-render"},{"name":"Understand how `useCallback` optimizes performance by caching function references and preventing unnecessary recreations"},{"name":"Recognize the difference between `useCallback` (caching functions) and `useMemo` (caching values) and their respective use cases"},{"name":"Mention that usually `useCallback` works with the `memo` function from React, which prevents components from re-rendering if their props haven''t changed. `memo` will be covered in the next lesson thoroughly so only briefly mention it here"}]'::jsonb,
+  '[{"id":"4-4-the-usecallback-hook-task-1","name":"Wrap the `handleClick` function with `useCallback` to memoize the function reference"},{"id":"4-4-the-usecallback-hook-task-2","name":"Add an empty dependencies array to the `useCallback` hook to ensure the function is only created once"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { memo, useState, useCallback } from \"react\";\n\nexport default function App() {\n  const [text, setText] = useState(\"\");\n\n  // Task: Wrap the handleClick function with useCallback to memoize the function reference\n  // Task: Add an empty dependencies array to the useCallback hook to ensure the function is only created once\n  const handleClick = () => {\n    setText(\"\");\n  };\n\n  return (\n    <div>\n      <h1>The useCallback Hook</h1>\n\n      <input\n        value={text}\n        onChange={(e) => {\n          setText(e.target.value);\n        }}\n        placeholder=\"Type here to cause re-render\"\n      />\n\n      <Button onClick={handleClick}>Clear</Button>\n    </div>\n  );\n}\n\nconst Button = memo(({ onClick, children }) => {\n  console.log(\"Button re-rendered\");\n\n  return <button onClick={onClick}>{children}</button>;\n});\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6cea3e96-218e-419b-83ad-c18be22e25fb',
+  '4-5-memoizing-with-useeffect',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'Memoizing with useEffect',
+  'Learn how to use useMemo and useCallback with useEffect to prevent unnecessary effect executions',
+  '
+In this lesson, you''ll learn how to combine `useMemo` and `useCallback` with `useEffect` to optimize when effects run. When you pass values or functions to `useEffect`''s dependency array, React checks if they''ve changed to determine whether to re-run the effect. By memoizing these dependencies, you can prevent unnecessary effect executions and improve performance.
+
+Your coding tasks will be memoizing a function with `useCallback` and adding it to a `useEffect` dependency array, demonstrating how memoization prevents the effect from running on every render.
+  ',
+  '5658f281-8847-4bc8-a0a7-d6ddb6bdc1cd',
+  false,
+  4,
+  '[{"name":"Understand how `useEffect` dependencies trigger effect re-execution when they change"},{"name":"Learn how memoizing dependencies with `useMemo` and `useCallback` prevents unnecessary effect runs"},{"name":"Recognize that non-memoized functions and objects are recreated on every render, causing effects to re-run unnecessarily"}]'::jsonb,
+  '[{"id":"4-5-memoizing-with-useeffect-task-0","name":"Memoize the `unstableObject` with `useMemo` to make it stable"},{"id":"4-5-memoizing-with-useeffect-task-1","name":"Add an empty dependencies array to the `useMemo` hook"},{"id":"4-5-memoizing-with-useeffect-task-2","name":"Wrap the `fetchData` function with `useCallback` to memoize the function reference"},{"id":"4-5-memoizing-with-useeffect-task-3","name":"Add the `count` state variable to the `useCallback` dependencies array"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useEffect, useCallback, useMemo } from \"react\";\n\nexport default function App() {\n  const [count, setCount] = useState(0);\n\n  // Task: Memoize the unstableObject with useMemo to make it stable\n  // Task: Add an empty dependencies array to the useMemo hook\n  const unstableObject = { message: \"I am unstable!\" };\n\n  useEffect(() => {\n    console.log(\"Unstable object changed\", unstableObject);\n  }, [unstableObject]);\n\n  // Task: Wrap the fetchData function with useCallback to memoize the function reference\n  // Task: Add the count state variable to the useCallback dependencies array\n  const unstableFunction = () => {\n    console.log(\"The count is\", count);\n  };\n\n  useEffect(() => {\n    unstableFunction();\n  }, [unstableFunction]);\n\n  return (\n    <div>\n      <h1>Memoizing with useEffect</h1>\n\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment Count</button>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ef7889f8-e08e-4abd-933d-5860c6fdbfe6',
+  '4-6-the-usecontext-hook',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useContext Hook',
+  'Learn how to use the useContext hook to read and subscribe to context in React components',
+  '
+In this lesson, you''ll learn about the `useContext` hook in React, which lets you read and subscribe to context from your component. `useContext` returns the context value for the calling component, which is determined by the value prop of the nearest `Context.Provider` component above it in the tree. This hook provides a clean way to consume context values throughout your component tree, eliminating prop drilling and making your code more maintainable.
+
+Your coding tasks will be creating a complete context implementation including a context provider, custom hook, and consuming the context in multiple components to build a counter application.
+  ',
+  '6962d835-b84c-4a7c-af14-df5f7367db90',
+  false,
+  5,
+  '[{"name":"Understand how to create and provide context using `createContext` and `Context.Provider`"},{"name":"Learn how to build custom hooks that wrap `useContext` for better error handling and developer experience"},{"name":"Recognize how useContext helps eliminate prop drilling by providing direct access to context values throughout the component tree"},{"name":"Understand the complete pattern of context creation, provision, and consumption in React applications"}]'::jsonb,
+  '[{"id":"4-6-the-usecontext-hook-task-1","name":"Create a `CounterContext` using the `createContext` function"},{"id":"4-6-the-usecontext-hook-task-2","name":"Create the `count` state variable using the `useState` hook"},{"id":"4-6-the-usecontext-hook-task-3","name":"Create the `increment` function that increments the `count` state by `1` using the state setter function"},{"id":"4-6-the-usecontext-hook-task-4","name":"Provide an object containing the `count` state variable and the `increment` function as the `value` prop of `CounterContext.Provider`"},{"id":"4-6-the-usecontext-hook-task-5","name":"Return the `children` prop wrapped in `CounterContext.Provider`"},{"id":"4-6-the-usecontext-hook-task-6","name":"Implement the `useCounterContext` custom hook to return the `CounterContext` value using the `useContext` hook"},{"id":"4-6-the-usecontext-hook-task-7","name":"Use the `useCounterContext` custom hook in the `CountValue` component to access the `count` state"},{"id":"4-6-the-usecontext-hook-task-8","name":"Render the `count` state in the `CountValue` component"},{"id":"4-6-the-usecontext-hook-task-9","name":"Use the `useCounterContext` custom hook in the `Increment` component to access the increment function"},{"id":"4-6-the-usecontext-hook-task-10","name":"Pass the `increment` function to the `onClick` event handler in the `Increment` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { createContext, useState, useContext } from \"react\";\n\n// Task: Create a CounterContext using the createContext function\n// Initialize the context with a default value of undefined\n\nfunction CounterProvider({ children }) {\n  // Task: Create the count state variable using the useState hook\n\n  // Task: Create the increment function that increments the count state by 1 using the state setter function\n\n  // Task: Provide an object containing the count state variable and increment function as the value prop of CounterContext.Provider\n  const value = {};\n\n  // Task: Return the children wrapped in CounterContext.Provider\n}\n\n// Task: Implement the useCounterContext custom hook to return the CounterContext value\n// Use the useContext hook to get the context value\n// Check if the context is undefined and throw an error with the message ''useCounterContext must be used within a CounterProvider'' when the context is undefined\nfunction useCounterContext() {}\n\nfunction CountValue() {\n  // Task: Use the useCounterContext custom hook to access the count state\n\n  return (\n    <div>\n      {/* Render the count state */}\n      <h2>Count: {}</h2>\n    </div>\n  );\n}\n\nfunction Increment() {\n  // Task: Use the useCounterContext custom hook to access the increment function\n\n  // Task: Pass the increment function to the onClick event handler\n  return <button>Increment</button>;\n}\n\nexport default function App() {\n  return (\n    <div>\n      <h1>The useContext Hook</h1>\n\n      <CounterProvider>\n        <div>\n          <CountValue />\n          <Increment />\n        </div>\n      </CounterProvider>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2593a5de-c960-41fb-8f1d-0f51b8fad26b',
+  '4-7-the-usereducer-hook',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useReducer Hook',
+  'Learn how to use useReducer for more declarative and predictable state management',
+  'In this lesson, you''ll learn about the reducer pattern and how `useReducer` provides a more declarative approach to state management compared to `useState`. While both hooks manage state, `useReducer` is particularly useful when you have complex state logic or multiple related state updates.
+
+Your coding tasks will be converting a component from using `useState` to `useReducer`, demonstrating how reducers make state updates more predictable and easier to understand.
+  ',
+  '7fae915b-9f28-43cc-8d26-023decda7cfc',
+  false,
+  6,
+  '[{"name":"Understand what a reducer is and how it differs from `useState`"},{"name":"Learn when to choose `useReducer` over `useState` for state management (mention use in Redux and other state management libraries)"},{"name":"Recognize how reducers make state updates more predictable and testable"}]'::jsonb,
+  '[{"id":"4-7-the-usereducer-hook-task-1","name":"Implement the `\"increment\"` action inside `counterReducer` by returning a new state object with the count property incremented by `1`"},{"id":"4-7-the-usereducer-hook-task-2","name":"Implement the `\"decrement\"` action inside `counterReducer` by returning a new state object with the count property decremented by `1`"},{"id":"4-7-the-usereducer-hook-task-3","name":"Replace the `useState` hook with `useReducer` using the `counterReducer` and `initialState`"},{"id":"4-7-the-usereducer-hook-task-4","name":"Refactor the `increment` function to dispatch an action object with the `\"increment\"` type"},{"id":"4-7-the-usereducer-hook-task-5","name":"Refactor the `decrement` function to dispatch an action object with the `\"decrement\"` type"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useReducer } from \"react\";\n\nfunction counterReducer(state, action) {\n  // Task: Implement the \"increment\" action inside counterReducer by returning a new state object with the count property incremented by 1\n  // Use a switch statement or if/else statement to handle the action based on action.type\n\n  // Task: Implement the \"decrement\" action inside counterReducer by returning a new state object with the count property decremented by 1\n  // Use a switch statement or if/else statement to handle the action based on action.type\n\n  return state;\n}\n\nfunction Counter() {\n  const initialState = { count: 0 };\n\n  // Task: Replace the useState hook with useReducer using the counterReducer and initialState\n  const [state, setState] = useState(initialState);\n\n  // Task: Refactor the increment function to dispatch an action object with the \"increment\" type\n  const increment = () => setState({ ...state, count: state.count + 1 });\n\n  // Task: Refactor the decrement function to dispatch an action object with the \"decrement\" type\n  const decrement = () => setState({ ...state, count: state.count - 1 });\n\n  return (\n    <div>\n      <p>Count: {state.count}</p>\n      <button onClick={increment}>Increment</button>\n      <button onClick={decrement}>Decrement</button>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>The useReducer Hook</h1>\n      <Counter />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '94d7deff-ef94-4a7d-9b6f-7bd21c1ba0af',
+  '4-8-the-useactionstate-hook',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useActionState Hook',
+  'Learn how to use the useActionState hook to manage form state and handle submissions',
+  '
+In this lesson, you''ll learn about the `useActionState` hook in React, which provides a streamlined way to handle form submissions and manage state based on action results. This hook is particularly useful for handling common form scenarios like loading states, success/error messages, and form validation without the need for multiple useState hooks. `useActionState` works seamlessly with both client and server components, making it ideal for modern React applications.
+
+Your coding tasks will focus on implementing the state return logic in the action function, practicing how to return appropriate state objects based on different form submission scenarios. You''ll learn how to provide clear user feedback through proper state management in form actions.
+  ',
+  '3dfbcf64-7234-417f-a345-45478064a5a2',
+  false,
+  7,
+  '[{"name":"Understand how `useActionState` simplifies form handling by managing submission state, pending status, and errors in a single hook"},{"name":"Learn how to implement action functions that receive previous state and form data to return appropriate next state"},{"name":"Understand how to provide user feedback through state objects returned from action functions"}]'::jsonb,
+  '[{"id":"4-8-the-useactionstate-hook-task-1","name":"Get the `username` value from the `formData` object"},{"id":"4-8-the-useactionstate-hook-task-2","name":"Get the `password` value from the `formData` object"},{"id":"4-8-the-useactionstate-hook-task-3","name":"Return a state object with `success` set to `false` and `message` set to `\"Login failed\"` when credentials are incorrect"},{"id":"4-8-the-useactionstate-hook-task-4","name":"Return a state object with `success` set to `true` and `message` set to `\"Login successful\"` when credentials are correct"},{"id":"4-8-the-useactionstate-hook-task-5","name":"Implement the `useActionState` hook in the `App` component"},{"id":"4-8-the-useactionstate-hook-task-6","name":"Replace the static `state`, `formAction`, and `isPending` variables with the return values of `useActionState`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useActionState } from \"react\";\n\nasync function action(prevState, formData) {\n  await new Promise((resolve) => {\n    setTimeout(resolve, 2000);\n  });\n\n  // Task: Get the username value from the formData object\n  const username = undefined;\n\n  // Task: Get the password value from the formData object\n  const password = undefined;\n\n  if (username !== \"Cosden\" || password !== \"Solutions\") {\n    // Task: Return a state object with success set to false and message set to \"Login failed\" when credentials are incorrect\n  }\n\n  // Task: Return a state object with success set to true and message set to \"Login successful\" when credentials are correct\n}\n\nexport default function App() {\n  // Task: Implement the useActionState hook in the App component\n  // Pass the action function as the first argument of useActionState to update state value\n  // Pass null as the second argument of useActionState to set the initial value\n\n  // Task: Replace the static state, formAction, and isPending variables with the return values of useActionState\n  const state = undefined;\n  const formAction = undefined;\n  const isPending = false;\n\n  return (\n    <div>\n      <h1>The useActionState Hook</h1>\n\n      <form action={formAction}>\n        <div>\n          <label htmlFor=\"username\">\n            Username:\n            <input\n              type=\"text\"\n              id=\"username\"\n              name=\"username\"\n              placeholder=\"Cosden\"\n            />\n          </label>\n        </div>\n\n        <div>\n          <label htmlFor=\"password\">\n            Password:\n            <input\n              type=\"text\"\n              id=\"password\"\n              name=\"password\"\n              placeholder=\"Solutions\"\n            />\n          </label>\n        </div>\n\n        <button type=\"submit\" disabled={isPending}>\n          {isPending ? \"Loading...\" : \"Login\"}\n        </button>\n\n        {state ? (\n          <p style={{ color: state.success ? \"green\" : \"red\" }}>\n            {state.message}\n          </p>\n        ) : null}\n      </form>\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '14b313e2-ec44-4fcd-ae2f-1325d7e3c457',
+  '4-9-the-uselayouteffect-hook',
+  'cd780c3c-e2fb-499a-86f2-8b1b5c0473bb',
+  '5fad418f-dcf1-4fd7-9b88-7e15a0ea92fc',
+  'The useLayoutEffect Hook',
+  'Learn how to use the useLayoutEffect hook to perform synchronous DOM mutations before the browser paints',
+  '
+In this lesson, you''ll learn about the `useLayoutEffect` hook, which fires synchronously after all DOM mutations but before the browser has painted. This makes it ideal for measurements or DOM manipulations that must happen before the user sees the screen, preventing visual flickers that can occur with `useEffect`.
+
+Your coding tasks will be replacing a `useEffect` with `useLayoutEffect` to measure an element''s dimensions before the browser paints, ensuring the layout is calculated synchronously.
+  ',
+  '014e1fa0-89bc-4cca-9a24-ab0babb402e5',
+  false,
+  8,
+  '[{"name":"Understand the difference between `useEffect` and `useLayoutEffect` in terms of when they execute relative to browser painting"},{"name":"Recognize when to use `useLayoutEffect` for DOM measurements and synchronous layout operations that prevent visual flickers"},{"name":"Learn that `useLayoutEffect` has the same signature as `useEffect` but runs synchronously before the browser paints"}]'::jsonb,
+  '[{"id":"4-9-the-uselayouteffect-hook-task-1","name":"Replace the `useEffect` call with `useLayoutEffect` for measuring the box dimensions"}]'::jsonb,
+  '{"template":"react","files":{"sandbox.config.json":{"code":"{\"infiniteLoopProtection\":false}","hidden":true},"App.jsx":{"code":"import { useState, useEffect, useLayoutEffect } from \"react\";\n\nexport default function App() {\n  const [showBox, setShowBox] = useState(false);\n  const [boxWidth, setBoxWidth] = useState(0);\n\n  // This artificially slows down rendering\n  let now = performance.now();\n  while (performance.now() - now < 500) {\n    // Do nothing for a bit...\n  }\n\n  // Task: Replace the useEffect call with useLayoutEffect for measuring the box dimensions\n  useEffect(() => {\n    if (showBox) {\n      const box = document.getElementById(\"box\");\n      if (box) {\n        setBoxWidth(box.offsetWidth);\n      }\n    }\n  }, [showBox]);\n\n  return (\n    <div>\n      <h1>The useLayoutEffect Hook</h1>\n\n      <button onClick={() => setShowBox(!showBox)}>Toggle Box</button>\n\n      {showBox && <div id=\"box\">Box Content</div>}\n\n      {boxWidth > 0 && <p>Box width: {boxWidth}px</p>}\n    </div>\n  );\n}\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+-- ------------------------------------------------------
+-- 插入课程: Design Patterns in React (design-patterns-in-react)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'design-patterns-in-react',
+  'Design Patterns in React',
+  'Learn essential React design patterns including component architecture, custom hook patterns, and UI patterns to build scalable and maintainable applications',
+  '## Course Overview
+
+Design patterns are the proven solutions to common problems that every React developer encounters. While you might know how to build components and manage state, understanding when and how to apply the right patterns is what separates maintainable, scalable applications from codebases that become increasingly difficult to work with over time.
+
+This course teaches you the essential design patterns that professional React developers use every day. You''ll learn not just the mechanics of each pattern, but more importantly, the reasoning behind them—when to use each pattern, why it exists, and what problems it solves. By the end of this course, you''ll have a mental toolkit of patterns to reach for when architecting React applications, making you a more effective and confident developer.
+
+## What You''ll Learn
+
+This course is structured into four comprehensive modules that build on each other, taking you from foundational concepts to advanced patterns used in production applications.
+
+### Module 1: Foundational Patterns
+
+We begin with the core patterns that form the foundation of well-architected React applications. You''ll start by understanding what design patterns are and why they matter in React development—this conceptual foundation helps you recognize when and where to apply patterns throughout your career.
+
+From there, you''ll master **custom hooks**, learning how to extract and share logic across your application without duplication. You''ll explore **lifting state up** and **colocating state**, understanding the crucial decisions about where state should live in your component tree. These seemingly simple concepts prevent countless bugs and architectural headaches down the road.
+
+The module concludes with the **state machine pattern**, a powerful approach for managing complex UI flows like multi-step forms, authentication sequences, and other stateful interactions that can quickly become spaghetti code without proper structure.
+
+### Module 2: Component Patterns
+
+This module dives deep into component architecture, teaching you how to structure components that are flexible, reusable, and maintainable. You''ll learn the **single responsibility principle** and how to apply it to React components, ensuring each component does one thing well.
+
+We cover the important distinctions between **presentational and container components** as well as **smart and dumb components**—patterns that help you separate concerns and make your code more testable. You''ll then explore advanced composition patterns including:
+
+- **Children pattern** for building flexible component APIs
+- **Function children pattern** for dynamic rendering scenarios  
+- **Render props** for sharing behavior across components
+- **Compound components** for creating intuitive component libraries (like Radix UI and shadcn/ui)
+- **Higher-order components** for enhancing components with shared behavior
+- **Dynamic component loading** for code-splitting and performance optimization
+- **Virtualization** for rendering large lists efficiently
+
+Each pattern is taught with real-world examples showing exactly when and why you''d choose one approach over another.
+
+### Module 3: Hook Patterns
+
+Hooks revolutionized React, but knowing how to use them effectively requires understanding advanced patterns. This module covers 14 essential hook patterns that optimize performance and simplify complex logic.
+
+You''ll learn **state derivation** techniques to avoid storing redundant state, **debouncing patterns** for handling user input efficiently, and how to leverage React 18''s **useDeferredValue** and **useTransition** for keeping your UI responsive during expensive operations.
+
+We explore **effect separation** for organizing side effects cleanly, **custom hook composition** for building powerful abstractions, and **context selectors** for optimizing context performance. You''ll also master advanced patterns like **useImperativeHandle**, the **latest ref pattern**, and the **abandon render pattern**.
+
+The module includes coverage of React 19''s new **use hook** with both context and promises, as well as the important new **useEffectEvent** pattern. These patterns represent the cutting edge of React development and prepare you for the future of the ecosystem.
+
+### Module 4: UI Patterns
+
+The final module focuses on real-world UI patterns that create professional user experiences. You''ll implement **error boundaries** for graceful error handling, **guard clause rendering** for clean conditional logic, and **skeleton placeholders** and **empty states** for better loading experiences.
+
+You''ll learn **optimistic UI updates** to make your applications feel instant, **partial rendering** for performance optimization, and the **variant pattern** for building consistent, type-safe component APIs. These patterns handle the practical challenges you face when building production applications—loading states, error handling, and creating interfaces that feel polished and responsive.
+
+## Who This Course Is For
+
+This course is designed for developers who are comfortable with React fundamentals and ready to level up their architectural skills. You should be familiar with components, props, state, and hooks before starting.
+
+**This course is perfect for you if:**
+
+✅ You''ve built React applications but want to improve your code organization and architecture
+
+✅ You''re preparing for React interviews where architectural decisions are discussed
+
+✅ You want to write code that''s easier to maintain, test, and scale
+
+✅ You''re joining a team and want to understand industry-standard patterns
+
+✅ You read other developers'' code and want to understand the patterns they''re using
+
+**You might want to start elsewhere if:**
+
+❌ You''re brand new to React and still learning the basics
+
+❌ You''re looking for quick shortcuts rather than deep understanding
+
+❌ You prefer to copy-paste solutions without understanding the reasoning
+
+## How You''ll Learn
+
+Every pattern in this course is taught with a consistent approach: you''ll understand what the pattern is, why it exists, when to use it, and how to implement it correctly. We don''t just show you code—we explain the reasoning behind architectural decisions so you can apply these patterns to your own unique challenges.
+
+Each lesson includes hands-on practice with real-world examples. You''ll see patterns demonstrated in production-quality code, not just toy examples. This practical approach ensures you can immediately apply what you learn to your own projects.
+
+## What You''ll Walk Away With
+
+By completing this course, you''ll have a comprehensive understanding of React design patterns that you can apply throughout your career. You''ll know how to structure components for maximum reusability, when to reach for different state management patterns, how to optimize performance with advanced hook techniques, and how to create polished user experiences with proven UI patterns.
+
+More importantly, you''ll develop the judgment to know which pattern to use in different situations. This isn''t about memorizing solutions—it''s about understanding principles that help you make better architectural decisions every day.
+
+The patterns you learn here are used in production applications at companies building real products. They''re battle-tested solutions that have proven themselves across countless React codebases. Whether you''re building your own projects, contributing to a team, or preparing for technical interviews, these patterns will make you a more effective React developer.',
+  'beginner',
+  12,
+  'published',
+  2,
+  1,
+  5
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'aa69630a-b4f7-4f1a-963f-137fcc8a1079',
+  '1-foundational-patterns',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Foundational Patterns',
+  'Learn the fundamentals of design patterns in React by practicing custom hooks, state management, and component organization',
+  0
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '717d47d7-0ce7-4383-af78-94d380512b84',
+  '1-1-what-are-design-patterns',
+  'aa69630a-b4f7-4f1a-963f-137fcc8a1079',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'What are Design Patterns?',
+  'Learn what design patterns are and why they are essential for building maintainable React applications',
+  'In this lesson, you''ll discover what design patterns are and understand their crucial role in creating maintainable, scalable React applications. Design patterns are proven solutions to common problems that developers face when building software, and they help us write more organized and reusable code.
+
+Your coding tasks will be to explore the code editor to get familiar with the React environment, as there are no specific code requirements for this introductory lesson.
+  ',
+  '3e27d33c-68fd-40c3-b353-28b88c17bdd2',
+  true,
+  0,
+  '[{"name":"Understand what design patterns are and why they matter in software development (e.g., code reusability, maintainability, team collaboration)"},{"name":"Give a brief history of design patterns"},{"name":"Learn how design patterns apply specifically to React applications (react can be written in many different ways, and design patterns help us write code that is more organized and reusable. Some ways are more efficient than others) (mention hard to understand code, big components, too many hooks and JSX, and all the other bad things one encounters in the wild)"},{"name":"Let the user know that in this course we''re going to be looking at a wide variety of design patterns. And the goal is really to have those in our knowledge belt to be able to pick and choose the ones that make the most sense for the problem that we''re facing. And that we are in fact going to be building a skill and we''re going to be still building React applications, which are going to do the same thing. But now the way we''re going to do it with our code is going to be much better, much more robust, much more scalable. And it''s going to make us better developers and our team more productive."}]'::jsonb,
+  '[{"id":"1-1-what-are-design-patterns-task-1","name":"Submit the code editor – no code required"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Submit the code editor – no code required\n\nfunction App() {\n  return (\n    <div>\n      <h1>Welcome to Design Patterns in React!</h1>\n      <p>This is your React playground for learning design patterns.</p>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '0d421916-c75f-4da3-9c63-a8af64752189',
+  '1-2-custom-hooks',
+  'aa69630a-b4f7-4f1a-963f-137fcc8a1079',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Custom Hooks',
+  'Learn how to create custom hooks to extract and reuse stateful logic across components',
+  'In this lesson, you''ll learn how to effectively use custom hooks, which are a powerful design pattern in React that allows you to extract component logic into reusable functions. Custom hooks let you share stateful logic between components without changing their structure, making your code more modular and easier to maintain.
+
+Your coding tasks will be creating a simple custom hook that manages a counter state, demonstrating how to extract logic from components into reusable functions.
+  ',
+  '09604a21-a776-43be-98d3-8ea38a46cc58',
+  true,
+  1,
+  '[{"name":"Understand what custom hooks are and how they must follow React''s rules of hooks (go over rules and mention that they are just functions that return a value and that they are a way to reuse stateful logic)"},{"name":"Learn how custom hooks enable code reuse and separation of concerns (and why you need it to avoid code duplication and other issues)"},{"name":"Recognize when to create a custom hook versus keeping logic in a component (mention that it''s a trade-off and you need to make the decision based on the problem at hand)"}]'::jsonb,
+  '[{"id":"1-2-custom-hooks-task-1","name":"Create a state variable called `count` and initialize it to `0` using the `useState` hook"},{"id":"1-2-custom-hooks-task-2","name":"Create a function called `increment` that increments the `count` state by `1` using the state setter function"},{"id":"1-2-custom-hooks-task-3","name":"Return an object with `count` and `increment` properties"},{"id":"1-2-custom-hooks-task-4","name":"Use the `useCounter` hook and access the `count` and `increment` function in a destructured object"},{"id":"1-2-custom-hooks-task-5","name":"Replace the `count` and `increment` placeholders with your `useCounter` hook implementation"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nfunction useCounter() {\n  // Task: Create a state variable called count and initialize it to 0 using the useState hook\n\n  // Task: Create a function called increment that increments the count state by 1 using the state setter function\n\n  // Task: Return an object with count and increment properties\n}\n\nfunction Counter() {\n  // Task: Use the useCounter hook and access the count and increment function in a destructured object\n\n  // Task: Replace the count and increment placeholders with your useCounter hook implementation\n  const count = 0;\n  const increment = () => {};\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Custom Hook Example</h1>\n      <Counter />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9939ce01-528c-4fa1-af78-9eed88e1f1c6',
+  '1-3-lifting-state-up',
+  'aa69630a-b4f7-4f1a-963f-137fcc8a1079',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Lifting State Up',
+  'Learn how to share state between components by moving it to their common parent',
+  'In this lesson, you''ll learn about lifting state up, a fundamental pattern in React for sharing state between sibling components. When multiple components need access to the same state, you move that state to their closest common ancestor and pass it down as props.
+
+Your coding tasks will be moving state from a child component to a parent component and passing the state down as props to enable communication between sibling components.
+  ',
+  '8dcf8214-17ac-4c6d-8457-118f2a7a321c',
+  false,
+  2,
+  '[{"name":"Understand when and why to lift state up to a parent component (give examples)"},{"name":"Learn how to pass state and state setters as props to child components"},{"name":"Recognize the trade-offs between local state and lifted state (give examples of both and even ask the user to think about the trade-offs)"}]'::jsonb,
+  '[{"id":"1-3-lifting-state-up-task-1","name":"Remove the `name` and `setName` state from the `NameInput` component"},{"id":"1-3-lifting-state-up-task-2","name":"Implement the `name` and `setName` state variables inside the `App` component"},{"id":"1-3-lifting-state-up-task-3","name":"Have the `NameDisplay` component receive `name` as props"},{"id":"1-3-lifting-state-up-task-4","name":"Have the `NameInput` component receive `name` and `setName` as props"},{"id":"1-3-lifting-state-up-task-5","name":"Pass `name` as props to the `NameDisplay` component"},{"id":"1-3-lifting-state-up-task-6","name":"Render the `name` from props in the greeting"},{"id":"1-3-lifting-state-up-task-7","name":"Pass the `name` and `setName` as props to the `NameInput` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\n// Task: Have the NameInput component receive name and setName as props\nfunction NameInput() {\n  // Task: Remove the name state from the NameInput component\n  const [name, setName] = useState(\"\");\n\n  return (\n    <div>\n      <label>Enter your name:</label>\n      <input\n        type=\"text\"\n        value={name}\n        onChange={(e) => setName(e.target.value)}\n      />\n    </div>\n  );\n}\n\n// Task: Have the NameDisplay component receive name as a prop\nfunction NameDisplay() {\n  return (\n    <div>\n      {/* Task: Render the name from props in the greeting */}\n      <p>Hello, {}!</p>\n    </div>\n  );\n}\n\nfunction App() {\n  // Task: Implement the name and setName state variables inside the App component\n  return (\n    <div>\n      <h1>Lifting State Up Example</h1>\n      {/* Task: Pass name and setName as props to the NameInput component */}\n      <NameInput />\n      {/* Task: Pass name as props to the NameDisplay component */}\n      <NameDisplay />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c9beadaf-6540-4e96-b73d-111012df1385',
+  '1-4-colocating-state',
+  'aa69630a-b4f7-4f1a-963f-137fcc8a1079',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Colocating State',
+  'Learn how to organize state by keeping it close to where it is used for better maintainability',
+  'In this lesson, you''ll learn about colocating state, an organizational pattern that helps keep your components maintainable by placing state as close as possible to where it''s used. This pattern reduces complexity and makes components easier to understand and modify.
+
+Your coding tasks will be moving state from a parent component down to a child component where it''s actually needed, demonstrating how colocation improves code organization.
+  ',
+  '1873325f-4626-4705-829b-6233bda74654',
+  false,
+  3,
+  '[{"name":"Understand the principle of state colocation and why it improves maintainability"},{"name":"Learn when to move state closer to where it''s used versus keeping it in parent components (refer back to the previous lesson about lifting state up)"},{"name":"Recognize how colocation reduces prop drilling and component complexity, and allows reuse of components"}]'::jsonb,
+  '[{"id":"1-4-colocating-state-task-1","name":"Have the `ToggleSection` receive no props"},{"id":"1-4-colocating-state-task-2","name":"Implement the `isVisible` and `setIsVisible` state variables inside the `ToggleSection` component"},{"id":"1-4-colocating-state-task-3","name":"Remove the `isVisible` and `setIsVisible` state from the `App` component"},{"id":"1-4-colocating-state-task-4","name":"Remove the `isVisible` and `setIsVisible` props from the `ToggleSection` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\n// Task: Have the ToggleSection receive no props\nfunction ToggleSection({ isVisible, setIsVisible }) {\n  // Task: Implement the isVisible and setIsVisible state variables inside the ToggleSection component\n\n  return (\n    <div>\n      <button onClick={() => setIsVisible(!isVisible)}>\n        {isVisible ? \"Hide\" : \"Show\"} Content\n      </button>\n      {isVisible && (\n        <div>\n          <p>This content can be toggled!</p>\n        </div>\n      )}\n    </div>\n  );\n}\n\nfunction App() {\n  // Task: Remove the isVisible and setIsVisible state from the App component\n  const [isVisible, setIsVisible] = useState(false);\n\n  return (\n    <div>\n      <h1>Colocating State Example</h1>\n      {/* Task: Remove the isVisible and setIsVisible props from the ToggleSection component */}\n      <ToggleSection isVisible={isVisible} setIsVisible={setIsVisible} />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '139437e5-f56b-4a75-9702-4fb9fc0a3d54',
+  '1-5-state-machine-pattern',
+  'aa69630a-b4f7-4f1a-963f-137fcc8a1079',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'State Machine Pattern',
+  'Learn how to manage complex state with a simple state machine using a single status variable',
+  'In this lesson, you''ll learn about the state machine pattern, which replaces multiple boolean state variables with a single status variable that can have different values. This simplifies state management and prevents impossible states like being both loading and having an error at the same time.
+
+Your coding tasks will be refactoring multiple boolean states into a single status state and updating the component logic to use this cleaner approach.
+  ',
+  'cd760302-6541-419b-81d2-edfb47bb2811',
+  false,
+  4,
+  '[{"name":"Understand what a state machine is and why it simplifies state management (prevents impossible states, clearer logic flow)"},{"name":"Learn how to replace multiple boolean states with a single status variable (loading, error, ready states become one status)"},{"name":"Recognize when to use state machines versus separate boolean states (when states are mutually exclusive or follow a clear flow)"}]'::jsonb,
+  '[{"id":"1-5-state-machine-pattern-task-1","name":"Replace the separate boolean states with a single `status` state with a value of `\"ready\"`"},{"id":"1-5-state-machine-pattern-task-2","name":"Replace the if check by checking that status is `\"ready\"` and set the status to `\"loading\"`"},{"id":"1-5-state-machine-pattern-task-3","name":"Replace the else if check by checking that status is `\"loading\"` and set the status to `\"error\"`"},{"id":"1-5-state-machine-pattern-task-4","name":"Replace the else if check by checking that status is `\"error\"` and set the status to `\"ready\"`"},{"id":"1-5-state-machine-pattern-task-5","name":"Update the render logic to check the `status` value instead of separate boolean states"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nfunction App() {\n  // Task: Replace the separate boolean states with a single status state with a value of \"ready\"\n  const [loading, setLoading] = useState(false);\n  const [error, setError] = useState(false);\n  const [ready, setReady] = useState(true);\n\n  const handleNextState = () => {\n    // Task: Replace the if check by checking that status is \"ready\" and set the status to \"loading\"\n    if (ready) {\n      setReady(false);\n      setLoading(true);\n\n      // Task: Replace the else if check by checking that status is \"loading\" and set the status to \"error\"\n    } else if (loading) {\n      setLoading(false);\n      setError(true);\n\n      // Task: Replace the else if check by checking that status is \"error\" and set the status to \"ready\"\n    } else if (error) {\n      setError(false);\n      setReady(true);\n    }\n  };\n\n  return (\n    <div>\n      <h1>State Machine Pattern</h1>\n\n      <button onClick={handleNextState}>Next State</button>\n\n      {/* Task: Update the render logic to check the status value instead of separate boolean states */}\n      {loading && <p>Loading...</p>}\n      {error && <p>Something went wrong!</p>}\n      {ready && <p>Ready to go!</p>}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '2-component-patterns',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Component Patterns',
+  'Learn how to build scalable component architectures with composition patterns and design principles',
+  1
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c37b26ee-5b2b-44b2-9e68-ee4c8e245de7',
+  '2-1-single-responsibility-principle',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Single Responsibility Principle',
+  'Learn how to keep components focused by ensuring each component has only one reason to change',
+  'In this lesson, you''ll learn about the Single Responsibility Principle (SRP) and how it applies to React components. This principle states that each component should have only one reason to change, meaning it should focus on doing one thing well. Following SRP makes components easier to understand, test, and maintain.
+
+Your coding tasks will be refactoring a large component that violates SRP by breaking it down into smaller, focused components and extracting logic into a custom hook.
+  ',
+  '3142021d-66d6-495c-a301-29ac523e23fc',
+  true,
+  0,
+  '[{"name":"Understand what the Single Responsibility Principle is and what it means for React components (each component should have one clear purpose and one reason to change)"},{"name":"Learn how to identify when a component is doing too much (e.g., handling multiple concerns like data fetching, UI rendering, and business logic)"},{"name":"Recognize the benefits of small, focused components (easier testing, better reusability, improved maintainability, and clearer code organization)"}]'::jsonb,
+  '[{"id":"2-1-single-responsibility-principle-task-1","name":"Extract the user data fetching logic into a custom hook called `useUser`"},{"id":"2-1-single-responsibility-principle-task-2","name":"Create a `UserProfile` component that only handles displaying user information"},{"id":"2-1-single-responsibility-principle-task-3","name":"Create a `UserActions` component that only handles user action buttons"},{"id":"2-1-single-responsibility-principle-task-4","name":"Refactor the `UserDashboard` component to use the new hook and components"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useEffect } from \"react\";\n\n// Task: Extract the user data fetching logic into a custom hook called useUser\n// Add the useState to store the user data\n// Add the useEffect to fetch the user data\n// Return an object with user and loading as properties\nfunction useUser() {}\n\n// Task: Create a UserProfile component that only handles displaying user information\n// Receives user as a prop\n// Returns the div with the user information (name, email, role)\nfunction UserProfile() {}\n\n// Task: Create a UserActions component that only handles user action buttons\n// Receives user as a prop\n// Implements the edit and delete functions\n// Returns the button with the edit and delete functions\nfunction UserActions() {}\n\n// Task: Refactor the UserDashboard component to use the new hook and components\nfunction UserDashboard() {\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    // Simulate API call\n    setTimeout(() => {\n      setUser({\n        name: \"John Doe\",\n        email: \"john@example.com\",\n        role: \"Developer\",\n      });\n      setLoading(false);\n    }, 1000);\n  }, []);\n\n  const handleEdit = () => {\n    alert(`Edit user ${user.name} clicked`);\n  };\n\n  const handleDelete = () => {\n    alert(`Delete user ${user.name} clicked`);\n  };\n\n  if (loading) {\n    return <div>Loading...</div>;\n  }\n\n  return (\n    <div>\n      <h2>User Dashboard</h2>\n      <div>\n        <h3>{user.name}</h3>\n        <p>Email: {user.email}</p>\n        <p>Role: {user.role}</p>\n      </div>\n      <div>\n        <button onClick={handleEdit}>Edit User</button>\n        <button onClick={handleDelete}>Delete User</button>\n      </div>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Single Responsibility Principle</h1>\n      <UserDashboard />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '3db4be96-0db9-4880-9f1a-827f63fa7488',
+  '2-2-presentational-vs-container-components',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Presentational vs Container Components',
+  'Learn how to separate presentation logic from business logic using presentational and container components',
+  'In this lesson, you''ll learn about the distinction between presentational and container components, a pattern that helps separate concerns in React applications. Presentational components focus purely on how things look, while container components handle how things work by managing state and business logic.
+
+Your coding tasks will be extracting business logic from a mixed component into a custom hook and creating a clean presentational component that receives data through props.
+  ',
+  '5ac0a097-94b5-4ef2-a894-8e17c5ce7278',
+  true,
+  1,
+  '[{"name":"Understand the difference between presentational and container components (presentational components focus on UI rendering while container components handle state and logic)"},{"name":"Learn when to use each pattern and how they work together (presentational components are reusable and testable, container components provide data and behavior)"},{"name":"Recognize how this separation improves component reusability and testability (presentational components can be used in different contexts with different data sources)"}]'::jsonb,
+  '[{"id":"2-2-presentational-vs-container-components-task-1","name":"Extract the todo management logic into a custom hook called `useTodos`"},{"id":"2-2-presentational-vs-container-components-task-2","name":"Create a presentational `TodoList` component that receives `todos` and `onToggle` as props"},{"id":"2-2-presentational-vs-container-components-task-3","name":"Refactor the `TodoContainer` to use the hook and render the presentational component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\n// Task: Extract the todo management logic into a custom hook called useTodos\n// Add the useState to store the todos\n// Implement the toggleTodo function\n// Return an object with todos and toggleTodo function as properties\nfunction useTodos() {}\n\n// Task: Create a presentational TodoList component that receives todos and onToggle as props\n// Receives todos and onToggle as props\n// Returns the ul with the todos (li with the todo text and a click handler to toggle the todo)\nfunction TodoList() {}\n\n// Task: Refactor the TodoContainer to use the hook and render the presentational component\nfunction TodoContainer() {\n  const [todos, setTodos] = useState([\n    { id: 1, text: \"Learn React\", completed: false },\n    { id: 2, text: \"Practice design patterns\", completed: true },\n    { id: 3, text: \"Build awesome apps\", completed: false },\n  ]);\n\n  const toggleTodo = (id) => {\n    setTodos(\n      todos.map((todo) =>\n        todo.id === id ? { ...todo, completed: !todo.completed } : todo,\n      ),\n    );\n  };\n\n  return (\n    <div>\n      <h2>Todo List</h2>\n      <ul>\n        {todos.map((todo) => (\n          <li\n            key={todo.id}\n            style={{\n              textDecoration: todo.completed ? \"line-through\" : \"none\",\n              cursor: \"pointer\",\n            }}\n            onClick={() => toggleTodo(todo.id)}\n          >\n            {todo.text}\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Presentational vs Container Components</h1>\n      <TodoContainer />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '268ba48a-3521-449e-bc81-ac5958c6cf3f',
+  '2-3-smart-vs-dumb-components',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Smart vs Dumb Components',
+  'Learn the difference between UI components and feature components in application architecture',
+  'In this lesson, you''ll learn about the distinction between smart and dumb components, which builds on the presentational vs container pattern from the previous lesson. UI components (dumb) are purely for displaying interface elements, while feature components (smart) handle interactions and business logic. This creates a clear hierarchy where pages contain feature components, which in turn use UI components.
+
+Your coding tasks will be creating simple UI components for displaying data and a feature component that orchestrates them with interactive behavior.
+  ',
+  'e2ea90b7-5ae1-4542-b4b4-f7b1c1bb2f62',
+  false,
+  2,
+  '[{"name":"Understand the difference between UI components and feature components (UI components display data without logic, feature components handle interactions and coordinate UI components)"},{"name":"Learn how these components fit into application architecture (pages contain feature components, feature components contain UI components, creating a clear hierarchy)"},{"name":"Recognize how this pattern scales to build complex applications (feature components can be reused across pages, UI components can be reused across features, creating modular and maintainable code)"}]'::jsonb,
+  '[{"id":"2-3-smart-vs-dumb-components-task-1","name":"Create a dumb `Card` UI component that receives `title` and `content` as props"},{"id":"2-3-smart-vs-dumb-components-task-2","name":"Create a dumb `Button` UI component that receives `children` and `onClick` as props"},{"id":"2-3-smart-vs-dumb-components-task-3","name":"Implement the `article` state and `setArticle` setter function inside the `ArticleFeature` component"},{"id":"2-3-smart-vs-dumb-components-task-4","name":"Implement the `handleLike` function inside the `ArticleFeature` component"},{"id":"2-3-smart-vs-dumb-components-task-5","name":"Render the `Card` component in the `ArticleFeature` component"},{"id":"2-3-smart-vs-dumb-components-task-6","name":"Render the `Button` component in the `ArticleFeature` component"},{"id":"2-3-smart-vs-dumb-components-task-7","name":"Render the `ArticleFeature` component in the main `App` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\n// Task: Create a dumb Card UI component that receives title and content as props\n// Return a div containing the title inside an h2 and the content inside a p\nfunction Card() {}\n\n// Task: Create a dumb Button UI component that receives children and onClick as props\n// Return a button that displays the children and calls the onClick function when clicked\nfunction Button() {}\n\nfunction ArticleFeature() {\n  // Task: Implement the article state and setter function inside the ArticleFeature component\n  // (remove from the App component)\n\n  // Task: Implement the handleLike function inside the ArticleFeature component\n  // (remove from the App component)\n\n  return (\n    <div>\n      {/* Task: Render the Card component in the ArticleFeature component */}\n      {/* Task: Render the Button component in the ArticleFeature component */}\n    </div>\n  );\n}\n\nfunction App() {\n  const [article, setArticle] = useState({\n    title: \"Understanding React Patterns\",\n    content: \"React patterns help us write better, more maintainable code...\",\n    likes: 0,\n  });\n\n  const handleLike = () => {\n    setArticle((prev) => ({ ...prev, likes: prev.likes + 1 }));\n  };\n\n  return (\n    <div>\n      <h1>Smart vs Dumb Components</h1>\n      {/* Task: Render the ArticleFeature component in the main App component \n      (replace the div with the h2, p, and buttons) */}\n      <div>\n        <h2>Understanding React Patterns</h2>\n        <p>React patterns help us write better, more maintainable code...</p>\n        <button>Like ({article.likes})</button>\n      </div>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c1ba86e7-b8f0-4d2d-b5e3-43ac604c62e1',
+  '2-4-children-pattern',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Children Pattern',
+  'Learn how to use the children prop to create flexible and reusable layout components',
+  'In this lesson, you''ll learn about the children pattern, which allows you to pass components as children through the `children` prop instead of rendering them directly. This pattern prevents unnecessary re-renders because the parent component doesn''t own the child components'' state, and it provides flexibility by allowing any component to be passed as a slot.
+
+Your coding tasks will be creating layout components that use the children prop to encapsulate structure and behavior while remaining agnostic about their content.
+  ',
+  'bc9d49ae-96ea-4f24-8b06-f9b13e848388',
+  false,
+  3,
+  '[{"name":"Understand how the children prop works and why it prevents unnecessary re-renders (children are created by the parent''s parent, so state changes in the wrapper don''t recreate them, and how it''s a common fix for expensive re-renders)"},{"name":"Learn how children provide flexibility as slots for any component (the wrapper component doesn''t need to know what specific components it will render)"},{"name":"Recognize when to use children vs props for component composition (children for layout and behavior encapsulation, props for specific data passing)"}]'::jsonb,
+  '[{"id":"2-4-children-pattern-task-1","name":"Create a `Wrapper` component that receives `children` and `showContent` as props"},{"id":"2-4-children-pattern-task-2","name":"Render the `Wrapper` component and pass `showContent` as a normal prop and `content` as children"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\n// Task: Create a Wrapper component that receives children and showContent as props\n// Return a div containing the children inside a p tag if showContent is true, otherwise render null\n// Use a ternary operator or an early return to return null if showContent is false\nfunction Wrapper() {}\n\nfunction App() {\n  const [showContent, setShowContent] = useState(true);\n\n  const content = \"This is the content\";\n\n  return (\n    <div>\n      <h1>Children Pattern</h1>\n      <button onClick={() => setShowContent(!showContent)}>\n        Toggle Content\n      </button>\n      {/* Task: Render the Wrapper component and pass showContent as a normal prop and content as children */}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '46a519eb-5bf7-448c-aa7d-ac924b832d0a',
+  '2-5-function-children-pattern',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Function Children Pattern',
+  'Learn how to pass functions as children to share data between parent and child components',
+  'In this lesson, you''ll learn about the function children pattern, where instead of passing JSX as children, you pass a function that receives arguments from the parent component. This pattern allows the parent to share data with its children while keeping the rendering logic flexible.
+
+Your coding tasks will be creating a component that calls its children as a function and passes data to it, demonstrating how this pattern enables data sharing with flexible rendering.
+  ',
+  'f3ba0059-3885-4331-882d-048299ca287d',
+  false,
+  4,
+  '[{"name":"Understand how function children work (children is a function that receives arguments from the parent)"},{"name":"Learn how to call children as a function and pass data to it (parent calls children with arguments)"},{"name":"Recognize when to use function children versus regular children (when you need to share data from parent to child)"},{"name":"Compare this pattern to hooks and how sometimes hooks are better and why (more modern, composable, flexible)"}]'::jsonb,
+  '[{"id":"2-5-function-children-pattern-task-1","name":"Create a `DataProvider` component that receives `children` as a function and calls it with `user` data"},{"id":"2-5-function-children-pattern-task-2","name":"Use the `DataProvider` component with a function as children that receives `user` and renders it"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Create a DataProvider component that receives children as a prop and calls it with user data\n// Call children as a function and pass the user object to it\nfunction DataProvider() {\n  const user = {\n    name: \"John Doe\",\n    email: \"john@example.com\",\n    role: \"Developer\",\n  };\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Function Children Pattern</h1>\n\n      {/* Task: Use the DataProvider component with a function as children that receives the user and renders it\n      (replace the h2, p, p with the user data) */}\n      <div>\n        <h2>John Doe</h2>\n        <p>john@example.com</p>\n        <p>Developer</p>\n      </div>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '19436eec-9a65-482b-a4f5-469d92012e7e',
+  '2-6-render-props-pattern',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Render Props Pattern',
+  'Learn how to pass rendering logic as props to create flexible and reusable components',
+  'In this lesson, you''ll learn about the render props pattern, which allows you to pass rendering logic as a prop to a component. This pattern is similar to function children but uses a named prop instead of the children prop, making it explicit what kind of rendering function is expected.
+
+Your coding tasks will be creating a component that takes a render function as a prop and uses it to render each item in a list with different presentations.
+  ',
+  '03a8e167-2503-4366-95ad-92204260761a',
+  false,
+  5,
+  '[{"name":"Understand what render props are and how they differ from function children (named props vs children prop for passing render functions)"},{"name":"Talk about the key and how it must be provided either inside the component that uses renderItem, or in the renderItem function"},{"name":"Learn how render props enable flexible component reuse (same data logic with different presentations)"},{"name":"Recognize when to use render props versus other composition patterns (when you need explicit, named rendering logic)"}]'::jsonb,
+  '[{"id":"2-6-render-props-pattern-task-1","name":"Create a `List` component that takes `items` and `renderItem` as props and renders a list of items by calling the `renderItem` function for each item"},{"id":"2-6-render-props-pattern-task-2","name":"Render the `List` component with the items and a `renderItem` function that returns a `li` tag with the item"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Create a List component that takes items and renderItem as props and renders a list of items by calling the renderItem function for each item\n// Return a ul tag with the list of items inside, calling the renderItem function for each item\nfunction List() {}\n\nfunction App() {\n  const items = [\"Apple\", \"Banana\", \"Cherry\"];\n\n  return (\n    <div>\n      <h1>Render Props Pattern</h1>\n\n      <h2>List</h2>\n      {/* Task: Render the List component and pass the items and a renderItem function that returns a li tag with the item as props (don''t forget the key!) */}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9b32d7de-6368-4c20-8ced-47fb2a592901',
+  '2-7-compound-components-pattern',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Compound Components Pattern',
+  'Learn how to create compound components that work together to provide flexible and reusable interfaces',
+  'In this lesson, you''ll learn about the compound components pattern, which allows you to create a set of components that work together but can be composed in different ways. This pattern provides flexibility by letting users arrange sub-components in different orders while maintaining the overall functionality.
+
+Your coding tasks will be creating a simple compound component system and using it in different configurations to demonstrate its flexibility and reusability.
+  ',
+  'f3b7ff42-0438-4404-9a35-d08ec8c81db3',
+  false,
+  6,
+  '[{"name":"Understand what compound components are and how they work together (multiple components that share behavior but can be arranged flexibly)"},{"name":"Learn how compound components provide flexibility in component composition (users can arrange sub-components in different orders)"},{"name":"Understand how to create a context for a compound component (show example of simple context, passing data to children, and accessing it with custom hooks)"},{"name":"Recognize when to use compound components versus other patterns (when you need flexible composition with shared behavior)"},{"name":"Mention that in React 19, we don''t need to use `.Provider` extension and can use the context directly. We also don''t need to use the `useContext` hook and can use the `use` hook instead. ALLOW THE USER TO USE WHICHEVER THEY WANT."}]'::jsonb,
+  '[{"id":"2-7-compound-components-pattern-task-1","name":"Create a `PostCard` component that receives `children` and a `post` as props and provides the `post` as context to its children"},{"id":"2-7-compound-components-pattern-task-2","name":"Create `PostCard.Header` sub-component that renders the `post.title` in an `h2` tag using the `usePost` hook"},{"id":"2-7-compound-components-pattern-task-3","name":"Create `PostCard.Body` sub-component that renders the `post.content` in a `p` tag using the `usePost` hook"},{"id":"2-7-compound-components-pattern-task-4","name":"Create `PostCard.Footer` sub-component that renders the `post.author` in a `p` tag using the `usePost` hook"},{"id":"2-7-compound-components-pattern-task-5","name":"Render the `PostCard` component with the `post` as props, and the `PostCard.Header`, `PostCard.Body`, and `PostCard.Footer` sub-components"},{"id":"2-7-compound-components-pattern-task-6","name":"Render the `PostCard` component with the `post` as props, but only render the `PostCard.Body` sub-component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { createContext, useContext } from \"react\";\n\nconst PostContext = createContext();\n\nconst usePost = () => {\n  const post = useContext(PostContext);\n  return post;\n};\n\n// Task: Create a PostCard component that receives children and a post as props and provides the post as context to its children\n// Return PostContext.Provider with the post as value and the children as its children\nfunction PostCard() {}\n\n// Task: Create PostCard.Header sub-component that renders the post title in an h2 tag using the usePost hook\nPostCard.Header = function PostCardHeader() {};\n\n// Task: Create PostCard.Body sub-component that renders the post content in a p tag using the usePost hook\nPostCard.Body = function PostCardBody() {};\n\n// Task: Create PostCard.Footer sub-component that renders the post author in a p tag using the usePost hook\nPostCard.Footer = function PostCardFooter() {};\n\nfunction App() {\n  const post = {\n    title: \"My First Post\",\n    content: \"This is the content of my first post\",\n    author: \"John Doe\",\n  };\n\n  return (\n    <div>\n      <h1>Compound Components Pattern</h1>\n\n      {/* Task: Render the PostCard component with the post as context, and the PostCard.Header, PostCard.Body, and PostCard.Footer sub-components */}\n\n      {/* Task: Render the PostCard component with the post as context, but only render the PostCard.Body sub-component */}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '["# Usage\n\nReading context with use\n\nWhen a context is passed to use, it works similarly to useContext. While useContext must be called at the top level of your component, use can be called inside conditionals like if and loops like for. use is preferred over useContext because it is more flexible.\n\nimport { use } from ''react'';\n\nfunction Button() {\nconst theme = use(ThemeContext);\n// ...\nuse returns the context value for the context you passed. To determine the context value, React searches the component tree and finds the closest context provider above for that particular context.\n\nTo pass context to a Button, wrap it or one of its parent components into the corresponding context provider.\n\nNote: In React 19+, you can remove the .Provider extension and use the context directly.\n\nfunction MyPage() {\nreturn (\n<ThemeContext value=\"dark\">\n\n<Form />\n</ThemeContext>\n);\n}\n\nfunction Form() {\n// ... renders buttons inside ...\n}\nIt doesn’t matter how many layers of components there are between the provider and the Button. When a Button anywhere inside of Form calls use(ThemeContext), it will receive \"dark\" as the value.\n\nUnlike useContext, use can be called in conditionals and loops like if.\n\nfunction HorizontalRule({ show }) {\nif (show) {\nconst theme = use(ThemeContext);\nreturn <hr className={theme} />;\n}\nreturn false;\n}\nuse is called from inside a if statement, allowing you to conditionally read values from a Context.\n\nPitfall\nLike useContext, use(context) always looks for the closest context provider above the component that calls it. It searches upwards and does not consider context providers in the component from which you’re calling use(context).\n"]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '7fd2108e-c847-4ab3-8714-ccdc87001764',
+  '2-8-higher-order-components',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Higher-Order Components',
+  'Learn about Higher-Order Components (HOCs) for component logic reuse in legacy React code',
+  'In this lesson, you''ll learn about Higher-Order Components (HOCs), which are functions that take a component and return a new component with additional functionality. While HOCs are mostly replaced by hooks in modern React, you''ll still encounter them in legacy codebases and some libraries.
+
+Your coding tasks will be creating a simple `withLoading` HOC that adds loading functionality to any component and using it to enhance a basic component.
+  ',
+  'cb41296a-4e26-4027-8b69-76af688fef38',
+  false,
+  7,
+  '[{"name":"Understand what Higher-Order Components are and how they work (functions that enhance components with additional props or behavior)"},{"name":"Learn why HOCs were important before hooks and why they''re less common now (hooks provide a simpler way to share logic between components, show comparison examples for clarity)"},{"name":"Recognize HOCs in legacy code and third-party libraries (you''ll encounter them even if you don''t write new ones)"}]'::jsonb,
+  '[{"id":"2-8-higher-order-components-task-1","name":"Create a `withUser` HOC that takes a component and returns it with `user` as a prop"},{"id":"2-8-higher-order-components-task-2","name":"Create an `EnhancedUserProfile` component that uses the `withUser` HOC and passes `UserProfile` as the component"},{"id":"2-8-higher-order-components-task-3","name":"Render the `EnhancedUserProfile` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Create a withUser HOC that takes a component and returns it with user as a prop\n// Return an inline function that returns the JSX of the Component with the user prop\nfunction withUser(Component) {\n  const user = {\n    name: \"John Doe\",\n    email: \"john@example.com\",\n  };\n}\n\nfunction UserProfile({ user }) {\n  return (\n    <div>\n      <h2>{user.name}</h2>\n      <p>{user.email}</p>\n    </div>\n  );\n}\n\n// Task: Create an EnhancedUserProfile component that uses the withUser HOC and passes UserProfile as the component\n\nfunction App() {\n  return (\n    <div>\n      <h1>Higher-Order Components</h1>\n\n      {/* Task: Render the EnhancedUserProfile component */}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '87eacb44-f31c-49bf-ac25-3d5e0bf48c6b',
+  '2-9-dynamic-component-loading',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Dynamic Component Loading',
+  'Learn how to lazy load components dynamically based on user interaction to improve performance',
+  'In this lesson, you''ll learn about dynamic component loading using React''s `lazy` function and `Suspense`. This pattern allows you to load components only when they''re needed, reducing the initial bundle size and improving app startup performance.
+
+Your coding tasks will be converting a regular component import to a lazy import and wrapping it with `Suspense` to handle the loading state.
+  ',
+  '3326e5a1-c9b1-483a-9f49-f50ac7f1b3c2',
+  false,
+  8,
+  '[{"name":"Understand what dynamic component loading is and why it improves performance (smaller initial bundle, faster startup, load components on demand)"},{"name":"Learn how `React.lazy` and `Suspense` work together (lazy creates a lazy component, Suspense handles loading states) (learn the API of Suspense and fallback props)"},{"name":"Recognize realistic use cases like modals, admin panels, or feature-specific components that aren''t always needed"}]'::jsonb,
+  '[{"id":"2-9-dynamic-component-loading-task-1","name":"Convert the regular `Dashboard` import to use the `lazy` function"},{"id":"2-9-dynamic-component-loading-task-2","name":"Wrap the `Dashboard` component with `Suspense` and provide a `p` tag with the message `Loading...` as the fallback"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, Suspense, lazy } from \"react\";\n\n// Task: Convert the regular Dashboard import to use the lazy function\nimport Dashboard from \"./Dashboard\";\n\nfunction App() {\n  const [showDashboard, setShowDashboard] = useState(false);\n\n  return (\n    <div>\n      <h1>Dynamic Component Loading</h1>\n\n      <button onClick={() => setShowDashboard(!showDashboard)}>\n        {showDashboard ? \"Hide\" : \"Show\"} Dashboard\n      </button>\n\n      {showDashboard && (\n        // Task: Wrap the Dashboard component with Suspense and provide a p tag with the message \"Loading...\" as the fallback\n        <Dashboard />\n      )}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"Dashboard.jsx":{"code":"function Dashboard() {\n  return (\n    <div>\n      <h2>Dashboard</h2>\n      <p>This component was loaded dynamically!</p>\n      <div>\n        <p>Analytics: 1,234 views</p>\n        <p>Users: 567 active</p>\n        <p>Revenue: $12,345</p>\n      </div>\n    </div>\n  );\n}\n\nexport default Dashboard;\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '3c3eb465-37a2-4889-936b-893740e57c3e',
+  '2-10-virtualization-pattern',
+  '3c75b29c-7dcd-458b-bfac-b5fe9f7978b7',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Virtualization Pattern',
+  'Learn how to use virtualization to efficiently render large lists with react-window',
+  'In this lesson, you''ll discover the virtualization pattern using the `react-window` library, which efficiently renders large lists by only showing visible items in the viewport. This dramatically improves performance when dealing with thousands of list items by avoiding the creation of unnecessary DOM nodes.
+
+Your coding tasks will be replacing a regular list with a virtualized `FixedSizeList` component and creating a simple row component to render each item.
+  ',
+  'ed1fb378-bf83-40bf-8988-891859329b04',
+  false,
+  9,
+  '[{"name":"Understand what virtualization is and why it improves performance for large lists (only renders visible items, reduces DOM nodes)"},{"name":"Learn how `react-window` works with `FixedSizeList` for lists with uniform item heights"},{"name":"Recognize when to use virtualization (lists with hundreds or thousands of items)"}]'::jsonb,
+  '[{"id":"2-10-virtualization-pattern-task-1","name":"Create a `Row` component that receives `index`, `items`, and `style` as props and renders the item"},{"id":"2-10-virtualization-pattern-task-2","name":"Replace the regular list rendering with `List` component"}]'::jsonb,
+  '{"template":"react","dependencies":{"react-window":"latest"},"files":{"App.jsx":{"code":"import { List } from \"react-window\";\n\nconst items = Array.from({ length: 1000 }, (_, index) => `Item ${index + 1}`);\n\n// Task: Create a Row component that receives index, items, and style as props and renders the item\n// Render a div with the item inside using items[index]\n// Pass the style prop to the div\nfunction Row() {}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Virtualization Pattern</h1>\n      <p>Rendering {items.length} items efficiently:</p>\n\n      {/* Task: Replace the regular list rendering with List component */}\n      <div style={{ height: 400 }}>\n        {items.map((item, index) => (\n          <div key={index}>{item}</div>\n        ))}\n      </div>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '["# React Window Docs\n\nLists\nFixed row heights\nThe simplest type of list to render is one with fixed row heights.\n\nTo render this type of list, you need to specify how many rows it contains (rowCount), which component should render rows (rowComponent), and the height of each row (rowHeight):\nimport { List } from \"react-window\";\nfunction Example({ names }: { names: string[] }) {\nreturn (\n<List\nrowComponent={RowComponent}\nrowCount={names.length}\nrowHeight={25}\nrowProps={{ names }}\n/>\n);\n}\nThe rowProps object can also be used to share between components. Values passed in rowProps will also be passed as props to the row component:\nimport { type RowComponentProps } from \"react-window\";\nfunction RowComponent({\nindex,\nnames,\nstyle\n}: RowComponentProps<{\nnames: string[];\n}>) {\nreturn (\n\n<div className=\"flex items-center justify-between\" style={style}>\n{names[index]}\n<div className=\"text-slate-500 text-xs\">{`${index + 1} of ${names.length}`}</div>\n</div>\n);\n}\n"]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '3-hook-patterns',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Hook Patterns',
+  'Learn advanced hook patterns for efficient state management and performance optimization',
+  2
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '57d2c7b1-82a2-4f69-8c31-676e2ad1d134',
+  '3-1-deriving-state',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Deriving State',
+  'Learn how to derive state from existing state instead of creating unnecessary state variables',
+  'In this lesson, you''ll learn about deriving state, which means calculating values from existing state instead of storing them in separate state variables. This pattern eliminates unnecessary `useEffect` hooks and reduces the risk of state getting out of sync.
+
+Your coding tasks will be removing an unnecessary state variable and `useEffect` hook by deriving the full name directly from the first and last name states.
+  ',
+  'fa1e55bc-d354-4576-abde-d93a47f1567a',
+  true,
+  0,
+  '[{"name":"Understand when state should be derived instead of stored (when one piece of state can be calculated from another)"},{"name":"Learn how deriving state eliminates unnecessary `useEffect` hooks and prevents synchronization bugs"},{"name":"Recognize the performance benefits of deriving state (no extra renders, simpler component logic)"}]'::jsonb,
+  '[{"id":"3-1-deriving-state-task-1","name":"Remove the `fullName` state variable"},{"id":"3-1-deriving-state-task-2","name":"Remove the `useEffect` that updates `fullName`"},{"id":"3-1-deriving-state-task-3","name":"Create a new variable called `fullName` that is derived from `firstName` and `lastName`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useEffect } from \"react\";\n\nfunction App() {\n  const [firstName] = useState(\"John\");\n  const [lastName] = useState(\"Doe\");\n\n  // Task: Remove the fullName state variable\n  const [fullName, setFullName] = useState(\"\");\n\n  // Task: Remove the useEffect that updates fullName\n  useEffect(() => {\n    setFullName(`${firstName} ${lastName}`);\n  }, [firstName, lastName]);\n\n  // Task: Create a new variable called fullName that is derived from firstName and lastName\n\n  return (\n    <div>\n      <h1>Deriving State</h1>\n      <p>Full Name: {fullName}</p>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd614a9e6-f5c8-4444-9247-0463a2b72dd2',
+  '3-2-debounce',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Debounce',
+  'Learn how to use the useDebounce hook to delay expensive operations until user input stabilizes',
+  'In this lesson, you''ll learn about debouncing, which delays executing a function until after a specified time has passed since it was last called. This is useful for expensive operations like API calls or search queries that you don''t want to run on every keystroke.
+
+Your coding tasks will be using a `useDebounce` hook to delay logging user input until they stop typing for a specified amount of time.
+  ',
+  '457c7055-b048-48fb-acdd-0ea34f55d58e',
+  true,
+  1,
+  '[{"name":"Understand what debouncing is and why it''s useful (preventing excessive function calls during rapid user input)"},{"name":"Learn how `useDebounce` hooks work (they return a delayed version of a value that only updates after a specified delay, worth it to show example of the hook and its usage, so user knows how to use it and pass params)"},{"name":"Recognize common use cases like search inputs, API calls, and resize handlers"}]'::jsonb,
+  '[{"id":"3-2-debounce-task-1","name":"Create a `debouncedValue` state variable using the `useState` hook with `value` as the initial value"},{"id":"3-2-debounce-task-2","name":"Create a `useEffect` hook that sets the `debouncedValue` state variable to the `value` after the `delay` using `setTimeout`"},{"id":"3-2-debounce-task-3","name":"Return the `debouncedValue` state variable"},{"id":"3-2-debounce-task-4","name":"Use the `useDebounce` hook to create a `debouncedSearchTerm` variable using the `searchTerm` state and a `500ms` delay"},{"id":"3-2-debounce-task-5","name":"Render the `debouncedSearchTerm` inside the curly braces"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useEffect } from \"react\";\n\nfunction useDebounce(value, delay) {\n  // Task: Create a debouncedValue state variable using the useState hook with value as the initial value\n\n  // Task: Create a useEffect hook that sets the debouncedValue state variable to the value after the delay using setTimeout\n\n  // Task: Return the debouncedValue state variable\n}\n\nfunction App() {\n  const [searchTerm, setSearchTerm] = useState(\"\");\n\n  // Task: Use the useDebounce hook to create a debouncedSearchTerm variable using the searchTerm state and a 500ms delay\n\n  return (\n    <div>\n      <h1>Debounce</h1>\n\n      <input\n        type=\"text\"\n        placeholder=\"Type to search...\"\n        value={searchTerm}\n        onChange={(e) => setSearchTerm(e.target.value)}\n      />\n\n      <p>Search term: {searchTerm}</p>\n      {/* Task: Render the the debouncedSearchTerm inside the curly braces */}\n      <p>Debounced search term: {}</p>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'be82910e-d3e0-42be-be56-eef8e527cd28',
+  '3-3-use-deferred-value',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Prioritize rendering with useDeferredValue',
+  'Learn how to use useDeferredValue to defer expensive updates and improve user experience',
+  'In this lesson, you''ll learn about `useDeferredValue`, which allows you to defer updating a value until more urgent updates have finished. This helps keep the UI responsive by allowing high-priority updates (like user input) to render before lower-priority updates (like expensive calculations).
+
+Your coding tasks will be using `useDeferredValue` to defer updating an expensive list rendering while keeping the input field responsive.
+  ',
+  'ab058f98-4ed1-4938-a6f0-57a32bac33b3',
+  false,
+  2,
+  '[{"name":"Understand what `useDeferredValue` does and why it improves performance (defers less important updates to keep UI responsive)"},{"name":"Learn how it differs from debouncing (useDeferredValue is about render priority, debouncing is about timing)"},{"name":"Recognize when to use it (expensive rendering that shouldn''t block user interactions)"}]'::jsonb,
+  '[{"id":"3-3-use-deferred-value-task-1","name":"Use `useDeferredValue` to create a `deferredQuery` variable using the `query` state"},{"id":"3-3-use-deferred-value-task-2","name":"Replace the `SlowList` `query` prop with `deferredQuery`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useDeferredValue, memo } from \"react\";\n\nfunction App() {\n  const [query, setQuery] = useState(\"\");\n\n  // Task: Use useDeferredValue to create a deferredQuery variable using the query state\n\n  return (\n    <div>\n      <input\n        type=\"text\"\n        value={query}\n        onChange={(e) => setQuery(e.target.value)}\n        placeholder=\"Search...\"\n      />\n      {/* Task: Replace the SlowList query prop with deferredQuery */}\n      <SlowList query={query} />\n    </div>\n  );\n}\n\nconst SlowList = memo(({ query }) => {\n  const items = [];\n  for (let i = 0; i < 250; i++) {\n    items.push(<SlowItem key={i} text={query} />);\n  }\n  return <ul className=\"items\">{items}</ul>;\n});\n\nconst SlowItem = ({ text }) => {\n  let startTime = performance.now();\n  while (performance.now() - startTime < 1) {\n    // Do nothing for 1 ms per item to emulate extremely slow code\n  }\n\n  return <li className=\"item\">Text: {text}</li>;\n};\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '236ba190-983a-46ea-9d2d-46e421d1d1e3',
+  '3-4-use-transition',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Interrupt rendering with useTransition',
+  'Learn how to use useTransition to mark updates as non-urgent and show loading states',
+  'In this lesson, you''ll learn about `useTransition`, which allows you to mark state updates as non-urgent transitions. This keeps the UI responsive during expensive updates by allowing React to interrupt them for more urgent updates, and provides a loading state you can use to show feedback to users.
+
+Your coding tasks will be using `useTransition` to wrap an async state update and displaying a loading indicator while the transition is pending.
+  ',
+  '78fb63c1-db62-49d3-80bd-382eb9798278',
+  false,
+  3,
+  '[{"name":"Understand what `useTransition` does and how it improves user experience (marks updates as non-urgent, provides loading states)"},{"name":"Learn how it works with the `startTransition` function and `isPending` state"},{"name":"Learn how to nest startTransition inside another startTransition when using async state updates (mention that this will be fixed in later React versions)"},{"name":"Recognize when to use it (expensive state updates that shouldn''t block user interactions)"}]'::jsonb,
+  '[{"id":"3-4-use-transition-task-1","name":"Use the `useTransition` hook to get `isPending` and `startTransition` variables"},{"id":"3-4-use-transition-task-2","name":"Wrap the `asyncFunction` function call and state update with `startTransition`"},{"id":"3-4-use-transition-task-3","name":"Render a `p` tag with the message `\"Loading...\"` when `isPending` is `true`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useTransition } from \"react\";\n\nasync function asyncFunction(input) {\n  await new Promise((resolve) => setTimeout(resolve, 3000));\n  return input;\n}\n\nfunction App() {\n  const [input, setInput] = useState(\"\");\n  const [result, setResult] = useState(\"\");\n\n  // Task: Use the useTransition hook to get isPending and startTransition variables\n\n  const handleProcess = async () => {\n    // Task: Wrap the asyncFunction function call and state update with startTransition\n    // Don''t forget to wrap the state update with another startTransition\n    const processedResult = await asyncFunction(input);\n    setResult(processedResult);\n  };\n\n  return (\n    <div>\n      <h1>useTransition</h1>\n\n      <input\n        type=\"text\"\n        placeholder=\"Enter text to process...\"\n        value={input}\n        onChange={(e) => setInput(e.target.value)}\n      />\n\n      <button onClick={handleProcess}>Process</button>\n\n      {/* Task: Render a p tag with the message \"Loading...\" when isPending is true */}\n\n      {result && <p>{result}</p>}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'e972b592-5eae-40cb-b11c-89f58ffe52ff',
+  '3-5-effect-separation-pattern',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Effect Separation Pattern',
+  'Learn how to separate multiple concerns in useEffect by using multiple effects instead of one',
+  'In this lesson, you''ll learn about the effect separation pattern, which means using multiple `useEffect` hooks instead of combining different concerns into a single effect. This makes your code more maintainable and allows each effect to have its own dependency array.
+
+Your coding tasks will be splitting a single `useEffect` that handles both document title updates and logging into two separate effects with their own dependencies.
+  ',
+  '8ac593bd-87b2-468c-b980-e4aa5f83fe92',
+  false,
+  4,
+  '[{"name":"Understand why multiple effects are better than one large effect (separation of concerns, clearer dependencies, easier maintenance, porting to custom hooks)"},{"name":"Learn how to identify when an effect is doing too much (multiple unrelated operations with different dependencies, refer back to SRP)"},{"name":"Recognize that each effect can have its own dependency array and cleanup logic"}]'::jsonb,
+  '[{"id":"3-5-effect-separation-pattern-task-1","name":"Create a separate `useEffect` for updating the document title that depends only on `name`"},{"id":"3-5-effect-separation-pattern-task-2","name":"Create a separate `useEffect` for logging that depends only on `count`"},{"id":"3-5-effect-separation-pattern-task-3","name":"Remove the original combined `useEffect`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useEffect } from \"react\";\n\nfunction App() {\n  const [name, setName] = useState(\"John\");\n  const [count, setCount] = useState(0);\n\n  // Task: Remove the original combined useEffect\n  useEffect(() => {\n    document.title = `Hello ${name}`;\n\n    console.log(`Count changed to: ${count}`);\n  }, [name, count]);\n\n  // Task: Create a separate useEffect for updating the document title that depends only on name\n\n  // Task: Create a separate useEffect for logging that depends only on count\n\n  return (\n    <div>\n      <h1>Effect Separation Pattern</h1>\n\n      <input\n        type=\"text\"\n        value={name}\n        onChange={(e) => setName(e.target.value)}\n        placeholder=\"Enter name\"\n      />\n\n      <button onClick={() => setCount(count + 1)}>Count: {count}</button>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '672a9670-88e3-468b-ad47-964dbf5cb2ea',
+  '3-6-first-render-detection',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'First Render Detection',
+  'Learn how to detect the first render using a ref instead of useEffect for better performance',
+  'In this lesson, you''ll learn about first render detection using a ref pattern instead of `useEffect`. You create a ref that starts as `false`, check it during render, and if it''s false you run your first-render logic and set it to `true`. This is more efficient than using `useEffect` with an empty dependency array.
+
+Your coding tasks will be implementing this pattern to show a welcome message only on the first render without using `useEffect`.
+  ',
+  'c480659f-ee3b-4101-a395-a05415549e02',
+  false,
+  5,
+  '[{"name":"Understand why using a ref is better than `useEffect` for first render detection (runs synchronously during render, no extra render cycle)"},{"name":"Learn how the ref pattern works (starts false, check during render, set to true after first use)"},{"name":"Recognize when this pattern is useful (initialization logic that should run once during the first render)"}]'::jsonb,
+  '[{"id":"3-6-first-render-detection-task-1","name":"Create a ref called `isFirstRender` initialized to `true` using the `useRef` hook"},{"id":"3-6-first-render-detection-task-2","name":"During rendering, add an if statement that checks if `isFirstRender.current` is `true`"},{"id":"3-6-first-render-detection-task-3","name":"Inside the if statement, log a `\"First render\"` message and set `isFirstRender.current` to `false`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useRef } from \"react\";\n\nfunction App() {\n  const [count, setCount] = useState(0);\n\n  // Task: Create a ref called isFirstRender initialized to true using the useRef hook\n\n  // Task: During rendering, add an if statement that checks if isFirstRender.current is true\n  // Task: Inside the if statement, log a \"First render\" message and set isFirstRender.current to false\n\n  return (\n    <div>\n      <h1>First Render Detection</h1>\n\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6cf3e994-e43e-44af-a815-a6865ccb29b5',
+  '3-7-custom-hook-composition',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Custom Hook Composition',
+  'Learn how to combine multiple custom hooks into one powerful hook for complex functionality',
+  'In this lesson, you''ll learn about custom hook composition, which means combining multiple custom hooks together to create more powerful and reusable functionality. This pattern helps organize complex logic by breaking it into smaller, focused hooks that can be combined as needed.
+
+Your coding tasks will be creating a search functionality by composing separate hooks for input management and filtering logic into one comprehensive search hook.
+  ',
+  'e90a274c-b2f4-4554-a7b1-d1ecf3fe0f1c',
+  false,
+  6,
+  '[{"name":"Understand how to break complex logic into multiple focused custom hooks (separation of concerns at the hook level – go beyond learning what a custom hook is, focus on the design pattern at scale)"},{"name":"Learn how to combine multiple hooks into one comprehensive hook (composition over complexity)"},{"name":"Recognize when to use hook composition versus single large hooks (when logic has distinct but related concerns, mention how you can have a big hook for a feature that has many smaller hooks inside it as an example)"}]'::jsonb,
+  '[{"id":"3-7-custom-hook-composition-task-1","name":"Create a `useInput` hook that manages a state variable `query` and a `setQuery` handler"},{"id":"3-7-custom-hook-composition-task-2","name":"Create a `useFilter` hook that takes `items` and `query` as arguments, and returns a memoized array of filtered items using `useMemo`"},{"id":"3-7-custom-hook-composition-task-3","name":"Create a `useSearch` hook that uses the `useInput` and `useFilter` hooks"},{"id":"3-7-custom-hook-composition-task-4","name":"Replace the `useState` hook and the `filteredItems` variable with the returned values from the `useSearch` hook"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useMemo } from \"react\";\n\nconst ITEMS = [\n  \"apple\",\n  \"banana\",\n  \"cherry\",\n  \"date\",\n  \"elderberry\",\n  \"fig\",\n  \"grape\",\n];\n\n// Task: Create a useInput hook that manages a state variable query and a setQuery handler\n// Initialize the query to an empty string\n// Return the query and setQuery handler as an object\nfunction useInput() {}\n\n// Task: Create a useFilter hook that takes items and query as arguments, and returns a memoized array of filtered items using useMemo\n// Return the filtered items based whether the item includes the query in its lowercase form\nfunction useFilter() {}\n\n// Task: Create a useSearch hook that uses the useInput and useFilter hooks\n// Return an object with the query value, setQuery handler, and filtered items\nfunction useSearch() {}\n\nfunction App() {\n  // Task: Replace the useState hook and the filteredItems variable with the returned values from the useSearch hook\n  const [query, setQuery] = useState(\"\");\n  const filteredItems = ITEMS.filter((item) =>\n    item.toLowerCase().includes(query.toLowerCase()),\n  );\n\n  return (\n    <div>\n      <h1>Custom Hook Composition</h1>\n\n      <input\n        type=\"text\"\n        placeholder=\"Search fruits...\"\n        value={query}\n        onChange={(e) => setQuery(e.target.value)}\n      />\n\n      <ul>\n        {filteredItems.map((item) => (\n          <li key={item}>{item}</li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '0d50dee4-36ae-4c7b-b1b3-cefe663425a2',
+  '3-8-context-selector',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Context Selector',
+  'Learn how to use context selectors to prevent unnecessary re-renders when context values change',
+  'In this lesson, you''ll learn about context selectors using the `use-context-selector` library, which allows components to subscribe to only specific parts of a context value. This prevents unnecessary re-renders when other parts of the context change that the component doesn''t care about.
+
+Your coding tasks will be replacing regular `useContext` with `useContextSelector` to optimize performance by selecting only the specific data each component needs.
+  ',
+  '2f35871a-9ccf-4187-bfd1-f700bfbb0017',
+  false,
+  7,
+  '[{"name":"Understand the performance problem with regular context (all consumers re-render when any part of context changes)"},{"name":"Learn how context selectors solve this by allowing components to subscribe to specific values only"},{"name":"Recognize when to use context selectors (when context has multiple values and components only need specific ones)"},{"name":"Mention how specifically the use-context-selector library works and that the code is still going to run but it won''t get committed. So if we put a useEffect to console.log when the component is rendering, it''s only going to show when the value changes. But if we just console.log it directly in the component without the useEffect, it''s going to run even if the value doesn''t change"}]'::jsonb,
+  '[{"id":"3-8-context-selector-task-1","name":"Replace the `useContext` hook in `NameComponent` with `useContextSelector` and select only the `name` using a selector function"},{"id":"3-8-context-selector-task-2","name":"Replace the `useContext` hook in `CountComponent` with `useContextSelector` and select only the `count` using a selector function"}]'::jsonb,
+  '{"template":"react","dependencies":{"use-context-selector":"latest"},"files":{"App.jsx":{"code":"import { useState, useEffect } from \"react\";\nimport {\n  createContext,\n  useContext,\n  useContextSelector,\n} from \"use-context-selector\";\n\nconst AppContext = createContext();\n\nfunction NameComponent() {\n  // Task: Replace the useContext hook with useContextSelector and select only the name using a selector function\n  const { name } = useContext(AppContext);\n\n  // Use to keep track of how many times the component is rendered\n  useEffect(() => {\n    console.log(\"NameComponent rendered\");\n  });\n\n  return <p>Name: {name}</p>;\n}\n\nfunction CountComponent() {\n  // Task: Replace the useContext hook with useContextSelector and select only the count using a selector function\n  const { count } = useContext(AppContext);\n\n  // Use to keep track of how many times the component is rendered\n  useEffect(() => {\n    console.log(\"CountComponent rendered\");\n  });\n\n  return <p>Count: {count}</p>;\n}\n\nfunction AppProvider({ children }) {\n  const [name, setName] = useState(\"John\");\n  const [count, setCount] = useState(0);\n\n  return (\n    <AppContext.Provider value={{ name, count }}>\n      <div>\n        <h1>Context Selector</h1>\n\n        <button onClick={() => setName(name === \"John\" ? \"Jane\" : \"John\")}>\n          Change Name\n        </button>\n        <button onClick={() => setCount(count + 1)}>Increment Count</button>\n\n        {children}\n      </div>\n    </AppContext.Provider>\n  );\n}\n\nfunction App() {\n  return (\n    <AppProvider>\n      <NameComponent />\n      <CountComponent />\n    </AppProvider>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '["# use-context-selector\n\nReact useContextSelector hook in userland\n\n## Introduction\n\nReact Context and useContext is often used to avoid prop drilling,\nhowever it''s known that there''s a performance issue.\nWhen a context value is changed, all components that useContext\nwill re-render.\n\n## Usage\n\n```javascript\nimport { useState } from \"react\";\nimport { createRoot } from \"react-dom/client\";\n\nimport { createContext, useContextSelector } from \"use-context-selector\";\n\nconst context = createContext(null);\n\nconst Counter1 = () => {\n  const count1 = useContextSelector(context, (v) => v[0].count1);\n  const setState = useContextSelector(context, (v) => v[1]);\n  const increment = () =>\n    setState((s) => ({\n      ...s,\n      count1: s.count1 + 1,\n    }));\n  return (\n    <div>\n      <span>Count1: {count1}</span>\n      <button type=\"button\" onClick={increment}>\n        +1\n      </button>\n      {Math.random()}\n    </div>\n  );\n};\n\nconst Counter2 = () => {\n  const count2 = useContextSelector(context, (v) => v[0].count2);\n  const setState = useContextSelector(context, (v) => v[1]);\n  const increment = () =>\n    setState((s) => ({\n      ...s,\n      count2: s.count2 + 1,\n    }));\n  return (\n    <div>\n      <span>Count2: {count2}</span>\n      <button type=\"button\" onClick={increment}>\n        +1\n      </button>\n      {Math.random()}\n    </div>\n  );\n};\n\nconst StateProvider = ({ children }) => (\n  <context.Provider value={useState({ count1: 0, count2: 0 })}>\n    {children}\n  </context.Provider>\n);\n\nconst App = () => (\n  <StateProvider>\n    <Counter1 />\n    <Counter2 />\n  </StateProvider>\n);\n\ncreateRoot(document.getElementById(\"app\")).render(<App />);\n```\n\n## API\n\n<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n\n### createContext\n\nThis creates a special context for `useContextSelector`.\n\n#### Parameters\n\n- `defaultValue` **Value**&#x20;\n\n#### Examples\n\n```javascript\nimport { createContext } from \"use-context-selector\";\n\nconst PersonContext = createContext({ firstName: \"\", familyName: \"\" });\n```\n\n### useContextSelector\n\nThis hook returns context selected value by selector.\n\nIt will only accept context created by `createContext`.\nIt will trigger re-render if only the selected value is referentially changed.\n\nThe selector should return referentially equal result for same input for better performance.\n\n#### Parameters\n\n- `context` **Context\\<Value>**&#x20;\n- `selector` **function (value: Value): Selected**&#x20;\n\n#### Examples\n\n```javascript\nimport { useContextSelector } from \"use-context-selector\";\n\nconst firstName = useContextSelector(PersonContext, (state) => state.firstName);\n```\n\n### useContext\n\nThis hook returns the entire context value.\nUse this instead of React.useContext for consistent behavior.\n\n#### Parameters\n\n- `context` **Context\\<Value>**&#x20;\n\n#### Examples\n\n```javascript\nimport { useContext } from \"use-context-selector\";\n\nconst person = useContext(PersonContext);\n```\n\n### useContextUpdate\n\nThis hook returns an update function to wrap an updating function\n\nUse this for a function that will change a value in\nconcurrent rendering in React 18.\nOtherwise, there''s no need to use this hook.\n\n#### Parameters\n\n- `context` **Context\\<Value>**&#x20;\n\n#### Examples\n\n```javascript\nimport { useContextUpdate } from ''use-context-selector'';\n\nconst update = useContextUpdate();\n\n// Wrap set state function\nupdate(() => setState(...));\n\n// Experimental suspense mode\nupdate(() => setState(...), { suspense: true });\n```\n"]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '816c551d-55a9-46b7-9829-b2a5b5473992',
+  '3-9-use-imperative-handle',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'UseImperativeHandle',
+  'Learn how to expose imperative methods from child components to parent components using refs',
+  'In this lesson, you''ll learn about `useImperativeHandle`, which allows child components to expose specific methods to their parent components through a ref. This pattern is useful when you need to call functions on a child component imperatively, like focusing an input.
+
+Your coding tasks will be creating a custom input component that exposes a focus method to its parent using `useImperativeHandle`.
+  ',
+  '5b7738da-0abe-4e69-8c58-2acc30a7fe43',
+  false,
+  8,
+  '[{"name":"Understand what `useImperativeHandle` does and when to use it (exposing specific methods from child to parent)"},{"name":"Mention how pre React 19, `forwardRef` was used pass the ref, but now it''s not needed anymore we can pass the ref directly to the component as a normal prop (not as an extra or separate prop). Just through `ref` like any other prop. IMPORTANT: REFS CAN BE DESTRUCTURED LIKE NORMAL PROPS IN REACT 19+. FORWARD REF HAS BEEN REMOVED. DO NOT TELL THE USER TO MAKE THE REF A SEPARATE PROP. THEY ARE NOW COMPLELY NORMAL PROPS."},{"name":"Recognize common use cases like focusing inputs, scrolling elements, or triggering animations (mention that we can even do it through a context to provide broader access to the inner workings of a component)"},{"name":"Mention that this is the opposite of React''s top-down data flow. But sometimes, there are valid reasons to do it (show examples)"}]'::jsonb,
+  '[{"id":"3-9-use-imperative-handle-task-1","name":"Create a `CustomInput` component that receives a `ref` and `...rest` props"},{"id":"3-9-use-imperative-handle-task-2","name":"Use `useImperativeHandle` to expose a `focusInner` method that focuses the input using `localRef.current.focus()`"},{"id":"3-9-use-imperative-handle-task-3","name":"Return an input element with the `localRef` as the ref and spread the `...rest` props"},{"id":"3-9-use-imperative-handle-task-4","name":"Create a `handleFocus` function that focuses the input by calling the `focusInner` method on the `inputRef`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useRef, useImperativeHandle } from \"react\";\n\n// Task: Create a CustomInput component that receives a ref and ...rest props\n// In React 19+, refs can be destructured like normal props. So you can just pass the ref as a normal prop\nfunction CustomInput() {\n  const localRef = useRef();\n\n  // Task: Use useImperativeHandle to expose a focusInner method that focuses the input using localRef.current.focus()\n\n  // Task: Return an input element with the localRef as the ref and spread the ...rest props\n}\n\nfunction App() {\n  const inputRef = useRef();\n\n  // Task: Create a handleFocus function that calls the focusInner method on the inputRef\n  const handleFocus = () => {};\n\n  return (\n    <div>\n      <h1>UseImperativeHandle</h1>\n\n      <CustomInput ref={inputRef} placeholder=\"Click button to focus me\" />\n      <button onClick={handleFocus}>Focus Input</button>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '["# useImperativeHandle\n\nuseImperativeHandle is a React Hook that lets you customize the handle exposed as a ref.\n\nuseImperativeHandle(ref, createHandle, dependencies?)\n\n## Usage\n\nExposing a custom ref handle to the parent component\nExposing your own imperative methods\nCall useImperativeHandle at the top level of your component to customize the ref handle it exposes:\n\nimport { useImperativeHandle } from ''react'';\n\n// In React 19+, refs can be destructured like normal props. So you can just pass the ref as a normal prop\nfunction MyInput({ ref }) {\nuseImperativeHandle(ref, () => {\nreturn {\n// ... your methods ...\n};\n}, []);\n// ...\nSee more examples below.\n\nParameters\nref: The ref you received as a prop to the MyInput component.\n\ncreateHandle: A function that takes no arguments and returns the ref handle you want to expose. That ref handle can have any type. Usually, you will return an object with the methods you want to expose.\n\noptional dependencies: The list of all reactive values referenced inside of the createHandle code. Reactive values include props, state, and all the variables and functions declared directly inside your component body. If your linter is configured for React, it will verify that every reactive value is correctly specified as a dependency. The list of dependencies must have a constant number of items and be written inline like [dep1, dep2, dep3]. React will compare each dependency with its previous value using the Object.is comparison. If a re-render resulted in a change to some dependency, or if you omitted this argument, your createHandle function will re-execute, and the newly created handle will be assigned to the ref.\n\nNote\nStarting with React 19, ref is available as a prop. In React 18 and earlier, it was necessary to get the ref from forwardRef.\n\nReturns\nuseImperativeHandle returns undefined.\n\nUsage\nExposing a custom ref handle to the parent component\nTo expose a DOM node to the parent element, pass in the ref prop to the node.\n\nfunction MyInput({ ref }) {\nreturn <input ref={ref} />;\n};\nWith the code above, a ref to MyInput will receive the <input> DOM node. However, you can expose a custom value instead. To customize the exposed handle, call useImperativeHandle at the top level of your component:\n\nimport { useImperativeHandle } from ''react'';\n\nfunction MyInput({ ref }) {\nuseImperativeHandle(ref, () => {\nreturn {\n// ... your methods ...\n};\n}, []);\n\nreturn <input />;\n};\nNote that in the code above, the ref is no longer passed to the <input>.\n\nFor example, suppose you don’t want to expose the entire <input> DOM node, but you want to expose two of its methods: focus and scrollIntoView. To do this, keep the real browser DOM in a separate ref. Then use useImperativeHandle to expose a handle with only the methods that you want the parent component to call:\n\nimport { useRef, useImperativeHandle } from ''react'';\n\nfunction MyInput({ ref }) {\nconst inputRef = useRef(null);\n\nuseImperativeHandle(ref, () => {\nreturn {\nfocus() {\ninputRef.current.focus();\n},\nscrollIntoView() {\ninputRef.current.scrollIntoView();\n},\n};\n}, []);\n\nreturn <input ref={inputRef} />;\n};\nNow, if the parent component gets a ref to MyInput, it will be able to call the focus and scrollIntoView methods on it. However, it will not have full access to the underlying <input> DOM node.\n\n## Pitfall\n\nDo not overuse refs. You should only use refs for imperative behaviors that you can’t express as props: for example, scrolling to a node, focusing a node, triggering an animation, selecting text, and so on.\n\nIf you can express something as a prop, you should not use a ref. For example, instead of exposing an imperative handle like { open, close } from a Modal component, it is better to take isOpen as a prop like <Modal isOpen={isOpen} />. Effects can help you expose imperative behaviors via props.\n"]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ea8c8f46-ef5d-4b8d-8ee1-b0cc7c20d191',
+  '3-10-latest-ref-pattern',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Latest Ref Pattern',
+  'Learn how to use refs to access the latest values in useEffect without causing re-renders',
+  'In this lesson, you''ll learn about the latest ref pattern, which solves the problem of accessing the latest values in `useEffect` without adding them to the dependency array. You create a ref to store the function and another `useEffect` with no dependencies that runs on every render to keep the ref updated.
+
+Your coding tasks will be implementing this pattern with an event listener that needs access to the latest count value without causing the effect to re-run on every count change.
+  ',
+  '888b935c-8efa-49d8-a27e-ab3836424a4f',
+  false,
+  9,
+  '[{"name":"Understand the problem of dependency arrays in `useEffect` (stale closures, functions capture values at the time they''re created, unnecessary re-renders, potential infinite loops)"},{"name":"Learn how the latest ref pattern solves this using refs and a synchronizing effect"},{"name":"Recognize how refs provide imperative access to always get the latest values (even in an event listener set only once)"}]'::jsonb,
+  '[{"id":"3-10-latest-ref-pattern-task-1","name":"Create a ref using `useRef` called `onClickRef` to store the latest `onClick` value"},{"id":"3-10-latest-ref-pattern-task-2","name":"Create a `useEffect` with no dependencies that updates `onClickRef.current` on every render with the latest `onClick` value"},{"id":"3-10-latest-ref-pattern-task-3","name":"Use `onClickRef.current` in the click handler instead of the stale `onClick` value"},{"id":"3-10-latest-ref-pattern-task-4","name":"Remove `onClick` from the dependency array of the `useEffect`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useEffect, useRef } from \"react\";\n\nfunction ClickHandler({ onClick }) {\n  // Task: Create a ref using useRef called onClickRef to store the latest onClick value\n\n  // Task: Create a useEffect with no dependencies that updates onClickRef.current on every render with the latest onClick value\n\n  useEffect(() => {\n    const handleClick = () => {\n      // Task: Call onClickRef.current in the click handler instead of the passed onClick function\n      onClick();\n    };\n\n    document.addEventListener(\"click\", handleClick);\n\n    return () => {\n      document.removeEventListener(\"click\", handleClick);\n    };\n  }, [onClick]); // Task: Remove onClick from the dependency array of the useEffect\n\n  return (\n    <div>\n      <h1>Latest Ref Pattern</h1>\n    </div>\n  );\n}\n\nfunction App() {\n  return <ClickHandler onClick={() => console.log(\"Clicked\")} />;\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9387f36c-ad5c-4508-b41b-0d354af5f1b1',
+  '3-11-abandon-render-pattern',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Abandon Render Pattern',
+  'Learn the abandon render pattern as an alternative to usePrevious hooks for tracking previous values',
+  'In this lesson, you''ll learn about the abandon render pattern, which is the official React-recommended way to track previous values instead of using `usePrevious` hooks. You use an if statement during render to check if a value changed, and if so, you update state mid-render, causing React to abandon the current render and start fresh with the new values.
+
+Your coding tasks will be implementing this pattern to track the previous count value and display both current and previous values without using a `usePrevious` hook.
+  ',
+  'a9e5b6ba-a9db-49cb-ac4c-536921ba0b51',
+  false,
+  10,
+  '[{"name":"Understand why `usePrevious` hooks are not recommended (they can cause timing issues and are not officially supported)"},{"name":"Learn how the abandon render pattern works (if statement during render that sets state when values differ)"},{"name":"Recognize that this pattern is documented in the official React documentation as the preferred approach (even though it''s weird)"}]'::jsonb,
+  '[{"id":"3-11-abandon-render-pattern-task-1","name":"Create a state variable called `prevCount` to store the previous `count` value"},{"id":"3-11-abandon-render-pattern-task-2","name":"During rendering, add an `if` statement that checks if `count` is different from `prevCount`"},{"id":"3-11-abandon-render-pattern-task-3","name":"Set `prevCount` to the current `count` value inside the `if` statement to abandon the render"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nfunction App() {\n  const [count, setCount] = useState(0);\n\n  // Task: Create a state variable called prevCount to store the previous count value\n\n  // Task: During rendering, add an if statement that checks if count is different from prevCount\n  // Task: Set prevCount to the current count value inside the if statement to abandon the render\n\n  return (\n    <div>\n      <h1>Abandon Render Pattern</h1>\n\n      <p>Current count: {count}</p>\n\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '026919e5-362f-4d05-b442-32de806758ab',
+  '3-12-use-hook-with-context',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Use Hook with Context',
+  'Learn how to use the modern use hook for reading context conditionally in React 19',
+  'In this lesson, you''ll discover the modern `use` hook introduced in React 19, which provides a more flexible way to read context values compared to `useContext`. The `use` hook can be called conditionally inside if statements and loops, making it more versatile for dynamic component behavior.
+
+Your coding tasks will be replacing `useContext` with the new `use` hook and implementing conditional context reading to demonstrate its flexibility.
+  ',
+  '1b7e87dd-2ba1-4c73-b617-8d4292c2b923',
+  false,
+  11,
+  '[{"name":"Understand the benefits of the `use` hook over `useContext` (can be called conditionally)"},{"name":"Learn how to use the `use` hook to read context values"},{"name":"Explore conditional context reading with the `use` hook inside if statements"}]'::jsonb,
+  '[{"id":"3-12-use-hook-with-context-task-1","name":"Replace `useContext(ThemeContext)` with `use(ThemeContext)` in the `Button` component"},{"id":"3-12-use-hook-with-context-task-2","name":"Move the `use(ThemeContext)` call inside the `if (show)` condition in the `Button` component"},{"id":"3-12-use-hook-with-context-task-3","name":"Remove the `.Provider` extension and use `ThemeContext` directly"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { createContext, useContext, use } from \"react\";\nimport \"./app.css\";\n\nconst ThemeContext = createContext(null);\n\nfunction Button({ show, children }) {\n  // Task: Replace useContext(ThemeContext) with use(ThemeContext)\n  const theme = useContext(ThemeContext);\n\n  if (show) {\n    // Task: Move the use(ThemeContext) call inside the if (show) condition above\n    const className = \"button-\" + theme;\n    return <button className={className}>{children}</button>;\n  }\n\n  return null;\n}\n\nfunction App() {\n  return (\n    // Task: Remove the .Provider extension and use ThemeContext directly\n    <ThemeContext.Provider value=\"dark\">\n      <h1>Use Hook with Context</h1>\n      <Button show={true}>Sign up</Button>\n      <Button show={false}>Log in</Button>\n    </ThemeContext.Provider>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"app.css":{"code":".button-dark {\n  background-color: #333;\n  color: #fff;\n}\n\n.button-light {\n  background-color: #fff;\n  color: #333;\n}\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '["# Usage\n\nReading context with use\n\nWhen a context is passed to use, it works similarly to useContext. While useContext must be called at the top level of your component, use can be called inside conditionals like if and loops like for. use is preferred over useContext because it is more flexible.\n\nimport { use } from ''react'';\n\nfunction Button() {\nconst theme = use(ThemeContext);\n// ...\nuse returns the context value for the context you passed. To determine the context value, React searches the component tree and finds the closest context provider above for that particular context.\n\nTo pass context to a Button, wrap it or one of its parent components into the corresponding context provider.\n\nNote: In React 19+, you can remove the .Provider extension and use the context directly.\n\nfunction MyPage() {\nreturn (\n<ThemeContext value=\"dark\">\n\n<Form />\n</ThemeContext>\n);\n}\n\nfunction Form() {\n// ... renders buttons inside ...\n}\nIt doesn’t matter how many layers of components there are between the provider and the Button. When a Button anywhere inside of Form calls use(ThemeContext), it will receive \"dark\" as the value.\n\nUnlike useContext, use can be called in conditionals and loops like if.\n\nfunction HorizontalRule({ show }) {\nif (show) {\nconst theme = use(ThemeContext);\nreturn <hr className={theme} />;\n}\nreturn false;\n}\nuse is called from inside a if statement, allowing you to conditionally read values from a Context.\n\nPitfall\nLike useContext, use(context) always looks for the closest context provider above the component that calls it. It searches upwards and does not consider context providers in the component from which you’re calling use(context).\n"]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '927c0d40-c7cb-4a7c-a880-f425dbef1114',
+  '3-13-use-hook-with-promises',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Use Hook with Promises',
+  'Learn how to use the use hook with promises and Suspense for handling asynchronous data',
+  'In this lesson, you''ll learn how the `use` hook works with promises to handle asynchronous data in React 19. When you pass a promise to `use`, it integrates with Suspense boundaries to show loading states while the promise is pending, and displays the resolved data once available.
+
+Your coding tasks will be creating a simple promise and using the `use` hook to read its value within a Suspense boundary.
+  ',
+  '923b6964-edf6-4b84-9f3d-503542ac4182',
+  false,
+  12,
+  '[{"name":"Understand how the `use` hook works with promises for asynchronous data"},{"name":"Learn how `use` integrates with Suspense to handle loading states"},{"name":"Recognize the pattern of passing promises to components and reading them with `use`"},{"name":"Mention that this is usually used for streaming data from server components to client components, or even on client side (show examples of server components creating promises and passing them to client components, and benefits of this (not having to wait for the entire page to load))"}]'::jsonb,
+  '[{"id":"3-13-use-hook-with-promises-task-1","name":"Use the `use` hook to read the `messagePromise` in the `Message` component"},{"id":"3-13-use-hook-with-promises-task-2","name":"Display the resolved message content in the paragraph element"},{"id":"3-13-use-hook-with-promises-task-3","name":"Pass the `messagePromise` to the `Message` component as props"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { Suspense, use } from \"react\";\n\n// Simple function that returns a promise\nfunction fetchMessage() {\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve(\"Hello from the promise!\");\n    }, 2000);\n  });\n}\n\nfunction Message({ messagePromise }) {\n  // Task: Use the use hook to read the messagePromise\n  const messageContent = \"\";\n\n  // Task: Display the resolved message content in the paragraph element\n  return <p>Here is the message: {}</p>;\n}\n\nfunction App() {\n  const messagePromise = fetchMessage();\n\n  return (\n    <div>\n      <h1>Use Hook with Promises</h1>\n      <Suspense fallback={<p>⌛ Loading message...</p>}>\n        {/* Task: Pass the messagePromise to the Message component as props */}\n        <Message />\n      </Suspense>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '["# Use with Promises\n\nData can be streamed from the server to the client by passing a Promise as a prop from a Server Component to a Client Component. Or, we can also do this on the client side by creating a Promise and passing it to the use API in another client side component.\n\nimport { fetchMessage } from ''./lib.js'';\nimport { Message } from ''./message.js'';\n\nexport default function App() {\nconst messagePromise = fetchMessage();\nreturn (\n<Suspense fallback={<p>waiting for message...</p>}>\n<Message messagePromise={messagePromise} />\n</Suspense>\n);\n}\nThe Client Component then takes the Promise it received as a prop and passes it to the use API. This allows the Client Component to read the value from the Promise that was initially created by the Server Component (or in another client side component).\n\n// message.js\n''use client'';\n\nimport { use } from ''react'';\n\nexport function Message({ messagePromise }) {\nconst messageContent = use(messagePromise);\nreturn <p>Here is the message: {messageContent}</p>;\n}\nBecause Message is wrapped in Suspense, the fallback will be displayed until the Promise is resolved. When the Promise is resolved, the value will be read by the use API and the Message component will replace the Suspense fallback.\n"]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '468b5295-4ea6-493c-a637-99fa55f0b436',
+  '3-14-use-effect-event',
+  'e99ca03e-cbf0-47e3-be11-0149a8acefe3',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'useEffectEvent Pattern',
+  'Learn how to use useEffectEvent to read latest values in Effects without causing re-synchronization',
+  'In this lesson, you''ll learn about useEffectEvent, a new React hook that solves a common problem: reading the latest props or state in an Effect without making those values reactive. Sometimes you want an Effect to re-run only when certain values change, but still access the latest values of other props or state without causing the Effect to re-run. useEffectEvent lets you extract non-reactive logic from your Effects.
+
+Your coding task will be refactoring an Effect that currently re-runs unnecessarily whenever itemCount changes, even though we only want it to run when the URL changes.
+  ',
+  '3df00b72-6186-4a4e-8d74-ad415fbfe89d',
+  false,
+  13,
+  '[{"name":"Understand the difference between reactive and non-reactive logic in Effects (talk about functions, objects, arrays, etc. and how they are reactive and must go in the dependency array if used in the Effect)"},{"name":"Learn when to use useEffectEvent to prevent unnecessary Effect re-runs (when you want to read the latest values of other props or state without causing the Effect to re-run)"}]'::jsonb,
+  '[{"id":"3-14-use-effect-event-task-1","name":"Create an effect event called `onVisit` using the `useEffectEvent` hook"},{"id":"3-14-use-effect-event-task-2","name":"Update the `useEffect` to replace `trackPageView` with `onVisit` and pass the url as argument"},{"id":"3-14-use-effect-event-task-3","name":"Remove `itemCount` from the dependency array"}]'::jsonb,
+  '{"template":"react","dependencies":{"react":"19.2.0","react-dom":"19.2.0"},"files":{"App.jsx":{"code":"import { useState, useEffect, useEffectEvent } from \"react\";\n\nfunction trackPageView(url, itemCount) {\n  console.log(`📊 Page viewed: ${url} | Items in cart: ${itemCount}`);\n}\n\nfunction Page({ url }) {\n  const [itemCount, setItemCount] = useState(0);\n\n  // Task: Create an Effect Event called onVisit using the useEffectEvent hook\n  // The effect event should take the url as argument and call trackPageView with the url and itemCount\n\n  useEffect(() => {\n    // Task: Update the useEffect to replace trackPageView with onVisit and pass the url as argument\n    trackPageView(url, itemCount);\n  }, [url, itemCount]); // Task: Remove itemCount from the dependency array\n\n  return (\n    <div>\n      <h2>Current Page: {url}</h2>\n      <p>Items in cart: {itemCount}</p>\n      <button onClick={() => setItemCount(itemCount + 1)}>\n        Add Item to Cart\n      </button>\n      <button onClick={() => setItemCount(0)} disabled={itemCount === 0}>\n        Clear Cart\n      </button>\n    </div>\n  );\n}\n\nfunction App() {\n  const [url, setUrl] = useState(\"/home\");\n\n  return (\n    <div>\n      <h1>useEffectEvent Pattern</h1>\n      <div>\n        <button onClick={() => setUrl(\"/home\")}>Home</button>\n        <button onClick={() => setUrl(\"/products\")}>Products</button>\n        <button onClick={() => setUrl(\"/about\")}>About</button>\n      </div>\n      <Page url={url} />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '["useEffectEvent\nuseEffectEvent is a React Hook that lets you extract non-reactive logic from your Effects into a reusable function called an Effect Event.\n\nconst onSomething = useEffectEvent(callback)\nReference\nuseEffectEvent(callback)\nUsage\nReading the latest props and state\nReference\nuseEffectEvent(callback)\nCall useEffectEvent at the top level of your component to declare an Effect Event. Effect Events are functions you can call inside Effects, such as useEffect:\n\nimport { useEffectEvent, useEffect } from ''react'';\n\nfunction ChatRoom({ roomId, theme }) {\nconst onConnected = useEffectEvent(() => {\nshowNotification(''Connected!'', theme);\n});\n\nuseEffect(() => {\nconst connection = createConnection(serverUrl, roomId);\nconnection.on(''connected'', () => {\nonConnected();\n});\nconnection.connect();\nreturn () => connection.disconnect();\n}, [roomId]);\n\n// ...\n}\nSee more examples below.\n\nParameters\ncallback: A function containing the logic for your Effect Event. When you define an Effect Event with useEffectEvent, the callback always accesses the latest values from props and state when it is invoked. This helps avoid issues with stale closures.\nReturns\nReturns an Effect Event function. You can call this function inside useEffect, useLayoutEffect, or useInsertionEffect.\n\nCaveats\nOnly call inside Effects: Effect Events should only be called within Effects. Define them just before the Effect that uses them. Do not pass them to other components or hooks. The eslint-plugin-react-hooks linter (version 6.1.1 or higher) will enforce this restriction to prevent calling Effect Events in the wrong context.\nNot a dependency shortcut: Do not use useEffectEvent to avoid specifying dependencies in your Effect’s dependency array. This can hide bugs and make your code harder to understand. Prefer explicit dependencies or use refs to compare previous values if needed.\nUse for non-reactive logic: Only use useEffectEvent to extract logic that does not depend on changing values.\nUsage\nReading the latest props and state\nTypically, when you access a reactive value inside an Effect, you must include it in the dependency array. This makes sure your Effect runs again whenever that value changes, which is usually the desired behavior.\n\nBut in some cases, you may want to read the most recent props or state inside an Effect without causing the Effect to re-run when those values change.\n\nTo read the latest props or state in your Effect, without making those values reactive, include them in an Effect Event.\n\nimport { useEffect, useContext, useEffectEvent } from ''react'';\n\nfunction Page({ url }) {\nconst { items } = useContext(ShoppingCartContext);\nconst numberOfItems = items.length;\n\nconst onNavigate = useEffectEvent((visitedUrl) => {\nlogVisit(visitedUrl, numberOfItems);\n});\n\nuseEffect(() => {\nonNavigate(url);\n}, [url]);\n\n// ...\n}\nIn this example, the Effect should re-run after a render when url changes (to log the new page visit), but it should not re-run when numberOfItems changes. By wrapping the logging logic in an Effect Event, numberOfItems becomes non-reactive. It’s always read from the latest value without triggering the Effect.\n\nYou can pass reactive values like url as arguments to the Effect Event to keep them reactive while accessing the latest non-reactive values inside the event.\n"]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '4-ui-patterns',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'UI Patterns',
+  'Learn how to build good user experiences by mastering loading states, errors, and proven UI patterns',
+  3
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '7fc21693-c04b-441a-a651-5d80f9e417ab',
+  '4-1-error-boundary-pattern',
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Error Boundary Pattern',
+  'Learn how to handle JavaScript errors in React components using error boundaries',
+  'In this lesson, you''ll learn about error boundaries, which are React components that catch JavaScript errors anywhere in their child component tree and display a fallback UI instead of crashing the entire app. Error boundaries help create more resilient applications.
+
+Your coding tasks will be wrapping a component that throws an error with an error boundary to prevent the app from crashing.
+  ',
+  '8645eaaf-0e9a-4ff0-811a-ff3389ae6ac0',
+  true,
+  0,
+  '[{"name":"Understand what error boundaries are and why they''re important (prevent entire app crashes from component errors)"},{"name":"Learn how to use the `react-error-boundary` library for simple error handling (mention that it''s the only use case left for class components in modern react)"},{"name":"Recognize when and where to place error boundaries in your component tree (around risky components or feature boundaries)"},{"name":"Mention that a lot of frameworks or navigation libraries have their own error boundaries automatically applied even if you don''t see it. So it''s everywhere and standard practice"}]'::jsonb,
+  '[{"id":"4-1-error-boundary-pattern-task-1","name":"Create a `FallbackComponent` that receives `error` and `resetErrorBoundary` as props"},{"id":"4-1-error-boundary-pattern-task-2","name":"Return the fallback UI using the `error` and `resetErrorBoundary` props"},{"id":"4-1-error-boundary-pattern-task-3","name":"Add a button with the text `Reset` that calls `resetErrorBoundary` on click"},{"id":"4-1-error-boundary-pattern-task-4","name":"Wrap the `BuggyComponent` with `ErrorBoundary` from react-error-boundary"},{"id":"4-1-error-boundary-pattern-task-5","name":"Provide the `FallbackComponent` as the `fallback` prop"},{"id":"4-1-error-boundary-pattern-task-6","name":"Provide a `onReset` prop that sets `shouldError` to `false`"}]'::jsonb,
+  '{"template":"react","dependencies":{"react-error-boundary":"latest"},"files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { ErrorBoundary } from \"react-error-boundary\";\n\n// Task: Have the FallbackComponent receive error and resetErrorBoundary as props\nfunction FallbackComponent() {\n  // Task: Return the fallback UI using the error and resetErrorBoundary props\n  // Return a div with a p tag with the text error.message\n  // Add a button with the text \"Reset\" that calls resetErrorBoundary on click\n}\n\nfunction BuggyComponent({ shouldError, setShouldError }) {\n  if (shouldError) {\n    throw new Error(\"Something went wrong!\");\n  }\n\n  return (\n    <div>\n      <p>This component works fine until you click the button</p>\n      <button onClick={() => setShouldError(true)}>Cause Error</button>\n    </div>\n  );\n}\n\nfunction App() {\n  const [shouldError, setShouldError] = useState(false);\n\n  return (\n    <div>\n      <h1>Error Boundary Pattern</h1>\n\n      {/* Task: Wrap the BuggyComponent with ErrorBoundary from react-error-boundary */}\n      {/* Task: Provide the FallbackComponent as the fallback prop  */}\n      {/* Task: Provide a onReset prop that sets shouldError to false */}\n      <BuggyComponent\n        shouldError={shouldError}\n        setShouldError={setShouldError}\n      />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '["# react-error-boundary\n\n## API\n\n### `ErrorBoundary` component\n\nWrap an `ErrorBoundary` component around other React components to \"catch\" errors and render a fallback UI. The component supports several ways to render a fallback (as shown below).\n\n> **Note** `ErrorBoundary` is a _client_ component. You can only pass props to it that are serializeable or use it in files that have a `\"use client\";` directive.\n\n#### `ErrorBoundary` with `fallback` prop\n\nThe simplest way to render a default \"something went wrong\" type of error message.\n\n```js\n\"use client\";\n\nimport { ErrorBoundary } from \"react-error-boundary\";\n\n<ErrorBoundary fallback={<div>Something went wrong</div>}>\n  <ExampleApplication />\n</ErrorBoundary>;\n```\n\n#### `ErrorBoundary` with `fallbackRender` prop\n\n[\"Render prop\"](https://react.dev/reference/react/Children#calling-a-render-prop-to-customize-rendering) function responsible for returning a fallback UI based on a thrown value.\n\n```js\n\"use client\";\n\nimport { ErrorBoundary } from \"react-error-boundary\";\n\nfunction fallbackRender({ error, resetErrorBoundary }) {\n  // Call resetErrorBoundary() to reset the error boundary and retry the render.\n\n  return (\n    <div role=\"alert\">\n      <p>Something went wrong:</p>\n      <pre style={{ color: \"red\" }}>{error.message}</pre>\n    </div>\n  );\n}\n\n<ErrorBoundary\n  fallbackRender={fallbackRender}\n  onReset={(details) => {\n    // Reset the state of your app so the error doesn''t happen again\n  }}\n>\n  <ExampleApplication />\n</ErrorBoundary>;\n```\n\n#### `ErrorBoundary` with `FallbackComponent` prop\n\nReact component responsible for returning a fallback UI based on a thrown value.\n\n```js\n\"use client\";\n\nimport { ErrorBoundary } from \"react-error-boundary\";\n\nfunction Fallback({ error, resetErrorBoundary }) {\n  // Call resetErrorBoundary() to reset the error boundary and retry the render.\n\n  return (\n    <div role=\"alert\">\n      <p>Something went wrong:</p>\n      <pre style={{ color: \"red\" }}>{error.message}</pre>\n    </div>\n  );\n}\n\n<ErrorBoundary\n  FallbackComponent={Fallback}\n  onReset={(details) => {\n    // Reset the state of your app so the error doesn''t happen again\n  }}\n>\n  <ExampleApplication />\n</ErrorBoundary>;\n```\n\n#### Logging errors with `onError`\n\n```js\n\"use client\";\n\nimport { ErrorBoundary } from \"react-error-boundary\";\n\nconst logError = (error: Error, info: { componentStack: string }) => {\n  // Do something with the error, e.g. log to an external API\n};\n\nconst ui = (\n  <ErrorBoundary FallbackComponent={ErrorFallback} onError={logError}>\n    <ExampleApplication />\n  </ErrorBoundary>\n);\n```\n\n### `useErrorBoundary` hook\n\nConvenience hook for imperatively showing or dismissing error boundaries.\n\n#### Show the nearest error boundary from an event handler\n\nReact only handles errors thrown during render or during component lifecycle methods (e.g. effects and did-mount/did-update). Errors thrown in event handlers, or after async code has run, will not be caught.\n\nThis hook can be used to pass those errors to the nearest error boundary:\n\n```js\n\"use client\";\n\nimport { useErrorBoundary } from \"react-error-boundary\";\n\nfunction Example() {\n  const { showBoundary } = useErrorBoundary();\n\n  useEffect(() => {\n    fetchGreeting(name).then(\n      (response) => {\n        // Set data in state and re-render\n      },\n      (error) => {\n        // Show error boundary\n        showBoundary(error);\n      },\n    );\n  });\n\n  // Render ...\n}\n```\n\n#### Dismiss the nearest error boundary\n\nA fallback component can use this hook to request the nearest error boundary retry the render that originally failed.\n\n```js\n\"use client\";\n\nimport { useErrorBoundary } from \"react-error-boundary\";\n\nfunction ErrorFallback({ error }) {\n  const { resetBoundary } = useErrorBoundary();\n\n  return (\n    <div role=\"alert\">\n      <p>Something went wrong:</p>\n      <pre style={{ color: \"red\" }}>{error.message}</pre>\n      <button onClick={resetBoundary}>Try again</button>\n    </div>\n  );\n}\n```\n"]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'f7b33029-af85-4313-ad3e-665e724e3749',
+  '4-2-guard-clause-rendering',
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Guard Clause Rendering',
+  'Learn how to use early returns to handle loading and error states cleanly',
+  'In this lesson, you''ll learn about guard clause rendering, which uses early returns to exit the render function when data is missing, invalid, or still loading. This pattern keeps your main render logic clean and separates concerns by handling edge cases first.
+
+Your coding tasks will be adding guard clauses that return early for loading and error states, and creating separate components for these states.
+  ',
+  'c103afc5-02fd-4efd-a92b-e44294068bd7',
+  true,
+  1,
+  '[{"name":"Understand what guard clauses are and how they simplify component logic (early returns that handle edge cases first, mention that this is a normal programing pattern)"},{"name":"Learn how to separate loading and error states into their own components (component separation for different UI states)"},{"name":"Recognize when to use guard clauses versus conditional rendering (guard clauses for simple states, conditional rendering for complex logic)"}]'::jsonb,
+  '[{"id":"4-2-guard-clause-rendering-task-1","name":"Create a `LoadingComponent` that returns a `p` tag with `Loading...`"},{"id":"4-2-guard-clause-rendering-task-2","name":"Create an `ErrorComponent` that returns a `p` tag with `Something went wrong!`"},{"id":"4-2-guard-clause-rendering-task-3","name":"Add a guard clause that returns `LoadingComponent` if `loading` is true"},{"id":"4-2-guard-clause-rendering-task-4","name":"Add a guard clause that returns `ErrorComponent` if `error` is true"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\n// Task: Create a LoadingComponent that returns a p tag with \"Loading...\"\nfunction LoadingComponent() {}\n\n// Task: Create an ErrorComponent that returns a p tag with \"Something went wrong!\"\nfunction ErrorComponent() {}\n\nfunction UserProfile({ loading, error, user }) {\n  // Task: Add a guard clause that returns LoadingComponent if loading is true\n\n  // Task: Add a guard clause that returns ErrorComponent if error is true\n\n  return (\n    <div>\n      <h2>{user.name}</h2>\n      <p>{user.email}</p>\n      <p>{user.role}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(false);\n\n  const user = {\n    name: \"John Doe\",\n    email: \"john@example.com\",\n    role: \"Developer\",\n  };\n\n  return (\n    <div>\n      <h1>Guard Clause Rendering</h1>\n\n      <button onClick={() => setLoading(!loading)}>Toggle Loading</button>\n      <button onClick={() => setError(!error)}>Toggle Error</button>\n\n      <UserProfile loading={loading} error={error} user={user} />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'bdb3bb30-b328-4bd3-9159-0f2a45bca080',
+  '4-3-skeleton-placeholder-pattern',
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Skeleton & Placeholder Pattern',
+  'Learn how to show skeleton placeholders while content is loading to improve perceived performance',
+  'In this lesson, you''ll learn about skeleton and placeholder patterns, which show the structure of content while it''s loading. This improves perceived performance by giving users a visual indication that content is coming and showing them what to expect.
+
+Your coding tasks will be creating a simple skeleton component and displaying it while content is loading instead of a generic loading message.
+  ',
+  'adfb2eb3-626b-4223-aa3d-64bce0d4e3f3',
+  false,
+  2,
+  '[{"name":"Understand what skeleton loading is and why it improves user experience (shows content structure, reduces perceived loading time)"},{"name":"Recognize when to use skeletons versus loading spinners (skeletons for content with known structure, spinners for unknown wait times)"},{"name":"Learn how to create simple skeleton components that match your content structure"}]'::jsonb,
+  '[{"id":"4-3-skeleton-placeholder-pattern-task-1","name":"Create a `ProfileSkeleton` component with placeholder divs for name and email"},{"id":"4-3-skeleton-placeholder-pattern-task-2","name":"Add a ternary operator that shows `ProfileSkeleton` when `loading` is true, otherwise shows `Profile`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport \"./App.css\";\n\n// Task: Create a ProfileSkeleton component with placeholder divs for name and email\n// Return a div with two empty divs inside it, one for the name and one for the email\n// Use the className \"skeleton\" for each of the inner divs\nfunction ProfileSkeleton() {}\n\nfunction Profile({ user }) {\n  return (\n    <div>\n      <h2>{user.name}</h2>\n      <p>{user.email}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  const [loading, setLoading] = useState(true);\n\n  const user = {\n    name: \"John Doe\",\n    email: \"john@example.com\",\n  };\n\n  return (\n    <div>\n      <h1>Skeleton & Placeholder Pattern</h1>\n\n      <button onClick={() => setLoading(!loading)}>Toggle Loading</button>\n\n      {/* Task: Add a ternary operator that shows ProfileSkeleton when loading is true, otherwise shows Profile */}\n      <Profile user={user} />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"App.css":{"code":".skeleton {\n  background-color: #303030;\n  width: 200px;\n  height: 30px;\n  border-radius: 4px;\n  margin-bottom: 8px;\n}\n\ndiv:has(> div.skeleton) {\n  margin-top: 12px;\n}\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '4bf09b7e-fcf3-4b82-86a7-a0db0c19f96d',
+  '4-4-empty-state-pattern',
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Empty State Pattern',
+  'Learn how to create meaningful empty states when lists or content areas have no data',
+  'In this lesson, you''ll learn about empty state patterns, which provide helpful messaging and guidance when lists or content areas are empty. Good empty states tell users why the area is empty and often suggest actions they can take.
+
+Your coding tasks will be creating a dedicated empty state component and displaying it when a list has no items instead of showing nothing.
+  ',
+  'e228e88d-3776-4ecf-ab7a-a157d64c7b79',
+  false,
+  3,
+  '[{"name":"Understand why empty states are important for user experience (prevent confusion, provide guidance, suggest actions)"},{"name":"Learn how to create dedicated empty state components (separate components for different empty scenarios)"},{"name":"Recognize when to show empty states versus loading states (empty when no data exists, loading when data is being fetched)"}]'::jsonb,
+  '[{"id":"4-4-empty-state-pattern-task-1","name":"Create an `EmptyTodos` component that returns a `p` tag with `\"No todos yet. Click the button to add one.\"`"},{"id":"4-4-empty-state-pattern-task-2","name":"Add a ternary operator that shows the `EmptyTodos` component when the todos array is empty, otherwise shows the todos"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\n// Task: Create an EmptyTodos component that returns a p tag with \"No todos yet. Click the button to add one.\"\nfunction EmptyTodos() {}\n\nfunction App() {\n  const [todos, setTodos] = useState([]);\n\n  const addTodo = () => {\n    setTodos([...todos, `Todo ${todos.length + 1}`]);\n  };\n\n  const clearTodos = () => {\n    setTodos([]);\n  };\n\n  return (\n    <div>\n      <h1>Empty State Pattern</h1>\n\n      <button onClick={addTodo}>Add Todo</button>\n      <button onClick={clearTodos}>Clear All</button>\n\n      <div>\n        {/* Task: Add a ternary operator that shows the EmptyTodos component when the todos array is empty, otherwise shows the todos */}\n        <ul>\n          {todos.map((todo, index) => (\n            <li key={index}>{todo}</li>\n          ))}\n        </ul>\n      </div>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'bc883e97-6c32-4163-a1b1-53496d638432',
+  '4-5-optimistic-ui-updates',
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Optimistic UI Updates',
+  'Learn how to use useOptimistic to update the UI immediately before server responses',
+  'In this lesson, you''ll learn about optimistic UI updates using the `useOptimistic` hook, which allows you to update the UI immediately while an async operation is pending. This makes the app feel faster and more responsive by showing the expected result before the server confirms it.
+
+Your coding tasks will be using `useOptimistic` to immediately show a new todo item while a mock async function simulates saving it to the server.
+  ',
+  'c6e43213-77e8-40c3-ad66-d84be3cd2305',
+  false,
+  4,
+  '[{"name":"Understand what optimistic updates are and why they improve user experience (immediate feedback, faster perceived performance)"},{"name":"Recognize when to use optimistic updates (operations that are likely to succeed, like adding items or toggling states)"},{"name":"Learn how `useOptimistic` works (provides optimistic state that reverts if the operation fails)"},{"name":"Go over how useOptimistic works with useTransition (how it''s designed to work with React''s concurrent rendering)"}]'::jsonb,
+  '[{"id":"4-5-optimistic-ui-updates-task-1","name":"Use `useOptimistic` to create optimistic todos state"},{"id":"4-5-optimistic-ui-updates-task-2","name":"Add the new todo optimistically when the form is submitted"},{"id":"4-5-optimistic-ui-updates-task-3","name":"Render the optimistic state using `optimisticTodos` instead of `todos`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useOptimistic, useTransition } from \"react\";\n\n// Mock async function\nasync function saveTodo(todo) {\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n  return todo;\n}\n\nfunction App() {\n  const [todos, setTodos] = useState([\"Learn React\", \"Build an app\"]);\n  const [newTodo, setNewTodo] = useState(\"\");\n\n  const [isPending, startTransition] = useTransition();\n\n  // Task: Use useOptimistic to create optimistic todos state\n  // Pass the todos state as the first argument\n  // Pass a state updater function that receives the previous state and returns the new state as the second argument\n  // The state updater function should return the new state with the new todo added at the end of the array\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    if (!newTodo.trim()) return;\n\n    startTransition(async () => {\n      // Task: Add the new todo optimistically when the form is submitted inside startTransition\n\n      try {\n        await saveTodo(newTodo);\n\n        startTransition(() => {\n          setTodos((prev) => [...prev, newTodo]);\n          setNewTodo(\"\");\n        });\n      } catch (error) {\n        console.error(\"Failed to save todo\");\n      }\n    });\n  };\n\n  return (\n    <div>\n      <h1>Optimistic UI Updates</h1>\n\n      <form onSubmit={handleSubmit}>\n        <input\n          type=\"text\"\n          disabled={isPending}\n          value={newTodo}\n          onChange={(e) => setNewTodo(e.target.value)}\n          placeholder=\"Add a todo...\"\n        />\n        <button type=\"submit\">Add</button>\n      </form>\n\n      <ul>\n        {/* Render the optimistic state using optimisticTodos instead of todos */}\n        {todos.map((todo, index) => (\n          <li key={index}>{todo}</li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '0e3d41e0-bd2d-4342-957b-586bd1deecfc',
+  '4-6-partial-rendering',
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Partial Rendering of Available Data',
+  'Learn how to render available data gracefully even when some parts fail to load',
+  'In this lesson, you''ll learn about partial rendering, which allows you to show available data even when some parts fail to load. For example, you can show a user''s name and email even if their avatar image fails to load, providing a better user experience than showing nothing at all.
+
+Your coding tasks will be creating components that gracefully handle missing or failed data by showing available information and fallbacks for unavailable parts.
+  ',
+  '327b54bb-bfaa-47cc-81f6-1e2d7b7c4cc0',
+  false,
+  5,
+  '[{"name":"Understand the principle of graceful degradation (show what you can, fallback for what you can''t)"},{"name":"Learn how to separate data concerns so failures in one part don''t affect others (independent data loading and error handling)"},{"name":"Recall how we handled error boundaries in previous lessons as well as early return with guard clauses for loading and error states. This is similar, but we''re instead going to render the available partial data instead of a full fallback UI"},{"name":"Recognize when to use partial rendering (when different data sources have different reliability or loading times)"}]'::jsonb,
+  '[{"id":"4-6-partial-rendering-task-1","name":"Create an `Avatar` component that returns an `img` tag with the `src` set to the `avatarUrl`, or a fallback image if the `avatarUrl` is null"},{"id":"4-6-partial-rendering-task-2","name":"Render the `Avatar` component with the user''s `avatarUrl`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n\nconst FALLBACK_IMAGE_URL = \"https://i.pravatar.cc/100?img=2\";\n\n// Task: Create an Avatar component returns an img tag with the src set to the avatarUrl, or a fallback image if the avatarUrl is null\n// Use the FALLBACK_IMAGE_URL as the fallback image\nfunction Avatar({ avatarUrl }) {}\n\nfunction ProfileHeader({ user }) {\n  return (\n    <div>\n      {/* Task: Render the Avatar component with the user''s avatarUrl */}\n      <div>\n        <h2>{user.name}</h2>\n        <p>{user.email}</p>\n      </div>\n    </div>\n  );\n}\n\nfunction App() {\n  const avatarUrl = \"https://i.pravatar.cc/100?img=1\";\n\n  const [user, setUser] = useState({\n    name: \"John Doe\",\n    email: \"john@example.com\",\n    avatarUrl,\n  });\n\n  const simulateAvatarFailure = () => {\n    setUser((prev) => ({ ...prev, avatarUrl: null }));\n  };\n\n  const restoreAvatar = () => {\n    setUser((prev) => ({\n      ...prev,\n      avatarUrl,\n    }));\n  };\n\n  return (\n    <div>\n      <h1>Partial Rendering of Available Data</h1>\n\n      <button onClick={simulateAvatarFailure}>Simulate Avatar Failure</button>\n      <button onClick={restoreAvatar}>Restore Avatar</button>\n\n      <ProfileHeader user={user} />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'db73ffc9-8fd0-4878-b0b7-ebb006c81887',
+  '4-7-variant-pattern',
+  '6438b84d-2940-4593-9c67-a143772fcb2b',
+  '63c2d9a5-d94c-4279-87b6-82e1a80e6fb6',
+  'Variant Pattern',
+  'Learn how to use variants to create flexible component styling with predefined options',
+  'In this lesson, you''ll learn about the variant pattern, which uses an object to map variant names to style properties. Instead of passing style objects directly, you pass a variant prop and the component looks up the appropriate styles from a predefined variants object.
+
+Your coding tasks will be creating a button component with variant-based styling and using it with different variants to show how this pattern simplifies component APIs.
+  ',
+  '587feda5-551d-4821-bea2-7c907a1882c0',
+  false,
+  6,
+  '[{"name":"Understand how the variant pattern simplifies component styling APIs (one prop instead of multiple style props)"},{"name":"Learn how to create a variants object that maps names to style properties"},{"name":"Recognize when to use variants versus direct style props (variants for predefined options, style props for custom styling)"}]'::jsonb,
+  '[{"id":"4-7-variant-pattern-task-1","name":"Create a `variants` object that return an object with the `backgroundColor` property for each variant"},{"id":"4-7-variant-pattern-task-2","name":"Create a `style` object that uses the `variant` prop to return the correct styles from the `variants` object"},{"id":"4-7-variant-pattern-task-3","name":"Render the `Button` component with `\"primary\"` variant and `\"Primary\"` as children"},{"id":"4-7-variant-pattern-task-4","name":"Render the `Button` component with `\"secondary\"` variant and `\"Secondary\"` as children"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Create a variants object that return an object with the backgroundColor property for each variant\n// The variants object should have the following keys: primary, secondary\n// Use a background color of \"blue\" for primary and \"red\" for secondary\nconst variants = {};\n\nfunction Button({ children, variant }) {\n  // Task: Create a style object that uses the variant prop to return the correct styles from the variants object\n  const style = {};\n\n  return <button style={style}>{children}</button>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Variant Pattern</h1>\n\n      {/* Task: Render the Button component with \"primary\" variant and \"Primary\" as children */}\n\n      {/* Task: Render the Button component with \"secondary\" variant and \"Secondary\" as children */}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+-- ------------------------------------------------------
+-- 插入课程: React Query (react-query)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'react-query',
+  'React Query',
+  'Learn data fetching in React with queries, mutations, caching strategies, optimistic updates, and building performant data-driven applications',
+  '# Master Modern Data Fetching with React Query
+
+**Transform your React applications from basic data fetching to professional-grade data management** with our comprehensive course that takes you from traditional useEffect patterns to mastering React Query''s powerful features.
+
+## What You''ll Achieve
+
+By the end of this course, you''ll have mastered React Query (TanStack Query), the industry standard for data fetching in React applications. You''ll understand how to build applications that are more performant, have better user experience, and are easier to maintain. You''ll move beyond manual loading states and error handling to a declarative approach that handles caching, synchronization, and background updates automatically.
+
+## Your Learning Journey
+
+### **Foundation & Problem Understanding**
+Start by understanding the challenges of data fetching in modern React applications. You''ll see firsthand why traditional useEffect patterns become unwieldy as applications grow, and discover how React Query solves these fundamental problems. You''ll learn about the mental model shift from imperative data fetching to declarative data synchronization.
+
+### **From Traditional to Modern**
+Experience the evolution of data fetching patterns by building the same functionality using useEffect, custom hooks, and finally React Query. This progression will give you deep appreciation for why React Query has become essential for modern React development and help you understand when and why to use each approach.
+
+### **React Query Fundamentals**
+Master the core concepts of React Query including the QueryClient, query keys, and the useQuery hook. You''ll learn how React Query''s intelligent caching system works, how it determines when data is stale, and how it manages background refetching to keep your UI synchronized with your data sources.
+
+### **Advanced Query Patterns**
+Dive deeper into React Query''s powerful features including query invalidation, optimistic updates, infinite queries, and mutation handling. You''ll learn to build complex data flows that feel effortless to users while being robust and predictable for developers.
+
+### **Performance & Best Practices**
+Learn the patterns and practices that separate good React Query usage from great React Query usage. Master query optimization, understand when to use different caching strategies, and learn how to structure your queries for maximum performance and maintainability.
+
+## Who This Course Is For
+
+- **React Developers** who want to level up their data fetching game
+- **Frontend Engineers** building data-intensive applications
+- **Full-stack Developers** who need better client-side data management
+- **Teams** looking to standardize their data fetching patterns
+- **Anyone** frustrated with manual loading states and cache management
+
+## Your Commitment, Your Success
+
+This course emphasizes hands-on learning with practical examples you''ll use in real applications. You''ll build increasingly sophisticated data fetching patterns, each building on the last, until you''ve mastered the complete React Query ecosystem.
+
+**Ready to revolutionize your data fetching?** Join developers worldwide who have transformed their React applications with React Query''s powerful and elegant approach to data synchronization.',
+  'beginner',
+  12,
+  'draft',
+  3,
+  0,
+  0
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'ab66d699-c36d-40ed-9f72-59109769ce18',
+  '1-introduction-and-setup',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Introduction and Setup',
+  'Learn what React Query is, understand traditional data fetching problems, and set up React Query in your application',
+  0
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6f1c8fee-70bc-45bf-ae94-01564bd64cb4',
+  '1-1-what-is-react-query',
+  'ab66d699-c36d-40ed-9f72-59109769ce18',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'What is React Query?',
+  'Learn what React Query is, understand the problems it solves, and explore its benefits for modern React applications',
+  'In this lesson, you''ll discover what React Query is and understand the fundamental problems it solves in modern React applications. You''ll learn how React Query transforms data fetching from imperative, manual state management to a declarative, automatic approach that handles caching, synchronization, and background updates.
+
+Your coding tasks will be to explore the code editor and get familiar with the React environment, as there are no specific code requirements for this introductory lesson.',
+  NULL,
+  false,
+  0,
+  '[{"name":"Understand what React Query (TanStack Query) is and its role in modern React applications"},{"name":"Learn about the common problems with traditional data fetching in React (e.g., manual loading states, error handling, cache management, duplicate requests, race conditions)"},{"name":"Explore the benefits React Query provides (e.g., automatic caching, background refetching, optimistic updates, request deduplication, simple hooks)"},{"name":"Understand the mental model shift from imperative data fetching to declarative data synchronization"}]'::jsonb,
+  '[{"id":"1-1-what-is-react-query-task-1","name":"Submit the code editor – no code required"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Submit the code editor – no code required\n\nfunction App() {\n  return (\n    <div>\n      <h1>Welcome to Data Fetching with React Query!</h1>\n      <p>\n        This is your React playground for learning modern data fetching\n        patterns.\n      </p>\n      <p>\n        In this course, you''ll master React Query and transform how you handle\n        data in React applications.\n      </p>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2a6bcb6c-404c-42bd-9a31-a33ff7f17404',
+  '1-2-fetching-data-with-useeffect',
+  'ab66d699-c36d-40ed-9f72-59109769ce18',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Fetching Data with useEffect',
+  'Learn the traditional approach to data fetching using useEffect and understand its limitations',
+  'In this lesson, you''ll learn how to fetch data using the traditional `useEffect` approach that most React developers are familiar with. You''ll implement a basic data fetching pattern and then enhance it with loading and error states to see the manual work required.
+
+Your coding tasks will be implementing a `useEffect` hook to fetch user data, adding loading state management, and implementing error handling to understand the complexity involved in traditional data fetching.',
+  NULL,
+  false,
+  1,
+  '[{"name":"Understand how to fetch data using `useEffect` and `fetch` API"},{"name":"Learn to manage loading states manually during data fetching"},{"name":"Implement error handling for failed network requests"},{"name":"Recognize the boilerplate code required for basic data fetching patterns, as well as missing functionality (race conditions, cache management, etc.)"}]'::jsonb,
+  '[{"id":"1-2-fetching-data-with-useeffect-task-0","name":"Replace the `user` with a state variable using `useState`"},{"id":"1-2-fetching-data-with-useeffect-task-1","name":"Replace the `loading` with a state variable using `useState`"},{"id":"1-2-fetching-data-with-useeffect-task-2","name":"Replace the `error` with a state variable using `useState`"},{"id":"1-2-fetching-data-with-useeffect-task-3","name":"Add a `useEffect` hook that fetches data from `API_URL` and stores it in the `user` state"},{"id":"1-2-fetching-data-with-useeffect-task-4","name":"Set `loading` to `true` at the start of the fetch and `false` when it completes"},{"id":"1-2-fetching-data-with-useeffect-task-5","name":"Add error handling by setting the `error` state to `true` if the fetch fails"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useEffect } from \"react\";\n\nconst API_URL = \"https://jsonplaceholder.typicode.com/users/1\";\n\nfunction App() {\n  // Task: Replace the user with a state variable using useState\n  const user = null;\n\n  // Task: Replace the loading with a state variable using useState\n  const loading = false;\n\n  // Task: Replace the error with a state variable using useState\n  const error = false;\n\n  // Task: Add a useEffect hook that fetches data from API_URL and stores it in the user state\n  // Use the fetch API to fetch the data using either .then() or async/await\n\n  // Task: Set loading to true at the start of the fetch and false when it completes\n\n  // Task: Add error handling by setting the error state to true if the fetch fails\n\n  if (loading) {\n    return <div>Loading user...</div>;\n  }\n\n  if (error) {\n    return <div>Error: {error}</div>;\n  }\n\n  if (!user) {\n    return <div>No user data</div>;\n  }\n\n  return (\n    <div>\n      <h1>User Profile</h1>\n      <h2>{user.name}</h2>\n      <p>Email: {user.email}</p>\n      <p>Website: {user.website}</p>\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ac444759-a25f-463e-8904-cdacd0796c5c',
+  '1-3-creating-custom-usefetch-hook',
+  'ab66d699-c36d-40ed-9f72-59109769ce18',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Creating a custom useFetch hook',
+  'Learn to extract data fetching logic into a reusable custom hook and understand its benefits and limitations',
+  'In this lesson, you''ll learn how to create a reusable custom hook called `useFetch` that encapsulates the data fetching logic from the previous lesson. You''ll see how custom hooks can reduce code duplication but still require manual state management for each use case.
+
+Your coding tasks will be creating a `useFetch` hook that returns data, loading, and error states, then using this hook in two different components to see both its benefits and limitations.',
+  NULL,
+  false,
+  2,
+  '[{"name":"Understand the naive reason why developers might want to extract data fetching logic into a custom hook without React Query"},{"name":"Recognize the small benefits of the custom fetch hook (reusable logic), as well as the limitations of custom fetch hooks (e.g., no caching, duplicate requests, manual cache invalidation) which haven''t been solved by the custom fetch hook"},{"name":"Understand that this is a naive step towards fixing these problems, but that React Query does a better job by exposing the use query hook that does all of this already for you"}]'::jsonb,
+  '[{"id":"1-3-creating-custom-usefetch-hook-task-1","name":"Create a `useFetch` hook that takes a `url` parameter and returns an object with `data`, `loading`, and `error` properties"},{"id":"1-3-creating-custom-usefetch-hook-task-2","name":"Use the `useFetch` hook in the `UserProfile` component to fetch user data"},{"id":"1-3-creating-custom-usefetch-hook-task-2","name":"Remove the manual `useEffect` data fetching logic from the `UserProfile` component"},{"id":"1-3-creating-custom-usefetch-hook-task-3","name":"Use the `useFetch` hook in the `PostsList` component to fetch posts data"},{"id":"1-3-creating-custom-usefetch-hook-task-4","name":"Remove the manual `useEffect` data fetching logic from the `PostsList` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useEffect } from \"react\";\n\nconst USER_API_URL = \"https://jsonplaceholder.typicode.com/users/1\";\nconst POSTS_API_URL = \"https://jsonplaceholder.typicode.com/posts?_limit=3\";\n\n// Task: Create a useFetch hook that takes a url parameter and returns an object with data, loading, and error properties\n// Create a state variable for data, loading, and error\n// Use the useEffect hook to fetch the data from the url using the fetch API with either .then() or async/await\nfunction useFetch() {}\n\nfunction UserProfile() {\n  // Task: Use the useFetch hook in the UserProfile component to fetch user data\n  // Replace the user, isLoading, and error with the values from the useFetch hook\n  const [user, setUser] = useState(null);\n  const [isLoading, setIsLoading] = useState(false);\n  const [error, setError] = useState(false);\n\n  // Task: Remove the manual useEffect data fetching logic from the UserProfile component\n  useEffect(() => {\n    async function fetchUser() {\n      setIsLoading(true);\n      try {\n        const response = await fetch(USER_API_URL);\n        const data = await response.json();\n        setUser(data);\n      } catch (error) {\n        setError(error);\n      } finally {\n        setIsLoading(false);\n      }\n    }\n\n    fetchUser();\n  }, []);\n\n  if (isLoading) {\n    return <div>Loading user...</div>;\n  }\n\n  if (error) {\n    return <div>Error: {error}</div>;\n  }\n\n  if (!user) {\n    return <div>No user data</div>;\n  }\n\n  return (\n    <div>\n      <h2>User Profile</h2>\n      <h3>{user.name}</h3>\n      <p>Email: {user.email}</p>\n    </div>\n  );\n}\n\nfunction PostsList() {\n  // Task: Use the useFetch hook in the PostsList component to fetch posts data\n  // Replace the posts, isLoading, and error with the values from the useFetch hook\n  const [posts, setPosts] = useState(null);\n  const [isLoading, setIsLoading] = useState(false);\n  const [error, setError] = useState(false);\n\n  // Task: Remove the manual useEffect data fetching logic from the PostsList component\n  useEffect(() => {\n    async function fetchPosts() {\n      setIsLoading(true);\n      try {\n        const response = await fetch(POSTS_API_URL);\n        const data = await response.json();\n        setPosts(data);\n      } catch (error) {\n        setError(error);\n      } finally {\n        setIsLoading(false);\n      }\n    }\n\n    fetchPosts();\n  }, []);\n\n  if (isLoading) {\n    return <div>Loading posts...</div>;\n  }\n\n  if (error) {\n    return <div>Error: {error}</div>;\n  }\n\n  if (!posts) {\n    return <div>No posts data</div>;\n  }\n\n  return (\n    <div>\n      <h2>Recent Posts</h2>\n      {posts.map((post) => (\n        <div key={post.id}>\n          <h4>{post.title}</h4>\n          <p>{post.body.substring(0, 100)}...</p>\n        </div>\n      ))}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Custom useFetch Hook Demo</h1>\n      <UserProfile />\n      <hr />\n      <PostsList />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd4e4b517-d1dc-49bd-af8d-ba073906011f',
+  '1-4-setting-up-react-query',
+  'ab66d699-c36d-40ed-9f72-59109769ce18',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Setting up React Query',
+  'Learn how to install and configure React Query with QueryClient and QueryClientProvider in your React application',
+  'In this lesson, you''ll learn how to set up React Query in your React application. You''ll understand the role of the `QueryClient` and `QueryClientProvider`, and how they work together to provide React Query''s functionality throughout your component tree.
+
+Your coding tasks will be creating a `QueryClient` instance, wrapping your application with the `QueryClientProvider`, and ensuring React Query is properly configured for your app.',
+  NULL,
+  false,
+  3,
+  '[{"name":"Understand the role of `QueryClient` in managing queries and mutations"},{"name":"Learn how `QueryClientProvider` makes React Query available throughout your component tree (reference context API)"},{"name":"See the basic setup pattern required for React Query integration"},{"name":"Understand the provider pattern and how it enables React Query''s functionality"}]'::jsonb,
+  '[{"id":"1-4-setting-up-react-query-task-1","name":"Import `QueryClient` and `QueryClientProvider` from `@tanstack/react-query`"},{"id":"1-4-setting-up-react-query-task-2","name":"Create a new `QueryClient` instance and assign it to the `queryClient` variable"},{"id":"1-4-setting-up-react-query-task-3","name":"Wrap the `AppContent` component with `QueryClientProvider` and pass the `queryClient` as a prop"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Import QueryClient and QueryClientProvider from @tanstack/react-query\n\n// Task: Create a new QueryClient instance and assign it to the queryClient variable\n\nfunction AppContent() {\n  return (\n    <div>\n      <h1>React Query Setup</h1>\n      <p>React Query is now properly configured!</p>\n      <p>You can now use React Query hooks throughout your application.</p>\n    </div>\n  );\n}\n\nfunction App() {\n  // Task: Wrap the AppContent component with QueryClientProvider and pass the queryClient as a prop\n  return <AppContent />;\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '26eafdb1-a38a-49c1-ad17-dcf939554d7f',
+  '1-5-understanding-queryclient',
+  'ab66d699-c36d-40ed-9f72-59109769ce18',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Understanding the QueryClient',
+  'Learn about QueryClient configuration options and how to set default behavior for all queries in your application',
+  'In this lesson, you''ll dive deeper into the `QueryClient` and learn how to configure default options that will apply to all queries in your application. You''ll understand key configuration options like `staleTime`, `gcTime`, and `retry` that control React Query''s behavior.
+
+Your coding tasks will be configuring the `QueryClient` with default options to customize how React Query handles caching, stale data, and retry logic across your entire application.',
+  NULL,
+  false,
+  4,
+  '[{"name":"Understand the benefits of customizing the `QueryClient` in React Query at the application level"},{"name":"Learn about key configuration options like `staleTime` and `gcTime` (mention that these will be revisited specifically later in the course)"},{"name":"See some examples of use cases for different configuration options"}]'::jsonb,
+  '[{"id":"1-5-understanding-queryclient-task-1","name":"Set the default `staleTime` to `5` minutes (`5 * 60 * 1000` milliseconds) in the QueryClient configuration"},{"id":"1-5-understanding-queryclient-task-2","name":"Set the default `gcTime` to `10` minutes (`10 * 60 * 1000` milliseconds) in the QueryClient configuration"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\n\n// Task: Set the default staleTime to 5 minutes (5 * 60 * 1000 milliseconds) in the QueryClient configuration\n// Task: Set the default gcTime to 10 minutes (10 * 60 * 1000 milliseconds) in the QueryClient configuration\nconst queryClient = new QueryClient();\n\nfunction AppContent() {\n  return (\n    <div>\n      <h1>QueryClient Configuration</h1>\n      <p>The QueryClient is now configured with custom default options:</p>\n      <ul>\n        <li>Stale Time: 5 minutes</li>\n        <li>Garbage Collection Time: 10 minutes</li>\n      </ul>\n      <p>These defaults will apply to all queries unless overridden.</p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <QueryClientProvider client={queryClient}>\n      <AppContent />\n    </QueryClientProvider>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '27a8815f-f143-4a91-a623-2daa5891d4a1',
+  '1-6-writing-your-first-query',
+  'ab66d699-c36d-40ed-9f72-59109769ce18',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Writing Your First Query',
+  'Learn to use the useQuery hook to fetch data and experience React Query''s automatic loading and error states',
+  'In this lesson, you''ll write your first React Query using the `useQuery` hook with the simplest possible configuration. You''ll see how React Query automatically handles loading states, error states, and data management without any manual state management code.
+
+Your coding tasks will be implementing a `useQuery` hook to fetch user data and experiencing the automatic state management that React Query provides out of the box.',
+  NULL,
+  false,
+  5,
+  '[{"name":"Learn the basic syntax and usage of the `useQuery` hook (without going into any options, or configuration, not even talking about query keys as they''ll be covered in the next lessons)"},{"name":"Understand how React Query automatically provides `data`, `isLoading`, and `error` states and compare to the custom useFetch hook we did in the previous lessons"},{"name":"See how React Query eliminates manual state management for data fetching without having to do any extra work"},{"name":"Experience the simplicity of React Query compared to traditional useEffect patterns, as well as all the other benefits that React Query provides (caching, background refetching, optimistic updates, request deduplication, etc. – all for free)"}]'::jsonb,
+  '[{"id":"1-6-writing-your-first-query-task-1","name":"Import `useQuery` from `@tanstack/react-query`"},{"id":"1-6-writing-your-first-query-task-2","name":"Use `useQuery` with the query key `[\"user\"]` and the `fetchUser` function as the query function"},{"id":"1-6-writing-your-first-query-task-3","name":"Replace the `data`, `isLoading`, and `error` variables with the variables from the `useQuery` result"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"// Task: Import useQuery from @tanstack/react-query\n\nimport { fetchUser } from \"./api\";\n\nfunction UserProfile() {\n  // Task: Use useQuery with the query key [\"user\"] and the fetchUser function as the query function\n\n  // Task: Replace the data, isLoading, and error variables with the variables from the useQuery result\n  const data = null;\n  const isLoading = false;\n  const error = null;\n\n  if (isLoading) {\n    return <div>Loading user...</div>;\n  }\n\n  if (error) {\n    return <div>Error: {error.message}</div>;\n  }\n\n  if (!data) {\n    return <div>No user data</div>;\n  }\n\n  return (\n    <div>\n      <h2>Your First React Query!</h2>\n      <h3>{data.name}</h3>\n      <p>Email: {data.email}</p>\n      <p>Website: {data.website}</p>\n      <p>Company: {data.company.name}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  return <UserProfile />;\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"const API_URL = \"https://jsonplaceholder.typicode.com/users/1\";\n\nexport const fetchUser = async () => {\n  try {\n    const response = await fetch(API_URL);\n    if (!response.ok) {\n      throw new Error(\"Failed to fetch user\");\n    }\n    const data = await response.json();\n    return data;\n  } catch {\n    throw new Error(\"Failed to fetch user\");\n  }\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false},"index.js":{"code":"import React from \"react\";\nimport { createRoot } from \"react-dom/client\";\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\nimport \"./styles.css\";\n\nimport App from \"./App.jsx\";\n\nconst queryClient = new QueryClient();\n\nconst root = createRoot(document.getElementById(\"root\"));\nroot.render(\n  <QueryClientProvider client={queryClient}>\n    <App />\n  </QueryClientProvider>,\n);\n","hidden":true,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  '2-queries-and-data-fetching',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Queries and Data Fetching',
+  'Master React Query''s core concepts including query keys, functions, lifecycle, states, and advanced patterns',
+  1
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '22ca945a-c40d-4a64-8fd2-960afb56fa5b',
+  '2-1-query-keys',
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Query Keys',
+  'Learn the anatomy of query keys, why they must be arrays, and how to structure them with and without arguments',
+  'In this lesson, you''ll learn about query keys, which are React Query''s way of uniquely identifying and caching your queries. You''ll understand why query keys must be arrays and how to structure them properly, including the important rule that any arguments passed to your query function must also be included in the query key.
+
+Your coding tasks will be creating query keys for different scenarios - one simple query without arguments and another with arguments to see how query keys change based on the data being fetched.',
+  NULL,
+  false,
+  0,
+  '[{"name":"Understand that query keys must always be arrays and serve as unique identifiers for queries"},{"name":"Learn the anatomy of query keys and how they relate to the data being fetched"},{"name":"Master the rule that any arguments passed to query functions must be included in the query key"},{"name":"See practical examples of query keys with and without arguments (simple id arguments, but also object arguments like page, limit, etc.)"}]'::jsonb,
+  '[{"id":"2-1-query-keys-task-1","name":"Create a query key `[\"users\"]` for the `AllUsers` component"},{"id":"2-1-query-keys-task-2","name":"Create a query key `[\"user\", userId]` for the `UserProfile` component using the `userId` variable"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\nimport { fetchAllUsers, fetchUser } from \"./api\";\n\nfunction AllUsers() {\n  const { data: users } = useQuery({\n    // Task: Create a query key [\"users\"] for the AllUsers component\n    queryKey: [],\n    queryFn: fetchAllUsers,\n  });\n\n  return (\n    <div>\n      <h2>All Users ({users?.length})</h2>\n      {users?.map((user) => (\n        <p key={user.id}>{user.name}</p>\n      ))}\n    </div>\n  );\n}\n\nfunction UserProfile() {\n  const userId = 1;\n\n  const { data: user } = useQuery({\n    // Task: Create a query key [\"user\", userId] for the UserProfile component using the userId variable\n    queryKey: [],\n    queryFn: () => fetchUser(userId),\n  });\n\n  return (\n    <div>\n      <h2>User Profile</h2>\n      <p>Name: {user?.name}</p>\n      <p>Email: {user?.email}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Query Keys Example</h1>\n      <AllUsers />\n      <hr />\n      <UserProfile />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchAllUsers = async () => {\n  const response = await fetch(\"https://jsonplaceholder.typicode.com/users\");\n  return response.json();\n};\n\nexport const fetchUser = async (userId) => {\n  const response = await fetch(\n    `https://jsonplaceholder.typicode.com/users/${userId}`,\n  );\n  return response.json();\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false},"index.js":{"code":"import React from \"react\";\nimport { createRoot } from \"react-dom/client\";\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\nimport \"./styles.css\";\n\nimport App from \"./App.jsx\";\n\nconst queryClient = new QueryClient();\n\nconst root = createRoot(document.getElementById(\"root\"));\nroot.render(\n  <QueryClientProvider client={queryClient}>\n    <App />\n  </QueryClientProvider>,\n);\n","hidden":true,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd42c67d8-e6d7-4cbb-bab5-1cb87d6ac9ac',
+  '2-2-query-functions',
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Query Functions',
+  'Learn the structure and requirements of query functions, how to pass arguments, and understand they don''t have to fetch data',
+  'In this lesson, you''ll learn about query functions - the functions that React Query calls to get your data. You''ll understand that query functions must be asynchronous and can return any kind of data, not just fetched data from APIs. You''ll also learn how to properly pass arguments to query functions.
+
+Your coding tasks will be creating simple async query functions that return mock data and understanding how arguments flow from your components through to your query functions.',
+  NULL,
+  false,
+  1,
+  '[{"name":"Understand that query functions must be asynchronous functions that return something"},{"name":"Learn that query functions don''t have to fetch data - they can return any async data. Also mention that this is state management for the server state, which is what React Query is (but also understand that data fetching is the most common use case for React Query)"},{"name":"See how to pass arguments to query functions and ensure they''re included in query keys"}]'::jsonb,
+  '[{"id":"2-2-query-functions-task-1","name":"Create an async function `getProductList` that returns the `mockProducts` array after a `1` second delay"},{"id":"2-2-query-functions-task-2","name":"Create an async function `getProductById` that takes an `id` parameter and returns the matching product from `mockProducts`"},{"id":"2-2-query-functions-task-3","name":"Use the `getProductList` function in the query"},{"id":"2-2-query-functions-task-4","name":"Use the `getProductById` function in the query with the `productId` argument"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\n\n// Mock data\nconst mockProducts = [\n  { id: 1, name: \"Laptop\", price: 999 },\n  { id: 2, name: \"Phone\", price: 599 },\n  { id: 3, name: \"Tablet\", price: 399 },\n];\n\n// Task: Create an async function getProductList that returns the mockProducts array after a 1 second delay\n// Use setTimeout with Promise to create the delay\nconst getProductList = async () => {};\n\n// Task: Create an async function getProductById that takes an id parameter and returns the matching product from mockProducts\n// Use setTimeout with Promise to create a delay, then find the product by id\nconst getProductById = async (id) => {};\n\nfunction ProductList() {\n  const { data: products } = useQuery({\n    queryKey: [\"products\"],\n    // Task: Use the getProductList function in the query\n    queryFn: () => {},\n  });\n\n  return (\n    <div>\n      <h2>Product List</h2>\n      {products?.map((product) => (\n        <p key={product.id}>\n          {product.name} - ${product.price}\n        </p>\n      ))}\n    </div>\n  );\n}\n\nfunction ProductDetail() {\n  const productId = 2;\n\n  const { data: product } = useQuery({\n    queryKey: [\"product\", productId],\n    // Task: Use the getProductById function in the query with the productId argument\n    queryFn: () => {},\n  });\n\n  return (\n    <div>\n      <h2>Product Detail</h2>\n      <h3>{product?.name}</h3>\n      <p>Price: ${product?.price}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Query Functions Example</h1>\n      <ProductList />\n      <hr />\n      <ProductDetail />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"index.js":{"code":"import React from \"react\";\nimport { createRoot } from \"react-dom/client\";\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\nimport \"./styles.css\";\n\nimport App from \"./App.jsx\";\n\nconst queryClient = new QueryClient();\n\nconst root = createRoot(document.getElementById(\"root\"));\nroot.render(\n  <QueryClientProvider client={queryClient}>\n    <App />\n  </QueryClientProvider>,\n);\n","hidden":true,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'a82d3dcb-de69-4763-aa7d-2263ac5d392d',
+  '2-3-query-lifecycle',
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'The Query Lifecycle',
+  'Understand how queries progress through their lifecycle and the key properties available at each stage',
+  'In this lesson, you''ll learn about the query lifecycle - how a query progresses from initial mount to having data available. You''ll understand that initially `data` is undefined, then `isLoading` becomes true while fetching, and finally the query resolves with either data or an error state.
+
+Your coding tasks will be exploring the main query properties `data`, `isLoading`, and `isError` to understand how they change throughout the query lifecycle.',
+  NULL,
+  false,
+  2,
+  '[{"name":"Understand that `data` starts as `undefined` when a query first mounts (reference that it''s just like in useEffect, before the effect runs, the value is undefined)"},{"name":"Learn how `isLoading` indicates when a query is actively fetching for the first time"},{"name":"Learn how `isFetching` indicates when a query is actively fetching (including background fetches)"},{"name":"Learn how `isFetched` indicates when a query has fetched data"},{"name":"See how `isError` and `error` properties work when queries fail"}]'::jsonb,
+  '[{"id":"2-3-query-lifecycle-task-1","name":"Assign the `data` property from the `useQuery` hook to the `queryData` variable"},{"id":"2-3-query-lifecycle-task-2","name":"Assign the `isLoading` property from the `useQuery` hook to the `isLoadingState` variable"},{"id":"2-3-query-lifecycle-task-3","name":"Assign the `isFetching` property from the `useQuery` hook to the `isFetchingState` variable"},{"id":"2-3-query-lifecycle-task-4","name":"Assign the `isFetched` property from the `useQuery` hook to the `isFetchedState` variable"},{"id":"2-3-query-lifecycle-task-5","name":"Assign the `isError` property from the `useQuery` hook to the `isErrorState` variable"},{"id":"2-3-query-lifecycle-task-6","name":"Assign the `error` property from the `useQuery` hook to the `errorState` variable"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser } from \"./api\";\n\nfunction UserProfile() {\n  const [throwError, setThrowError] = useState(false);\n\n  const { data, isLoading, isFetching, isFetched, isError, error } = useQuery({\n    queryKey: [\"user\", { throwError }],\n    queryFn: () => fetchUser(throwError),\n  });\n\n  // Task: Assign the data property from the useQuery hook to the queryData variable\n  let queryData;\n\n  // Task: Assign the isLoading property from the useQuery hook to the isLoadingState variable\n  let isLoadingState;\n\n  // Task: Assign the isFetching property from the useQuery hook to the isFetchingState variable\n  let isFetchingState;\n\n  // Task: Assign the isFetched property from the useQuery hook to the isFetchedState variable\n  let isFetchedState;\n\n  // Task: Assign the isError property from the useQuery hook to the isErrorState variable\n  let isErrorState;\n\n  // Task: Assign the error property from the useQuery hook to the errorState variable\n  let errorState;\n\n  return (\n    <div>\n      <p>Data: {queryData ? JSON.stringify(queryData) : \"No data\"}</p>\n      <p>Is Loading: {isLoadingState}</p>\n      <p>Is Fetching: {isFetchingState}</p>\n      <p>Is Fetched: {isFetchedState}</p>\n      <p>Is Error: {isErrorState}</p>\n      <p>Error: {errorState ? errorState.message : \"No error\"}</p>\n      <button onClick={() => setThrowError(!throwError)}>\n        {throwError ? \"Success\" : \"Error\"}\n      </button>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Query Lifecycle</h1>\n      <UserProfile />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchUser = async (throwError) => {\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n\n  if (throwError) {\n    throw new Error(\"Failed to fetch user\");\n  }\n\n  return { id: 1, name: \"John Doe\", email: \"john@example.com\" };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false},"index.js":{"code":"import React from \"react\";\nimport { createRoot } from \"react-dom/client\";\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\nimport \"./styles.css\";\n\nimport App from \"./App.jsx\";\n\nconst queryClient = new QueryClient({\n  defaultOptions: {\n    queries: {\n      retry: false,\n    },\n  },\n});\n\nconst root = createRoot(document.getElementById(\"root\"));\nroot.render(\n  <QueryClientProvider client={queryClient}>\n    <App />\n  </QueryClientProvider>,\n);\n","hidden":true,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'a637c27e-3223-4693-bef9-93fcf3097692',
+  '2-4-fetching-on-demand',
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Fetching on Demand',
+  'Learn how to control when queries execute using the enabled option for on-demand data fetching',
+  'In this lesson, you''ll learn how to control when queries execute by using the `enabled` option. Sometimes you don''t want a query to run immediately when a component mounts - instead, you want to trigger it based on user interaction or some other condition.
+
+Your coding tasks will be creating a query that only runs when a user clicks a button, demonstrating how the `enabled` option gives you full control over query execution timing.',
+  NULL,
+  false,
+  3,
+  '[{"name":"Understand how the `enabled` option controls query execution"},{"name":"Learn to create queries that only run when certain conditions are met"},{"name":"See how to trigger queries on-demand based on user interactions"},{"name":"See use cases and examples of when it makes sense to use on demand fetching in React apps and components"}]'::jsonb,
+  '[{"id":"2-4-fetching-on-demand-task-1","name":"Create a state variable `shouldFetch` initialized to `false`"},{"id":"2-4-fetching-on-demand-task-2","name":"Add the `enabled: shouldFetch` option to the useQuery to control when it runs"},{"id":"2-4-fetching-on-demand-task-3","name":"Create a button that sets `shouldFetch` to `true` when clicked"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { fetchWeatherData } from \"./api\";\n\nfunction WeatherWidget() {\n  // Task: Create a state variable shouldFetch initialized to false\n\n  const {\n    data: weather,\n    isLoading,\n    isError,\n  } = useQuery({\n    queryKey: [\"weather\"],\n    queryFn: fetchWeatherData,\n    // Task: Add the enabled: shouldFetch option to the useQuery to control when it runs\n    enabled: false,\n  });\n\n  return (\n    <div>\n      <h2>Weather Widget</h2>\n\n      {/* Task: Create a button that sets shouldFetch to true when clicked */}\n\n      {isLoading && <p>Loading weather data...</p>}\n      {isError && <p>Failed to load weather data</p>}\n\n      {weather && (\n        <div>\n          <p>Temperature: {weather.temperature}°C</p>\n          <p>Condition: {weather.condition}</p>\n          <p>Humidity: {weather.humidity}%</p>\n        </div>\n      )}\n\n      {!weather && !isLoading && !isError && (\n        <p>Click the button to fetch weather data!</p>\n      )}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Fetching on Demand Example</h1>\n      <p>This query will only run when you click the button!</p>\n      <WeatherWidget />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchWeatherData = async () => {\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n  return {\n    temperature: Math.floor(Math.random() * 30) + 10,\n    condition: [\"Sunny\", \"Cloudy\", \"Rainy\", \"Snowy\"][\n      Math.floor(Math.random() * 4)\n    ],\n    humidity: Math.floor(Math.random() * 40) + 40,\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false},"index.js":{"code":"import React from \"react\";\nimport { createRoot } from \"react-dom/client\";\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\nimport \"./styles.css\";\n\nimport App from \"./App.jsx\";\n\nconst queryClient = new QueryClient();\n\nconst root = createRoot(document.getElementById(\"root\"));\nroot.render(\n  <QueryClientProvider client={queryClient}>\n    <App />\n  </QueryClientProvider>,\n);\n","hidden":true,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6a83729e-c953-4e05-b5a5-40545a0877e7',
+  '2-5-dependent-queries',
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Dependent Queries',
+  'Learn how to create queries that depend on data from other queries',
+  'In this lesson, you''ll learn how to create dependent queries - queries that only run after another query has completed successfully. This is useful when you need data from one query to make another query, such as fetching a user first, then fetching their posts.
+
+Your coding tasks will be creating two queries where the second query depends on data from the first query, using the `enabled` option to control the execution flow.',
+  NULL,
+  false,
+  4,
+  '[{"name":"Understand how to create queries that depend on other queries"},{"name":"Expand on the previous lesson to now use the `enabled` learned in the previous lesson option with data from previous queries"},{"name":"See how dependent queries prevent unnecessary API calls"},{"name":"Talk about the drawbacks of dependent queries (can be slow, need to wait for the first query to complete, etc.) and offer alternatives like parallel fetching if possible"}]'::jsonb,
+  '[{"id":"2-5-dependent-queries-task-1","name":"Create a query to fetch user data with query key `[\"user\"]` and the `fetchUser` function"},{"id":"2-5-dependent-queries-task-2","name":"Create a second query to fetch user posts with query key `[\"posts\", userId]` and the `fetchUserPosts` function"},{"id":"2-5-dependent-queries-task-3","name":"Make the posts query depend on the user query by using `enabled: !!user?.id`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser, fetchUserPosts } from \"./api\";\n\nfunction UserProfile() {\n  // Task: Create a query to fetch user data with query key [\"user\"] and the fetchUser function\n  const user = null;\n\n  // Task: Create a second query to fetch user posts with query key [\"posts\", user?.id] and the fetchUserPosts function\n  // Task: Make the posts query depend on the user query by using enabled: !!user?.id\n  const posts = null;\n\n  return (\n    <div>\n      <h2>User Profile</h2>\n\n      {user && (\n        <div>\n          <h3>{user.name}</h3>\n          <p>Email: {user.email}</p>\n\n          <h4>Posts:</h4>\n          {posts && (\n            <ul>\n              {posts.map((post) => (\n                <li key={post.id}>\n                  <strong>{post.title}</strong>: {post.content}\n                </li>\n              ))}\n            </ul>\n          )}\n        </div>\n      )}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Dependent Queries Example</h1>\n      <p>Posts will only load after user data is available!</p>\n      <UserProfile />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchUser = async () => {\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n  return { id: 1, name: \"Alice Johnson\", email: \"alice@example.com\" };\n};\n\nexport const fetchUserPosts = async (userId) => {\n  await new Promise((resolve) => setTimeout(resolve, 1500));\n  return [\n    { id: 1, title: \"My First Post\", content: \"Hello world!\" },\n    { id: 2, title: \"Learning React Query\", content: \"It''s amazing!\" },\n    { id: 3, title: \"Dependent Queries\", content: \"So powerful!\" },\n  ];\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '124d96fc-b511-446c-bd23-838975f1ab4e',
+  '2-6-query-custom-hooks',
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Query Custom Hooks',
+  'Learn to create reusable custom hooks that wrap useQuery for better code organization and reusability',
+  'In this lesson, you''ll learn how to create custom hooks that wrap `useQuery` to make your queries more reusable and organized. Custom query hooks are perfect when you want to share the same query logic, options, and configuration across multiple components.
+
+Your coding tasks will be creating a custom `useUserQuery` hook that encapsulates user data fetching logic and then using it in multiple components to see the benefits of this pattern.',
+  NULL,
+  false,
+  5,
+  '[{"name":"Understand how to wrap `useQuery` in custom hooks for reusability"},{"name":"Learn the benefits of custom query hooks for code organization"},{"name":"See how custom hooks can encapsulate query options and logic (less repetition, less prone to bugs, etc)"}]'::jsonb,
+  '[{"id":"2-6-query-custom-hooks-task-1","name":"Create a custom hook `useUserQuery` that wraps and returns `useQuery`"},{"id":"2-6-query-custom-hooks-task-2","name":"Use the `useUserQuery` hook in the `UserCard` component"},{"id":"2-6-query-custom-hooks-task-3","name":"Use the `useUserQuery` hook in the `UserDetails` component"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser } from \"./api\";\n\n// Task: Create a custom hook useUserQuery that wraps and returns useQuery\n// The hook should use query key [\"user\"] and the fetchUser function\n\nfunction UserCard() {\n  // Task: Use the useUserQuery hook in the UserCard component\n  const { data: user, isLoading, isError } = {};\n\n  if (isLoading) return <div>Loading user card...</div>;\n  if (isError) return <div>Error loading user card</div>;\n\n  return (\n    <div>\n      <h3>User Card</h3>\n      <p>\n        <strong>Name:</strong> {user?.name}\n      </p>\n      <p>\n        <strong>Role:</strong> {user?.role}\n      </p>\n    </div>\n  );\n}\n\nfunction UserDetails() {\n  // Task: Use the useUserQuery hook in the UserDetails component\n  const { data: user, isLoading, isError } = {};\n\n  if (isLoading) return <div>Loading user details...</div>;\n  if (isError) return <div>Error loading user details</div>;\n\n  return (\n    <div>\n      <h3>User Details</h3>\n      <p>\n        <strong>ID:</strong> {user?.id}\n      </p>\n      <p>\n        <strong>Name:</strong> {user?.name}\n      </p>\n      <p>\n        <strong>Email:</strong> {user?.email}\n      </p>\n      <p>\n        <strong>Location:</strong> {user?.location}\n      </p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Query Custom Hooks Example</h1>\n      <p>Both components use the same custom hook and share cached data!</p>\n      <UserCard />\n      <UserDetails />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchUser = async () => {\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n  return {\n    id: 1,\n    name: \"Sarah Wilson\",\n    email: \"sarah@example.com\",\n    role: \"Developer\",\n    location: \"San Francisco\",\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '0c1a2406-c386-42de-bfa0-774619ae5018',
+  '2-7-query-options',
+  '203a5b47-8118-4f11-9f94-41bbe22a893c',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Query Options',
+  'Learn to extract and reuse query options across multiple queries while allowing customization',
+  'In this lesson, you''ll learn how to extract query options into reusable objects that can be shared across multiple queries. This approach provides flexibility - you can use the same base options but customize specific properties like `staleTime` for different use cases.
+
+Your coding tasks will be creating a base query options object and then using it in multiple queries, with one query customizing the options to show how this pattern provides both reusability and flexibility.',
+  NULL,
+  false,
+  6,
+  '[{"name":"Understand how to extract query options into reusable objects"},{"name":"Learn to share common query configuration across multiple queries"},{"name":"See how to extend and customize base query options for specific needs"},{"name":"Compare the query options pattern to custom hooks"}]'::jsonb,
+  '[{"id":"2-7-query-options-task-1","name":"Create a `userQueryOptions` object with `queryKey`, `queryFn` properties"},{"id":"2-7-query-options-task-2","name":"Use the `userQueryOptions` in the first `useQuery`"},{"id":"2-7-query-options-task-3","name":"Use the `userQueryOptions` in the second `useQuery` but override the `staleTime` to `10 * 60 * 1000`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser } from \"./api\";\n\n// Task: Create a userQueryOptions object with queryKey, queryFn properties\n// Use [\"user\"] as the query key and the fetchUser function as the query function\n\nfunction StandardQuery() {\n  // Task: Use the userQueryOptions in the first useQuery\n  const { data: user } = useQuery({});\n\n  return (\n    <div>\n      <h3>Standard Query</h3>\n      <div>{user?.name}</div>\n      <div>{user?.lastActive}</div>\n    </div>\n  );\n}\n\nfunction CustomizedQuery() {\n  // Task: Use the userQueryOptions in the second useQuery but override the staleTime to 10 * 60 * 1000\n  const { data: user } = useQuery({});\n\n  return (\n    <div>\n      <h3>Customized Query</h3>\n      <div>{user?.name}</div>\n      <div>{user?.email}</div>\n      <div>{user?.lastActive}</div>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <QueryClientProvider client={queryClient}>\n      <div>\n        <h1>Query Options Example</h1>\n        <p>\n          Both queries share the same base options but with different stale\n          times!\n        </p>\n        <StandardQuery />\n        <CustomizedQuery />\n      </div>\n    </QueryClientProvider>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchUser = async () => {\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n  return {\n    id: 1,\n    name: \"Emma Thompson\",\n    email: \"emma@example.com\",\n    lastActive: new Date().toLocaleTimeString(),\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '2903725c-46f6-4660-a0f8-d136f283f0f1',
+  '3-mutations-and-query-invalidation',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Mutations and Query Invalidation',
+  'Learn to modify data with mutations, handle mutation states, and keep your UI synchronized with query invalidation',
+  2
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c23d602b-8652-4340-8bf1-14136dc8d581',
+  '3-1-usemutation-hook',
+  '2903725c-46f6-4660-a0f8-d136f283f0f1',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'The useMutation hook',
+  'Learn the basics of the useMutation hook for modifying data and triggering side effects',
+  'In this lesson, you''ll learn about the `useMutation` hook, which is React Query''s way of handling data modifications like creating, updating, or deleting data. Unlike queries that fetch data, mutations change data on the server and then often update your local cache.
+
+Your coding tasks will be creating a simple mutation using `useMutation` and triggering it with the `mutate` function to see the basic mutation pattern in action.',
+  NULL,
+  false,
+  0,
+  '[{"name":"Understand the purpose of `useMutation` for data modifications (contrast with useQuery)"},{"name":"Learn the basic syntax and structure of the `useMutation` hook"},{"name":"See how to trigger mutations using the `mutate` function"}]'::jsonb,
+  '[{"id":"3-1-usemutation-hook-task-1","name":"Import `useMutation` from `@tanstack/react-query`"},{"id":"3-1-usemutation-hook-task-2","name":"Use `useMutation` with the `createUser` function and destructure the `mutate` function"},{"id":"3-1-usemutation-hook-task-3","name":"Call `mutate` with the new user data when the form is submitted"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\n// Task: Import useMutation from @tanstack/react-query\nimport { createUser } from \"./api\";\n\nfunction CreateUserForm() {\n  const [name, setName] = useState(\"\");\n  const [email, setEmail] = useState(\"\");\n\n  // Task: Use useMutation with the createUser function and destructure the mutate function\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    if (name && email) {\n      // Task: Call mutate with the new user data when the form is submitted\n      // mutate({ name, email });\n\n      // Reset form\n      setName(\"\");\n      setEmail(\"\");\n    }\n  };\n\n  return (\n    <div>\n      <h2>Create User</h2>\n      <form onSubmit={handleSubmit}>\n        <div>\n          <input\n            type=\"text\"\n            placeholder=\"Name\"\n            value={name}\n            onChange={(e) => setName(e.target.value)}\n          />\n        </div>\n        <div>\n          <input\n            type=\"email\"\n            placeholder=\"Email\"\n            value={email}\n            onChange={(e) => setEmail(e.target.value)}\n          />\n        </div>\n        <button type=\"submit\">Create User</button>\n      </form>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>useMutation Hook Example</h1>\n      <CreateUserForm />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const createUser = async (userData) => {\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  return {\n    id: Math.floor(Math.random() * 1000),\n    ...userData,\n    createdAt: new Date().toISOString(),\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '515ced49-02eb-491b-b10a-a114a85195bd',
+  '3-2-mutation-states',
+  '2903725c-46f6-4660-a0f8-d136f283f0f1',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Mutation States',
+  'Learn to track mutation progress using isPending and other state properties from useMutation',
+  'In this lesson, you''ll learn about the different state properties that `useMutation` provides to track the progress of your mutations. The most important is `isPending`, which tells you when a mutation is currently running, allowing you to show loading states and disable UI elements.
+
+Your coding tasks will be using the `isPending` state to provide user feedback during mutations and prevent duplicate submissions while a mutation is in progress.',
+  NULL,
+  false,
+  1,
+  '[{"name":"Understand the `isPending` state for tracking active mutations"},{"name":"Learn to provide user feedback during mutation execution"},{"name":"See how to prevent duplicate mutations using state flags"}]'::jsonb,
+  '[{"id":"3-2-mutation-states-task-1","name":"Destructure the `isPending` and `isSuccess` properties from the `useMutation` hook"},{"id":"3-2-mutation-states-task-2","name":"Disable the submit button when `isPending` is `true`"},{"id":"3-2-mutation-states-task-3","name":"Show loading text in the button when `isPending` is `true`"},{"id":"3-2-mutation-states-task-4","name":"Show a `p` tag with the message `\"Profile updated successfully\"` when `isSuccess` is `true`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useMutation } from \"@tanstack/react-query\";\nimport { updateUserProfile } from \"./api\";\n\nfunction ProfileForm() {\n  const [name, setName] = useState(\"John Doe\");\n  const [bio, setBio] = useState(\"Software developer\");\n\n  // Task: Destructure the isPending and isSuccess properties from the useMutation hook\n  const { mutate } = useMutation({\n    mutationFn: updateUserProfile,\n  });\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    mutate({ name, bio });\n  };\n\n  return (\n    <div>\n      <h2>Update Profile</h2>\n      <form onSubmit={handleSubmit}>\n        <div>\n          <input\n            type=\"text\"\n            placeholder=\"Name\"\n            value={name}\n            onChange={(e) => setName(e.target.value)}\n          />\n        </div>\n        <div>\n          <textarea\n            placeholder=\"Bio\"\n            value={bio}\n            onChange={(e) => setBio(e.target.value)}\n          />\n        </div>\n        {/* Task: Disable the submit button when isPending is true */}\n        {/* Task: Show loading text in the button when isPending is true */}\n        <button type=\"submit\">Update Profile</button>\n\n        {/* Task: Show a p tag with the message \"Profile updated successfully\" when isSuccess is true */}\n      </form>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Mutation States Example</h1>\n      <ProfileForm />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const updateUserProfile = async (profileData) => {\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n\n  return {\n    id: 1,\n    ...profileData,\n    updatedAt: new Date().toISOString(),\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '508419d9-fbc0-4ed6-b8ff-e7468ff59360',
+  '3-3-mutation-callbacks',
+  '2903725c-46f6-4660-a0f8-d136f283f0f1',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Mutation Callbacks',
+  'Learn to run code at different stages of mutations using onMutate, onSuccess, and onError callbacks',
+  'In this lesson, you''ll learn about mutation callbacks - functions that run at different stages of your mutation lifecycle. You can run code when a mutation starts (`onMutate`), when it succeeds (`onSuccess`), or when it fails (`onError`).
+
+Your coding tasks will be adding simple callback functions that update local state to track what happens during each stage of the mutation process.',
+  NULL,
+  false,
+  2,
+  '[{"name":"Understand the purpose of mutation callbacks for side effects"},{"name":"Learn to use `onMutate` for actions that happen before the mutation"},{"name":"See how `onSuccess` runs when mutations complete successfully"},{"name":"See how to use `onError` to handle mutation failures"}]'::jsonb,
+  '[{"id":"3-3-mutation-callbacks-task-1","name":"Add an `onMutate` callback that sets the `status` state to `\"mutating\"`"},{"id":"3-3-mutation-callbacks-task-2","name":"Add an `onSuccess` callback that sets the `status` state to `\"success\"`"},{"id":"3-3-mutation-callbacks-task-3","name":"Add an `onError` callback that sets the `status` state to `\"error\"`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useMutation } from \"@tanstack/react-query\";\nimport { completeTask } from \"./api\";\n\nfunction TaskManager() {\n  const [taskName, setTaskName] = useState(\"\");\n  const [status, setStatus] = useState(\"ready\");\n\n  const { mutate, isPending } = useMutation({\n    mutationFn: completeTask,\n    // Task: Add an onMutate callback that sets the status state to \"mutating\"\n\n    // Task: Add an onSuccess callback that sets the status state to \"success\"\n\n    // Task: Add an onError callback that sets the status state to \"error\"\n  });\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    if (taskName) {\n      mutate({ name: taskName });\n      setTaskName(\"\");\n    }\n  };\n\n  return (\n    <div>\n      <h2>Task Manager</h2>\n      <p>Status: {status}</p>\n\n      <form onSubmit={handleSubmit}>\n        <input\n          type=\"text\"\n          placeholder=\"Task name\"\n          value={taskName}\n          onChange={(e) => setTaskName(e.target.value)}\n        />\n        <button type=\"submit\" disabled={isPending}>\n          {isPending ? \"Processing...\" : \"Complete Task\"}\n        </button>\n      </form>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Mutation Callbacks Example</h1>\n      <TaskManager />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const completeTask = async (taskData) => {\n  await new Promise((resolve) => setTimeout(resolve, 1500));\n\n  // Randomly fail sometimes to demonstrate error callback\n  if (Math.random() < 0.5) {\n    throw new Error(\"Task failed to complete\");\n  }\n\n  return {\n    id: Math.floor(Math.random() * 1000),\n    ...taskData,\n    completedAt: new Date().toISOString(),\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6adc5c89-d9e4-40fe-9693-7cfc30e12b9e',
+  '3-4-invalidating-queries',
+  '2903725c-46f6-4660-a0f8-d136f283f0f1',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Invalidating Queries',
+  'Learn to refresh query data after mutations using useQueryClient and query invalidation',
+  'In this lesson, you''ll learn how to invalidate queries after mutations to keep your UI synchronized with the latest data. When you modify data on the server, you often want to refetch related queries to ensure your UI shows the most up-to-date information.
+
+Your coding tasks will be using the `useQueryClient` hook to get access to the query client and then invalidating specific queries by their query keys in the mutation''s `onSuccess` callback.',
+  NULL,
+  false,
+  3,
+  '[{"name":"Understand the purpose of query invalidation for data synchronization"},{"name":"Learn to use the `useQueryClient` hook to access the query client"},{"name":"See how to invalidate queries using `queryClient.invalidateQueries`"}]'::jsonb,
+  '[{"id":"3-4-invalidating-queries-task-1","name":"Import `useQueryClient` from `@tanstack/react-query`"},{"id":"3-4-invalidating-queries-task-2","name":"Use `useQueryClient` to get the `queryClient` instance"},{"id":"3-4-invalidating-queries-task-3","name":"In the `onSuccess` callback, invalidate the `[\"todos\"]` query using `queryClient.invalidateQueries`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery, useMutation } from \"@tanstack/react-query\";\n// Task: Import useQueryClient from @tanstack/react-query\nimport { fetchTodos, addTodo } from \"./api\";\n\nfunction TodoList() {\n  const { data: todos, isLoading } = useQuery({\n    queryKey: [\"todos\"],\n    queryFn: fetchTodos,\n  });\n\n  if (isLoading) return <div>Loading todos...</div>;\n\n  return (\n    <div>\n      <h3>Todo List</h3>\n      {todos?.map((todo) => (\n        <div key={todo.id}>\n          {todo.title} {todo.completed ? \"✅\" : \"⏳\"}\n        </div>\n      ))}\n    </div>\n  );\n}\n\nfunction AddTodoForm() {\n  const [title, setTitle] = useState(\"\");\n\n  // Task: Use useQueryClient to get the queryClient instance\n\n  const { mutate, isPending } = useMutation({\n    mutationFn: addTodo,\n    onSuccess: () => {\n      // Task: In the onSuccess callback, invalidate the [\"todos\"] query using queryClient.invalidateQueries\n\n      setTitle(\"\");\n    },\n  });\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    if (title) {\n      mutate({ title });\n    }\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input\n        type=\"text\"\n        placeholder=\"New todo\"\n        value={title}\n        onChange={(e) => setTitle(e.target.value)}\n      />\n      <button type=\"submit\" disabled={isPending}>\n        {isPending ? \"Adding...\" : \"Add Todo\"}\n      </button>\n    </form>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Query Invalidation Example</h1>\n      <AddTodoForm />\n      <TodoList />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"let todos = [\n  { id: 1, title: \"Learn React Query\", completed: false },\n  { id: 2, title: \"Build awesome apps\", completed: true },\n];\n\nexport const fetchTodos = async () => {\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n  return [...todos];\n};\n\nexport const addTodo = async (todoData) => {\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  const newTodo = {\n    id: Math.floor(Math.random() * 10000),\n    ...todoData,\n    completed: false,\n  };\n\n  todos.push(newTodo);\n  return newTodo;\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ab943641-bf6b-47be-add0-2259eb29692e',
+  '3-5-async-mutations',
+  '2903725c-46f6-4660-a0f8-d136f283f0f1',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Async Mutations',
+  'Learn to use mutateAsync for promise-based mutations that you can await and handle with async/await syntax',
+  'In this lesson, you''ll learn about `mutateAsync`, an alternative to the regular `mutate` function that returns a promise. This allows you to use async/await syntax and handle mutations in a more procedural way when you need to perform multiple operations in sequence.
+
+Your coding tasks will be using `mutateAsync` instead of `mutate` and handling the mutation with async/await syntax to see how this pattern works for sequential operations.',
+  NULL,
+  false,
+  4,
+  '[{"name":"Understand when to use `mutateAsync` instead of `mutate`"},{"name":"Learn to handle mutations with async/await syntax"},{"name":"See how to perform sequential operations after mutations"}]'::jsonb,
+  '[{"id":"3-5-async-mutations-task-1","name":"Destructure `mutateAsync` from the `useMutation` hook"},{"id":"3-5-async-mutations-task-2","name":"Make the `handleSubmit` function asynchronous"},{"id":"3-5-async-mutations-task-3","name":"Call `mutateAsync` inside a try/catch block and handle both success and error cases"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useMutation } from \"@tanstack/react-query\";\nimport { saveDocument } from \"./api\";\n\nfunction DocumentEditor() {\n  const [title, setTitle] = useState(\"\");\n  const [content, setContent] = useState(\"\");\n  const [message, setMessage] = useState(\"\");\n\n  // Task: Destructure mutateAsync from the useMutation hook\n  const { isPending } = useMutation({\n    mutationFn: saveDocument,\n  });\n\n  // Task: Make the handleSubmit function asynchronous\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    setMessage(\"\");\n\n    if (title && content) {\n      // Task: Call mutateAsync inside a try/catch block and handle both success and error cases\n      // Inside the try block call mutateAsync with the title and content and assign the result to a variable result\n      // Then set the message to \"Document saved! ID: {result.id}\"\n      // Then reset the title and content to empty strings\n      // Inside the catch block set the message to the error message using error.message\n    }\n  };\n\n  return (\n    <div>\n      <h2>Document Editor</h2>\n\n      {message && <p>{message}</p>}\n\n      <form onSubmit={handleSubmit}>\n        <div>\n          <input\n            type=\"text\"\n            placeholder=\"Document title\"\n            value={title}\n            onChange={(e) => setTitle(e.target.value)}\n          />\n        </div>\n        <div>\n          <textarea\n            placeholder=\"Document content\"\n            value={content}\n            onChange={(e) => setContent(e.target.value)}\n          />\n        </div>\n        <button type=\"submit\" disabled={isPending}>\n          {isPending ? \"Saving...\" : \"Save Document\"}\n        </button>\n      </form>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Async Mutations Example</h1>\n      <DocumentEditor />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const saveDocument = async (documentData) => {\n  await new Promise((resolve) => setTimeout(resolve, 1500));\n\n  // Randomly fail sometimes to demonstrate error handling\n  if (Math.random() < 0.5) {\n    throw new Error(\"Failed to save document\");\n  }\n\n  return {\n    id: Math.floor(Math.random() * 1000),\n    ...documentData,\n    savedAt: new Date().toISOString(),\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  '4-cache-management-and-invalidation',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Cache Management and Invalidation',
+  'Master React Query''s powerful caching system with fine-grained control, data access, and smart invalidation strategies',
+  3
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b8bf031e-113d-4d81-87b1-3a6d49c089c1',
+  '4-1-understanding-query-cache',
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Understanding the Query Cache',
+  'Learn how React Query''s cache works by seeing the same query used in multiple components with instant cache hits',
+  'In this lesson, you''ll understand how React Query''s cache works by using the same query in two different components. You''ll see that when the first component fetches data, the second component can access that same data instantly from the cache without making another network request.
+
+Your coding tasks will be creating two components that use identical queries and demonstrating how the cache provides instant data access when the second component mounts.',
+  NULL,
+  false,
+  0,
+  '[{"name":"Understand how React Query caches data based on query keys (talk about the QueryClient and how it manages all of the work of caching and providing data to all queries based on the query keys)"},{"name":"See how multiple components can share cached data instantly using the same query key and how this is beneficial"},{"name":"Understand that React Query will first try to look for data in the cache and if it''s not found it will make a network request. If it is found it will return the data from the cache, but depending on the query options it may also refetch the data from the network in the background"}]'::jsonb,
+  '[{"id":"4-1-understanding-query-cache-task-1","name":"Use the same query with key `[\"user\"]` in the `UserProfile` component"},{"id":"4-1-understanding-query-cache-task-2","name":"Use the same query with key `[\"user\"]` in the `UserCard` component"},{"id":"4-1-understanding-query-cache-task-3","name":"Create a state variable `showCard` initialized to `false`"},{"id":"4-1-understanding-query-cache-task-4","name":"Add a button that toggles `showCard` to show the second component"},{"id":"4-1-understanding-query-cache-task-5","name":"Render `UserCard` when `showCard` is `true` using a ternary operator"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser } from \"./api\";\n\nfunction UserProfile() {\n  const { data: user, isLoading } = useQuery({\n    // Task: Use the same query with key [\"user\"] in the UserProfile component\n    queryKey: [],\n    queryFn: fetchUser,\n  });\n\n  if (isLoading) return <div>Loading user profile...</div>;\n\n  return (\n    <div>\n      <h3>User Profile</h3>\n      <p>Name: {user?.name}</p>\n      <p>Email: {user?.email}</p>\n      <p>Role: {user?.role}</p>\n    </div>\n  );\n}\n\nfunction UserCard() {\n  const { data: user, isLoading } = useQuery({\n    // Task: Use the same query with key [\"user\"] in the UserCard component\n    queryKey: [],\n    queryFn: fetchUser,\n  });\n\n  // Should not see this because the data is cached\n  if (isLoading) return <div>Loading user card...</div>;\n\n  return (\n    <div>\n      <h3>User Card</h3>\n      <p>\n        {user?.name} - {user?.role}\n      </p>\n    </div>\n  );\n}\n\nfunction App() {\n  // Task: Create a state variable showCard initialized to false\n\n  return (\n    <div>\n      <h1>Understanding Query Cache</h1>\n      <p>Check the console to see when API calls are made!</p>\n\n      <UserProfile />\n\n      {/* Task: Add a button that toggles showCard to show the second component */}\n\n      {/* Task: Render UserCard when showCard is true using a ternary operator */}\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchUser = async () => {\n  console.log(\"API call made - fetching user data\");\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n\n  return {\n    id: 1,\n    name: \"Alice Johnson\",\n    email: \"alice@example.com\",\n    role: \"Developer\",\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd51c0775-6db1-4fd4-8951-aa6e5e4a0a14',
+  '4-2-fine-grained-cache-control',
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Fine-grained Cache Control',
+  'Learn how query keys with parameters provide fine-grained cache control for different data combinations',
+  'In this lesson, you''ll learn how React Query provides fine-grained cache control by using query keys with parameters. Different combinations of parameters create separate cache entries, allowing you to cache different pages, limits, or filters independently.
+
+Your coding tasks will be creating queries with page and limit parameters and seeing how changing these parameters creates separate cache entries that can be accessed independently.',
+  NULL,
+  false,
+  1,
+  '[{"name":"Understand how query key parameters create separate cache entries and the benefit of this for flexibility and cache control"},{"name":"See examples of how different parameter combinations are cached independently and how using the same values will return the same data from the cache if it exists"},{"name":"Learn when it makes sense to use fine-grained cache control and when it makes sense to use a more generic query key"}]'::jsonb,
+  '[{"id":"4-2-fine-grained-cache-control-task-1","name":"Create a query with key `[\"posts\", { page, limit }]` using the current `page` and `limit` state"},{"id":"4-2-fine-grained-cache-control-task-2","name":"Render a button that calls `setPage(1)` when clicked"},{"id":"4-2-fine-grained-cache-control-task-3","name":"Render a button that calls `setPage(2)` when clicked"},{"id":"4-2-fine-grained-cache-control-task-4","name":"Render a button that calls `setLimit(3)` when clicked"},{"id":"4-2-fine-grained-cache-control-task-5","name":"Render a button that calls `setLimit(5)` when clicked"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { fetchPosts } from \"./api\";\n\nfunction PostsList() {\n  const [page, setPage] = useState(1);\n  const [limit, setLimit] = useState(3);\n\n  const { data: posts, isLoading } = useQuery({\n    // Task: Create a query with key [\"posts\", { page, limit }] using the current page and limit state\n    queryKey: [],\n    queryFn: () => fetchPosts({ page, limit }),\n  });\n\n  return (\n    <div>\n      <h2>\n        Posts (Page: {page}, Limit: {limit})\n      </h2>\n      <p>Check console to see when API calls are made!</p>\n\n      <div>\n        {/* Task: Render a button that calls setPage(1) when clicked */}\n        {/* Task: Render a button that calls setPage(2) when clicked */}\n\n        {/* Task: Render a button that calls setLimit(3) when clicked */}\n        {/* Task: Render a button that calls setLimit(5) when clicked */}\n      </div>\n\n      {/* This will only be true the first time page and limit are used with each combination of values */}\n      {isLoading ? (\n        <div>Loading posts...</div>\n      ) : (\n        <div>\n          {posts?.map((post) => (\n            <div key={post.id}>\n              <h4>{post.title}</h4>\n              <p>{post.content}</p>\n            </div>\n          ))}\n        </div>\n      )}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Fine-grained Cache Control</h1>\n      <PostsList />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"const mockPosts = [\n  { id: 1, title: \"First Post\", content: \"Content 1\" },\n  { id: 2, title: \"Second Post\", content: \"Content 2\" },\n  { id: 3, title: \"Third Post\", content: \"Content 3\" },\n  { id: 4, title: \"Fourth Post\", content: \"Content 4\" },\n  { id: 5, title: \"Fifth Post\", content: \"Content 5\" },\n  { id: 6, title: \"Sixth Post\", content: \"Content 6\" },\n  { id: 7, title: \"Seventh Post\", content: \"Content 7\" },\n  { id: 8, title: \"Eighth Post\", content: \"Content 8\" },\n];\n\nexport const fetchPosts = async ({ page, limit }) => {\n  console.log(`API call: fetching posts page=${page}, limit=${limit}`);\n  await new Promise((resolve) => setTimeout(resolve, 1500));\n\n  const startIndex = (page - 1) * limit;\n  const endIndex = startIndex + limit;\n\n  return mockPosts.slice(startIndex, endIndex);\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c88ed632-9bd8-4cc2-a263-936c9c0cff49',
+  '4-3-query-filters',
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Query Filters',
+  'Learn to use query filters for targeted invalidation using partial query keys and filter patterns',
+  'In this lesson, you''ll learn about query filters, which allow you to target specific queries for invalidation using partial query keys. Instead of invalidating all queries, you can be precise about which cached data to refresh based on patterns in your query keys.
+
+Your coding tasks will be using different invalidation patterns to target specific queries, partial query keys, and demonstrating how filters give you fine-grained control over cache invalidation.',
+  NULL,
+  false,
+  2,
+  '[{"name":"Understand how to use partial query keys for targeted invalidation (tie back to the previous lesson about fine-grained cache control and its benefits)"},{"name":"Learn different filter patterns for precise cache control (partial query keys, full query keys, etc.)"},{"name":"Show examples and realistic use cases for query filters and what they achieve"}]'::jsonb,
+  '[{"id":"4-3-query-filters-task-1","name":"Add a button that invalidates all queries with `queryClient.invalidateQueries()`"},{"id":"4-3-query-filters-task-2","name":"Add a button that partially invalidates queries using `{ queryKey: [\"posts\"] }`"},{"id":"4-3-query-filters-task-3","name":"Add a button that partially invalidates queries using `{ queryKey: [\"posts\", { page: 1 }] }`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery, useQueryClient } from \"@tanstack/react-query\";\nimport { fetchPosts, fetchUser } from \"./api\";\n\nfunction PostsList({ page }) {\n  const { data: posts, isLoading } = useQuery({\n    queryKey: [\"posts\", { page }],\n    queryFn: () => fetchPosts({ page }),\n  });\n\n  if (isLoading) return <div>Loading posts page {page}...</div>;\n\n  return (\n    <div>\n      <h3>Posts Page {page}</h3>\n      {posts?.map((post) => (\n        <p key={post.id}>{post.title}</p>\n      ))}\n    </div>\n  );\n}\n\nfunction UserProfile() {\n  const { data: user, isLoading } = useQuery({\n    queryKey: [\"user\"],\n    queryFn: fetchUser,\n  });\n\n  if (isLoading) return <div>Loading user...</div>;\n\n  return (\n    <div>\n      <h3>User Profile</h3>\n      <p>\n        {user?.name} - {user?.email}\n      </p>\n    </div>\n  );\n}\n\nfunction InvalidationControls() {\n  const queryClient = useQueryClient();\n\n  return (\n    <div>\n      <h3>Invalidation Controls</h3>\n      <p>Check console to see which queries are refetched!</p>\n\n      {/* Task: Add a button that invalidates all queries with queryClient.invalidateQueries() */}\n\n      {/* Task: Add a button that partially invalidates queries using { queryKey: [\"posts\"] } */}\n\n      {/* Task: Add a button that partially invalidates queries using { queryKey: [\"posts\", { page: 1 }] } */}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Query Filters Example</h1>\n\n      <InvalidationControls />\n\n      <UserProfile />\n      <PostsList page={1} />\n      <PostsList page={2} />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchPosts = async ({ page }) => {\n  console.log(`API call: fetching posts page=${page}`);\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  const posts = [\n    {\n      id: 1,\n      title: `Post 1 - Page ${page}`,\n      content: `Content for page ${page}`,\n    },\n    {\n      id: 2,\n      title: `Post 2 - Page ${page}`,\n      content: `Content for page ${page}`,\n    },\n    {\n      id: 3,\n      title: `Post 3 - Page ${page}`,\n      content: `Content for page ${page}`,\n    },\n  ];\n\n  return posts;\n};\n\nexport const fetchUser = async () => {\n  console.log(\"API call: fetching user data\");\n  await new Promise((resolve) => setTimeout(resolve, 800));\n\n  return {\n    id: 1,\n    name: \"John Doe\",\n    email: \"john@example.com\",\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '0a644fe4-4bf2-42f0-922c-89022c72dc7c',
+  '4-4-accessing-query-data',
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Accessing Query Data',
+  'Learn to access cached query data directly using queryClient.getQueryData for reading cached values',
+  'In this lesson, you''ll learn how to access cached query data directly using `queryClient.getQueryData`. This allows you to read data that''s already been fetched and cached without triggering a new query or causing a re-render.
+
+Your coding tasks will be using `getQueryData` to access cached data and display it in a different part of your application without using the `useQuery` hook.',
+  NULL,
+  false,
+  3,
+  '[{"name":"Learn to use `queryClient.getQueryData` to access cached data"},{"name":"Understand when to access cached data vs using useQuery"},{"name":"See how to read cached data without triggering re-renders"}]'::jsonb,
+  '[{"id":"4-4-accessing-query-data-task-1","name":"Use `useQueryClient` to get the `queryClient` instance"},{"id":"4-4-accessing-query-data-task-2","name":"Use `queryClient.getQueryData()` to get the cached counter value for the query with key `[\"counter\"]`"},{"id":"4-4-accessing-query-data-task-3","name":"Display the cached counter value in the component using `cachedCounter.value`"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery, useQueryClient } from \"@tanstack/react-query\";\nimport { fetchCounter } from \"./api\";\n\nfunction CounterDisplay() {\n  const { data: counter, isLoading } = useQuery({\n    queryKey: [\"counter\"],\n    queryFn: fetchCounter,\n  });\n\n  if (isLoading) return <div>Loading counter...</div>;\n\n  return (\n    <div>\n      <h3>Counter Display</h3>\n      <p>Value: {counter?.value}</p>\n      <p>Last Updated: {counter?.lastUpdated}</p>\n    </div>\n  );\n}\n\nfunction CachedCounterReader() {\n  // Task: Use useQueryClient to get the queryClient instance\n\n  // Task: Use queryClient.getQueryData() to get the cached counter value for the query with key [\"counter\"]\n  const cachedCounter = null;\n\n  return (\n    <div>\n      <h3>Cached Counter Reader</h3>\n      {cachedCounter ? (\n        <div>\n          {/* Task: Display the cached counter value in the component using cachedCounter.value */}\n          <p>Cached Value: {}</p>\n          <p>This data was read directly from cache!</p>\n        </div>\n      ) : (\n        <p>No cached data available yet</p>\n      )}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Accessing Query Data</h1>\n      <p>The second component reads data directly from cache!</p>\n\n      <CounterDisplay />\n      <CachedCounterReader />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchCounter = async () => {\n  console.log(\"API call: fetching counter\");\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  return {\n    value: 42,\n    lastUpdated: new Date().toISOString(),\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b9c26782-05f2-44c8-8aa3-45f8dd4269bd',
+  '4-5-updating-query-data',
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Updating Query Data',
+  'Learn to update cached query data directly using queryClient.setQueryData for optimistic updates',
+  'In this lesson, you''ll learn how to update cached query data directly using `queryClient.setQueryData`. This is useful for many different use cases, including optimistic updates where you want to immediately update the UI with new data before or instead of making a server request.
+
+Your coding tasks will be using `setQueryData` to update cached data and seeing how this immediately reflects in all components using that query.',
+  NULL,
+  false,
+  4,
+  '[{"name":"Learn to use `queryClient.setQueryData` to update cached data"},{"name":"Understand how cache updates immediately reflect in all components and causes a re-render"},{"name":"Understand the difference between updating cache vs refetching data and when to use each (with examples)"}]'::jsonb,
+  '[{"id":"4-5-updating-query-data-task-1","name":"Use `useQueryClient` to get the `queryClient` instance"},{"id":"4-5-updating-query-data-task-2","name":"Use `queryClient.setQueryData()` to increment the counter value by `1`"},{"id":"4-5-updating-query-data-task-3","name":"Create a button that calls the `incrementCounter` function when clicked"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery, useQueryClient } from \"@tanstack/react-query\";\nimport { fetchCounter } from \"./api\";\n\nfunction CounterDisplay() {\n  const { data: counter, isLoading } = useQuery({\n    queryKey: [\"counter\"],\n    queryFn: fetchCounter,\n  });\n\n  if (isLoading) return <div>Loading counter...</div>;\n\n  return (\n    <div>\n      <h3>Counter Display</h3>\n      <p>Value: {counter?.value}</p>\n      <p>Last Updated: {counter?.lastUpdated}</p>\n    </div>\n  );\n}\n\nfunction CounterControls() {\n  // Task: Use useQueryClient to get the queryClient instance\n\n  const incrementCounter = () => {\n    // Task: Use queryClient.setQueryData() to increment the counter value by 1\n    // Pass a callback function that accesses the prevData as the second argument and uses it to increment the counter value\n  };\n\n  return (\n    <div>\n      <h3>Counter Controls</h3>\n      {/* Task: Create a button that calls the increment function when clicked */}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Updating Query Data</h1>\n      <p>Click the button to update cached data instantly!</p>\n\n      <CounterDisplay />\n      <CounterControls />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchCounter = async () => {\n  console.log(\"API call: fetching counter\");\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  return {\n    value: 10,\n    lastUpdated: new Date().toISOString(),\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '468f7956-cc8a-4dcc-b89b-6c468feb65b4',
+  '4-6-setting-initial-data',
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Setting Initial Data',
+  'Learn to provide initial data to queries using the initialData option to avoid loading states',
+  'In this lesson, you''ll learn how to use the `initialData` option to provide data to a query before it fetches from the server. This is useful when you already have data available locally and want to show it immediately while the query runs in the background.
+
+Your coding tasks will be using the `initialData` option to provide immediate data to queries and understanding how this affects the query''s loading and stale states.',
+  NULL,
+  false,
+  5,
+  '[{"name":"Learn to use the `initialData` option to provide immediate data"},{"name":"Understand how initial data affects loading and stale states"},{"name":"See when initial data is useful vs other data loading patterns"}]'::jsonb,
+  '[{"id":"4-6-setting-initial-data-task-1","name":"Add `initialData: initialUserData` to the query options"},{"id":"4-6-setting-initial-data-task-2","name":"Add `initialData: () => getInitialPosts()` using a function to the posts query"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser, fetchPosts, initialUserData, getInitialPosts } from \"./api\";\n\nfunction UserProfile() {\n  const {\n    data: user,\n    isLoading,\n    isFetching,\n  } = useQuery({\n    queryKey: [\"user\"],\n    queryFn: fetchUser,\n    // Task: Add initialData: initialUserData to the query options\n  });\n\n  return (\n    <div>\n      <h3>User Profile</h3>\n      {isLoading && <p>Loading...</p>}\n      {isFetching && <p>Fetching fresh data...</p>}\n      {user && (\n        <div>\n          <p>Name: {user.name}</p>\n          <p>Email: {user.email}</p>\n          <p>Role: {user.role}</p>\n        </div>\n      )}\n    </div>\n  );\n}\n\nfunction PostsList() {\n  const {\n    data: posts,\n    isLoading,\n    isFetching,\n  } = useQuery({\n    queryKey: [\"posts\"],\n    queryFn: fetchPosts,\n    // Task: Add initialData: () => getInitialPosts() using a function to the posts query\n  });\n\n  return (\n    <div>\n      <h3>Posts List</h3>\n      {isLoading && <p>Loading...</p>}\n      {isFetching && <p>Fetching fresh data...</p>}\n      {posts && (\n        <div>\n          {posts.map((post) => (\n            <div key={post.id}>\n              <h4>{post.title}</h4>\n              <p>{post.content}</p>\n            </div>\n          ))}\n        </div>\n      )}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Setting Initial Data</h1>\n      <p>\n        Notice how data shows immediately, then updates when fresh data arrives!\n      </p>\n\n      <UserProfile />\n      <PostsList />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"// Initial data that we already have locally\nexport const initialUserData = {\n  id: 1,\n  name: \"Alice Johnson (cached)\",\n  email: \"alice@cache.com\",\n  role: \"Developer\",\n};\n\nexport const getInitialPosts = () => {\n  console.log(\"Getting initial posts from local data\");\n  return [\n    { id: 1, title: \"Cached Post 1\", content: \"Local cached content\" },\n    { id: 2, title: \"Cached Post 2\", content: \"Another cached post\" },\n  ];\n};\n\nexport const fetchUser = async () => {\n  console.log(\"API call: fetching user data\");\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n\n  return {\n    id: 1,\n    name: \"Alice Johnson (from server)\",\n    email: \"alice@server.com\",\n    role: \"Senior Developer\",\n  };\n};\n\nexport const fetchPosts = async () => {\n  console.log(\"API call: fetching posts\");\n  await new Promise((resolve) => setTimeout(resolve, 1500));\n\n  return [\n    { id: 1, title: \"Server Post 1\", content: \"Fresh content from server\" },\n    { id: 2, title: \"Server Post 2\", content: \"Updated server content\" },\n  ];\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'deb43f64-324c-4ca3-8259-a303d66c01cf',
+  '4-7-placeholder-data',
+  '5a9690a2-0c16-409a-8191-9b8829cb74b3',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Placeholder Data',
+  'Learn the differences between placeholderData and initialData for temporary data display',
+  'In this lesson, you''ll learn about `placeholderData`, which is similar to `initialData` but with important differences. Placeholder data is treated as stale and doesn''t persist in the cache, making it perfect for showing temporary data while the real query loads.
+
+Your coding tasks will be comparing `placeholderData` with `initialData` to understand when to use each approach for different scenarios.',
+  NULL,
+  false,
+  6,
+  '[{"name":"Learn the difference between `placeholderData` and `initialData`"},{"name":"Understand when placeholder data is treated as stale vs fresh"},{"name":"See how placeholder data doesn''t persist in cache like initial data"}]'::jsonb,
+  '[{"id":"4-7-placeholder-data-task-1","name":"Add `placeholderData: placeholderUserData` to the first query"},{"id":"4-7-placeholder-data-task-2","name":"Add `initialData: initialUserData` to the second query for comparison"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser, placeholderUserData, initialUserData } from \"./api\";\n\nfunction PlaceholderExample() {\n  const {\n    data: user,\n    isLoading,\n    isFetching,\n    isPlaceholderData,\n  } = useQuery({\n    queryKey: [\"user\", 1],\n    queryFn: () => fetchUser(1),\n    // Task: Add placeholderData: placeholderUserData to the first query\n  });\n\n  return (\n    <div>\n      <h3>Placeholder Data Example</h3>\n      <p>Is Loading: {isLoading.toString()}</p>\n      <p>Is Fetching: {isFetching.toString()}</p>\n      <p>Is Placeholder Data: {isPlaceholderData?.toString()}</p>\n      {user && (\n        <div>\n          <p>Name: {user.name}</p>\n          <p>Email: {user.email}</p>\n        </div>\n      )}\n    </div>\n  );\n}\n\nfunction InitialDataExample() {\n  const {\n    data: user,\n    isLoading,\n    isFetching,\n    isPlaceholderData,\n  } = useQuery({\n    queryKey: [\"user\", 2],\n    queryFn: () => fetchUser(2),\n    // Task: Add initialData: initialUserData to the second query for comparison\n  });\n\n  return (\n    <div>\n      <h3>Initial Data Example</h3>\n      <p>Is Loading: {isLoading.toString()}</p>\n      <p>Is Fetching: {isFetching.toString()}</p>\n      <p>Is Placeholder Data: {isPlaceholderData?.toString()}</p>\n      {user && (\n        <div>\n          <p>Name: {user.name}</p>\n          <p>Email: {user.email}</p>\n        </div>\n      )}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Placeholder Data vs Initial Data</h1>\n      <p>Compare how placeholder data and initial data behave differently!</p>\n\n      <PlaceholderExample />\n      <InitialDataExample />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"// Data we can show temporarily\nexport const placeholderUserData = {\n  id: 1,\n  name: \"Loading User... (placeholder)\",\n  email: \"loading@placeholder.com\",\n  role: \"Loading...\",\n};\n\nexport const initialUserData = {\n  id: 2,\n  name: \"Cached User (initial)\",\n  email: \"cached@initial.com\",\n  role: \"Developer\",\n};\n\nexport const fetchUser = async (userId) => {\n  console.log(`API call: fetching user ${userId}`);\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n\n  return {\n    id: userId,\n    name: `User ${userId} (from server)`,\n    email: `user${userId}@server.com`,\n    role: \"Developer\",\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  '5-advanced-react-query',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Advanced React Query',
+  'Master advanced React Query patterns including optimistic updates, infinite queries, suspense, and performance optimization',
+  4
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '6376db10-43f0-439e-8ee1-3efea2257c56',
+  '5-1-optimistic-updates',
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Optimistic Updates',
+  'Learn to implement optimistic updates using onMutate callback with proper rollback on errors',
+  'In this lesson, you''ll learn how to implement optimistic updates using React Query''s `onMutate` callback. Optimistic updates allow you to immediately update the UI with expected results before the server responds, providing a snappy user experience while handling rollbacks if the mutation fails.
+
+Your coding tasks will be implementing an optimistic update for adding todos, including proper error handling and rollback functionality using the patterns learned in this course.',
+  NULL,
+  false,
+  0,
+  '[{"name":"Learn to implement optimistic updates using the `onMutate` callback (refer to the mutation callbacks lesson and how we have onMutate, onSuccess, and onError)"},{"name":"Learn to use the `queryClient.cancelQueries()` function to cancel outgoing queries"},{"name":"Understand how to snapshot previous data for rollback scenarios"},{"name":"See how to handle errors by rolling back optimistic changes when the mutation fails (see how to access the previous todos in the onError callback by returning them from onMutate context)"},{"name":"Talk about how sometimes you don''t need to revalidate the query after a mutation since you''ve already updated the cache optimistically. But show how sometimes you might need to do so and give examples (onSettled, or onSuccess)"}]'::jsonb,
+  '[{"id":"5-1-optimistic-updates-task-1","name":"Add an `onMutate` callback that cancels outgoing queries and snapshots previous todos"},{"id":"5-1-optimistic-updates-task-2","name":"Optimistically update the todos cache by adding the new todo to the existing list"},{"id":"5-1-optimistic-updates-task-3","name":"Add an `onError` callback that rolls back to the previous todos if the mutation fails"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery, useMutation, useQueryClient } from \"@tanstack/react-query\";\nimport { fetchTodos, addTodo } from \"./api\";\n\nfunction TodoList() {\n  const { data: todos, isLoading } = useQuery({\n    queryKey: [\"todos\"],\n    queryFn: fetchTodos,\n  });\n\n  if (isLoading) return <div>Loading todos...</div>;\n\n  return (\n    <div>\n      <h3>Todo List</h3>\n      {todos?.map((todo) => (\n        <div key={todo.id}>\n          {todo.text} {todo.completed ? \"✅\" : \"⏳\"}\n        </div>\n      ))}\n    </div>\n  );\n}\n\nfunction AddTodoForm() {\n  const [text, setText] = useState(\"\");\n  const queryClient = useQueryClient();\n\n  const { mutate, isPending, error } = useMutation({\n    mutationFn: addTodo,\n    // Task: Add an onMutate callback that cancels outgoing queries and snapshots previous todos\n    // Use the queryClient.cancelQueries() function to cancel outgoing queries\n\n    // Task: Optimistically update the todos cache by adding the new todo to the existing list\n    // Use the queryClient.setQueryData() function to update the todos cache\n\n    // Task: Add an onError callback that rolls back to the previous todos if the mutation fails\n    // Use the queryClient.setQueryData() function to update the todos cache to the previous todos\n  });\n\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    if (text.trim()) {\n      mutate({ text });\n      setText(\"\");\n    }\n  };\n\n  return (\n    <div>\n      <h3>Add Todo</h3>\n      <form onSubmit={handleSubmit}>\n        <input\n          type=\"text\"\n          value={text}\n          onChange={(e) => setText(e.target.value)}\n          placeholder=\"Enter todo text\"\n        />\n        <button type=\"submit\" disabled={isPending}>\n          {isPending ? \"Adding...\" : \"Add Todo\"}\n        </button>\n      </form>\n      {error && <p>Error: {error.message}</p>}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Optimistic Updates</h1>\n      <p>\n        Notice how todos appear instantly, then get rolled back if they fail!\n      </p>\n\n      <AddTodoForm />\n      <TodoList />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"let todos = [\n  { id: 1, text: \"Learn React Query\", completed: false },\n  { id: 2, text: \"Build awesome apps\", completed: true },\n];\n\nexport const fetchTodos = async () => {\n  console.log(\"API call: fetching todos\");\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n  return [...todos];\n};\n\nexport const addTodo = async (newTodo) => {\n  console.log(\"API call: adding todo\", newTodo);\n  await new Promise((resolve) => setTimeout(resolve, 1500));\n\n  // Simulate random failures for demonstration\n  if (Math.random() < 0.4) {\n    throw new Error(\"Failed to add todo\");\n  }\n\n  const todo = {\n    id: Math.floor(Math.random() * 10000),\n    text: newTodo.text,\n    completed: false,\n  };\n\n  todos.push(todo);\n  return todo;\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9c05264e-4630-42e8-9f3f-531accce6e8b',
+  '5-2-paginated-queries',
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Paginated Queries',
+  'Learn to implement paginated queries with page navigation and proper cache management for each page',
+  'In this lesson, you''ll learn how to implement paginated queries where each page is cached separately. You''ll see how React Query handles pagination by treating each page as a separate query based on the page parameter in the query key.
+
+Your coding tasks will be implementing page navigation with buttons to increment and decrement pages, and understanding how React Query handles pagination through values returned from the API.',
+  NULL,
+  false,
+  1,
+  '[{"name":"Understand how pagination works with query keys and separate cache entries (mention that pagination is a very common use case and is a good way to learn React Query)"},{"name":"Learn to implement pagination while keeping track of hasNextPage and hasPreviousPage, and how the API must return these data in the response (connect to the bigger end to end picture of fetching data both at api level and query level)"}]'::jsonb,
+  '[{"id":"5-2-paginated-queries-task-1","name":"Create a `page` state variable initialized to `1`"},{"id":"5-2-paginated-queries-task-2","name":"Create a query with key `[\"posts\", { page }]` that fetches posts for the current page"},{"id":"5-2-paginated-queries-task-3","name":"Add buttons to navigate to previous and next pages"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { fetchPosts } from \"./api\";\n\nfunction PaginatedPosts() {\n  // Task: Create a page state variable initialized to 1\n\n  const { data, isLoading, error } = useQuery({\n    // Task: Create a query with key [\"posts\", { page }] that fetches posts for the current page\n    queryKey: [],\n    queryFn: () => fetchPosts({ page }),\n  });\n\n  if (isLoading) return <div>Loading posts...</div>;\n  if (error) return <div>Error: {error.message}</div>;\n\n  return (\n    <div>\n      <h2>Posts - Page {data?.currentPage}</h2>\n\n      <div>\n        {/* Task: Add buttons to navigate to previous and next pages */}\n        {/* Add Previous button that decrements page (disabled if no previous page) */}\n        {/* Add Next button that increments page (disabled if no next page) */}\n      </div>\n\n      <div>\n        {data?.posts?.map((post) => (\n          <div key={post.id}>\n            <h4>{post.title}</h4>\n            <p>{post.content}</p>\n          </div>\n        ))}\n      </div>\n\n      <p>\n        Page {data?.currentPage} of {data?.totalPages}\n      </p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Paginated Queries</h1>\n\n      <PaginatedPosts />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"const allPosts = Array.from({ length: 50 }, (_, i) => ({\n  id: i + 1,\n  title: `Post ${i + 1}`,\n  content: `This is the content for post ${i + 1}`,\n}));\n\nexport const fetchPosts = async ({ page = 1, limit = 5 }) => {\n  console.log(`API call: fetching posts page=${page}, limit=${limit}`);\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  const startIndex = (page - 1) * limit;\n  const endIndex = startIndex + limit;\n  const posts = allPosts.slice(startIndex, endIndex);\n\n  return {\n    posts,\n    totalPages: Math.ceil(allPosts.length / limit),\n    currentPage: page,\n    hasNextPage: endIndex < allPosts.length,\n    hasPreviousPage: page > 1,\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '13f54293-7104-4fc2-8972-3edcfdd42832',
+  '5-3-infinite-queries',
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Infinite Queries',
+  'Learn to implement infinite queries using useInfiniteQuery',
+  'In this lesson, you''ll learn how to use `useInfiniteQuery` to implement infinite loading patterns. Instead of pagination with separate pages, infinite queries accumulate data by appending new pages to existing results, perfect for "load more" functionality.
+
+Your coding tasks will be implementing `useInfiniteQuery` with a load more button and understanding how React Query manages the accumulated pages of data.',
+  NULL,
+  false,
+  2,
+  '[{"name":"Learn to use `useInfiniteQuery` for infinite loading patterns (and how it differs from pagination)"},{"name":"Understand how `getNextPageParam` determines if more pages exist (and how the backend must return the next page number or null in the response)"},{"name":"See how `fetchNextPage` loads and accumulates additional data and how RQ handles it automatically"}]'::jsonb,
+  '[{"id":"5-3-infinite-queries-task-1","name":"Replace `useQuery` with `useInfiniteQuery` and configure the query function"},{"id":"5-3-infinite-queries-task-2","name":"Configure the query function to receive `pageParam` as an argument and use it to fetch the items"},{"id":"5-3-infinite-queries-task-3","name":"Add `getNextPageParam` to determine the next page number from the last page"},{"id":"5-3-infinite-queries-task-4","name":"Add a Load More button that calls `fetchNextPage` when clicked"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useQuery } from \"@tanstack/react-query\";\nimport { fetchItems } from \"./api\";\n\nfunction InfiniteItemsList() {\n  // Task: Replace useQuery with useInfiniteQuery\n  const { data, isLoading, error } = useQuery({\n    queryKey: [\"items\"],\n    // Task: Configure the query function to receive pageParam as an argument and use it to fetch the items\n    queryFn: () => fetchItems(),\n    // Task: Add getNextPageParam to determine the next page number from the last page\n  });\n\n  if (isLoading) return <div>Loading items...</div>;\n  if (error) return <div>Error: {error.message}</div>;\n\n  // For useQuery (temporary - will change with useInfiniteQuery)\n  const allItems = data?.items || [];\n\n  return (\n    <div>\n      <h2>Infinite Items List</h2>\n\n      <div>\n        {allItems.map((item) => (\n          <div key={item.id}>\n            <h4>{item.name}</h4>\n            <p>{item.description}</p>\n          </div>\n        ))}\n      </div>\n\n      {/* Task: Add a Load More button that calls fetchNextPage when clicked */}\n      {/* Show button only if hasNextPage is true and not currently fetching */}\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Infinite Queries</h1>\n      <p>Load more items infinitely without losing previous data!</p>\n\n      <InfiniteItemsList />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"const allItems = Array.from({ length: 25 }, (_, i) => ({\n  id: i + 1,\n  name: `Item ${i + 1}`,\n  description: `Description for item ${i + 1}`,\n}));\n\nexport const fetchItems = async ({ pageParam = 1 }) => {\n  console.log(`API call: fetching items page=${pageParam}`);\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  const limit = 5;\n  const startIndex = (pageParam - 1) * limit;\n  const endIndex = startIndex + limit;\n  const items = allItems.slice(startIndex, endIndex);\n\n  return {\n    items,\n    nextPage: endIndex < allItems.length ? pageParam + 1 : null,\n    hasMore: endIndex < allItems.length,\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '72483701-503b-4f62-a540-88ce8d499e12',
+  '5-4-prefetching-queries',
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Prefetching Queries',
+  'Learn to prefetch queries using queryClient.prefetchQuery for improved user experience',
+  'In this lesson, you''ll learn how to prefetch queries using `queryClient.prefetchQuery` to load data before it''s actually needed. This technique improves user experience by having data ready when users navigate to different sections of your application.
+
+Your coding tasks will be implementing prefetching when hovering over navigation links and seeing how prefetched data appears instantly when accessed.',
+  NULL,
+  false,
+  3,
+  '[{"name":"Learn to use `queryClient.prefetchQuery` to load data in advance"},{"name":"Understand when and why to prefetch data for better user experience"},{"name":"See how prefetched data appears instantly when the query is used (and how it might still be background fetching if staleTime is set or gcTime is configured)"}]'::jsonb,
+  '[{"id":"5-4-prefetching-queries-task-1","name":"Use `useQueryClient` to get the query client instance in the `Navigation` component"},{"id":"5-4-prefetching-queries-task-2","name":"Use `queryClient.prefetchQuery` to prefetch the user data"},{"id":"5-4-prefetching-queries-task-3","name":"Use `queryClient.prefetchQuery` to prefetch the posts data"},{"id":"5-4-prefetching-queries-task-4","name":"Add an `onMouseEnter` handler to prefetch the user data when hovering over the user profile button"},{"id":"5-4-prefetching-queries-task-3","name":"Add an `onMouseEnter` handler to prefetch the posts data when hovering over the posts button"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState } from \"react\";\nimport { useQuery, useQueryClient } from \"@tanstack/react-query\";\nimport { fetchUser, fetchPosts } from \"./api\";\n\nfunction UserProfile() {\n  const { data: user, isLoading } = useQuery({\n    queryKey: [\"user\"],\n    queryFn: fetchUser,\n  });\n\n  if (isLoading) return <div>Loading user...</div>;\n\n  return (\n    <div>\n      <h3>User Profile</h3>\n      <p>Name: {user?.name}</p>\n      <p>Email: {user?.email}</p>\n      <p>Bio: {user?.bio}</p>\n    </div>\n  );\n}\n\nfunction PostsList() {\n  const { data: posts, isLoading } = useQuery({\n    queryKey: [\"posts\"],\n    queryFn: fetchPosts,\n  });\n\n  if (isLoading) return <div>Loading posts...</div>;\n\n  return (\n    <div>\n      <h3>Posts</h3>\n      {posts?.map((post) => (\n        <div key={post.id}>\n          <h4>{post.title}</h4>\n          <p>{post.content}</p>\n        </div>\n      ))}\n    </div>\n  );\n}\n\nfunction Navigation() {\n  const [activeView, setActiveView] = useState(\"home\");\n  // Task: Use useQueryClient to get the query client instance in the Navigation component\n\n  const prefetchUser = () => {\n    // Task: Use queryClient.prefetchQuery to prefetch the user data\n    // Use [\"user\"] as the query key and fetchUser as the function\n  };\n\n  const prefetchPosts = () => {\n    // Task: Use queryClient.prefetchQuery to prefetch the posts data\n    // Use [\"posts\"] as the query key and fetchPosts as the function\n  };\n\n  return (\n    <div>\n      <h2>Navigation</h2>\n      <p>\n        Hover over buttons to prefetch data, then click to see instant loading!\n      </p>\n\n      <div>\n        <button onClick={() => setActiveView(\"home\")}>Home</button>\n\n        {/* Task: Add an onMouseEnter handler to prefetch the user data when hovering over the user profile button */}\n        <button onClick={() => setActiveView(\"user\")}>User Profile</button>\n\n        {/* Task: Add an onMouseEnter handler to prefetch the posts data when hovering over the posts button */}\n        <button onClick={() => setActiveView(\"posts\")}>Posts</button>\n      </div>\n\n      <div>\n        {activeView === \"home\" && (\n          <p>Welcome! Hover over the buttons above to prefetch data.</p>\n        )}\n        {activeView === \"user\" && <UserProfile />}\n        {activeView === \"posts\" && <PostsList />}\n      </div>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Prefetching Queries</h1>\n      <Navigation />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchUser = async () => {\n  console.log(\"API call: fetching user\");\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n\n  return {\n    id: 1,\n    name: \"John Doe\",\n    email: \"john@example.com\",\n    bio: \"Software developer passionate about React\",\n  };\n};\n\nexport const fetchPosts = async () => {\n  console.log(\"API call: fetching posts\");\n  await new Promise((resolve) => setTimeout(resolve, 1500));\n\n  return [\n    {\n      id: 1,\n      title: \"Getting Started with React Query\",\n      content: \"Learn the basics...\",\n    },\n    {\n      id: 2,\n      title: \"Advanced Patterns\",\n      content: \"Explore advanced techniques...\",\n    },\n    { id: 3, title: \"Performance Tips\", content: \"Optimize your queries...\" },\n  ];\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9f03301a-a234-46a9-8c59-e7bdfa01d7a5',
+  '5-5-suspense-queries',
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Suspense Queries',
+  'Learn to use useSuspenseQuery with React Suspense boundaries for declarative loading states',
+  'In this lesson, you''ll learn how to use `useSuspenseQuery` with React''s Suspense boundaries to handle loading states declaratively. Instead of manually checking `isLoading`, Suspense automatically shows fallback UI while queries are loading.
+
+Your coding tasks will be replacing `useQuery` with `useSuspenseQuery` and wrapping components with Suspense boundaries to see how loading states are handled automatically.',
+  NULL,
+  false,
+  4,
+  '[{"name":"Learn to use `useSuspenseQuery` instead of `useQuery` for suspense-enabled queries"},{"name":"Understand how React Suspense boundaries handle loading states automatically by showing a fallback UI while queries are loading"},{"name":"See the benefits of declarative loading states with Suspense (go over how it''s used a lot in server components of prefetching data and streaming it to clients)"}]'::jsonb,
+  '[{"id":"5-5-suspense-queries-task-1","name":"Replace `useQuery` with `useSuspenseQuery` in the `UserProfile` component"},{"id":"5-5-suspense-queries-task-2","name":"Remove manual `isLoading` checks since Suspense handles loading states"},{"id":"5-5-suspense-queries-task-3","name":"Remove the optional chaining operator on the user data"},{"id":"5-5-suspense-queries-task-4","name":"Wrap the `UserProfile` component with a `Suspense` boundary and fallback UI"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { Suspense } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { fetchUser } from \"./api\";\n\nfunction UserProfile() {\n  // Task: Replace useQuery with useSuspenseQuery in the UserProfile component\n  const {\n    data: user,\n    isLoading,\n    error,\n  } = useQuery({\n    queryKey: [\"user\"],\n    queryFn: fetchUser,\n  });\n\n  // Task: Remove manual isLoading checks since Suspense handles loading states\n  if (isLoading) return <div>Loading user...</div>;\n  if (error) return <div>Error: {error.message}</div>;\n\n  return (\n    <div>\n      <h3>User Profile</h3>\n      {/* Task: Remove the optional chaining operator on the user data\n      Optional chaining is not needed since the data is guaranteed to be there because of Suspense */}\n      <p>Name: {user?.name}</p>\n      <p>Email: {user?.email}</p>\n      <p>Role: {user?.role}</p>\n      <p>Location: {user?.location}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Suspense Queries</h1>\n      <p>Notice how Suspense handles loading states automatically!</p>\n\n      {/* Task: Wrap the UserProfile component with a Suspense boundary and fallback UI\n      Use a div with the text \"Loading user...\" as the fallback */}\n      <UserProfile />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchUser = async () => {\n  console.log(\"API call: fetching user\");\n  await new Promise((resolve) => setTimeout(resolve, 2000));\n\n  return {\n    id: 1,\n    name: \"Alice Johnson\",\n    email: \"alice@example.com\",\n    role: \"Senior Developer\",\n    location: \"San Francisco\",\n  };\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ff1aa6f3-ebb9-4801-aa33-23606b092b73',
+  '5-6-query-cancellation',
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Query Cancellation',
+  'Learn to cancel queries using AbortController and React Query''s built-in cancellation support',
+  'In this lesson, you''ll learn how to cancel queries using React Query''s built-in support for AbortController. This is useful for long-running requests that users might want to cancel, preventing unnecessary network usage and avoiding race conditions.
+
+Your coding tasks will be implementing query cancellation using the abort signal and providing users with the ability to cancel ongoing requests with a button.',
+  NULL,
+  false,
+  5,
+  '[{"name":"Learn how React Query automatically provides AbortController signals to query functions"},{"name":"Understand how to use the abort signal in fetch requests for cancellation"},{"name":"See how to manually abort requests by accessing and using the signal directly"}]'::jsonb,
+  '[{"id":"5-6-query-cancellation-task-1","name":"Use the `signal` parameter in the query function to support cancellation"},{"id":"5-6-query-cancellation-task-2","name":"Store the AbortController in a ref to access it for manual cancellation"},{"id":"5-6-query-cancellation-task-3","name":"Add a Cancel button that calls `abortController.abort()` to cancel the request"},{"id":"5-6-query-cancellation-task-4","name":"Add a Start Request button to trigger a new query manually"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useState, useRef } from \"react\";\nimport { useQuery } from \"@tanstack/react-query\";\nimport { fetchLargeData } from \"./api\";\n\nfunction DataFetcher() {\n  const [enabled, setEnabled] = useState(false);\n\n  // Task: Create a abortControllerRef to store the AbortController using useRef\n\n  const { data, isLoading, error, isFetching } = useQuery({\n    queryKey: [\"largeData\"],\n    queryFn: ({ signal }) => {\n      // Task: Assign the signal to the abortControllerRef.current for manual cancellation\n      abortControllerRef.current = signal;\n      return fetchLargeData({ signal });\n    },\n    enabled,\n  });\n\n  const startRequest = () => {\n    setEnabled(true);\n  };\n\n  const cancelRequest = () => {\n    // Task: Implement the cancelRequest function to abort the request using the abortControllerRef.current?.abort()\n  };\n\n  return (\n    <div>\n      <h2>Large Data Fetcher</h2>\n      <p>This request takes 5 seconds. Try cancelling it!</p>\n\n      <div>\n        {/* Task: Add a Start Request button to trigger a new query manually by calling startRequest */}\n\n        {/* Task: Add a Cancel button that calls abortController.abort() to cancel the request */}\n      </div>\n\n      <div>\n        <p>\n          Status:{\" \"}\n          {isLoading ? \"Loading...\" : isFetching ? \"Fetching...\" : \"Idle\"}\n        </p>\n\n        {error && <p>Error: {error.message}</p>}\n\n        {data && (\n          <div>\n            <h3>Data Received:</h3>\n            <p>{data.data}</p>\n            <p>Timestamp: {data.timestamp}</p>\n          </div>\n        )}\n      </div>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <h1>Query Cancellation</h1>\n      <p>Learn how to cancel long-running queries!</p>\n\n      <DataFetcher />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"export const fetchLargeData = async ({ signal }) => {\n  console.log(\"API call: starting large data fetch (5 seconds)\");\n\n  try {\n    await new Promise((resolve, reject) => {\n      const timeoutId = setTimeout(resolve, 5000);\n\n      signal?.addEventListener(\"abort\", () => {\n        clearTimeout(timeoutId);\n        reject(new Error(\"Request was cancelled\"));\n      });\n    });\n\n    console.log(\"API call: large data fetch completed\");\n    return {\n      id: 1,\n      data: \"This is some large data that took 5 seconds to fetch\",\n      timestamp: new Date().toISOString(),\n    };\n  } catch (error) {\n    console.log(\"API call: fetch was cancelled or failed\");\n    throw error;\n  }\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '2bf49582-3ed3-4cf5-b5d5-b2cb92221f03',
+  '5-7-performance-optimization',
+  '97be72d8-2269-40da-8f3d-8542fe65af21',
+  'f6a710c1-6e94-4972-9355-00e697c3d85c',
+  'Performance Optimization',
+  'Learn to optimize React Query performance using the select function to prevent unnecessary re-renders',
+  'In this lesson, you''ll learn how to optimize React Query performance using the `select` function. When you only need a subset of query data, the select function prevents unnecessary re-renders by only triggering updates when the selected data actually changes.
+
+Your coding tasks will be using the select function to extract specific data from queries and seeing how this prevents re-renders when unrelated data changes.',
+  NULL,
+  false,
+  6,
+  '[{"name":"Understand how React Query re-renders components when any query data changes"},{"name":"Learn to use the `select` function to extract only needed data from queries"},{"name":"See how select prevents unnecessary re-renders for better performance"}]'::jsonb,
+  '[{"id":"5-7-performance-optimization-task-1","name":"Add a `select` function to the first query that returns only the user''s name"},{"id":"5-7-performance-optimization-task-2","name":"Add a `select` function to the second query that returns only the count of posts"},{"id":"5-7-performance-optimization-task-3","name":"Add render counters to see which components re-render when data changes"}]'::jsonb,
+  '{"template":"react","files":{"App.jsx":{"code":"import { useRef } from \"react\";\nimport { useQuery, useQueryClient } from \"@tanstack/react-query\";\nimport { fetchUser, fetchPosts } from \"./api\";\n\nfunction UserName() {\n  // Used to keep track of how many times the component is rendered\n  const renderCount = useRef(0);\n  renderCount.current += 1;\n\n  const { data: userName } = useQuery({\n    queryKey: [\"user\"],\n    queryFn: fetchUser,\n    // Task: Add a select function to the first query that returns only the user''s name\n  });\n\n  return (\n    <div>\n      <h3>User Name Component (Renders: {renderCount.current})</h3>\n      <p>Name: {userName}</p>\n    </div>\n  );\n}\n\nfunction FullUserData() {\n  // Used to keep track of how many times the component is rendered\n  const renderCount = useRef(0);\n  renderCount.current += 1;\n\n  const { data: user } = useQuery({\n    queryKey: [\"user\"],\n    queryFn: fetchUser,\n  });\n\n  return (\n    <div>\n      <h3>Full User Data Component (Renders: {renderCount.current})</h3>\n      <p>Name: {user?.name}</p>\n      <p>Email: {user?.email}</p>\n      <p>Role: {user?.role}</p>\n      <p>Last Active: {user?.lastActive}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  const queryClient = useQueryClient();\n\n  return (\n    <div>\n      <h1>Performance Optimization</h1>\n      <p>\n        Watch the render counts to see how select prevents unnecessary\n        re-renders!\n      </p>\n\n      <button\n        onClick={() => queryClient.invalidateQueries({ queryKey: [\"user\"] })}\n      >\n        Refresh User\n      </button>\n\n      <UserName />\n      <FullUserData />\n    </div>\n  );\n}\n\nexport default App;\n","hidden":false,"active":true,"readOnly":false,"asset":false},"api.js":{"code":"let userData = {\n  id: 1,\n  name: \"Alice Johnson\",\n  email: \"alice@example.com\",\n  role: \"Developer\",\n  lastActive: new Date().toISOString(),\n};\n\nlet postsData = [\n  { id: 1, title: \"First Post\", content: \"Content 1\", likes: 5 },\n  { id: 2, title: \"Second Post\", content: \"Content 2\", likes: 12 },\n  { id: 3, title: \"Third Post\", content: \"Content 3\", likes: 8 },\n];\n\nexport const fetchUser = async () => {\n  console.log(\"API call: fetching user\");\n  await new Promise((resolve) => setTimeout(resolve, 1000));\n\n  // Update lastActive to simulate changing data\n  userData.lastActive = new Date().toISOString();\n  return { ...userData };\n};\n\nexport const fetchPosts = async () => {\n  console.log(\"API call: fetching posts\");\n  await new Promise((resolve) => setTimeout(resolve, 800));\n\n  // Randomly update likes to simulate changing data\n  postsData = postsData.map((post) => ({\n    ...post,\n    likes: post.likes + Math.floor(Math.random() * 3),\n  }));\n\n  return [...postsData];\n};\n","hidden":false,"active":false,"readOnly":false,"asset":false}},"dependencies":{"@tanstack/react-query":"latest"}}'::jsonb,
+  '[]'::jsonb
+);
+
+-- ------------------------------------------------------
+-- 插入课程: TypeScript (typescript)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'typescript',
+  'TypeScript',
+  'Master TypeScript from fundamentals to advanced concepts with hands-on practice',
+  '## Course Overview
+
+TypeScript has become the standard for professional JavaScript development, adopted by teams at companies like Google, Microsoft, Airbnb, and Stripe. It adds a powerful type system on top of JavaScript that catches bugs at compile time, provides better tooling and autocompletion, and makes your code self-documenting. But TypeScript''s type system is deep, and understanding it properly is what separates developers who fight with the compiler from those who leverage it as their most powerful tool.
+
+This course takes you from TypeScript beginner to confident practitioner through a structured, hands-on approach. You''ll learn not just the syntax, but how TypeScript''s type system actually works—type inference, type narrowing, utility types, and the advanced patterns that professional developers use every day. By the end of this course, you''ll have the solid foundation needed to write type-safe code in any TypeScript project, understand complex type definitions you encounter in libraries, and use the type system to prevent bugs before they happen.
+
+## What You''ll Learn
+
+This course is structured into four comprehensive modules that progressively build your TypeScript knowledge from foundational types to advanced type system features.
+
+### Module 1: Getting Started
+
+We begin by establishing what TypeScript is and why it''s become essential for modern JavaScript development. You''ll understand how TypeScript''s static type system catches errors at compile time rather than runtime, and how it improves developer productivity through better tooling and autocompletion.
+
+From there, you''ll master TypeScript''s core type system—primitive types, function annotations, object types, arrays, and tuples. You''ll learn union types and literal types for creating precise type definitions, enums for named constants, and type aliases and interfaces for organizing your types. The module covers generic types for creating reusable components, type assertions for when you know more than the compiler, and the special types `any`, `unknown`, and `never` that round out TypeScript''s type hierarchy.
+
+### Module 2: Type Narrowing
+
+Type narrowing is one of TypeScript''s most powerful features, and this module gives you complete mastery of it. You''ll learn how TypeScript narrows types through control flow analysis—using `typeof` type guards, equality checks, and custom type predicates to write code that''s both type-safe and expressive.
+
+You''ll master the `instanceof` and `in` operators for narrowing object types, and learn discriminated unions—a pattern that''s used extensively in professional TypeScript code for handling different variants of data. The module also covers essential operators for working with nullable types: optional chaining for safe property access, nullish coalescing for default values, and the non-null assertion operator for when you''re certain a value exists.
+
+### Module 3: More on Object Types
+
+This module focuses on TypeScript''s utility types and patterns for working with complex object types. You''ll start with intersection types and interface extensions—two approaches for combining types—and understand when to use each and how they handle conflicts differently.
+
+You''ll then master the essential utility types that every TypeScript developer needs: `Partial` for making properties optional, `Readonly` for immutability, `keyof` for extracting property names, `Omit` and `Pick` for creating subsets of existing types, and `Required` for enforcing complete objects. These utility types are used constantly in real-world TypeScript code and understanding them deeply will make you significantly more productive.
+
+### Module 4: Advanced TypeScript Features
+
+The final module covers advanced TypeScript features that give you full command of the type system. You''ll learn `Extract` and `Exclude` for filtering union types, `Parameters` and `ReturnType` for working with function signatures, and `Awaited` for unwrapping Promise types.
+
+You''ll master template literal types for creating string patterns, const assertions for preserving literal types, and the `satisfies` operator for validating types while preserving inference. The module covers mapped types—the underlying mechanism that powers many of TypeScript''s built-in utility types—giving you the ability to create your own type transformations. Finally, you''ll learn how to type classes with properties, constructors, and access modifiers.
+
+## Who This Course Is For
+
+This course is designed for JavaScript developers who want to learn TypeScript properly, from the ground up.
+
+**This course is perfect for you if:**
+
+✅ You know JavaScript and want to add TypeScript to your skill set
+
+✅ You''ve used TypeScript superficially but have gaps in your understanding of the type system
+
+✅ You find yourself fighting with TypeScript errors instead of leveraging the type system
+
+✅ You want to understand utility types, generics, and type narrowing rather than just using `any` everywhere
+
+✅ You want a structured approach that builds concepts progressively
+
+**You might want to start elsewhere if:**
+
+❌ You''re not comfortable with JavaScript yet (take our JavaScript course first)
+
+❌ You''re already proficient with TypeScript''s type system and looking for framework-specific patterns (try our React with TypeScript course instead)
+
+❌ You want to learn a framework before understanding the underlying type system
+
+## How You''ll Learn
+
+Every concept in this course is taught with a clear, consistent approach: you''ll understand what each type feature does, why it exists, and how to use it correctly. We don''t just show you syntax—we explain how TypeScript''s type system actually works so you can reason about types and fix type errors effectively.
+
+Each lesson includes hands-on practice with real examples. You''ll write actual TypeScript code, not just read about it. This practical approach ensures the concepts stick and you can immediately apply what you learn to your own projects.
+
+## What You''ll Walk Away With
+
+By completing this course, you''ll have a comprehensive understanding of TypeScript''s type system that transforms how you write JavaScript. You''ll be able to read and understand complex type definitions, write type-safe code that catches bugs at compile time, and use TypeScript''s utility types and advanced features to express exactly what your code expects.
+
+More importantly, you''ll understand how TypeScript''s type system actually works—not just memorizing syntax, but understanding type inference, type narrowing, and the patterns that make TypeScript code both safe and expressive. This deep understanding means you''ll be able to debug type errors, learn new TypeScript features quickly, and grow as a developer.
+
+The TypeScript knowledge you gain here is fundamental to modern web development. Whether you''re building React applications, backend services with Node.js, or working with any modern JavaScript framework, TypeScript has become the expected standard. This isn''t just about learning a type system—it''s about writing better, more reliable code for the rest of your development career.',
+  'beginner',
+  14,
+  'published',
+  4,
+  0,
+  0
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '1-getting-started',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Getting Started',
+  'Learn TypeScript fundamentals including type annotations, functions, objects, arrays, and core type system features',
+  0
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b4696a1b-cf7f-4375-a543-a5ba5bae954d',
+  '1-1-introduction-to-typescript',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Introduction to TypeScript',
+  'Understand TypeScript''s role in solving JavaScript''s type-related issues and improving code quality',
+  '
+In this lesson, you''ll learn about TypeScript as a statically typed superset of JavaScript that addresses one of JavaScript''s biggest drawbacks: the lack of static typing. You''ll discover how TypeScript''s type system helps catch errors at compile time rather than runtime, leading to more reliable and maintainable code. TypeScript enhances developer productivity by providing better tooling, autocompletion, and clear documentation through types.
+
+Your coding tasks will be observing unexpected JavaScript behavior in a type-unsafe function and seeing how TypeScript''s type annotations prevent similar issues at compile time.
+  ',
+  'f0d66e71-25ca-4a28-add9-a3d3a2776ede',
+  true,
+  0,
+  '[{"name":"Understand what TypeScript is and how it extends JavaScript with optional static typing"},{"name":"Recognize common JavaScript type coercion pitfalls and how TypeScript helps prevent them"},{"name":"Learn how TypeScript improves code quality, maintainability, and developer productivity"},{"name":"Observe how TypeScript catches type errors at compile time rather than runtime"}]'::jsonb,
+  '[{"id":"1-1-introduction-to-typescript-task-1","name":"Replace the string `\"1\"` with the number `1` in the `add` function call"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"function add(a: number, b: number): number {\n  return a + b;\n}\n\n// Do not change the code above\n\n// Task: Replace the string \"1\" with the number 1 in the add function call\nconsole.log(\"add(1, 2):\", add(\"1\", 2));\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '16828409-1f61-4c17-ac92-49aaf244c22d',
+  '1-2-primitive-types',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Primitive Types',
+  'Learn about TypeScript''s primitive types and how to annotate variables with them',
+  '
+In this lesson, you''ll learn about TypeScript''s primitive types including `string`, `number`, `boolean`, `undefined`, and `null`. You''ll focus on the everyday types like `string`, `number`, and `boolean` that you''ll use most frequently in your TypeScript code. Understanding these fundamental types is essential for writing type-safe code and leveraging TypeScript''s full potential.
+
+Your coding tasks will be practicing type annotations by explicitly specifying the types for variables that hold different primitive values, helping you build muscle memory for TypeScript''s type syntax.
+  ',
+  'd9948565-dfe9-4d40-a651-ef562712c78a',
+  true,
+  1,
+  '[{"name":"Understand TypeScript''s primitive types including `string`, `number`, `boolean`, `undefined`, and `null`"},{"name":"Learn how to annotate variables with explicit type annotations in TypeScript"},{"name":"Recognize when to use each primitive type and their common use cases"},{"name":"Focus on everyday types like `string`, `number`, and `boolean` as the most frequently used primitives"}]'::jsonb,
+  '[{"id":"1-2-primitive-types-task-1","name":"Annotate the `message` variable as a `string`"},{"id":"1-2-primitive-types-task-2","name":"Annotate the `id` variable as a `number`"},{"id":"1-2-primitive-types-task-3","name":"Annotate the `isTrue` variable as a `boolean`"},{"id":"1-2-primitive-types-task-4","name":"Annotate the `unassigned` variable as `undefined`"},{"id":"1-2-primitive-types-task-5","name":"Annotate the `empty` variable as `null`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate the message variable as a string\nconst message = \"Hello, world!\";\n\n// Task: Annotate the id variable as a number\nconst id = 1;\n\n// Task: Annotate the isTrue variable as a boolean\nconst isTrue = true;\n\n// Task: Annotate the unassigned variable as undefined\nconst unassigned = undefined;\n\n// Task: Annotate the empty variable as null\nconst empty = null;\n\n// Do not change the code below\n\nconsole.log(\"message:\", message);\nconsole.log(\"isTrue:\", isTrue);\nconsole.log(\"id:\", id);\nconsole.log(\"unassigned:\", unassigned);\nconsole.log(\"empty:\", empty);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'a19fa305-a47a-4c32-9321-b7e9586e73ce',
+  '1-3-functions',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Functions',
+  'Learn how to type function parameters, return values, function types, and understand the void type',
+  '
+In this lesson, you''ll learn how to type functions in TypeScript by adding parameter type annotations, return type annotations, and function type expressions. You''ll also discover the `void` type, which represents the absence of a return value, and learn how it differs from `undefined`. Function type expressions use syntax similar to arrow functions but describe the function''s type rather than implementing it. Properly typing functions is essential for creating reliable, self-documenting code that clearly communicates what inputs are expected and what outputs are returned.
+
+Your coding tasks will be practicing function type annotations by specifying parameter types, return types, function type expressions, and using the `void` type for functions that don''t return values.
+  ',
+  '1f608079-cb79-42c1-a888-b93a2494aaf7',
+  false,
+  2,
+  '[{"name":"Learn how to add parameter type annotations to function parameters"},{"name":"Understand how to specify return type annotations for function return values"},{"name":"Learn function type expressions that describe function types using syntax similar to arrow functions"},{"name":"Differentiate between the `void` type and `undefined` type in function returns"},{"name":"Recognize when to use `void` for functions that don''t return any value"}]'::jsonb,
+  '[{"id":"1-3-functions-task-1","name":"Annotate the `name` parameter of the `sayHello` function as a `string`"},{"id":"1-3-functions-task-2","name":"Annotate the `callback` parameter of the `sayHelloToWorld` function with a function type that takes a `name` parameter of type `string` and returns a `string`"},{"id":"1-3-functions-task-3","name":"Annotate the `number` parameter of the `addTen` function as a `number`"},{"id":"1-3-functions-task-4","name":"Annotate the return value of the `addTen` function as a `number`"},{"id":"1-3-functions-task-5","name":"Annotate the return value of the `doNothing` function as `void`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate the name parameter of the sayHello function as a string\nfunction sayHello(name) {\n  return `Hello, ${name}!`;\n}\n\n// Task: Annotate the callback parameter of the sayHelloToWorld function with a function type that takes a name parameter of type string and returns a string\nfunction sayHelloToWorld(callback) {\n  return callback(\"World\");\n}\n\n// Task: Annotate the number parameter of the addTen function as a number\n// Task: Annotate the addTen function''s return value as a number\nfunction addTen(number) {\n  return number + 10;\n}\n\n// Task: Annotate the doNothing function''s return value as void\nfunction doNothing() {\n  console.log(\"I am doing nothing\");\n}\n\n// Do not change the code below\n\nconsole.log(\"sayHelloToWorld(sayHello):\", sayHelloToWorld(sayHello));\nconsole.log(\"addTen(5):\", addTen(5));\ndoNothing();\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd29f5b1d-5f07-478f-a4d7-842d732d8da7',
+  '1-4-objects',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Objects',
+  'Learn how to type objects in TypeScript using object type annotations and the Record utility type',
+  '
+In this lesson, you''ll learn how to type objects in TypeScript using object type annotations and the `Record` utility type. The basic syntax for declaring object types is similar to JavaScript object literals, but instead of values, you specify types for each property. For objects with dynamic keys, the `Record<Keys, Type>` utility type allows you to create object types where property keys are of one type and values are of another. This combination gives you flexibility to work with both objects that have known, fixed property names and objects with dynamic keys while maintaining type safety.
+
+Your coding tasks will be practicing both basic object type annotations for fixed properties and the `Record` utility type for dynamic key structures, helping you build comprehensive skills for typing objects in TypeScript.
+  ',
+  '74d55aba-fb6d-4c4d-9c3b-adc67021996e',
+  false,
+  3,
+  '[{"name":"Learn the syntax for object type annotations in TypeScript for objects with fixed property names"},{"name":"Understand how object types specify the structure and property types of objects"},{"name":"Learn the `Record<Keys, Type>` utility type for creating object types with dynamic keys and consistent value types"},{"name":"Recognize the difference between objects with fixed properties and objects with dynamic keys"}]'::jsonb,
+  '[{"id":"1-4-objects-task-1","name":"Annotate the `user` variable as an object with two string properties called `firstName` and `lastName`"},{"id":"1-4-objects-task-2","name":"Assign the `user` variable with an object with `firstName` of `\"John\"` and `lastName` of `\"Doe\"`"},{"id":"1-4-objects-task-3","name":"Annotate the `scoreBoard` variable with `Record<string, number>`"},{"id":"1-4-objects-task-4","name":"Assign the `scoreBoard` variable with an object with two properties named `Alice` and `Bob` with any number values"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate the user variable as an object with two string properties called firstName and lastName\n// Task: Assign the user variable with an object with firstName of \"John\" and lastName of \"Doe\"\nlet user;\n\n// Task: Annotate the scoreBoard variable with Record<string, number>\n// Task: Assign the scoreBoard variable with an object with two properties named Alice and Bob with any number values\nlet scoreBoard;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\n\nconsole.log(''scoreBoard[\"Alice\"]:'', scoreBoard[\"Alice\"]);\nconsole.log(''scoreBoard[\"Bob\"]:'', scoreBoard[\"Bob\"]);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd95a501a-e39a-4798-92f2-f56f911ab637',
+  '1-5-arrays',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Arrays',
+  'Learn how to type arrays in TypeScript using type annotations and generics',
+  '
+In this lesson, you''ll learn how to type arrays in TypeScript using two syntaxes: the bracket syntax `Type[]` and the generic `Array<Type>` syntax. Both accomplish the same result, but the bracket syntax is generally preferred as it''s more concise and readable. You''ll practice typing arrays that contain specific element types, which helps TypeScript catch errors when you try to push incompatible values into arrays or access elements with incorrect types.
+
+Your coding tasks will be practicing array type annotations using both syntax forms, helping you become comfortable with TypeScript''s approach to typed arrays while working with practical examples.
+  ',
+  'dac845f3-9d0a-42fa-9afc-b5eae25fc1f6',
+  false,
+  4,
+  '[{"name":"Learn how to type arrays using the bracket syntax `Type[]` for array type annotations"},{"name":"Understand the generic `Array<Type>` syntax as an alternative way to type arrays"},{"name":"Recognize that `Type[]` is the preferred syntax and is shorthand for `Array<Type>`"}]'::jsonb,
+  '[{"id":"1-5-arrays-task-1","name":"Annotate the `fruits` variable as an array of string using the bracket syntax"},{"id":"1-5-arrays-task-2","name":"Assign an array of `\"apple\", \"orange\", and \"banana\"` to the `fruits` variable"},{"id":"1-5-arrays-task-3","name":"Annotate the `numbers` variable as an array of number using the generic `Array` type"},{"id":"1-5-arrays-task-4","name":"Assign an array of numbers from 1 to 5 to the `numbers` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate the fruits variable as an array of string using the bracket syntax\n// Task: Assign an array of \"apple\", \"orange\", and \"banana\" to the fruits variable\nlet fruits;\n\n// Task: Annotate the numbers variable as an array of number using the generic Array type\n// Task: Assign an array of numbers from 1 to 5 to the numbers variable\nlet numbers;\n\n// Do not change the code below\n\nconsole.log(\"fruits:\", fruits);\nconsole.log(\"numbers:\", numbers);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '97d3be8d-5752-4430-97ea-5ebb01eb6dee',
+  '1-6-tuples',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Tuples',
+  'Learn how to use tuple types to represent arrays with fixed lengths and named element types',
+  '
+In this lesson, you''ll learn about tuple types in TypeScript, which represent arrays with a fixed number of elements where each element has a specific type. While JavaScript doesn''t have built-in tuple types, TypeScript provides this feature to help you work with array-like structures where the position and type of each element matters. Tuples can also have named elements, which provide additional clarity about what each position represents. Tuples are particularly useful for representing pairs, triples, or any fixed-length collections where each position has semantic meaning.
+
+Your coding tasks will be practicing tuple type annotations with named elements and observing how TypeScript prevents accessing elements beyond the defined tuple length, helping you write more precise and self-documenting code when working with fixed-length arrays.
+  ',
+  '8dd7c99e-a769-4692-bd92-21ed5e202a96',
+  false,
+  5,
+  '[{"name":"Understand what tuple types are and how they differ from regular array types"},{"name":"Learn that tuples represent arrays with fixed lengths and specific types for each position"},{"name":"Recognize that tuple elements can be named to provide additional clarity about their purpose"}]'::jsonb,
+  '[{"id":"1-6-tuples-task-1","name":"Annotate coordinates as a tuple of two number elements called `x` and `y`"},{"id":"1-6-tuples-task-2","name":"Assign an array of two numbers to `coordinates`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate coordinates as a tuple of two number elements called x and y\n// Task: Assign an array of two numbers to coordinates\nlet coordinates;\n\n// Do not change the code below\n\nconsole.log(\"x:\", coordinates[0]);\nconsole.log(\"y:\", coordinates[1]);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'd24c8fac-396b-4baa-a352-6f2cb701cedb',
+  '1-7-unions-and-literal-types',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Unions and Literal Types',
+  'Learn how to combine literal types into unions to create more precise type definitions',
+  '
+In this lesson, you''ll learn about union types and literal types in TypeScript. Literal types allow you to specify exact values as types, while union types let you combine multiple types together to represent values that may be any one of those types. These concepts are often used together because literal types become much more powerful when combined into unions, allowing you to create type definitions that can only accept specific predetermined values. This pattern is extremely common in TypeScript for creating type-safe APIs and state management.
+
+Your coding tasks will be practicing the combination of literal types into union types to restrict function parameters to specific allowed values, helping you write more precise and self-documenting code.
+  ',
+  '9cb7026d-239f-402c-a4fc-6dc42e4c8f38',
+  false,
+  6,
+  '[{"name":"Understand what literal types are and how they represent specific values as types"},{"name":"Learn how union types allow combining multiple types together with the `|` operator to represent values that may be any one of those types"},{"name":"Recognize that literal types are most useful when combined into unions for restricted value sets"}]'::jsonb,
+  '[{"id":"1-7-unions-and-literal-types-task-1","name":"Annotate the `appStatus` variable with a union type of the literal types `\"loading\"`, `\"success\"` or `\"error\"`"},{"id":"1-7-unions-and-literal-types-task-2","name":"Assign the value `\"loading\"` to `appStatus`"},{"id":"1-7-unions-and-literal-types-task-3","name":"Annotate the `successStatus` variable with a literal type of `\"success\"`"},{"id":"1-7-unions-and-literal-types-task-4","name":"Assign the value `\"success\"` to `successStatus`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate the appStatus variable with a union type of \"loading\", \"success\" or \"error\"\n// Task: Assign the value \"loading\" to appStatus\nlet appStatus;\n\n// Task: Annotate the successStatus variable with a literal type of \"success\"\n// Task: Assign the value \"success\" to successStatus\nlet successStatus;\n\n// Do not change the code below\n\nconsole.log(\"appStatus:\", appStatus);\nconsole.log(\"successStatus:\", successStatus);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '4d217e83-a1c0-4b1a-98cc-5b8515a78103',
+  '1-8-enums',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Enums',
+  'Learn how to use enums to define a set of named constants in TypeScript',
+  '
+In this lesson, you''ll learn about enums in TypeScript, which allow you to define a set of named constants. Enums make your code more readable and maintainable by giving meaningful names to sets of related values. TypeScript supports both numeric enums (where values are auto-incremented numbers starting from 0) and string enums (where each value is explicitly defined as a string). Enums are particularly useful when you have a fixed set of related values that won''t change, such as directions, status codes, or days of the week.
+
+Your coding tasks will be practicing enum declarations by creating both numeric and string enums, accessing enum values by their names, and using enums to type variables for improved type safety.
+  ',
+  '5f4e9c43-2a04-466a-a809-567aa3fe6c08',
+  false,
+  7,
+  '[{"name":"Understand what enums are and how they define sets of named constants in TypeScript"},{"name":"Learn the difference between numeric enums and string enums"},{"name":"Recognize how to access enum values by name and how reverse mapping works for numeric enums"}]'::jsonb,
+  '[{"id":"1-8-enums-task-1","name":"Create a numeric enum called `Direction` with values `Up`, `Down`, `Left`, and `Right`"},{"id":"1-8-enums-task-2","name":"Assign `Direction.Up` to the `currentDirection` variable"},{"id":"1-8-enums-task-3","name":"Create a string enum called `Status` with values `Pending` as `\"pending\"`, `Active` as `\"active\"`, and `Completed` as `\"completed\"`"},{"id":"1-8-enums-task-4","name":"Assign `Status.Active` to the `currentStatus` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Create a numeric enum called Direction with values Up, Down, Left, and Right\n\n// Task: Assign Direction.Up to the currentDirection variable\nlet currentDirection;\n\n// Task: Create a string enum called Status with values Pending as \"pending\", Active as \"active\", and Completed as \"completed\"\n\n// Task: Assign Status.Active to the currentStatus variable\nlet currentStatus;\n\n// Do not change the code below\n\nconsole.log(\"currentDirection:\", currentDirection);\nconsole.log(\"currentStatus:\", currentStatus);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c8824f1c-dfec-414e-8a60-1772a1e1504c',
+  '1-9-type-aliases',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Type Aliases',
+  'Learn how to create reusable type definitions using type aliases for complex types',
+  '
+In this lesson, you''ll learn about type aliases in TypeScript, which allow you to create names for any type. While you''ve been annotating types directly on variables and parameters, type aliases provide a better way to reuse complex types like object types, union types, and function types throughout your code. Type aliases improve code maintainability by centralizing type definitions and enable more advanced TypeScript patterns by giving names to complex type structures.
+
+Your coding tasks will be practicing the extraction of complex types into reusable type aliases and applying them to function parameters and variables, helping you organize your type definitions more effectively.
+  ',
+  '0cca1965-d5a7-4cdf-8e62-f7acc8cc2cc5',
+  false,
+  8,
+  '[{"name":"Understand what type aliases are and how they provide names for any type in TypeScript"},{"name":"Learn how type aliases improve code reusability and maintainability for complex types"},{"name":"Recognize that type aliases are commonly used for object types, union types, and function types"}]'::jsonb,
+  '[{"id":"1-9-type-aliases-task-1","name":"Create a `User` type alias object with two string properties called `firstName` and `lastName`"},{"id":"1-9-type-aliases-task-2","name":"Annotate the `user` variable with the `User` type"},{"id":"1-9-type-aliases-task-3","name":"Assign the `user` variable with an object with `firstName` of `\"John\"` and `lastName` of `\"Doe\"`"},{"id":"1-9-type-aliases-task-4","name":"Create a `Status` type alias with a union type of `\"success\"`, `\"loading\"`, or `\"error\"`"},{"id":"1-9-type-aliases-task-5","name":"Annotate the `appStatus` variable with the `Status` type"},{"id":"1-9-type-aliases-task-6","name":"Assign the `appStatus` variable with a status of `\"success\"`"},{"id":"1-9-type-aliases-task-7","name":"Create a `Callback` type alias with a function type that takes a `name` parameter of type `string` and returns a `string`"},{"id":"1-9-type-aliases-task-8","name":"Annotate the `callback` variable with the `Callback` type"},{"id":"1-9-type-aliases-task-9","name":"Assign a function that takes a `name` argument and returns the greeting string `Hello, ${name}!` to the `callback` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Create a User type alias object with two string properties called firstName and lastName\n\n// Task: Annotate the user variable with the User type\n// Task: Assign the user variable with an object with firstName of \"John\" and lastName of \"Doe\"\nlet user;\n\n// Task: Create a Status type alias with a union type of \"success\", \"loading\", or \"error\"\n\n// Task: Annotate the appStatus variable with the Status type\n// Task: Assign the appStatus variable with a status of \"success\"\nlet appStatus;\n\n// Task: Create a Callback type alias with a function type that takes a name parameter of type string and returns a string\n\n// Task: Annotate the callback variable with the Callback type\n// Task: Assign a function that takes a name argument and returns the greeting string \"Hello, ${name}!\"\nlet callback;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\nconsole.log(\"appStatus:\", appStatus);\nconsole.log(''callback(\"John\"):'', callback(\"John\"));\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '36f1ba1d-e935-4ac6-ba4f-cb9e01669c1e',
+  '1-10-interfaces',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Interfaces',
+  'Learn how to define object shapes using interfaces as an alternative to type aliases',
+  '
+In this lesson, you''ll learn about interfaces in TypeScript, which provide another way to define the structure of objects. Interfaces describe what properties an object should have and what types those properties should be. While both interfaces and type aliases can describe object shapes, they have some differences: interfaces are specifically designed for object types and can be extended or implemented, while type aliases can represent any kind of type including primitives, unions, and objects. Understanding both gives you flexibility in how you structure your type definitions.
+
+Your coding tasks will be practicing interface declarations and using them to type objects and function parameters, helping you become comfortable with this fundamental TypeScript feature for defining object contracts.
+  ',
+  '1b52c9cd-65ae-4ebb-9cba-437c196fa677',
+  false,
+  9,
+  '[{"name":"Understand what interfaces are and how they define the structure for objects"},{"name":"Learn that interfaces are specifically designed for describing object shapes"},{"name":"Recognize that both interfaces and type aliases can describe object types but have different capabilities"}]'::jsonb,
+  '[{"id":"1-10-interfaces-task-1","name":"Create an interface named `User` with two string properties called `firstName` and `lastName`"},{"id":"1-10-interfaces-task-2","name":"Annotate the `user` variable with the `User` interface"},{"id":"1-10-interfaces-task-3","name":"Assign the `user` variable with an object with `firstName` of `\"John\"` and `lastName` of `\"Doe\"`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Create an interface named User with two string properties called firstName and lastName\n\n// Task: Annotate the user variable with the User interface\n// Task: Assign the user variable with an object with firstName of \"John\" and lastName of \"Doe\"\nlet user;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '7607ebce-dca9-4c98-a8cc-94d83799d215',
+  '1-11-type-assertions',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Type Assertions',
+  'Learn how to use type assertions to override TypeScript''s type inference when you know more about the type',
+  '
+In this lesson, you''ll learn about type assertions in TypeScript, which allow you to override the compiler''s inferred type when you have more specific knowledge about a value''s type. Type assertions use the `as` keyword syntax to tell TypeScript to treat a value as a specific type. They are useful when working with data from external sources, third-party libraries, or situations where TypeScript cannot determine the exact type. However, type assertions should be used carefully since they tell TypeScript to trust you even when the assertion might be incorrect at runtime.
+
+Your coding tasks will be practicing type assertions in common scenarios like working with data that has a broader type than you need, where you need to provide more specific type information than TypeScript can infer automatically.
+  ',
+  'beec7dfb-8a6a-4f5f-b5dd-e8b6fb81782c',
+  false,
+  10,
+  '[{"name":"Understand what type assertions are and when they are useful for overriding TypeScript''s type inference"},{"name":"Learn the syntax for type assertions using the `as` keyword followed by the target type"},{"name":"Recognize common use cases for type assertions like narrowing union types and working with external data"},{"name":"Understand that type assertions can be impossible when there''s no relationship between the asserted types"}]'::jsonb,
+  '[{"id":"1-11-type-assertions-task-1","name":"Assign the result of the `getValue()` function to `stringValue`"},{"id":"1-11-type-assertions-task-2","name":"Annotate the `stringValue` variable as a `string` using type assertion"},{"id":"1-11-type-assertions-task-3","name":"Assign the uppercase version of `stringValue` to `stringUppercase`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"function getValue(): string | number {\n  return \"hello\";\n}\n\n// Do not change the code above\n\n// Task: Assign the result of the getValue() function to stringValue\n// Task: Annotate the stringValue variable as a string using type assertion\nlet stringValue;\n\n// Task: Assign the uppercase version of stringValue to stringUppercase\nlet stringUppercase;\n\n// Do not change the code below\n\nconsole.log(\"stringValue:\", stringValue);\nconsole.log(\"stringUppercase:\", stringUppercase);\n","hidden":false,"active":true,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'abf63555-bf85-4a6b-b044-175b4c40eaf4',
+  '1-12-generic-types',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Generic Types',
+  'Learn how to create reusable components and functions using generic type parameters',
+  '
+In this lesson, you''ll learn about generic types in TypeScript, which allow you to create reusable components that work with multiple types rather than a single one. You''ve already encountered one generic type: `Array<Type>`. Generics enable you to capture the type a user provides, allowing you to work with that type while maintaining type safety. This is particularly useful for creating flexible functions, interfaces, and classes that can work with various data types while still providing full type information.
+
+Your coding tasks will be practicing generic type parameters by explicitly specifying type arguments to generic functions, helping you understand how generics preserve type information throughout your code.
+  ',
+  '95d093a5-8c2a-4ee8-bbca-94f87a4e5400',
+  false,
+  11,
+  '[{"name":"Understand what generic types are and how they create reusable components that work with multiple types"},{"name":"Learn that generics use type parameters to capture and work with provided types while maintaining type safety"}]'::jsonb,
+  '[{"id":"1-12-generic-types-task-1","name":"Create a generic `Return` type of an object with a property called `value` of type `T`"},{"id":"1-12-generic-types-task-2","name":"Annotate the `getReturnValue` function with a `value` argument as a generic type `T` and a return value of `Return<T>`"},{"id":"1-12-generic-types-task-3","name":"Call the `getReturnValue` function with `user` as the `value` argument and assign it to the `userValue` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  firstName: string;\n  lastName: string;\n};\n\nconst user: User = { firstName: \"John\", lastName: \"Doe\" };\n\n// Do not change the code above\n\n// Task: Create a generic Return type of an object with a property called value of type T\n\n// Task: Annotate the getReturnValue function with a value argument as a generic type T and a return value of Return<T>\nfunction getReturnValue(value) {\n  return { value };\n}\n\n// Task: Call the getReturnValue function with user as the value argument and assign it to the userValue variable\nlet userValue;\n\n// Do not change the code below\n\nconsole.log(\"userValue:\", userValue);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '708708cc-3c79-4c78-9273-542956c483ac',
+  '1-13-any-and-unknown',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Any and Unknown',
+  'Learn the differences between the any and unknown types and when to use each',
+  '
+In this lesson, you''ll learn about the `any` and `unknown` types in TypeScript and understand their key differences and use cases. The `any` type disables all type checking, allowing you to perform any operation on values of this type, effectively opting out of TypeScript''s type system. This is commonly used during migration from JavaScript to TypeScript or when working with dynamic content. In contrast, the `unknown` type represents values that could be of any type but requires type narrowing or type assertions before you can perform operations on them, making it ideal for handling API responses, user input, or other uncertain values while maintaining type safety.
+
+Your coding tasks will be observing how TypeScript handles operations on `any` and `unknown` types differently, demonstrating the type safety benefits of `unknown` over `any` in practical scenarios.
+  ',
+  'c08f4a72-2f22-439d-b9c7-a544f76f570a',
+  false,
+  12,
+  '[{"name":"Understand that the `any` type disables type checking and allows any operation without TypeScript errors"},{"name":"Learn that the `unknown` type represents values of unknown type that require type narrowing before use"},{"name":"Recognize that `unknown` is the type-safe counterpart to `any` and preserves type safety"},{"name":"Differentiate use cases: `any` for JavaScript migration and dynamic content, `unknown` for API responses and user input"}]'::jsonb,
+  '[{"id":"1-13-any-and-unknown-task-1","name":"Assign `anyVariable` to `\"I can be a string!\"`"},{"id":"1-13-any-and-unknown-task-2","name":"Re-assign `anyVariable` to the number 0"},{"id":"1-13-any-and-unknown-task-3","name":"Re-assign `anyVariable` to `null`"},{"id":"1-13-any-and-unknown-task-4","name":"Annotate `unknownVariable` as `unknown`"},{"id":"1-13-any-and-unknown-task-5","name":"Assign `unknownVariable` to `\"I can also be a string!\"`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"let anyVariable;\n\n// Do not change the code above\n\n// Task: Assign anyVariable to \"I can be a string!\"\n\nconsole.log(\"anyVariable string:\", anyVariable);\n\n// Task: Re-assign anyVariable to the number 0\n\nconsole.log(\"anyVariable number:\", anyVariable);\n\n// Task: Re-assign anyVariable to the null\n\nconsole.log(\"anyVariable null:\", anyVariable);\n\n// Task: Annotate unknownVariable as unknown\nlet unknownVariable;\n\n// Task: Assign unknownVariable to \"I can also be a string!\"\n\nconsole.log(\"unknownVariable string:\", unknownVariable);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c98c62eb-f163-4f0e-9c76-18d8add153fe',
+  '1-14-never',
+  'e5c4a980-a480-43cc-b428-0264b383b015',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Never',
+  'Learn how the never type represents values that never occur and ensures exhaustive type checking',
+  '
+In this lesson, you''ll learn about the `never` type in TypeScript, which represents values that never occur. The `never` type is used when a function never returns (always throws an error) or when a variable cannot have any value. This type is particularly useful for exhaustive type checking in switch statements and conditional branches, ensuring that you handle all possible cases and that your code remains type-safe even as types evolve.
+
+Your coding tasks will be practicing the use of the `never` type for functions that never return and for exhaustive type checking patterns that catch unhandled cases at compile time.
+  ',
+  '5bdec17d-80ea-4a03-aecc-c7180b17e7f0',
+  false,
+  13,
+  '[{"name":"Understand what the `never` type represents and when it occurs in TypeScript"},{"name":"Learn how to use `never` for functions that never return a value (always throw errors)"},{"name":"Recognize how `never` enables exhaustive type checking to ensure all cases are handled"}]'::jsonb,
+  '[{"id":"1-14-never-task-1","name":"Annotate the `neverReturns` function''s return value as `never`"},{"id":"1-14-never-task-2","name":"Call the `neverReturns` function and assign it to the `result` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate the neverReturns function''s return value as never\nfunction neverReturns() {\n  throw new Error(\"This function never returns\");\n}\n\nlet result;\n\ntry {\n  // Task: Call the neverReturns function and assign it to the result variable\n} catch (error) {\n  console.log(error);\n}\n\n// Do not change the code below\n\nconsole.log(\"result:\", result);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '2-type-narrowing',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Type Narrowing',
+  'Learn TypeScript''s type narrowing techniques to safely work with dynamic data and union types',
+  1
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'a9a43800-7c2a-4fcb-beee-a928b5b14c4c',
+  '2-1-type-guards',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Type Guards',
+  'Learn how to narrow types using typeof operator to check primitive types at runtime',
+  '
+In this lesson, you''ll learn about `typeof` type guards in TypeScript, which allow you to narrow the type of a value by checking its runtime type using the `typeof` operator. TypeScript understands how `typeof` works and will narrow types accordingly in conditional branches. This is particularly useful when working with values of type `unknown` or union types, as it allows TypeScript to infer more specific types within different code branches based on runtime checks.
+
+Your coding tasks will be practicing `typeof` type guards to check for various primitive types and narrow the type of values within conditional branches, helping you write type-safe code that handles different value types appropriately.
+  ',
+  '562130b4-4d12-4761-a1fe-562480238d35',
+  true,
+  0,
+  '[{"name":"Understand what `typeof` type guards are and how they narrow types using runtime type checks"},{"name":"Learn how TypeScript understands `typeof` operator and narrows types in conditional branches"},{"name":"Recognize that `typeof` type guards are particularly useful for values of type `unknown` and union types"}]'::jsonb,
+  '[{"id":"2-1-type-guards-task-1","name":"Narrow the type of `value` if it is a `string` by using `typeof value === \"string\"` and return it"},{"id":"2-1-type-guards-task-2","name":"Narrow the type of `value` if it is a `number` by using `typeof value === \"number\"` and return it"},{"id":"2-1-type-guards-task-3","name":"Narrow the type of `value` if it is a `function` by using `typeof value === \"function\"` and return it"},{"id":"2-1-type-guards-task-4","name":"Narrow the type of `value` if it is an `object` by using `typeof value === \"object\"` and return it"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"function checkType(value: unknown) {\n  // Task: Narrow the type of value if it is a string by using typeof value === \"string\" and return it\n\n  // Task: Narrow the type of value if it is a number by using typeof value === \"number\" and return it\n\n  // Task: Narrow the type of value if it is a function by using typeof value === \"function\" and return it\n\n  // Task: Narrow the type of value if it is an object by using typeof value === \"object\" and return it\n\n  return value;\n}\n\n// Do not change the code below\n\nconsole.log(''checkType(\"Hello, World!\"):'', checkType(\"Hello, World!\"));\nconsole.log(\"checkType(67):\", checkType(67));\nconsole.log(\n  \"checkType(() => {}):\",\n  checkType(() => {}),\n);\nconsole.log(\"checkType({}):\", checkType({}));\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'ac5de80e-7ae8-404e-8652-4cb93a7f181a',
+  '2-2-equality-narrowing',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Equality Narrowing',
+  'Learn how to narrow types using equality checks like ===, !==, ==, and !=',
+  '
+In this lesson, you''ll learn about equality narrowing in TypeScript, which uses equality checks like `===`, `!==`, `==`, and `!=` to narrow types. TypeScript uses these checks to infer more specific types about values, particularly when comparing against literal values. This is especially useful for distinguishing between values that might have the same `typeof` result but different semantic meanings, such as distinguishing `null` from other objects when using `typeof value === "object"`.
+
+Your coding tasks will be practicing equality narrowing to distinguish `null` from other object types, helping you write more precise type checks that handle edge cases in your type narrowing logic.
+  ',
+  '857caf23-8db0-4a44-8fa6-be2edb68cc94',
+  true,
+  1,
+  '[{"name":"Understand what equality narrowing is and how it uses equality checks to narrow types"},{"name":"Learn how TypeScript uses equality checks like `===` and `!==` to infer more specific types"},{"name":"Recognize that equality narrowing is particularly useful for distinguishing values with the same `typeof` result"}]'::jsonb,
+  '[{"id":"2-2-equality-narrowing-task-1","name":"Narrow the type of `value` if it is `null` by using `value === null` and return it"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"function checkType(value: unknown) {\n  if (typeof value === \"object\") {\n    // Task: Narrow the type of value if it is null by using value === null and return it\n\n    return value;\n  }\n\n  return value;\n}\n\n// Do not change the code below\n\nconsole.log(\"checkType({}):\", checkType({}));\nconsole.log(\"checkType(null):\", checkType(null));\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '768bbb9a-ef93-491c-9f5e-babaf4f1bbf6',
+  '2-3-type-predicates',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Type Predicates',
+  'Learn how to create custom type guard functions using type predicates for complex type narrowing',
+  '
+In this lesson, you''ll learn about type predicates in TypeScript, which allow you to create custom type guard functions that narrow types based on your own logic. Type predicates are special return type annotations that take the form `parameterName is Type` and tell TypeScript that if the function returns `true`, the parameter can be narrowed to the specified type. This is particularly useful for creating reusable type guards that encapsulate complex type checking logic and can be used throughout your codebase.
+
+Your coding tasks will be practicing type predicates by creating a custom type guard function that checks if a value is an array, and then using that function to narrow types in your type checking logic.
+  ',
+  '15f831e4-9a7a-49b1-a735-4b6d319268c5',
+  false,
+  2,
+  '[{"name":"Understand what type predicates are and how they create custom type guard functions"},{"name":"Learn the syntax for type predicates using the `parameterName is Type` return type annotation"},{"name":"Recognize that type predicates are useful for encapsulating complex type checking logic in reusable functions"}]'::jsonb,
+  '[{"id":"2-3-type-predicates-task-1","name":"Annotate the `isString` function''s return value with a type predicate that narrows the type of `value` to a string"},{"id":"2-3-type-predicates-task-2","name":"Return the boolean result of `typeof value === \"string\"` in the `isString` function"},{"id":"2-3-type-predicates-task-3","name":"Annotate the `isObject` function''s return value with a type predicate that narrows the type of `value` to an object"},{"id":"2-3-type-predicates-task-4","name":"Return the boolean result of `typeof value === \"object\"` in the `isObject` function"},{"id":"2-3-type-predicates-task-5","name":"Narrow the type of `value` if it is a string by using the `isString` function and return it"},{"id":"2-3-type-predicates-task-6","name":"Narrow the type of `value` if it is an object by using the `isObject` function and return it"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Annotate the return value with a type predicate that narrows the type of value to a string\nfunction isString(value: unknown) {\n  // Task: Return the boolean result of typeof value === \"string\"\n}\n\n// Task: Annotate the return value with a type predicate that narrows the type of value to an object\nfunction isObject(value: unknown) {\n  // Task: Return the boolean result of typeof value === \"object\"\n}\n\nfunction checkType(value: unknown) {\n  // Task: Narrow the type of value if it is a string by using the isString function and return it\n\n  // Task: Narrow the type of value if it is an object by using the isObject function and return it\n\n  return value;\n}\n\n// Do not change the code below\n\nconsole.log(''checkType(\"Hello, World!\"):'', checkType(\"Hello, World!\"));\nconsole.log(\"checkType({}):\", checkType({}));\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '56c09443-42b0-4b72-b2f4-7d780d50bb03',
+  '2-4-the-instanceof-operator',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'The instanceof operator',
+  'Learn how to narrow types using instanceof operator to check class instances and built-in objects',
+  '
+In this lesson, you''ll learn about `instanceof` narrowing in TypeScript, which uses the `instanceof` operator to check whether a value is an instance of a specific class or constructor function. TypeScript understands how `instanceof` works and will narrow types accordingly, allowing you to work with class instances and built-in objects in a type-safe manner. This is particularly useful for distinguishing between different object types that have the same `typeof` result but different constructor origins.
+
+Your coding tasks will be practicing `instanceof` narrowing to check if a value is an instance of the `Error` class, helping you write more specific type checks for class instances and built-in objects.
+  ',
+  'f6a3f439-c7e2-48a8-8e25-b0ee9c585d37',
+  false,
+  3,
+  '[{"name":"Understand what `instanceof` narrowing is and how it checks class instances and constructor functions"},{"name":"Learn how TypeScript understands the `instanceof` operator and narrows types based on constructor checks"},{"name":"Recognize that `instanceof` narrowing is useful for distinguishing object types with the same `typeof` result"}]'::jsonb,
+  '[{"id":"2-4-the-instanceof-operator-task-1","name":"Return the boolean value of `value instanceof Error`"},{"id":"2-4-the-instanceof-operator-task-2","name":"Narrow the type of `value` if it is an instance of `Error` by using the `isError` function and return it"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"function isError(value: unknown): value is Error {\n  // Task: Return the boolean result of value instanceof Error\n}\n\nfunction checkType(value: unknown) {\n  if (typeof value === \"object\") {\n    // Task: Narrow the type of value if it is an instance of Error by using the isError function and return it\n\n    return value;\n  }\n\n  return value;\n}\n\n// Do not change the code below\n\nconsole.log(\"checkType(new Error()):\", checkType(new Error()));\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '35a484b5-f307-4376-afbb-9966c2d772db',
+  '2-5-the-in-operator',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'The in operator',
+  'Learn how to narrow types using the in operator to check for property existence in objects',
+  '
+In this lesson, you''ll learn about the `in` operator narrowing in TypeScript, which uses the `in` operator to check whether an object has a property with a given name. TypeScript understands how the `in` operator works and will narrow types based on property existence checks. This is particularly useful for working with union types where different object types have distinct properties, allowing you to safely access properties that only exist on specific types within the union.
+
+Your coding tasks will be practicing the `in` operator to check for property existence and narrow object types in union types, helping you write type-safe code that handles different object structures appropriately.
+  ',
+  '32e32db4-6573-411e-ac58-881db91c4403',
+  false,
+  4,
+  '[{"name":"Understand what the `in` operator narrowing is and how it checks for property existence in objects"},{"name":"Learn how TypeScript understands the `in` operator and narrows types based on property checks"},{"name":"Recognize that the `in` operator is useful for working with union types of objects with distinct properties"}]'::jsonb,
+  '[{"id":"2-5-the-in-operator-task-1","name":"Narrow the type of `item` if it is a `Book` by using `\"read\" in item`"},{"id":"2-5-the-in-operator-task-2","name":"Call the `read` function of the narrowed `Book` item"},{"id":"2-5-the-in-operator-task-3","name":"Narrow the type of `item` if it is a `Toy` by using `\"play\" in item`"},{"id":"2-5-the-in-operator-task-4","name":"Call the `play` function of the narrowed `Toy` item"},{"id":"2-5-the-in-operator-task-5","name":"Call the `whatsInTheBox` function with `myBook` as the `item` argument"},{"id":"2-5-the-in-operator-task-6","name":"Call the `whatsInTheBox` function with `myToy` as the `item` argument"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"interface Book {\n  title: string;\n  pages: number;\n  read: () => void;\n}\n\ninterface Toy {\n  name: string;\n  play: () => void;\n}\n\nconst myBook: Book = {\n  title: \"TypeScript Guide\",\n  pages: 200,\n  read: () => console.log(\"Reading the book...\"),\n};\n\nconst myToy: Toy = {\n  name: \"Lego\",\n  play: () => console.log(\"Building with Lego...\"),\n};\n\n// Do not change the code above\n\nfunction whatsInTheBox(item: Book | Toy) {\n  // Task: Narrow the type of item if it is a Book by using \"read\" in item\n  // Task: Call the read function of the narrowed Book item\n\n  // Task: Narrow the type of item if it is a Toy by using \"play\" in item\n  // Task: Call the play function of the narrowed Toy item\n}\n\n// Task: Call the whatsInTheBox function with myBook as the item argument\n\n// Task: Call the whatsInTheBox function with myToy as the item argument\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '88b61bc9-053c-4b14-be58-b6e48eca2682',
+  '2-6-discriminated-unions',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Discriminated Unions',
+  'Learn how to use discriminated unions with common literal properties for type-safe narrowing',
+  '
+In this lesson, you''ll learn about discriminated unions in TypeScript, which are union types that share a common property with literal types. This common property, called the discriminant, allows TypeScript to narrow the type of each union member based on the value of the discriminant property. Discriminated unions are particularly powerful when combined with `switch` statements, as TypeScript can exhaustively check all possible cases and ensure that every member of the union is handled appropriately.
+
+Your coding tasks will be practicing discriminated unions by creating a union type of shapes and implementing the case handling in a `switch` statement, helping you understand how discriminated unions enable comprehensive type safety.
+  ',
+  '193eb7a8-af38-41ca-8179-abff7417ee07',
+  false,
+  5,
+  '[{"name":"Understand what discriminated unions are and how they use common literal properties for type narrowing"},{"name":"Learn that the common property in discriminated unions is called the discriminant"},{"name":"Recognize how discriminated unions work with `switch` statements for exhaustive type checking"}]'::jsonb,
+  '[{"id":"2-6-discriminated-unions-task-1","name":"Create a `Shape` type alias with a union type of `Circle` and `Square`"},{"id":"2-6-discriminated-unions-task-2","name":"Annotate the `shape` parameter of the `getArea` function as `Shape`"},{"id":"2-6-discriminated-unions-task-3","name":"Narrow the type of `shape` if it is `Circle` by using `case \"circle\"`"},{"id":"2-6-discriminated-unions-task-4","name":"Return the result of `Math.PI * shape.radius ** 2` if shape is `Circle`"},{"id":"2-6-discriminated-unions-task-5","name":"Narrow the type of `shape` if it is `Square` by using `case \"square\"`"},{"id":"2-6-discriminated-unions-task-6","name":"Return the result of `shape.side ** 2` if `shape` is `Square`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"interface Circle {\n  type: \"circle\";\n  radius: number;\n}\n\ninterface Square {\n  type: \"square\";\n  side: number;\n}\n\nconst circle: Circle = { type: \"circle\", radius: 5 };\nconst square: Square = { type: \"square\", side: 4 };\n\n// Do not change the code above\n\n// Task: Create a Shape type alias with a union type of Circle and Square\n\n// Task: Annotate the shape parameter of the getArea function as Shape\nfunction getArea(shape: unknown): number | string {\n  switch (shape.type) {\n    // Task: Narrow the type of shape if it is Circle by using case \"circle\"\n    // Task: Return the result of Math.PI * shape.radius ** 2 if shape is Circle\n\n    // Task: Narrow the type of shape if it is Square by using case \"square\"\n    // Task: Return the result of shape.side ** 2 if shape is Square\n\n    default:\n      return \"Unknown shape\";\n  }\n}\n\n// Do not change the code below\n\nconsole.log(\"getArea(circle):\", getArea(circle));\nconsole.log(\"getArea(square):\", getArea(square));\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '9da00218-bd3e-41e6-b4fc-870c5444adb3',
+  '2-7-optional-chaining',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Optional Chaining',
+  'Learn how to safely access nested properties and methods using the optional chaining operator',
+  '
+In this lesson, you''ll learn about the optional chaining operator (`?.`) in TypeScript, which allows you to safely access deeply nested properties without having to check each level for `null` or `undefined`. When you use `?.`, TypeScript will short-circuit and return `undefined` if any part of the chain is `null` or `undefined`, preventing runtime errors. This operator can be used with property access, array indexing, and function calls, making it invaluable when working with data that may have missing or optional fields.
+
+Your coding tasks will be practicing optional chaining to safely navigate through potentially undefined object properties and call methods that might not exist.
+  ',
+  '363fe659-6a79-4173-9ce9-8cb169e32832',
+  false,
+  6,
+  '[{"name":"Understand what the optional chaining operator (`?.`) does and how it prevents runtime errors"},{"name":"Learn how to use optional chaining with property access, array indexing, and function calls"},{"name":"Recognize that optional chaining returns `undefined` when encountering `null` or `undefined` in the chain"}]'::jsonb,
+  '[{"id":"2-7-optional-chaining-task-1","name":"Use optional chaining to access the `city` property of `user.address` and assign it to the `city` variable"},{"id":"2-7-optional-chaining-task-2","name":"Use optional chaining to access the first element of `user.hobbies` and assign it to the `firstHobby` variable"},{"id":"2-7-optional-chaining-task-3","name":"Use optional chaining to call the `greet` method on `user` and assign the result to the `greeting` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  name: string;\n  address?: {\n    street: string;\n    city: string;\n  };\n  hobbies?: string[];\n  greet?: () => string;\n};\n\nconst user: User = {\n  name: \"John Doe\",\n};\n\n// Do not change the code above\n\n// Task: Use optional chaining to access the city property of user.address and assign it to the city variable\nlet city: string | undefined;\n\n// Task: Use optional chaining to access the first element of user.hobbies and assign it to the firstHobby variable\nlet firstHobby: string | undefined;\n\n// Task: Use optional chaining to call the greet method on user and assign the result to the greeting variable\nlet greeting: string | undefined;\n\n// Do not change the code below\n\nconsole.log(\"city:\", city);\nconsole.log(\"firstHobby:\", firstHobby);\nconsole.log(\"greeting:\", greeting);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '11dfed6d-de6a-430a-87a0-7570691798e8',
+  '2-8-nullish-coalescing',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Nullish Coalescing',
+  'Learn how to provide default values for null or undefined using the nullish coalescing operator',
+  '
+In this lesson, you''ll learn about the nullish coalescing operator (`??`) in TypeScript, which provides a way to specify default values when dealing with `null` or `undefined`. Unlike the logical OR operator (`||`), which treats all falsy values (including `0`, `""`, and `false`) as triggers for the default, the nullish coalescing operator only uses the default when the left-hand side is specifically `null` or `undefined`. This makes it ideal for preserving intentional falsy values while still handling missing data gracefully.
+
+Your coding tasks will be practicing the nullish coalescing operator to provide default values in various scenarios, helping you understand how it differs from the logical OR operator.
+  ',
+  '8d144041-4a5d-4210-ac1f-e93e8a3c56af',
+  false,
+  7,
+  '[{"name":"Understand what the nullish coalescing operator (`??`) does and when it provides the default value"},{"name":"Learn the difference between nullish coalescing (`??`) and logical OR (`||`) for default values"},{"name":"Recognize that `??` only triggers on `null` or `undefined`, not other falsy values like `0` or `\"\"`"}]'::jsonb,
+  '[{"id":"2-8-nullish-coalescing-task-1","name":"Use nullish coalescing to assign `\"Guest\"` as the default value for `username` and assign the result to the `displayName` variable"},{"id":"2-8-nullish-coalescing-task-2","name":"Use nullish coalescing to assign `0` as the default value for `userScore` and assign the result to the `score` variable"},{"id":"2-8-nullish-coalescing-task-3","name":"Use nullish coalescing to assign `[]` as the default value for `userItems` and assign the result to the `items` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"const username: string | null = null;\nconst userScore: number | undefined = undefined;\nconst userItems: string[] | null = null;\n\n// Do not change the code above\n\n// Task: Use nullish coalescing to assign \"Guest\" as the default value for username and assign the result to the displayName variable\nlet displayName: string;\n\n// Task: Use nullish coalescing to assign 0 as the default value for userScore and assign the result to the score variable\nlet score: number;\n\n// Task: Use nullish coalescing to assign [] as the default value for userItems and assign the result to the items variable\nlet items: string[];\n\n// Do not change the code below\n\nconsole.log(\"displayName:\", displayName);\nconsole.log(\"score:\", score);\nconsole.log(\"items:\", items);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'b8ba98b1-c508-4da3-8c0f-f99aaa7fe740',
+  '2-9-non-null-assertion',
+  '55c0ea0a-e388-41d9-bdd9-5014be060c44',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Non-null Assertion Operator',
+  'Learn how to use the non-null assertion operator to tell TypeScript a value is not null or undefined',
+  '
+In this lesson, you''ll learn about the non-null assertion operator (`!`) in TypeScript, which tells the compiler that a value is definitely not `null` or `undefined`, even when TypeScript cannot verify this on its own. This operator is useful when you have knowledge about your code that TypeScript doesn''t have, such as when working with DOM elements that you know exist or API responses you''ve validated elsewhere. However, use it carefully because incorrect usage can lead to runtime errors if the value actually is `null` or `undefined`.
+
+Your coding tasks will be practicing the non-null assertion operator in scenarios where you know a value exists but TypeScript''s type narrowing cannot determine this automatically.
+  ',
+  '622cd318-5fc7-4ad9-a007-e6cfe46974e3',
+  false,
+  8,
+  '[{"name":"Understand what the non-null assertion operator (`!`) does and how it affects type checking"},{"name":"Learn when to use the non-null assertion operator versus other null-checking approaches"},{"name":"Recognize the risks of using non-null assertions incorrectly and when to avoid them"}]'::jsonb,
+  '[{"id":"2-9-non-null-assertion-task-1","name":"Use the non-null assertion operator on the result of `getMaybeString()` and assign it to the `definitelyString` variable"},{"id":"2-9-non-null-assertion-task-2","name":"Use the non-null assertion operator to access the `length` property of the result of `getMaybeArray()` and assign it to the `arrayLength` variable"},{"id":"2-9-non-null-assertion-task-3","name":"Use the non-null assertion operator to call the `toUpperCase` method on the result of `getMaybeName()` and assign it to the `upperName` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"function getMaybeString(): string | null {\n  return \"Hello, TypeScript!\";\n}\n\nfunction getMaybeArray(): number[] | undefined {\n  return [1, 2, 3, 4, 5];\n}\n\nfunction getMaybeName(): string | null {\n  return \"john doe\";\n}\n\n// Do not change the code above\n\n// Task: Use the non-null assertion operator on the result of getMaybeString() and assign it to the definitelyString variable\nlet definitelyString: string;\n\n// Task: Use the non-null assertion operator to access the length property of the result of getMaybeArray() and assign it to the arrayLength variable\nlet arrayLength: number;\n\n// Task: Use the non-null assertion operator to call the toUpperCase method on the result of getMaybeName() and assign it to the upperName variable\nlet upperName: string;\n\n// Do not change the code below\n\nconsole.log(\"definitelyString:\", definitelyString);\nconsole.log(\"arrayLength:\", arrayLength);\nconsole.log(\"upperName:\", upperName);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '3-utility-types',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Utility Types',
+  'Learn TypeScript utility types for object manipulation including Partial, Readonly, Pick, Omit, and Required',
+  2
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '81f5083c-536b-4a77-a37c-e2bfbd750241',
+  '3-1-intersections',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Intersections',
+  'Learn how to combine multiple types into one using intersection types',
+  '
+In this lesson, you''ll learn about intersection types in TypeScript, which allow you to combine multiple types into one. Intersection types use the `&` operator to create a new type with all the properties of the combined types. This is particularly useful for creating complex types from simpler ones, allowing you to build up type definitions in a modular way while maintaining type safety and code reusability.
+
+Your coding tasks will be practicing intersection types by combining existing type definitions using the `&` operator, helping you understand how to create complex object types from simpler, reusable components.
+  ',
+  'c3f9bb2c-c6f4-4cf4-800d-a426b876e60b',
+  true,
+  0,
+  '[{"name":"Understand what intersection types are and how they combine multiple types into one"},{"name":"Learn the syntax for intersection types using the `&` operator"},{"name":"Recognize that intersection types are useful for creating complex types from simpler, reusable components"}]'::jsonb,
+  '[{"id":"3-1-intersections-task-1","name":"Replace the object type with an intersection of `WithUsername` and `WithPassword` using the `&` operator in the `LoginCredentials` type"},{"id":"3-1-intersections-task-2","name":"Replace the object type with an intersection of `LoginCredentials` and an object type with a string property called `name` using the `&` operator in the `RegisterCredentials` type"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type WithUsername = {\n  username: string;\n};\n\ntype WithPassword = {\n  password: string;\n};\n\n// Do not change the code above\n\n// Task: Replace the object type with an intersection of WithUsername and WithPassword using the & operator\ntype LoginCredentials = {\n  username: string;\n  password: string;\n};\n\n// Task: Replace the object type with an intersection of LoginCredentials and an object type with a string property called name using the & operator\ntype RegisterCredentials = {\n  username: string;\n  password: string;\n  name: string;\n};\n\n// Do not change the code below\n\nconst loginCredentials: LoginCredentials = {\n  username: \"johndoe\",\n  password: \"123456\",\n};\n\nconst registerCredentials: RegisterCredentials = {\n  username: \"johndoe\",\n  password: \"123456\",\n  name: \"John Doe\",\n};\n\nconsole.log(\"registerCredentials:\", registerCredentials);\nconsole.log(\"loginCredentials:\", loginCredentials);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'cbaa5302-7582-486c-a97d-6f6ad16b7a37',
+  '3-2-extensions',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Extensions',
+  'Learn how to create new interfaces that inherit properties from existing interfaces using extends',
+  '
+In this lesson, you''ll learn about extending types in TypeScript, specifically how to create new interfaces that inherit properties from multiple existing interfaces using the `extends` keyword. This approach provides an alternative to intersection types for combining object types, with interfaces offering a more declarative syntax for building type hierarchies. While both intersection types and interface extension can combine types, they represent different concepts: intersections create a new type by combining existing ones, while extension creates a subtype relationship where the new interface inherits from the base interfaces.
+
+Your coding tasks will be practicing interface extension by using the `extends` keyword to inherit properties from multiple base interfaces and adding new properties, helping you understand the interface-based approach to type composition.
+  ',
+  '1ec3e8a1-5ff5-416a-a48d-8a5034b6a916',
+  true,
+  1,
+  '[{"name":"Understand how to extend interfaces using the `extends` keyword to inherit properties from multiple existing interfaces"},{"name":"Learn that interface extension provides an alternative to intersection types for combining object types"},{"name":"Recognize the conceptual difference between intersections (type combination) and extension (subtype inheritance)"}]'::jsonb,
+  '[{"id":"3-2-extensions-task-1","name":"Extend the `RegisterCredentials` interface with the properties of `LoginCredentials` using the `extends` keyword"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"interface LoginCredentials {\n  username: string;\n  password: string;\n}\n\n// Task: Extend the RegisterCredentials interface with the properties of LoginCredentials using the extends keyword\ninterface RegisterCredentials {\n  name: string;\n}\n\n// Do not change the code below\n\nconst registerCredentials: RegisterCredentials = {\n  username: \"john_doe\",\n  password: \"123456\",\n  name: \"John Doe\",\n};\n\nconst loginCredentials: LoginCredentials = {\n  username: \"john_doe\",\n  password: \"123456\",\n};\n\nconsole.log(\"registerCredentials:\", registerCredentials);\nconsole.log(\"loginCredentials:\", loginCredentials);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '68f66cbf-0ec3-425e-af80-eaf8de857063',
+  '3-3-extensions-vs-intersections',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Extensions vs Intersections',
+  'Learn the differences between interface extensions and intersection types and when to use each',
+  '
+In this lesson, you''ll learn about the key differences between interface extensions and intersection types in TypeScript. While both can be used to combine types, interface extensions are stricter and will produce errors when there are conflicting property types, whereas intersection types will combine the conflicts using the `never` type. Understanding these differences is crucial for choosing the right approach for your type composition needs and for writing more robust and maintainable TypeScript code.
+
+Your coding tasks will be observing how TypeScript handles type conflicts differently in interface extensions versus intersection types, helping you understand the practical implications of each approach in real-world scenarios.
+  ',
+  'c9b6d048-04f1-42e1-b375-6c21ab09f6ac',
+  false,
+  2,
+  '[{"name":"Understand the key differences between interface extensions and intersection types for combining types"},{"name":"Learn that interface extensions are stricter and produce errors for conflicting property types"},{"name":"Recognize that intersection types handle conflicts by combining them with the `never` type"},{"name":"Observe how TypeScript handles type conflicts differently in extensions versus intersections"}]'::jsonb,
+  '[{"id":"3-3-extensions-vs-intersections-task-1","name":"Fix the type error in the `User1` type by removing `WithNumberId`"},{"id":"3-3-extensions-vs-intersections-task-2","name":"Fix the type error in the `user2` variable by removing `WithStringId` from the `User2` type"},{"id":"3-3-extensions-vs-intersections-task-3","name":"Assign a `User1` object with name of `\"John Doe\"` and id of `\"1\"` to the `user1` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"interface WithStringId {\n  id: string;\n}\n\ninterface WithNumberId {\n  id: number;\n}\n\n// Do not change the code above\n\n// Task: Fix the type error in the User1 type by removing WithNumberId\ninterface User1 extends WithStringId, WithNumberId {\n  name: string;\n}\n\n// Task: Fix the type error in the user2 variable by removing WithStringId\ntype User2 = WithStringId &\n  WithNumberId & {\n    name: string;\n  };\n\n// Task: Assign a User1 object with name of \"John Doe\" and id of \"1\" to the user1 variable\nlet user1: User1;\n\nlet user2: User2 = { id: 1, name: \"John Doe\" };\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'c91003be-8ffe-45f6-877a-0c2005569faf',
+  '3-4-optional-properties-and-partial',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Optional Properties and Partial',
+  'Learn how to mark properties as optional and use the Partial utility type for flexible object types',
+  '
+In this lesson, you''ll learn about optional properties in TypeScript, which allow you to define object properties that may or may not be present. Optional properties are marked with a question mark (`?`) after the property name. You''ll also learn about the `Partial` utility type, which uses the syntax `Partial<Type>` to create a new type by making all properties of an existing type optional. These features are particularly useful for creating flexible APIs, update operations, and configurations where not all properties are required.
+
+Your coding tasks will be practicing optional property syntax and the `Partial` utility type in a user management scenario, helping you understand how to create more flexible and practical type definitions for real-world use cases.
+  ',
+  '908856b5-7bb6-4786-994a-5fcd931b6b22',
+  false,
+  3,
+  '[{"name":"Understand what optional properties are and how to mark them with the `?` syntax"},{"name":"Learn the `Partial<Type>` syntax and how it makes all properties of a type optional"},{"name":"Recognize that optional properties and `Partial` are useful for update operations and flexible configurations"}]'::jsonb,
+  '[{"id":"3-4-optional-properties-and-partial-task-1","name":"Mark the `bio` property of the `User` interface as optional using the `?` symbol"},{"id":"3-4-optional-properties-and-partial-task-2","name":"Annotate the `user` variable with `User`"},{"id":"3-4-optional-properties-and-partial-task-3","name":"Assign an object with a `firstName` property of `\"John\"` and a `lastName` property of `\"Doe\"` to the `user` variable"},{"id":"3-4-optional-properties-and-partial-task-4","name":"Annotate the `emptyUser` variable with all the properties of `User` optional using the `Partial` type"},{"id":"3-4-optional-properties-and-partial-task-5","name":"Assign an empty object to the `emptyUser` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  firstName: string;\n  lastName: string;\n  // Task: Mark the bio property of the User interface as optional using the ? symbol\n  bio: string;\n};\n\n// Do not change the code above\n\n// Task: Annotate the user variable with User\n// Task: Assign an object with a firstName property of \"John\" and a lastName property of \"Doe\" to the user variable\nlet user;\n\n// Task: Annotate the emptyUser variable with all the properties of User optional using the Partial type\n// Task: Assign an empty object to the emptyUser variable\nlet emptyUser;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\nconsole.log(\"emptyUser:\", emptyUser);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '022afb8d-c2c3-4930-ab2c-c295bc68d0d3',
+  '3-5-read-only-properties-and-readonly',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Read-only Properties and Readonly',
+  'Learn how to make properties immutable using readonly modifier and the Readonly utility type',
+  '
+In this lesson, you''ll learn about read-only properties in TypeScript, which prevent properties from being reassigned after initialization. You can mark individual properties as read-only using the `readonly` modifier, or make all properties of an object read-only using the `Readonly<Type>` utility type. It''s important to understand that `readonly` only prevents reassignment at the TypeScript level and doesn''t make objects deeply immutable - nested objects can still be modified unless they''re also marked as read-only.
+
+Your coding tasks will be practicing the `readonly` modifier and `Readonly` utility type in a user management system, helping you understand how to create more secure and predictable type definitions while being aware of the limitations of shallow immutability.
+  ',
+  'fed5495f-6020-4476-81b2-f8b9e0a97d7e',
+  false,
+  4,
+  '[{"name":"Understand what read-only properties are and how to use the `readonly` modifier"},{"name":"Learn the `Readonly<Type>` syntax and how it makes all properties of a type read-only"},{"name":"Recognize that `readonly` provides shallow immutability and doesn''t prevent nested object modification"}]'::jsonb,
+  '[{"id":"3-5-read-only-properties-and-readonly-task-1","name":"Make the `firstName` property of the `User` interface read-only using the `readonly` keyword"},{"id":"3-5-read-only-properties-and-readonly-task-2","name":"Annotate the `user` variable with User"},{"id":"3-5-read-only-properties-and-readonly-task-3","name":"Assign an object with a `firstName` property of `\"John\"` and a `lastName` property of `\"Doe\"` to the `user` variable"},{"id":"3-5-read-only-properties-and-readonly-task-4","name":"Annotate the `readonlyUser` variable with all the properties of `User` read-only using the `Readonly` type"},{"id":"3-5-read-only-properties-and-readonly-task-5","name":"Assign an object with a `firstName` property of `\"Jane\"` and a `lastName` property of `\"Doe\"` to the `readonlyUser` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  // Task: Make the firstName property of the User interface read-only using the readonly keyword\n  firstName: string;\n  lastName: string;\n};\n\n// Task: Annotate the user variable with User\n// Task: Assign an object with a firstName property of \"John\" and a lastName property of \"Doe\" to the user variable\nlet user;\n\n// Task: Annotate the readonlyUser variable with all the properties of User read-only using the Readonly type\n// Task: Assign an object with a firstName property of \"Jane\" and a lastName property of \"Doe\" to the readonlyUser variable\nlet readonlyUser;\n\n// Do not change the code below\n\nconsole.log(\"readonlyUser:\", readonlyUser);\nconsole.log(\"user:\", user);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '34277ea2-eab0-4ae7-836d-3294dd8838c6',
+  '3-6-keyof',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'keyof',
+  'Learn how to use the keyof operator to create union types of object property names',
+  '
+In this lesson, you''ll learn about the `keyof` operator in TypeScript, which takes an object type and produces a union of its keys. The result of `keyof T` is a union type containing the literal string names of all properties in `T`. For simple object types, this creates a union of string literals, but `keyof` can also produce unions of different types when working with more complex types that have number, symbol, or template literal keys. This operator forms the foundation for many advanced TypeScript patterns and is essential for creating generic utilities that work with object properties. When combined with other TypeScript features, `keyof` enables powerful type-safe property access and manipulation.
+
+Your coding tasks will be practicing the `keyof` operator to restrict function parameters to valid property names of an object type, helping you create more robust and type-safe code when working with dynamic property access.
+  ',
+  'ffca9eeb-8a82-4f22-8568-cf7a45ba5602',
+  false,
+  5,
+  '[{"name":"Understand what the `keyof` operator is, how it creates union types of object property names, and that it produces a union of literal string types for simple objects but can handle more complex key types"},{"name":"Recognize that `keyof` ensures type safety when working with dynamic property access by restricting to valid keys"}]'::jsonb,
+  '[{"id":"3-6-keyof-task-1","name":"Annotate the property variable with a union of all property names of `User` using the `keyof` keyword"},{"id":"3-6-keyof-task-2","name":"Assign a string matching a property name of the `User` type to the `property` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  firstName: string;\n  lastName: string;\n};\n\nconst user = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n};\n\n// Do not change the code above\n\n// Task: Annotate the property variable with a union of all property names of User using the keyof keyword\n// Task: Assign a string matching a property name of the User type to the property variable\nlet property;\n\n// Do not change the code below\n\nconsole.log(\"user[property]:\", user[property]);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'e60dc6a6-acf7-410d-af17-98fa4770f3c0',
+  '3-7-omit',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Omit',
+  'Learn how to create new types by omitting specific properties from existing types using the Omit utility type',
+  '
+In this lesson, you''ll learn about the `Omit` utility type in TypeScript, which creates a new type by removing specified properties from an existing type. The `Omit<Type, Keys>` syntax takes two type parameters: `Type` represents the source type you want to modify, and `Keys` represents the property names (as string literals or union of string literals) that should be excluded from the resulting type. This is particularly useful for creating variations of existing types where certain properties need to be excluded for safety, validation, or internal implementation reasons.
+
+Your coding tasks will be practicing the `Omit` utility type to remove the `id` property from user creation inputs, since IDs are generated internally, helping you understand how to create more precise type definitions for different operations.
+  ',
+  '67c66349-1781-4350-8bb0-d41be18898d3',
+  false,
+  6,
+  '[{"name":"Understand what the `Omit` utility type is and how it removes properties from existing types"},{"name":"Learn the `Omit<Type, Keys>` syntax where `Type` is the source type and `Keys` are the property names to exclude"},{"name":"Recognize that `Keys` can be string literals or unions of string literals representing property names"}]'::jsonb,
+  '[{"id":"3-7-omit-task-1","name":"Annotate the `user` variable with all properties of `User` except `lastName` using the `Omit` type"},{"id":"3-7-omit-task-2","name":"Assign an object with a `firstName` property of `\"John\"` to the `user` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  firstName: string;\n  lastName: string;\n};\n\n// Do not change the code above\n\n// Task: Annotate the user variable with all properties of User except lastName using the Omit type\n// Task: Assign an object with a firstName property of \"John\" to the user variable\nlet user;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '994ef9ad-4330-4888-8ee8-49b6721187ae',
+  '3-8-pick',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Pick',
+  'Learn how to create new types by picking specific properties from existing types using the Pick utility type',
+  '
+In this lesson, you''ll learn about the `Pick` utility type in TypeScript, which creates a new type by selecting specified properties from an existing type. The `Pick<Type, Keys>` syntax takes two type parameters: `Type` represents the source type you want to select from, and `Keys` represents the property names (as string literals or union of string literals) that should be included in the resulting type. This is particularly useful for creating focused type definitions that include only the properties needed for specific use cases. Compared to `Omit`, which excludes properties, `Pick` takes the opposite approach by explicitly including only the properties you specify.
+
+Your coding tasks will be practicing the `Pick` utility type to create focused type definitions that include only specific properties needed for particular use cases, helping you understand when to choose `Pick` over `Omit` based on your specific needs.
+  ',
+  '505db844-33df-45e3-a7ce-8baa5cbffc15',
+  false,
+  7,
+  '[{"name":"Understand what the `Pick` utility type is and how it creates new types by selecting specific properties"},{"name":"Learn the `Pick<Type, Keys>` syntax and how to specify which properties to include"},{"name":"Recognize the difference between `Pick` (explicit inclusion) and `Omit` (explicit exclusion) approaches"}]'::jsonb,
+  '[{"id":"3-8-pick-task-1","name":"Annotate the `user` variable with only the `firstName` property of `User` using the `Pick` type"},{"id":"3-8-pick-task-2","name":"Assign an object with a `firstName` property of `\"John\"` to the `user` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  firstName: string;\n  lastName: string;\n};\n\n// Do not change the code above\n\n// Task: Annotate the user variable with only the firstName property of User using the Pick type\n// Task: Assign an object with a firstName property of \"John\" to the user variable\nlet user;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '780d60f4-fa23-4774-96ad-a96c06bbe824',
+  '3-9-required',
+  'df624453-8c8c-404f-a575-0180e359bb67',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Required',
+  'Learn how to use the Required utility type to make all properties of a type mandatory',
+  '
+In this lesson, you''ll learn about the `Required` utility type in TypeScript, which does the opposite of the `Partial` utility type you learned about in the "Optional Properties and Partial" lesson. While `Partial<Type>` makes all properties optional, `Required<Type>` makes all properties required, removing any optional modifiers from the type. This is particularly useful when you need to ensure that certain operations or functions receive complete objects with all properties present, even if the original type definition allows some properties to be optional.
+
+Your coding tasks will be practicing the `Required` utility type to enforce that all properties must be provided in specific scenarios, helping you create more robust APIs that guarantee complete data when needed.
+  ',
+  '1dea0480-9fd5-41a4-9ae4-97f1ee1750b8',
+  false,
+  8,
+  '[{"name":"Understand what the `Required` utility type is and how it makes all properties of a type mandatory"},{"name":"Learn that `Required<Type>` is the opposite of `Partial<Type>` - it removes optional modifiers rather than adding them"},{"name":"Recognize that `Required` is useful for enforcing complete objects in specific operations or validations"}]'::jsonb,
+  '[{"id":"3-9-required-task-1","name":"Annotate the `user` variable with all the properties of `User` required using the `Required` type"},{"id":"3-9-required-task-2","name":"Assign an object with a `firstName` property of `\"John\"` and a `lastName` property of `\"Doe\"` to the `user` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  firstName: string;\n  lastName?: string;\n};\n\n// Do not change the code above\n\n// Task: Annotate the user variable with all the properties of User required using the Required type\n// Task: Assign an object with a firstName property of \"John\" and a lastName property of \"Doe\" to the user variable\nlet user;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '4-advanced-typescript-features',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Advanced TypeScript Features',
+  'Master advanced TypeScript features including utility types, template literal types, const assertions, the satisfies operator, mapped types, and typed classes',
+  3
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '84b731fa-699c-4c1c-a09f-5273f7356843',
+  '4-1-extract-and-exclude',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Extract and Exclude',
+  'Learn how to use Extract and Exclude utility types to filter union types',
+  '
+In this lesson, you''ll learn about the `Extract` and `Exclude` utility types in TypeScript, which operate on union types similarly to how `Pick` and `Omit` work on object types. While `Pick` and `Omit` filter properties from object types, `Extract<Type, Union>` and `Exclude<Type, Union>` filter members from union types. `Extract` constructs a type by extracting from `Type` all union members that are assignable to `Union`, while `Exclude` constructs a type by excluding from `Type` all union members that are assignable to `Union`. These utilities are particularly useful for creating refined union types based on existing ones.
+
+Your coding tasks will be practicing the `Extract` and `Exclude` utility types to create filtered union types from existing string literal unions, helping you understand how to manipulate and refine union types for more precise type definitions.
+  ',
+  '58f364f9-c1a6-45bd-bbde-79209cf70fe6',
+  true,
+  0,
+  '[{"name":"Understand what the `Extract` and `Exclude` utility types are and how they filter union types"},{"name":"Learn that `Extract` and `Exclude` work on union types similarly to how `Pick` and `Omit` work on object types"},{"name":"Recognize that `Extract` keeps union members assignable to a type while `Exclude` removes them"}]'::jsonb,
+  '[{"id":"4-1-extract-and-exclude-task-1","name":"Create a `UserCredentials` type alias by extracting the `\"password\"` and `\"email\"` literal types of `UserProperties` using the `Extract` type"},{"id":"4-1-extract-and-exclude-task-2","name":"Create a `UserPublicProperties` type alias by excluding the `\"password\"` and `\"email\"` literal types of `UserProperties` using the `Exclude` type"},{"id":"4-1-extract-and-exclude-task-3","name":"Annotate the `userCredentialPropName` variable with `UserCredentials` and assign a valid value"},{"id":"4-1-extract-and-exclude-task-4","name":"Annotate the `userPublicPropName` variable with `UserPublicProperties` and assign a valid value"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type UserProperties = \"id\" | \"name\" | \"password\" | \"email\" | \"bio\";\n\n// Do not change the code above\n\n// Task: Create a UserCredentials type alias by extracting the \"password\" and \"email\" literal types of UserProperties using the Extract type\n\n// Task: Create a UserPublicProperties type alias by excluding the \"password\" and \"email\" literal types of UserProperties using the Exclude type\n\n// Task: Annotate the userCredentialPropName variable with UserCredentials and assign a valid value\nlet userCredentialPropName;\n\n// Task: Annotate the userPublicPropName variable with UserPublicProperties and assign a valid value\nlet userPublicPropName;\n\n// Do not change the code below\n\nconsole.log(\"userCredentialPropName:\", userCredentialPropName);\nconsole.log(\"userPublicPropName:\", userPublicPropName);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '8c0ca03f-6f37-4b61-840a-fed344c155fa',
+  '4-2-parameters-and-returntype',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Parameters and ReturnType',
+  'Learn how to extract function parameter types and return types using Parameters and ReturnType utility types',
+  '
+In this lesson, you''ll learn about the `Parameters` and `ReturnType` utility types in TypeScript, which allow you to extract the parameter types and return type from function types. The `Parameters<Type>` utility constructs a tuple type from the types used in the function''s parameters, while `ReturnType<Type>` extracts the return type of the function. These utilities are particularly useful when you need to work with function types in a generic way, such as creating wrapper functions, type-safe decorators, or when you need to reference a function''s signature without having direct access to its type definitions.
+
+Your coding tasks will be practicing the `Parameters` and `ReturnType` utility types to extract and inspect function signatures, helping you understand how to work with function types programmatically in TypeScript.
+  ',
+  '79b3435c-7547-4f7c-9ed0-a2ef3b2bed1e',
+  true,
+  1,
+  '[{"name":"Learn what the `Parameters` utility type is and how it extracts function parameter types as a tuple"},{"name":"Learn what the `ReturnType` utility type is and how it extracts a function''s return type"},{"name":"Recognize that these utilities are useful for working with function types generically and creating type-safe wrappers"}]'::jsonb,
+  '[{"id":"4-2-parameters-and-returntype-task-1","name":"Annotate the `parameters` variable with the parameters of the `sum` function using the `Parameters` type"},{"id":"4-2-parameters-and-returntype-task-2","name":"Assign a tuple of two numbers to the `parameters` variable"},{"id":"4-2-parameters-and-returntype-task-3","name":"Annotate the `returnValue` variable with the return type of the `sum` function using the `ReturnType` type"},{"id":"4-2-parameters-and-returntype-task-4","name":"Call `sum(...parameters)` and assign the result to the `returnValue` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"function sum(a: number, b: number) {\n  return a + b;\n}\n\n// Do not change the code above\n\n// Task: Annotate the parameters variable with the parameters of the sum function using the Parameters type\n// Task: Assign a tuple of two numbers to the parameters variable\nlet parameters;\n\n// Task: Annotate the returnValue variable with the return type of the sum function using the ReturnType type\n// Task: Call sum(...parameters) and assign the result to the returnValue variable\nlet returnValue;\n\n// Do not change the code below\n\nconsole.log(\"parameters:\", parameters);\nconsole.log(\"returnValue:\", returnValue);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'f940da92-3146-4461-84d6-0a6870a864e4',
+  '4-3-awaited',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Awaited',
+  'Learn how to use the Awaited utility type to extract the resolved type from Promises',
+  '
+In this lesson, you''ll learn about the `Awaited` utility type in TypeScript, which recursively unwraps Promise types to extract the type of the value they resolve to. The `Awaited<Type>` utility is particularly useful when working with asynchronous operations, as it allows you to work with the underlying value type without manually unwrapping nested Promise types. This utility handles not only simple Promises but also complex nested Promise structures, making it invaluable for type-safe asynchronous programming and for creating utilities that work with Promise-based APIs.
+
+Your coding tasks will be practicing the `Awaited` utility type to extract the resolved value type from Promise types, helping you understand how to work with asynchronous types in a type-safe manner.
+  ',
+  '1ef74d19-407e-4c78-a5f6-328e7afa012e',
+  false,
+  2,
+  '[{"name":"Understand what the `Awaited` utility type is and how it extracts the resolved type from Promises"},{"name":"Learn that `Awaited` recursively unwraps Promise types, handling both simple and complex nested Promise structures"},{"name":"Recognize that `Awaited` is particularly useful for type-safe asynchronous programming and Promise-based APIs"}]'::jsonb,
+  '[{"id":"4-3-awaited-task-1","name":"Annotate the `user` variable with the awaited return value of `UserPromise` using the `Awaited` type"},{"id":"4-3-awaited-task-2","name":"Assign an object with valid properties and values to the `user` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type UserPromise = Promise<{\n  firstName: string;\n  lastName: string;\n}>;\n\n// Do not change the code above\n\n// Task: Annotate the user variable with the awaited return value of UserPromise using the Awaited type\n// Task: Assign an object with valid properties and values to the user variable\nlet user;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'fb97edcd-fa0a-4731-8c6d-d5081fa95a70',
+  '4-4-template-literal-types',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Template Literal Types',
+  'Learn how to create string types using template literal syntax for more precise type definitions',
+  '
+In this lesson, you''ll learn about template literal types in TypeScript, which build on string literal types to create new string types using template syntax. Template literal types use the same syntax as JavaScript template literals but at the type level, allowing you to create types that represent specific string patterns. When combined with union types, template literal types can generate many string variations automatically, making them powerful for creating type-safe APIs, event handlers, and string manipulation utilities.
+
+Your coding tasks will be practicing template literal types to create string patterns and combine them with union types to generate multiple string type variations.
+  ',
+  '7b6f1826-07cd-485d-a4bc-8dda04bb61ac',
+  false,
+  3,
+  '[{"name":"Understand what template literal types are and how they create string types using template syntax"},{"name":"Learn how template literal types expand union types to create multiple string variations"},{"name":"Recognize practical use cases for template literal types such as event names and CSS properties"}]'::jsonb,
+  '[{"id":"4-4-template-literal-types-task-1","name":"Create a `Greeting` type alias using a template literal type that produces `Hello, ${string}!`"},{"id":"4-4-template-literal-types-task-2","name":"Annotate the `greeting` variable with `Greeting` and assign `\"Hello, World!\"`"},{"id":"4-4-template-literal-types-task-3","name":"Create an `EventName` type alias using a template literal type that combines `EventType` and `EventElement` as `${EventType}-${EventElement}`"},{"id":"4-4-template-literal-types-task-4","name":"Annotate the `eventName` variable with `EventName`"},{"id":"4-4-template-literal-types-task-5","name":"Assign `\"click-button\"` to the `eventName` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Create a Greeting type alias using a template literal type that produces Hello, ${string}!\n\n// Task: Annotate the greeting variable with Greeting and assign \"Hello, World!\"\nlet greeting;\n\ntype EventType = \"click\" | \"focus\" | \"blur\";\ntype EventElement = \"button\" | \"input\" | \"form\";\n\n// Do not change the code above\n\n// Task: Create an EventName type alias using a template literal type that combines EventType and EventElement as ${EventType}-${EventElement}\n\n// Task: Annotate the eventName variable with EventName\n// Task: Assign \"click-button\" to the eventName variable\nlet eventName;\n\n// Do not change the code below\n\nconsole.log(\"greeting:\", greeting);\nconsole.log(\"eventName:\", eventName);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'e6655f54-9a0c-4c93-a2a5-62239327c54b',
+  '4-5-const-assertions',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Const Assertions',
+  'Learn how to use const assertions to create deeply immutable types with literal type inference',
+  '
+In this lesson, you''ll learn about const assertions (`as const`) in TypeScript, which tell the compiler to infer the most specific (literal) type possible for a value. When you use `as const` on an object or array, TypeScript will infer literal types for all properties and make them readonly. This is particularly useful when you want to create configuration objects, define constants, or work with literal union types derived from arrays or objects. Const assertions prevent widening of literal types and ensure your values remain immutable at the type level.
+
+Your coding tasks will be practicing const assertions to create readonly objects with literal types, and using them to derive union types from arrays.
+  ',
+  'ead9c01a-502a-4d56-9048-e9dc9e3ba656',
+  false,
+  4,
+  '[{"name":"Understand what const assertions (`as const`) do and how they affect type inference"},{"name":"Learn that const assertions make objects and arrays deeply readonly with literal types"},{"name":"Recognize how to use const assertions to derive literal union types from arrays"}]'::jsonb,
+  '[{"id":"4-5-const-assertions-task-1","name":"Add a const assertion to the `colors` array using `as const`"},{"id":"4-5-const-assertions-task-2","name":"Create a `Color` type alias using `typeof colors[number]` to get a union of the color literals"},{"id":"4-5-const-assertions-task-3","name":"Annotate the `selectedColor` variable with `Color` and assign `\"blue\"`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Add a const assertion to the colors array using as const\nconst colors = [\"red\", \"green\", \"blue\"];\n\n// Task: Create a Color type alias using typeof colors[number] to get a union of the color literals\n\n// Task: Annotate the selectedColor variable with Color and assign \"blue\"\nlet selectedColor;\n\n// Do not change the code below\n\nconsole.log(\"colors:\", colors);\nconsole.log(\"selectedColor:\", selectedColor);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '44dfe020-65e6-48a7-a52c-f85be358b1a3',
+  '4-6-satisfies-operator',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Satisfies Operator',
+  'Learn how to use the satisfies operator to validate types while preserving inferred types',
+  '
+In this lesson, you''ll learn about the `satisfies` operator in TypeScript, which allows you to validate that a value matches a type without widening or changing its inferred type. Unlike type annotations which replace the inferred type, `satisfies` checks that the value conforms to a type while keeping the more specific inferred type. This is particularly useful when you want type-checking on object literals while still preserving access to specific property types and their methods.
+
+Your coding tasks will be practicing the satisfies operator to validate object shapes while maintaining access to literal types and specific property values.
+  ',
+  '38681727-b1e1-42d3-ad1a-2e47cbe10a95',
+  false,
+  5,
+  '[{"name":"Understand what the `satisfies` operator does and how it differs from type annotations"},{"name":"Learn that `satisfies` validates type compatibility while preserving the inferred type"},{"name":"Recognize when to use `satisfies` versus type annotations or const assertions"}]'::jsonb,
+  '[{"id":"4-6-satisfies-operator-task-1","name":"Add `satisfies Record<string, string | number>` to the `person` object"},{"id":"4-6-satisfies-operator-task-2","name":"Call `person.name.toUpperCase()` and assign the result to the `upperName` variable"},{"id":"4-6-satisfies-operator-task-3","name":"Call `person.age.toFixed()` and assign the result to the `formattedAge` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"// Task: Add satisfies Record<string, string | number> to the person object\nconst person = {\n  name: \"John Doe\",\n  age: 30,\n  email: \"john@example.com\",\n};\n\n// Task: Call person.name.toUpperCase() and assign the result to the upperName variable\nlet upperName;\n\n// Task: Call person.age.toFixed() and assign the result to the formattedAge variable\nlet formattedAge;\n\n// Do not change the code below\n\nconsole.log(\"upperName:\", upperName);\nconsole.log(\"formattedAge:\", formattedAge);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  '231f9894-352b-49a2-b334-8082d4e78d4d',
+  '4-7-mapped-types',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Mapped Types',
+  'Learn how to create new types by transforming properties of existing types using mapped types',
+  '
+In this lesson, you''ll learn about mapped types in TypeScript, which allow you to create new types by iterating over the keys of an existing type and transforming them. Mapped types use the `in` keyword combined with `keyof` to iterate over property keys and create new properties. This is the underlying mechanism that powers utility types like `Partial`, `Required`, `Readonly`, and `Pick`. Understanding mapped types gives you the foundation to create your own custom type transformations.
+
+Your coding tasks will be practicing mapped types by creating simple type transformations that iterate over object properties, helping you understand how built-in utility types work under the hood.
+  ',
+  'e16563b9-5235-4f6d-84f3-d4b59a8bdb83',
+  false,
+  6,
+  '[{"name":"Understand what mapped types are and how they transform properties of existing types"},{"name":"Learn the syntax for mapped types using `[K in keyof T]` to iterate over keys"},{"name":"Recognize that mapped types are the foundation for utility types like `Partial`, `Required`, and `Readonly`"}]'::jsonb,
+  '[{"id":"4-7-mapped-types-task-1","name":"Create a `MyReadonly` mapped type that makes all properties of `T` readonly using `{ readonly [K in keyof T]: T[K] }`"},{"id":"4-7-mapped-types-task-2","name":"Annotate the `readonlyUser` variable with `MyReadonly<User>` and assign a user object with `firstName` and `lastName` properties"},{"id":"4-7-mapped-types-task-3","name":"Create a `MyPartial` mapped type that makes all properties of `T` optional using `{ [K in keyof T]?: T[K] }`"},{"id":"4-7-mapped-types-task-4","name":"Annotate the `partialUser` variable with `MyPartial<User>` and assign an empty object `{}`"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"type User = {\n  firstName: string;\n  lastName: string;\n};\n\n// Do not change the code above\n\n// Task: Create a MyReadonly mapped type that makes all properties of T readonly using { readonly [K in keyof T]: T[K] }\n\n// Task: Annotate the readonlyUser variable with MyReadonly<User> and assign a user object with firstName and lastName properties\nlet readonlyUser;\n\n// Task: Create a MyPartial mapped type that makes all properties of T optional using { [K in keyof T]?: T[K] }\n\n// Task: Annotate the partialUser variable with MyPartial<User> and assign an empty object {}\nlet partialUser;\n\n// Do not change the code below\n\nconsole.log(\"readonlyUser:\", readonlyUser);\nconsole.log(\"partialUser:\", partialUser);\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (
+  'e29f1a9d-2ed6-4dfb-aea1-903d46d56e62',
+  '4-8-typing-classes',
+  '9cc0dfe2-a579-411b-bcfa-dee1150e2263',
+  '876d2a56-114b-4e78-9c53-6d6e7e4116e9',
+  'Typing Classes',
+  'Learn how to add type annotations to classes including properties, constructors, and methods',
+  '
+In this lesson, you''ll learn how to type classes in TypeScript. Classes are blueprints for creating objects with shared properties and methods. TypeScript allows you to add type annotations to class properties, constructor parameters, and method return types, ensuring type safety throughout your class definitions. You''ll also learn about access modifiers like `public`, `private`, and `protected`, and how TypeScript provides a shorthand for declaring and initializing properties directly in the constructor.
+
+Your coding tasks will be creating a typed class with properties and a method, helping you understand how to apply TypeScript''s type system to object-oriented programming patterns.
+  ',
+  '4c81f4d2-2b62-4aff-94ac-db5ec3dca72a',
+  false,
+  7,
+  '[{"name":"Understand how to add type annotations to class properties and methods"},{"name":"Learn about access modifiers (`public`, `private`, `protected`) and their role in TypeScript classes"},{"name":"Recognize the constructor parameter shorthand for declaring and initializing properties simultaneously"}]'::jsonb,
+  '[{"id":"4-8-typing-classes-task-1","name":"Annotate the `firstName` property as a `string`"},{"id":"4-8-typing-classes-task-2","name":"Annotate the `lastName` property as a `string`"},{"id":"4-8-typing-classes-task-3","name":"Annotate the `firstName` and `lastName` parameters of the constructor as `string`s"},{"id":"4-8-typing-classes-task-4","name":"Assign the `firstName` parameter to `this.firstName`"},{"id":"4-8-typing-classes-task-5","name":"Assign the `lastName` parameter to `this.lastName`"},{"id":"4-8-typing-classes-task-6","name":"Add a return type annotation of `string` to the `getFullName` method"},{"id":"4-8-typing-classes-task-7","name":"Create a new instance of `User` with `firstName` of `\"John\"` and `lastName` of `\"Doe\"` and assign it to the `user` variable"}]'::jsonb,
+  '{"template":"vanilla-ts","files":{"index.ts":{"code":"class User {\n  // Task: Annotate the firstName property as a string\n  firstName;\n  // Task: Annotate the lastName property as a string\n  lastName;\n\n  // Task: Annotate the firstName and lastName parameters of the constructor as strings\n  constructor(firstName, lastName) {\n    // Task: Assign the firstName parameter to this.firstName\n    // Task: Assign the lastName parameter to this.lastName\n  }\n\n  // Task: Add a return type annotation of string to the getFullName method\n  getFullName() {\n    return `${this.firstName} ${this.lastName}`;\n  }\n}\n\n// Do not change the code above\n\n// Task: Create a new instance of User with firstName of \"John\" and lastName of \"Doe\" and assign it to the user variable\nlet user;\n\n// Do not change the code below\n\nconsole.log(\"user:\", user);\nconsole.log(\"fullName:\", user.getFullName());\n","hidden":false,"active":false,"readOnly":false,"asset":false}}}'::jsonb,
+  '[]'::jsonb
+);
+
+-- ------------------------------------------------------
+-- 插入课程: React with TypeScript (react-with-typescript)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '9d8adbdd-aa7b-4a31-be0c-ae56f089caec',
+  'react-with-typescript',
+  'React with TypeScript',
+  'Learn how React works with TypeScript, including type-safe components, props, hooks, and building robust React applications',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  5,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: Redux with Redux Toolkit (redux)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  'b23bd757-337e-463a-8e7a-04223ed55d90',
+  'redux',
+  'Redux with Redux Toolkit',
+  'Learn global state management with actions, reducers, middleware, Redux Toolkit, and building scalable application architectures',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  6,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: Zustand (zustand)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '5a86a7e1-47c9-4279-b374-11ded8ff5305',
+  'zustand',
+  'Zustand',
+  'Manage application state with simple stores, middleware, persistence, selectors, and building lightweight, performant state solutions',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  7,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: React Router (Data Mode) (react-router)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '50d0f08c-2a24-4524-97dd-ae81ede277bd',
+  'react-router',
+  'React Router (Data Mode)',
+  'Learn client-side routing with navigation, nested routes, loaders, actions, protected routes, and building seamless single-page applications',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  8,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: Tanstack Router (tanstack-router)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  'e38044f0-87bb-499a-a93c-904e9b1b36b9',
+  'tanstack-router',
+  'Tanstack Router',
+  'Build type-safe applications with fully-typed routing, navigation, loaders, search params, and creating modern single-page experiences',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  9,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: React Hook Form (react-hook-form)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '11c24b35-a3be-4b6a-aa76-48449fbd8011',
+  'react-hook-form',
+  'React Hook Form',
+  'Create powerful forms with validation, error handling, field arrays, dynamic inputs, and building performant user input experiences',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  10,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: TanStack Form (tanstack-form)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  'c2c118e2-dff0-43a4-8973-7ce15ebdf3a5',
+  'tanstack-form',
+  'TanStack Form',
+  'Build performant forms with type-safe validation, field arrays, dynamic inputs, and creating seamless user input experiences',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  11,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: Tailwind (tailwind)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '5d60b125-c137-4798-a5ec-c601272a6aca',
+  'tailwind',
+  'Tailwind',
+  'Style modern applications with utility-first CSS, responsive design, custom configurations, animations, and building beautiful user interfaces',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  12,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: Next.js (nextjs)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  'd488c12a-4b2b-4f39-bd29-a870c0528048',
+  'nextjs',
+  'Next.js',
+  'Build full-stack React applications with server components, file-based routing, data fetching, caching, and modern web development patterns',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  13,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: Tanstack Start (tanstack-start)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  '3a183a75-818c-4371-bfab-3103217d8249',
+  'tanstack-start',
+  'Tanstack Start',
+  'Create full-stack React applications with server-side rendering, file-based routing, streaming, data fetching, and modern SSR patterns',
+  NULL,
+  'beginner',
+  12,
+  'draft',
+  14,
+  0,
+  0
+);
+
+-- ------------------------------------------------------
+-- 插入课程: React Router (Framework Mode) (react-router-framework-mode)
+-- ------------------------------------------------------
+INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (
+  'd0ee9d4a-66db-46cc-ae34-ceeb261c0d94',
+  'react-router-framework-mode',
+  'React Router (Framework Mode)',
+  'Learn framework-style routing with React Router, including file-based routing, layouts, server components integration, and building modern full-stack applications',
+  NULL,
+  'intermediate',
+  12,
+  'draft',
+  15,
+  0,
+  0
+);
+
+COMMIT;

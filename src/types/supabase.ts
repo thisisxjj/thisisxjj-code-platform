@@ -34,6 +34,176 @@ export type Database = {
   }
   public: {
     Tables: {
+      courses: {
+        Row: {
+          average_rating: number
+          created_at: string
+          description: string | null
+          difficulty: Database["public"]["Enums"]["course_difficulty"]
+          duration_in_hours: number
+          id: string
+          long_description: string | null
+          name: string
+          order_index: number
+          review_count: number
+          slug: string
+          status: Database["public"]["Enums"]["course_status"]
+          thumbnail_url: string | null
+          updated_at: string
+          xp_reward: number
+        }
+        Insert: {
+          average_rating?: number
+          created_at?: string
+          description?: string | null
+          difficulty?: Database["public"]["Enums"]["course_difficulty"]
+          duration_in_hours?: number
+          id?: string
+          long_description?: string | null
+          name: string
+          order_index?: number
+          review_count?: number
+          slug: string
+          status?: Database["public"]["Enums"]["course_status"]
+          thumbnail_url?: string | null
+          updated_at?: string
+          xp_reward?: number
+        }
+        Update: {
+          average_rating?: number
+          created_at?: string
+          description?: string | null
+          difficulty?: Database["public"]["Enums"]["course_difficulty"]
+          duration_in_hours?: number
+          id?: string
+          long_description?: string | null
+          name?: string
+          order_index?: number
+          review_count?: number
+          slug?: string
+          status?: Database["public"]["Enums"]["course_status"]
+          thumbnail_url?: string | null
+          updated_at?: string
+          xp_reward?: number
+        }
+        Relationships: []
+      }
+      lessons: {
+        Row: {
+          code_editor: Json
+          context: string | null
+          course_id: string
+          created_at: string
+          description: string | null
+          id: string
+          is_free: boolean
+          module_id: string
+          name: string
+          objectives: Json
+          order_index: number
+          resources: Json
+          slug: string
+          tasks: Json
+          updated_at: string
+          video_id: string | null
+          xp_reward: number
+        }
+        Insert: {
+          code_editor?: Json
+          context?: string | null
+          course_id: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_free?: boolean
+          module_id: string
+          name: string
+          objectives?: Json
+          order_index?: number
+          resources?: Json
+          slug: string
+          tasks?: Json
+          updated_at?: string
+          video_id?: string | null
+          xp_reward?: number
+        }
+        Update: {
+          code_editor?: Json
+          context?: string | null
+          course_id?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_free?: boolean
+          module_id?: string
+          name?: string
+          objectives?: Json
+          order_index?: number
+          resources?: Json
+          slug?: string
+          tasks?: Json
+          updated_at?: string
+          video_id?: string | null
+          xp_reward?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lessons_module_id_course_id_fkey"
+            columns: ["module_id", "course_id"]
+            isOneToOne: false
+            referencedRelation: "modules"
+            referencedColumns: ["id", "course_id"]
+          },
+        ]
+      }
+      modules: {
+        Row: {
+          course_id: string
+          created_at: string
+          description: string | null
+          id: string
+          name: string
+          order_index: number
+          slug: string
+          updated_at: string
+        }
+        Insert: {
+          course_id: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          name: string
+          order_index?: number
+          slug: string
+          updated_at?: string
+        }
+        Update: {
+          course_id?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          name?: string
+          order_index?: number
+          slug?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "modules_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "course_summaries"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "modules_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "courses"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profile_details: {
         Row: {
           additional_info: Json | null
@@ -139,13 +309,32 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      course_summaries: {
+        Row: {
+          average_rating: number | null
+          description: string | null
+          difficulty: Database["public"]["Enums"]["course_difficulty"] | null
+          duration_in_hours: number | null
+          id: string | null
+          lesson_count: number | null
+          module_count: number | null
+          name: string | null
+          order_index: number | null
+          review_count: number | null
+          slug: string | null
+          status: Database["public"]["Enums"]["course_status"] | null
+          task_count: number | null
+          thumbnail_url: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      course_difficulty: "beginner" | "intermediate" | "advanced"
+      course_status: "draft" | "published" | "archived"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -275,7 +464,10 @@ export const Constants = {
     Enums: {},
   },
   public: {
-    Enums: {},
+    Enums: {
+      course_difficulty: ["beginner", "intermediate", "advanced"],
+      course_status: ["draft", "published", "archived"],
+    },
   },
 } as const
 

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.json",
+  "_comment": "Supabase 脚本专用配置，运行于 Node.js 环境，使用 CommonJS 模块系统",
+
+  "compilerOptions": {
+
+    // ── 覆盖基础配置：模块系统 ────────────────────────────
+    "module": "CommonJS",         // 脚本用 CommonJS，避免 ESM 的 .js 后缀问题
+    "moduleResolution": "Node",   // 对应 CommonJS 的解析策略
+
+    // ── 覆盖基础配置：Node.js 类型支持 ───────────────────
+    "lib": ["ES2022"],
+    "types": ["node"],            // 仅注入 Node.js 类型，不引入浏览器 DOM 类型
+
+    // ── 覆盖基础配置：输出目录 ────────────────────────────
+    "outDir": "../../dist/scripts", // 编译产物隔离，不污染 src
+    "rootDir": ".",
+
+    // ── 脚本环境放宽的规则 ────────────────────────────────
+    // 脚本里 console.log 是有意为之，不需要这两条
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+
+  "include": [
+    "./**/*.ts"                   // 只编译 scripts 目录下的文件
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

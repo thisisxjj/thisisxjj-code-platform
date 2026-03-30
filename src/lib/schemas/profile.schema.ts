@@ -1,4 +1,4 @@
-import { email, z } from "zod";
+import { z } from "zod";
 import type { Database } from "@/types/supabase"; // Supabase 自动生成的类型
 
 type ProfileRow = Database["public"]["Tables"]["profile_details"]["Row"];
@@ -11,7 +11,7 @@ const RawProfileSchema = z.object({
 	updated_at: z.string(),
 	bio: z.string().nullable(),
 	username: z.string(),
-	email: z.string(),
+	email: z.email(),
 	name: z.string(),
 	occupation: z.string().nullable(),
 	additional_info: z.json(),
