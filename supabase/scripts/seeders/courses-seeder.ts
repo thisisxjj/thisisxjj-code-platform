@@ -1,4 +1,4 @@
-import { randomUUID } from 'crypto';
+import { randomUUID } from 'node:crypto';
 import { escapeText, escapeJsonb, validateEnum } from '../utils/sql-helpers';
 
 /**
@@ -31,7 +31,7 @@ export function generateCoursesSql(courses: any[]): string {
     sql += `-- ------------------------------------------------------\n`;
     sql += `-- 插入课程: ${course.name} (${course.id})\n`;
     sql += `-- ------------------------------------------------------\n`;
-    sql += `INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating) VALUES (\n`;
+    sql += `INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (\n`;
     sql += `  '${courseId}',\n`;
     sql += `  ${escapeText(course.id)},\n`;
     sql += `  ${escapeText(course.name)},\n`;
@@ -42,7 +42,9 @@ export function generateCoursesSql(courses: any[]): string {
     sql += `  '${status}',\n`;
     sql += `  ${courseIndex},\n`;
     sql += `  ${course.reviewCount ?? 0},\n`;
-    sql += `  ${course.averageRating ?? 0.00}\n`;
+    sql += `  ${course.averageRating ?? 0.00},\n`;
+    sql += `  ${course.xpReward ?? 100},\n`;
+    sql += `  ${escapeText(course.thumbnailUrl) ?? 'NULL'}\n`;
     sql += `);\n\n`;
 
     if (course.modules && Array.isArray(course.modules)) {
@@ -62,21 +64,31 @@ export function generateCoursesSql(courses: any[]): string {
           module.lessons.forEach((lesson: any, lessonIndex: number) => {
             const lessonId = randomUUID();
 
-            sql += `INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, context, video_id, is_free, order_index, objectives, tasks, code_editor, resources) VALUES (\n`;
+            const lessonType = validateEnum(
+              lesson.type,
+              ['standard', 'whiteboard', 'video', 'quiz'],
+              'standard',
+              `Lesson: ${lesson.id}`
+            );
+
+            sql += `INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (\n`;
             sql += `  '${lessonId}',\n`;
             sql += `  ${escapeText(lesson.id)},\n`;
             sql += `  '${moduleId}',\n`;
             sql += `  '${courseId}',\n`;
             sql += `  ${escapeText(lesson.name)},\n`;
             sql += `  ${escapeText(lesson.description)},\n`;
+            sql += `  '${lessonType}',\n`;
             sql += `  ${escapeText(lesson.context)},\n`;
             sql += `  ${escapeText(lesson.videoId)},\n`;
             sql += `  ${(lesson.isFree ?? false) ? 'true' : 'false'},\n`;
             sql += `  ${lessonIndex},\n`;
+            sql += `  ${lesson.xpReward ?? 10},\n`;
             sql += `  ${escapeJsonb(lesson.objectives || [])},\n`;
             sql += `  ${escapeJsonb(lesson.tasks || [])},\n`;
             sql += `  ${escapeJsonb(lesson.codeEditor || {})},\n`;
-            sql += `  ${escapeJsonb(lesson.resources || [])}\n`;
+            sql += `  ${escapeJsonb(lesson.resources || [])},\n`;
+            sql += `  ${escapeJsonb(lesson.whiteboard || { elements: [] })}\n`;
             sql += `);\n\n`;
           });
         }

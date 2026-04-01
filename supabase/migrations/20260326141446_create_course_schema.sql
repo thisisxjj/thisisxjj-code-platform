@@ -1,8 +1,8 @@
+begin;
+
 -- ============================================================
 -- 1. 创建通用函数与自定义枚举类型
 -- ============================================================
-
--- 自动更新 updated_at 的触发器函数
 create or replace function public.handle_updated_at()
 returns trigger
 set search_path = ''
@@ -13,34 +13,41 @@ begin
 end;
 $$ language plpgsql;
 
--- 课程难度枚举
-create type public.course_difficulty as enum ('beginner', 'intermediate', 'advanced');
+do $$ begin create type public.course_difficulty as enum ('beginner', 'intermediate', 'advanced'); exception when duplicate_object then null; end $$;
+do $$ begin create type public.course_status as enum ('draft', 'published', 'archived'); exception when duplicate_object then null; end $$;
+do $$ begin create type public.lesson_type as enum ('standard', 'whiteboard', 'video', 'quiz'); exception when duplicate_object then null; end $$;
 
--- 课程状态枚举 (替代布尔值，为后续扩展打底)
-create type public.course_status as enum ('draft', 'published', 'archived');
+-- 封装 task_count 计算逻辑为纯函数 (Immutable)，并设置 search_path 防御
+create or replace function public.calc_task_count(l_type public.lesson_type, l_tasks jsonb)
+returns integer
+language sql
+immutable
+set search_path = ''
+as $$
+  select case
+    when l_type = 'whiteboard' then 0
+    when jsonb_typeof(l_tasks) = 'array' then jsonb_array_length(l_tasks)
+    else 0
+  end;
+$$;
 
 -- ============================================================
 -- 2. courses 表 (课程主表)
 -- ============================================================
-create table public.courses (
+create table if not exists public.courses (
   id                 uuid primary key default gen_random_uuid(),
-  slug               text unique not null,       -- 前端路由标识，如 "javascript"
-  name               text not null,              -- UI 展示名称，如 "JavaScript 核心课程"
+  slug               text unique not null check (slug ~ '^[a-z0-9]([a-z0-9-]*[a-z0-9])?$'),
+  name               text not null,
   description        text,
   long_description   text,
   difficulty         public.course_difficulty not null default 'beginner',
-  duration_in_hours  integer not null default 0,
+  duration_in_hours  integer not null default 0 check (duration_in_hours >= 0),
   status             public.course_status not null default 'draft',
-  order_index        integer not null default 0,
+  order_index        integer not null default 0 check (order_index >= 0),
   thumbnail_url      text,
-
-  -- 预留字段：为 Phase 2 经验值系统和评价系统做好准备
-  xp_reward          integer not null default 100,
-  review_count       integer not null default 0,
-
-  -- 明确为 1-5 星评分制 (如 4.85)
+  xp_reward          integer not null default 100 check (xp_reward >= 0),
+  review_count       integer not null default 0 check (review_count >= 0),
   average_rating     numeric(3,2) not null default 0.00 check (average_rating >= 0.00 and average_rating <= 5.00),
-
   created_at         timestamptz not null default now(),
   updated_at         timestamptz not null default now()
 );
@@ -48,167 +55,170 @@ create table public.courses (
 -- ============================================================
 -- 3. modules 表 (课程模块表)
 -- ============================================================
-create table public.modules (
+create table if not exists public.modules (
   id                 uuid primary key default gen_random_uuid(),
-  slug               text not null,              -- 前端路由标识，如 "1-getting-started"
+  slug               text not null check (slug ~ '^[a-z0-9]([a-z0-9-]*[a-z0-9])?$'),
   course_id          uuid not null references public.courses(id) on delete cascade,
-  name               text not null,              -- UI 展示名称，如 "Getting Started"
+  name               text not null,
   description        text,
-  order_index        integer not null default 0,
-
+  order_index        integer not null default 0 check (order_index >= 0),
   created_at         timestamptz not null default now(),
   updated_at         timestamptz not null default now(),
-
-  -- 约束 1：同一个课程下的 module slug 不能重复
   unique(course_id, slug),
-
-  -- 约束 2：复合唯一约束。这是为了让 lessons 表的复合外键能够引用，确保数据一致性
   unique(id, course_id)
 );
 
 -- ============================================================
 -- 4. lessons 表 (课时表)
 -- ============================================================
-create table public.lessons (
+create table if not exists public.lessons (
   id                 uuid primary key default gen_random_uuid(),
-  slug               text not null,              -- 前端路由标识，如 "1-1-what-is-javascript"
+  slug               text not null check (slug ~ '^[a-z0-9]([a-z0-9-]*[a-z0-9])?$'),
   module_id          uuid not null,
-  course_id          uuid not null,              -- 冗余设计：用于 RLS 高效查询
-
-  name               text not null,              -- UI 展示名称，如 "What is JavaScript?"
+  course_id          uuid not null,
+  name               text not null,
   description        text,
-  context            text,                       -- Markdown 正文
+  type               public.lesson_type not null default 'standard',
+  context            text,
   video_id           text,
   is_free            boolean not null default false,
-  order_index        integer not null default 0,
+  order_index        integer not null default 0 check (order_index >= 0),
+  xp_reward          integer not null default 10 check (xp_reward >= 0),
 
-  -- 预留字段：为 Phase 2 单课经验值奖励做准备
-  xp_reward          integer not null default 10,
-
-  -- 核心 JSONB 数据结构
+  -- 核心资产字段
   objectives         jsonb not null default '[]'::jsonb,
   tasks              jsonb not null default '[]'::jsonb,
   code_editor        jsonb not null default '{}'::jsonb,
   resources          jsonb not null default '[]'::jsonb,
 
+  -- 新增：画板专属字段
+  whiteboard         jsonb not null default '{"elements": []}'::jsonb,
+
   created_at         timestamptz not null default now(),
   updated_at         timestamptz not null default now(),
 
-  -- 约束 1：复合外键。强制要求 lessons 的 (module_id, course_id) 必须和 modules 表里的一模一样，彻底杜绝数据撕裂！
   foreign key (module_id, course_id) references public.modules(id, course_id) on delete cascade,
+  unique(module_id, slug),
 
-  -- 约束 2：同一个模块下的 lesson slug 不能重复
-  unique(module_id, slug)
+  -- 新增：数据一致性约束。杜绝非 whiteboard 类型的课时混入庞大的画板脏数据。
+  constraint check_whiteboard_data check (
+    (type = 'whiteboard') or
+    (type != 'whiteboard' and whiteboard = '{"elements": []}'::jsonb)
+  )
 );
 
 -- ============================================================
 -- 5. 触发器 (Triggers)
 -- ============================================================
-create trigger on_courses_updated
-  before update on public.courses
-  for each row execute procedure public.handle_updated_at();
+drop trigger if exists on_courses_updated on public.courses;
+create trigger on_courses_updated before update on public.courses for each row execute function public.handle_updated_at();
 
-create trigger on_modules_updated
-  before update on public.modules
-  for each row execute procedure public.handle_updated_at();
+drop trigger if exists on_modules_updated on public.modules;
+create trigger on_modules_updated before update on public.modules for each row execute function public.handle_updated_at();
 
-create trigger on_lessons_updated
-  before update on public.lessons
-  for each row execute procedure public.handle_updated_at();
+drop trigger if exists on_lessons_updated on public.lessons;
+create trigger on_lessons_updated before update on public.lessons for each row execute function public.handle_updated_at();
 
 -- ============================================================
 -- 6. 索引优化 (Indexes)
 -- ============================================================
--- Slug 检索优化
-create index idx_courses_slug on public.courses(slug);
-
--- 外键检索优化
-create index idx_modules_course_id on public.modules(course_id);
-create index idx_lessons_module_id on public.lessons(module_id);
-create index idx_lessons_course_id on public.lessons(course_id);
-
--- 列表排序优化
-create index idx_modules_order on public.modules(course_id, order_index);
-create index idx_lessons_order on public.lessons(module_id, order_index);
+create index if not exists idx_modules_course_id on public.modules(course_id);
+create index if not exists idx_lessons_module_id on public.lessons(module_id);
+create index if not exists idx_lessons_course_id on public.lessons(course_id);
+create index if not exists idx_modules_order on public.modules(course_id, order_index);
+create index if not exists idx_lessons_order on public.lessons(module_id, order_index);
+-- 偏函数覆盖索引 (Partial Covering Index)
+create index if not exists idx_courses_published on public.courses(id) where status = 'published';
 
 -- ============================================================
--- 7. 行级安全策略 (Row Level Security - RLS)
+-- 7. 行级安全策略 (RLS - 纯读策略)
 -- ============================================================
 alter table public.courses enable row level security;
 alter table public.modules enable row level security;
 alter table public.lessons enable row level security;
 
--- Courses: 允许所有人查询所有状态的课程 (包含 draft 用于界面展示)。
-create policy "courses_select_all"
-  on public.courses for select
-  using (true);
+-- 架构说明: 后端通过 service_role 写入（BYPASSRLS），无需额外写入策略。
+drop policy if exists "courses_select_all" on public.courses;
+create policy "courses_select_all" on public.courses for select using (true);
 
--- Modules: 严格限制。所有人均可查询，但前提是所属课程的状态必须为 'published'。
-create policy "modules_select_published"
-  on public.modules for select
-  using (exists (
-    select 1 from public.courses c
-    where c.id = modules.course_id and c.status = 'published'
-  ));
+drop policy if exists "modules_select_published" on public.modules;
+create policy "modules_select_published" on public.modules for select
+  using (exists (select 1 from public.courses c where c.id = modules.course_id and c.status = 'published'));
 
--- Lessons: 严格限制。所有人均可查询，但前提是所属课程的状态必须为 'published'。
-create policy "lessons_select_published"
-  on public.lessons for select
-  using (exists (
-    select 1 from public.courses c
-    where c.id = lessons.course_id and c.status = 'published'
-  ));
+drop policy if exists "lessons_select_published" on public.lessons;
+create policy "lessons_select_published" on public.lessons for select
+  using (exists (select 1 from public.courses c where c.id = lessons.course_id and c.status = 'published'));
 
--- 确保如果存在旧视图，先将其删除（因为我们要修改返回的列结构）
+-- ============================================================
+-- 8. 视图 1: course_summaries (全量列表查询)
+-- ============================================================
+-- ⚠️ [安全与架构妥协说明 - Security Definer Bypass]:
+-- 本视图以 Definer 身份运行，故意绕过 modules/lessons 的 RLS 策略。
+-- 目的：支撑前端展示 "Draft" (敬请期待) 课程的规模数据 (章节数/任务数)。
+-- ============================================================
 drop view if exists public.course_summaries;
-
--- 创建带有 security_invoker 的视图，强制继承 RLS 策略！
-create view public.course_summaries with (security_invoker = on) as
-
--- 1. CTE: 预先聚合模块数量
+create view public.course_summaries as
 with module_counts as (
-  select
-    course_id,
-    count(id) as module_count
-  from public.modules
-  group by course_id
+  select course_id, count(*) as module_count from public.modules group by course_id
 ),
-
--- 2. CTE: 预先聚合课时数量与 JSONB 的 tasks 长度
 lesson_stats as (
-  select
-    course_id,
-    count(id) as lesson_count,
-    -- 聚合 task 数量，处理空值
-    coalesce(sum(jsonb_array_length(tasks)), 0) as task_count
-  from public.lessons
-  group by course_id
+  select course_id, count(*) as lesson_count, coalesce(sum(public.calc_task_count(type, tasks)), 0) as task_count
+  from public.lessons group by course_id
 )
-
--- 3. 主查询: 使用 LEFT JOIN 将聚合结果无缝拼接到课程主表
 select
-  c.id,
-  c.slug,
-  c.name,
-  c.description,
-  c.difficulty,
-  c.duration_in_hours,
-  c.thumbnail_url,
-  c.status,
-  c.order_index,
+  c.id, c.slug, c.name, c.description, c.difficulty, c.duration_in_hours,
+  c.thumbnail_url, c.status, c.order_index, c.review_count, c.average_rating,
+  coalesce(mc.module_count, 0) as module_count, coalesce(ls.lesson_count, 0) as lesson_count, coalesce(ls.task_count, 0) as task_count
+from public.courses c
+left join module_counts mc on c.id = mc.course_id
+left join lesson_stats ls on c.id = ls.course_id;
 
-  -- 补全的 UI 展示字段
-  c.review_count,
-  c.average_rating,
+-- ============================================================
+-- 9. 视图 2: course_details (课程大纲 - 附加各层级聚合统计)
+-- ============================================================
+-- ⚠️ WARNING:
+-- 此视图内部执行了高度嵌套的相关子查询 (3N+3 结构)。
+-- 严禁无条件全局扫描 (SELECT *)，仅限前端通过 slug 或 id 精准查询单条数据。
+-- ============================================================
+drop view if exists public.course_details;
+create view public.course_details with (security_invoker = on) as
+select
+  c.id, c.slug, c.name, c.description, c.long_description, c.difficulty,
+  c.duration_in_hours, c.status, c.order_index, c.thumbnail_url,
+  c.xp_reward, c.review_count, c.average_rating, c.created_at, c.updated_at,
 
-  -- 组装聚合数据，如果查不到则兜底为 0
-  coalesce(mc.module_count, 0) as module_count,
-  coalesce(ls.lesson_count, 0) as lesson_count,
-  coalesce(ls.task_count, 0) as task_count
+  -- 课程级统计 (Course Level Aggregates)
+  (select count(*) from public.modules m where m.course_id = c.id) as module_count,
+  (select count(*) from public.lessons l where l.course_id = c.id) as lesson_count,
+  (select coalesce(sum(public.calc_task_count(l.type, l.tasks)), 0) from public.lessons l where l.course_id = c.id) as task_count,
 
-from
-  public.courses c
-left join
-  module_counts mc on c.id = mc.course_id
-left join
-  lesson_stats ls on c.id = ls.course_id;
+  (
+    select coalesce(jsonb_agg(to_jsonb(m_tree) order by m_tree.order_index), '[]'::jsonb)
+    from (
+      select m.id, m.slug, m.name, m.description, m.order_index,
+
+        -- 模块级统计 (Module Level Aggregates)
+        (select count(*) from public.lessons l where l.module_id = m.id and l.course_id = c.id) as lesson_count,
+        (select coalesce(sum(public.calc_task_count(l.type, l.tasks)), 0) from public.lessons l where l.module_id = m.id and l.course_id = c.id) as task_count,
+
+        (
+          select coalesce(jsonb_agg(to_jsonb(l_tree) order by l_tree.order_index), '[]'::jsonb)
+          from (
+            -- 纯净大纲：只保留渲染列表所需的轻量字段，刻意排除了 context/tasks/code_editor/whiteboard
+            select l.id, l.slug, l.name, l.description, l.type, l.is_free, l.video_id, l.order_index, l.xp_reward, l.objectives
+            from public.lessons l where l.module_id = m.id and l.course_id = c.id
+          ) l_tree
+        ) as lessons
+      from public.modules m where m.course_id = c.id
+    ) m_tree
+  ) as modules
+from public.courses c;
+-- 采用方案 B：无 c.status 过滤条件。草稿课程正常返回主表信息，modules/lessons 依靠底层 RLS 返回空。
+
+-- ============================================================
+-- 10. 权限下放 (Grants)
+-- ============================================================
+grant select on public.course_summaries to anon, authenticated;
+grant select on public.course_details to anon, authenticated;
+
+commit

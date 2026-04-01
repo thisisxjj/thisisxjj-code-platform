@@ -2,7 +2,7 @@ import { Badge } from "#/components/ui/badge";
 import { Button } from "#/components/ui/button";
 import { Card, CardContent, CardFooter } from "#/components/ui/card";
 import { TextLink } from "#/components/ui/link";
-import type { CourseTemplateDTO } from "#/lib/schemas/course-template.schema";
+import type { CourseSummaryDTO } from "#/lib/schemas/course.schema";
 import { cn } from "#/lib/utils";
 import { ArrowRight, Layers, SquareCheckBig, Video } from "lucide-react";
 import {
@@ -14,13 +14,13 @@ export function CourseCard({
 	course,
 	className,
 }: {
-	course: CourseTemplateDTO;
+	course: CourseSummaryDTO;
 	className?: string;
 }) {
 	return (
 		<Card
 			className={cn(
-				"relative w-full justify-between transition-colors md:w-[350px]",
+				"relative w-full justify-between transition-colors md:w-87.5",
 				course.status !== "published" && "opacity-70",
 				className,
 			)}

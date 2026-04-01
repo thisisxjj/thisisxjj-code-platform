@@ -23,6 +23,7 @@ function RouteComponent() {
 }
 
 function LoaderComponent() {
+	// TODO get landingPageVariant
 	return {
 		affiliateId: undefined,
 		landingPageVariant: "launch-ai-focused",

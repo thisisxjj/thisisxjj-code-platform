@@ -12,6 +12,7 @@ export function CourseReviewStar({
 		<div className="flex items-center gap-1">
 			{[1, 2, 3, 4, 5].map((item) => (
 				<Star
+					key={item}
 					className={cn(
 						"size-5",
 						item <= rating

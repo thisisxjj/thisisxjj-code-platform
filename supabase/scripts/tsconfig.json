@@ -6,7 +6,6 @@
   "compilerOptions": {
 
     // ── 覆盖基础配置：模块系统 ────────────────────────────
-    "module": "CommonJS",         // 脚本用 CommonJS，避免 ESM 的 .js 后缀问题
     "moduleResolution": "Node",   // 对应 CommonJS 的解析策略
 
     // ── 覆盖基础配置：Node.js 类型支持 ───────────────────

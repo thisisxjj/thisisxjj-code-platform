@@ -118,7 +118,7 @@ export default function DevelopmentEvaluation({
 			</h2>
 			<div className="grid gap-4 sm:gap-6 md:grid-cols-2">
 				{Object.values(firstComments).map((item) => (
-					<CommentItem testimonial={item} />
+					<CommentItem key={item.name} testimonial={item} />
 				))}
 			</div>
 		</section>

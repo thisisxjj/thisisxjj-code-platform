@@ -12,8 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PlatformRouteImport } from './routes/_platform'
 import { Route as PlatformIndexRouteImport } from './routes/_platform/index'
 import { Route as AuthLoginRouteImport } from './routes/auth/login'
-import { Route as PlatformCoursesRouteImport } from './routes/_platform/courses'
+import { Route as PlatformCoursesIndexRouteImport } from './routes/_platform/courses/index'
 import { Route as ApiAuthCallbackRouteImport } from './routes/api/auth/callback'
+import { Route as PlatformCoursesCourseTemplateIdRouteImport } from './routes/_platform/courses/$courseTemplateId'
 
 const PlatformRoute = PlatformRouteImport.update({
   id: '/_platform',
@@ -29,9 +30,9 @@ const AuthLoginRoute = AuthLoginRouteImport.update({
   path: '/auth/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PlatformCoursesRoute = PlatformCoursesRouteImport.update({
-  id: '/courses',
-  path: '/courses',
+const PlatformCoursesIndexRoute = PlatformCoursesIndexRouteImport.update({
+  id: '/courses/',
+  path: '/courses/',
   getParentRoute: () => PlatformRoute,
 } as any)
 const ApiAuthCallbackRoute = ApiAuthCallbackRouteImport.update({
@@ -39,39 +40,59 @@ const ApiAuthCallbackRoute = ApiAuthCallbackRouteImport.update({
   path: '/api/auth/callback',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlatformCoursesCourseTemplateIdRoute =
+  PlatformCoursesCourseTemplateIdRouteImport.update({
+    id: '/courses/$courseTemplateId',
+    path: '/courses/$courseTemplateId',
+    getParentRoute: () => PlatformRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof PlatformIndexRoute
-  '/courses': typeof PlatformCoursesRoute
   '/auth/login': typeof AuthLoginRoute
+  '/courses/$courseTemplateId': typeof PlatformCoursesCourseTemplateIdRoute
   '/api/auth/callback': typeof ApiAuthCallbackRoute
+  '/courses/': typeof PlatformCoursesIndexRoute
 }
 export interface FileRoutesByTo {
-  '/courses': typeof PlatformCoursesRoute
   '/auth/login': typeof AuthLoginRoute
   '/': typeof PlatformIndexRoute
+  '/courses/$courseTemplateId': typeof PlatformCoursesCourseTemplateIdRoute
   '/api/auth/callback': typeof ApiAuthCallbackRoute
+  '/courses': typeof PlatformCoursesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_platform': typeof PlatformRouteWithChildren
-  '/_platform/courses': typeof PlatformCoursesRoute
   '/auth/login': typeof AuthLoginRoute
   '/_platform/': typeof PlatformIndexRoute
+  '/_platform/courses/$courseTemplateId': typeof PlatformCoursesCourseTemplateIdRoute
   '/api/auth/callback': typeof ApiAuthCallbackRoute
+  '/_platform/courses/': typeof PlatformCoursesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/courses' | '/auth/login' | '/api/auth/callback'
+  fullPaths:
+    | '/'
+    | '/auth/login'
+    | '/courses/$courseTemplateId'
+    | '/api/auth/callback'
+    | '/courses/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/courses' | '/auth/login' | '/' | '/api/auth/callback'
+  to:
+    | '/auth/login'
+    | '/'
+    | '/courses/$courseTemplateId'
+    | '/api/auth/callback'
+    | '/courses'
   id:
     | '__root__'
     | '/_platform'
-    | '/_platform/courses'
     | '/auth/login'
     | '/_platform/'
+    | '/_platform/courses/$courseTemplateId'
     | '/api/auth/callback'
+    | '/_platform/courses/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -103,11 +124,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_platform/courses': {
-      id: '/_platform/courses'
+    '/_platform/courses/': {
+      id: '/_platform/courses/'
       path: '/courses'
-      fullPath: '/courses'
-      preLoaderRoute: typeof PlatformCoursesRouteImport
+      fullPath: '/courses/'
+      preLoaderRoute: typeof PlatformCoursesIndexRouteImport
       parentRoute: typeof PlatformRoute
     }
     '/api/auth/callback': {
@@ -117,17 +138,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthCallbackRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_platform/courses/$courseTemplateId': {
+      id: '/_platform/courses/$courseTemplateId'
+      path: '/courses/$courseTemplateId'
+      fullPath: '/courses/$courseTemplateId'
+      preLoaderRoute: typeof PlatformCoursesCourseTemplateIdRouteImport
+      parentRoute: typeof PlatformRoute
+    }
   }
 }
 
 interface PlatformRouteChildren {
-  PlatformCoursesRoute: typeof PlatformCoursesRoute
   PlatformIndexRoute: typeof PlatformIndexRoute
+  PlatformCoursesCourseTemplateIdRoute: typeof PlatformCoursesCourseTemplateIdRoute
+  PlatformCoursesIndexRoute: typeof PlatformCoursesIndexRoute
 }
 
 const PlatformRouteChildren: PlatformRouteChildren = {
-  PlatformCoursesRoute: PlatformCoursesRoute,
   PlatformIndexRoute: PlatformIndexRoute,
+  PlatformCoursesCourseTemplateIdRoute: PlatformCoursesCourseTemplateIdRoute,
+  PlatformCoursesIndexRoute: PlatformCoursesIndexRoute,
 }
 
 const PlatformRouteWithChildren = PlatformRoute._addFileChildren(

@@ -1,14 +1,17 @@
 import { createServerSupabase } from "@/lib/supabase/server";
 import { logger } from "@/utils/logger.server";
 import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
 import {
-	CourseTemplateSchema,
-	type CourseTemplateDTO,
-} from "../schemas/course-template.schema";
+	CourseSummarySchema,
+	type CourseSummaryDTO,
+	CourseDetailsSchema,
+	type CourseDetailsDTO,
+} from "../schemas/course.schema";
 
 export const getAllCourseTemplates = createServerFn({
 	method: "GET",
-}).handler(async (): Promise<CourseTemplateDTO[]> => {
+}).handler(async (): Promise<CourseSummaryDTO[]> => {
 	try {
 		const supabase = createServerSupabase();
 
@@ -24,7 +27,7 @@ export const getAllCourseTemplates = createServerFn({
 			return [];
 		}
 
-		return CourseTemplateSchema.array().parse(data);
+		return CourseSummarySchema.array().parse(data);
 	} catch (err: any) {
 		logger.error("api course-template getAllCourseTemplates ===> Exception", {
 			err,
@@ -32,3 +35,38 @@ export const getAllCourseTemplates = createServerFn({
 		return [];
 	}
 });
+
+const GetCourseDetailBySlugSchema = z
+	.string()
+	.regex(/^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/, {
+		message: "Invalid course slug format",
+	});
+
+export const getCourseDetailBySlug = createServerFn({ method: "GET" })
+	.inputValidator((data: unknown) => GetCourseDetailBySlugSchema.parse(data))
+	.handler(async ({ data: slug }): Promise<CourseDetailsDTO | null> => {
+		try {
+			const supabase = createServerSupabase();
+
+			const { data, error } = await supabase
+				.from("course_details")
+				.select("*")
+				.eq("slug", slug)
+				.single();
+
+			if (error || !data) {
+				logger.error(
+					"api course-template getCourseDetailBySlug ===> DB Error",
+					{ error },
+				);
+				return null;
+			}
+
+			return CourseDetailsSchema.parse(data);
+		} catch (err: any) {
+			logger.error("api course-template getCourseDetailBySlug ===> Exception", {
+				err,
+			});
+			return null;
+		}
+	});

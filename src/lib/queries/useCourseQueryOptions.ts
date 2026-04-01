@@ -1,5 +1,5 @@
 import { queryOptions } from "@tanstack/react-query";
-import { getAllCourseTemplates } from "../api/course-template";
+import { getAllCourseTemplates, getCourseDetailBySlug } from "../api/course-template";
 
 export const courseKeys = {
 	courseTemplates: {
@@ -13,5 +13,12 @@ export function useAllCourseTemplatesQueryOptions() {
 	return queryOptions({
 		queryKey: courseKeys.courseTemplates.all,
 		queryFn: () => getAllCourseTemplates(),
+	});
+}
+
+export function useCourseDetailQueryOptions(slug: string) {
+	return queryOptions({
+		queryKey: courseKeys.courseTemplates.byLessonTemplateId(slug),
+		queryFn: () => getCourseDetailBySlug({ data: slug }),
 	});
 }

@@ -7,11 +7,23 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BookOpen, Search } from "lucide-react";
 import { Suspense, useMemo, useState } from "react";
 
-export const Route = createFileRoute("/_platform/courses")({
+export const Route = createFileRoute("/_platform/courses/")({
 	component: RouteComponent,
 	loader: ({ context }) => {
 		context.queryClient.fetchQuery(useAllCourseTemplatesQueryOptions());
 	},
+	head: () => ({
+		meta: [
+			{
+				title: "Courses | Cosden Code",
+			},
+			{
+				name: "description",
+				content:
+					"Browse all available courses and start your learning journey to become a full-stack React developer",
+			},
+		],
+	}),
 });
 
 function CoursesSkeleton() {

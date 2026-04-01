@@ -104,8 +104,10 @@ export type Database = {
           resources: Json
           slug: string
           tasks: Json
+          type: Database["public"]["Enums"]["lesson_type"]
           updated_at: string
           video_id: string | null
+          whiteboard: Json
           xp_reward: number
         }
         Insert: {
@@ -123,8 +125,10 @@ export type Database = {
           resources?: Json
           slug: string
           tasks?: Json
+          type?: Database["public"]["Enums"]["lesson_type"]
           updated_at?: string
           video_id?: string | null
+          whiteboard?: Json
           xp_reward?: number
         }
         Update: {
@@ -142,8 +146,10 @@ export type Database = {
           resources?: Json
           slug?: string
           tasks?: Json
+          type?: Database["public"]["Enums"]["lesson_type"]
           updated_at?: string
           video_id?: string | null
+          whiteboard?: Json
           xp_reward?: number
         }
         Relationships: [
@@ -188,6 +194,13 @@ export type Database = {
           updated_at?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "modules_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "course_details"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "modules_course_id_fkey"
             columns: ["course_id"]
@@ -309,6 +322,72 @@ export type Database = {
       }
     }
     Views: {
+      course_details: {
+        Row: {
+          average_rating: number | null
+          created_at: string | null
+          description: string | null
+          difficulty: Database["public"]["Enums"]["course_difficulty"] | null
+          duration_in_hours: number | null
+          id: string | null
+          lesson_count: number | null
+          long_description: string | null
+          module_count: number | null
+          modules: Json | null
+          name: string | null
+          order_index: number | null
+          review_count: number | null
+          slug: string | null
+          status: Database["public"]["Enums"]["course_status"] | null
+          task_count: number | null
+          thumbnail_url: string | null
+          updated_at: string | null
+          xp_reward: number | null
+        }
+        Insert: {
+          average_rating?: number | null
+          created_at?: string | null
+          description?: string | null
+          difficulty?: Database["public"]["Enums"]["course_difficulty"] | null
+          duration_in_hours?: number | null
+          id?: string | null
+          lesson_count?: never
+          long_description?: string | null
+          module_count?: never
+          modules?: never
+          name?: string | null
+          order_index?: number | null
+          review_count?: number | null
+          slug?: string | null
+          status?: Database["public"]["Enums"]["course_status"] | null
+          task_count?: never
+          thumbnail_url?: string | null
+          updated_at?: string | null
+          xp_reward?: number | null
+        }
+        Update: {
+          average_rating?: number | null
+          created_at?: string | null
+          description?: string | null
+          difficulty?: Database["public"]["Enums"]["course_difficulty"] | null
+          duration_in_hours?: number | null
+          id?: string | null
+          lesson_count?: never
+          long_description?: string | null
+          module_count?: never
+          modules?: never
+          name?: string | null
+          order_index?: number | null
+          review_count?: number | null
+          slug?: string | null
+          status?: Database["public"]["Enums"]["course_status"] | null
+          task_count?: never
+          thumbnail_url?: string | null
+          updated_at?: string | null
+          xp_reward?: number | null
+        }
+        Relationships: []
+      }
       course_summaries: {
         Row: {
           average_rating: number | null
@@ -330,11 +409,18 @@ export type Database = {
       }
     }
     Functions: {
-      [_ in never]: never
+      calc_task_count: {
+        Args: {
+          l_tasks: Json
+          l_type: Database["public"]["Enums"]["lesson_type"]
+        }
+        Returns: number
+      }
     }
     Enums: {
       course_difficulty: "beginner" | "intermediate" | "advanced"
       course_status: "draft" | "published" | "archived"
+      lesson_type: "standard" | "whiteboard" | "video" | "quiz"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -467,6 +553,7 @@ export const Constants = {
     Enums: {
       course_difficulty: ["beginner", "intermediate", "advanced"],
       course_status: ["draft", "published", "archived"],
+      lesson_type: ["standard", "whiteboard", "video", "quiz"],
     },
   },
 } as const
