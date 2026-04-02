@@ -177,7 +177,7 @@ function CourseDetailHeaderSection({
 }: {
 	courseTemplate: CourseDetailsDTO;
 }) {
-	// TODO 课程下所有节lesson 是否被提交过
+	// TODO: 课程下所有节lesson 是否被提交过
 	return (
 		<section className="flex flex-col items-center gap-6 text-center sm:gap-8">
 			<CourseThumbnail course={courseTemplate} className="size-16 sm:size-24" />
@@ -192,7 +192,7 @@ function CourseDetailHeaderSection({
 			<CourseStats courseTemplate={courseTemplate} />
 			<div className="flex w-full max-w-md flex-col justify-center gap-3 sm:flex-row">
 				<Button asChild size="xl">
-					{/* TODO 根据获取的lessonid导航到正确的lesson以及 文字描述 */}
+					{/* TODO: 根据获取的lessonid导航到正确的lesson以及 文字描述 */}
 					<TextLink
 						to="/courses/$courseTemplateId/lessons/$lessonTemplateId"
 						params={{ courseTemplateId: courseTemplate.id }}
@@ -263,7 +263,7 @@ function CourseLessonItem({
 	lesson: LessonOutlineDTO;
 	index: number;
 }) {
-	// TODO 添加真是的plan状态
+	// TODO: 添加真是的plan状态
 	return (
 		<TextLink
 			to="/courses/$courseTemplateId/lessons/$lessonTemplateId"
@@ -381,6 +381,7 @@ function CourseDetailContent({
 			<CourseOverviewSection courseTemplate={courseTemplate!} />
 			<Separator />
 			<CourseModulesSection courseTemplate={courseTemplate!} />
+			{/* TODO: 添加评论section */}
 		</Fragment>
 	);
 }

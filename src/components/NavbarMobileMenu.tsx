@@ -122,14 +122,18 @@ function UserDropdownMenu({
 				<DropdownMenuGroup>
 					{profileDetail?.username && (
 						<DropdownMenuItem asChild>
-							<TextLink variant="ghost" to="/">
+							<TextLink
+								variant="ghost"
+								to="/user/$username"
+								params={{ username: profileDetail.username }}
+							>
 								<UserRound className="size-4" />
 								Profile
 							</TextLink>
 						</DropdownMenuItem>
 					)}
 					<DropdownMenuItem asChild>
-						<TextLink variant="ghost" to="/">
+						<TextLink variant="ghost" to="/settings/account">
 							<Settings className="size-4" />
 							Settings
 						</TextLink>
@@ -169,7 +173,7 @@ function UserAvatar() {
 					Login
 				</TextLink>
 			</Button>
-			<Button asChild variant="ghost" size="lg">
+			<Button asChild size="lg">
 				<SmoothHashLink variant="ghost" to="/" hash="pricing">
 					Get Started
 				</SmoothHashLink>
@@ -183,7 +187,10 @@ export function UserInfoContainer() {
 	return user ? (
 		<div className="flex items-center gap-4">
 			<UserXpLevel />
+			{/* TODO: 添加用户的订阅信息 */}
 			<UserAvatar />
 		</div>
-	) : null;
+	) : (
+		<UserAvatar />
+	);
 }

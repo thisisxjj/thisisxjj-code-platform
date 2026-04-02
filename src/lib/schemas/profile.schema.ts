@@ -12,9 +12,9 @@ const RawProfileSchema = z.object({
 	bio: z.string().nullable(),
 	username: z.string(),
 	email: z.email(),
-	name: z.string(),
+	name: z.string().nullable(),
 	occupation: z.string().nullable(),
-	additional_info: z.json(),
+	additional_info: z.json().nullable(),
 }) satisfies z.ZodType<ProfileRow>;
 
 export const ProfileDetailSchema = RawProfileSchema.transform((row) => ({
