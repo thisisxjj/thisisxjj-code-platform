@@ -1,3 +1,4 @@
+import Footer from "#/components/Footer";
 import Header from "#/components/Header";
 import { createFileRoute, Outlet } from "@tanstack/react-router";
 
@@ -14,7 +15,7 @@ function RouteComponent() {
 			<main className="relative container mx-auto mt-(--header-height) min-h-[calc(100svh-var(--header-height)-var(--footer-height))] px-4 py-8">
 				<Outlet />
 			</main>
-			Footer
+			<Footer />
 		</div>
 	);
 }
