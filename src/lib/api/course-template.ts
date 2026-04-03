@@ -1,6 +1,7 @@
 import { createServerSupabase } from "@/lib/supabase/server";
 import { logger } from "@/utils/logger.server";
 import { createServerFn } from "@tanstack/react-start";
+import { notFound } from "@tanstack/react-router";
 import { z } from "zod";
 import {
 	CourseSummarySchema,
@@ -59,7 +60,7 @@ export const getCourseDetailBySlug = createServerFn({ method: "GET" })
 					"api course-template getCourseDetailBySlug ===> DB Error",
 					{ error },
 				);
-				return null;
+				throw notFound();
 			}
 
 			return CourseDetailsSchema.parse(data);
@@ -67,6 +68,6 @@ export const getCourseDetailBySlug = createServerFn({ method: "GET" })
 			logger.error("api course-template getCourseDetailBySlug ===> Exception", {
 				err,
 			});
-			return null;
+			throw notFound();
 		}
 	});

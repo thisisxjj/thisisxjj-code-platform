@@ -27,7 +27,6 @@ export const Route = createFileRoute("/_platform/courses/$courseTemplateId")({
 		const courseTemplate = await context.queryClient.ensureQueryData(
 			useCourseDetailQueryOptions(courseTemplateId),
 		);
-		console.log("route befor ==> ", courseTemplate, courseTemplateId);
 		if (courseTemplate?.status === "draft") {
 			throw redirect({
 				to: "/roadmap",
