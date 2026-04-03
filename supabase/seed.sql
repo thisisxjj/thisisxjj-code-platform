@@ -1,6 +1,6 @@
 -- ==========================================
 -- 自动生成的 Master Seed 数据
--- 生成时间: 2026-03-31T04:31:07.094Z
+-- 生成时间: 2026-04-03T11:10:19.306Z
 -- 警告: 请勿手动修改此文件，它由 scripts/generate-seed.ts 自动生成
 -- ==========================================
 
@@ -14,7 +14,7 @@ TRUNCATE TABLE public.courses, public.modules, public.lessons CASCADE;
 -- 插入课程: JavaScript (javascript)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'javascript',
   'JavaScript',
   'Learn JavaScript fundamentals from basic syntax to modern ES6+ features, asynchronous programming, and DOM manipulation',
@@ -108,19 +108,19 @@ The JavaScript knowledge you gain here is fundamental to modern web development.
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'ea73ee30-4da1-4a1f-8eb9-b772d5948eb8',
+  '6107b535-d170-4927-9d51-a03aa41098b5',
   '1-getting-started',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Getting Started',
   'Learn JavaScript fundamentals including variables, syntax, and best coding practices',
   0
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8c850972-f12c-4e66-a4d7-685ce231cfbf',
+  'e9cd7d7f-0cfd-4357-bcfb-e5d3343bd52d',
   '1-1-what-is-javascript',
-  'ea73ee30-4da1-4a1f-8eb9-b772d5948eb8',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '6107b535-d170-4927-9d51-a03aa41098b5',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'What is JavaScript?',
   'Learn about JavaScript''s history, its role in web development, and explore real-world applications',
   'standard',
@@ -140,10 +140,10 @@ Your coding tasks will be to explore the code editor and console to get familiar
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9ff82576-63dc-4bda-84c3-28ee23b733dd',
+  '2d170bde-1515-475d-b435-c4800aaa44c0',
   '1-2-the-javascript-console',
-  'ea73ee30-4da1-4a1f-8eb9-b772d5948eb8',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '6107b535-d170-4927-9d51-a03aa41098b5',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'The JavaScript Console',
   'Learn about the JavaScript console and how to use different console methods to log messages',
   'standard',
@@ -163,10 +163,10 @@ Your coding tasks will be using different console methods to log various types o
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f51b6b61-e21c-4a36-bea4-113181739b22',
+  '7426c248-2eda-46f0-9083-9b610e314a6f',
   '1-3-introduction-to-variables',
-  'ea73ee30-4da1-4a1f-8eb9-b772d5948eb8',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '6107b535-d170-4927-9d51-a03aa41098b5',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Introduction to Variables',
   'Learn how to create and use variables to store data in JavaScript',
   'standard',
@@ -186,10 +186,10 @@ Your coding tasks will be declaring variables with the `let` keyword, reassignin
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8458136c-e3ef-41c9-9114-0f0148f37c98',
+  'f95d9c00-9548-4e50-ad38-8aa56f383d0b',
   '1-4-variable-syntax',
-  'ea73ee30-4da1-4a1f-8eb9-b772d5948eb8',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '6107b535-d170-4927-9d51-a03aa41098b5',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Variable Syntax',
   'Learn JavaScript''s variable syntax rules and learn to identify and fix common syntax errors',
   'standard',
@@ -209,10 +209,10 @@ Your coding tasks will be debugging code that contains intentional syntax errors
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f6d99a14-a99f-4cbe-b74d-a24785fafc3b',
+  '3e818995-6e67-442d-b2f2-c26f28139b52',
   '1-5-variable-best-practices',
-  'ea73ee30-4da1-4a1f-8eb9-b772d5948eb8',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '6107b535-d170-4927-9d51-a03aa41098b5',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Variable Best Practices',
   'Learn professional coding best practices for writing clean, readable JavaScript variables',
   'standard',
@@ -232,10 +232,10 @@ Your coding tasks will be fixing code that violates these best practices, giving
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '72e43c5e-3d3c-4901-bf01-1d938f644336',
+  '5976d616-b6a3-4d1f-977e-7622c0bdfe58',
   '1-6-comments-and-documentation',
-  'ea73ee30-4da1-4a1f-8eb9-b772d5948eb8',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '6107b535-d170-4927-9d51-a03aa41098b5',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Comments and Documentation',
   'Learn how to use comments to document your code and understand their importance in JavaScript development',
   'standard',
@@ -255,19 +255,19 @@ Your coding tasks will be adding comments to the existing code in the code edito
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'bf919d32-0a8d-43f7-81ff-3ee6190ba79b',
+  '91eb9f83-b6bc-4e12-bdee-4ea11a7c909c',
   '2-data-types-and-operations',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Data Types & Operations',
   'Master JavaScript data types, operators, and type conversion for effective programming',
   1
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '37af2520-4cfa-43e1-ae56-6db8420c3360',
+  '00dc11b8-c6de-461c-9177-285145399a39',
   '2-1-strings-and-string-methods',
-  'bf919d32-0a8d-43f7-81ff-3ee6190ba79b',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '91eb9f83-b6bc-4e12-bdee-4ea11a7c909c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Strings and String Methods',
   'Learn how to work with strings and their main methods for text manipulation',
   'standard',
@@ -287,10 +287,10 @@ Your coding tasks will be using different string methods to concatenate names, c
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '829d6848-7e8d-48cf-a3bd-e5cf02199156',
+  'cbfc1d17-a7cd-41c0-80ba-3fe2f962f7f9',
   '2-2-numbers-and-mathematical-operators',
-  'bf919d32-0a8d-43f7-81ff-3ee6190ba79b',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '91eb9f83-b6bc-4e12-bdee-4ea11a7c909c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Numbers and Mathematical Operators',
   'Master working with numbers and mathematical operators for calculations',
   'standard',
@@ -310,10 +310,10 @@ Your coding tasks will be performing real-world calculations like adding fruits 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8324b0f3-0ac4-466d-a433-5c202be58318',
+  'ba46ea7e-3260-42ad-83af-4ef91e3e2477',
   '2-3-booleans-and-logical-operators',
-  'bf919d32-0a8d-43f7-81ff-3ee6190ba79b',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '91eb9f83-b6bc-4e12-bdee-4ea11a7c909c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Booleans and Logical Operators',
   'Understand boolean values and logical operators for decision-making in code',
   'standard',
@@ -333,10 +333,10 @@ Your coding tasks will be using comparison operators to check age requirements a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'eeb01b50-8303-4ead-99f5-1af457e9d324',
+  '35304ece-e657-43ee-9405-31960e8fd1a8',
   '2-4-null-and-undefined',
-  'bf919d32-0a8d-43f7-81ff-3ee6190ba79b',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '91eb9f83-b6bc-4e12-bdee-4ea11a7c909c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Null and Undefined',
   'Learn the difference between null and undefined values and how to work with them',
   'standard',
@@ -356,10 +356,10 @@ Your coding tasks will be using `===`, `==`, and `typeof` operators to compare a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9f7e6296-8966-4e13-97d9-df401728ea15',
+  '0f9a12c9-2110-4de1-8fae-d3181a97625b',
   '2-5-type-conversion-and-coercion',
-  'bf919d32-0a8d-43f7-81ff-3ee6190ba79b',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '91eb9f83-b6bc-4e12-bdee-4ea11a7c909c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Type Conversion and Coercion',
   'Understand how JavaScript automatically converts between data types and comparison operators',
   'standard',
@@ -379,10 +379,10 @@ Your coding tasks will be comparing different data types using both loose and st
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '65891669-6338-495f-8a97-88aaa5c4e359',
+  '1adac62b-082c-41fd-aa4c-210a76f3a5a3',
   '2-6-template-literals',
-  'bf919d32-0a8d-43f7-81ff-3ee6190ba79b',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '91eb9f83-b6bc-4e12-bdee-4ea11a7c909c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Template Literals',
   'Master template literals for modern string creation with embedded variables and expressions',
   'standard',
@@ -402,19 +402,19 @@ Your coding tasks will be converting traditional string concatenation to templat
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
   '3-control-flow-and-looping',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Control Flow & Looping',
   'Control program flow with conditionals, loops, and decision-making logic',
   2
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f2597e8b-7d9b-4811-901e-d4e4882cc06e',
+  'd6e4e9a8-d23b-4db1-8150-10fe15c24885',
   '3-1-conditional-statements-if-else-and-else-if',
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Conditional Statements: if, else, and else if',
   'Learn to make decisions in your code using if, else if, and else statements',
   'standard',
@@ -434,10 +434,10 @@ Your coding tasks will be creating conditional statements to check age requireme
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '068e14bf-4b96-4d95-b803-9b21489e64ba',
+  '62a70b3b-0c95-4d97-b539-61666acfa841',
   '3-2-the-switch-statement',
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'The switch Statement',
   'Master the switch statement for handling multiple conditions elegantly',
   'standard',
@@ -457,10 +457,10 @@ Your coding tasks will be converting a multi-branch `if...else` statement into a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '6b3cecf4-da4c-4d62-bb2b-6040f39063fc',
+  'c06e00a4-a01e-4d4d-81c2-ab765fb5ca39',
   '3-3-truthy-and-falsy-values',
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Truthy and Falsy Values',
   'Understand how JavaScript evaluates different values as true or false in conditionals',
   'standard',
@@ -480,10 +480,10 @@ Your coding tasks will be assigning different falsy and truthy values to variabl
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '57d68f9b-4a21-46e3-ba62-d79343a4e635',
+  '8436f9d6-a2a0-4d81-965c-20fde2bba64a',
   '3-4-the-ternary-operator',
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'The Ternary Operator',
   'Learn to write concise conditional statements using the ternary operator',
   'standard',
@@ -503,10 +503,10 @@ Your coding tasks will be simple conversions from `if...else` statements to tern
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '1cf1a7b6-dacf-4670-ac27-08e077048cb7',
+  'a2d3db95-e559-4081-9ad0-848e2dc13b79',
   '3-5-introduction-to-loops-for-while-do-while',
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Introduction to Loops: for, while, do...while',
   'Learn to repeat actions efficiently using for, while, and do-while loops',
   'standard',
@@ -526,10 +526,10 @@ Your coding tasks will be writing all three types of loops to increment counters
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f172c378-a37c-4c9a-92b4-ee894c933186',
+  'fc6593b6-ecb2-44f9-b5b6-99c121f0e164',
   '3-6-loop-control-break-and-continue',
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Loop Control: break and continue',
   'Master break and continue statements for precise control over loop execution',
   'standard',
@@ -549,10 +549,10 @@ Your coding tasks will be implementing both `break` and `continue` statements in
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '3f16e056-7e1c-4ff3-9ed0-9984e2c6175d',
+  '62ad28e8-e49e-4848-82f3-8acdf9dbda4d',
   '3-7-nested-loops',
-  '4e52d054-8f03-471f-bcaf-08dfc369aae0',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '5fdbfce0-7fe6-44a3-a03e-28b3e4ea9850',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Nested Loops',
   'Understand how loops work inside other loops and their execution patterns',
   'standard',
@@ -572,19 +572,19 @@ Your coding tasks will be creating a nested loop structure and incrementing coun
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
   '4-functions-and-scope',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Functions & Scope',
   'Write reusable code with functions and understand variable scope and closures',
   3
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '497feeef-6aaf-4a82-ba89-39ef4a4e8c9c',
+  '0fc80f20-764d-464d-ba91-67444190540e',
   '4-1-introduction-to-functions',
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Introduction to Functions',
   'Learn to create reusable blocks of code with functions for better organization',
   'standard',
@@ -604,10 +604,10 @@ Your coding tasks will be creating a simple function that displays a message and
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8acc6c56-2eec-4a0c-9d43-2c1040a4fee1',
+  '4ef35dfb-adca-486c-b361-6f8f8baf4e6f',
   '4-2-function-hoisting',
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Function Hoisting',
   'Understand how JavaScript moves function declarations and why order matters',
   'standard',
@@ -627,10 +627,10 @@ Your coding tasks will be experimenting with calling functions before they''re d
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '116d9242-855a-4901-bc6b-06e6fabfec43',
+  '06f2f897-f8de-4925-8c69-56e6d5b7a109',
   '4-3-function-parameters-and-return-values',
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Function Parameters and Return Values',
   'Make functions flexible by passing data in and getting results back',
   'standard',
@@ -650,10 +650,10 @@ Your coding tasks will be creating functions that accept input parameters, proce
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '1b5416c6-cfdb-4fd3-810d-5403554f0cf5',
+  '5a85ec3c-0e1e-474f-a515-66a44d93a74e',
   '4-4-understanding-scope',
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Understanding Scope',
   'Master where variables can be accessed with global, function, and block scope',
   'standard',
@@ -673,10 +673,10 @@ Your coding tasks will be creating variables with different scoping behaviors in
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '84f07898-4c48-4937-ae42-6ce81bf7cfe3',
+  '12a1e44b-5e4c-4a1d-a5a4-dd97d99a5eae',
   '4-5-closures',
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Closures',
   'Discover how functions remember variables from their creation environment',
   'standard',
@@ -696,10 +696,10 @@ Your coding tasks will be creating practical examples of closures, including a f
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '29304676-03d4-414f-9620-967372f05000',
+  'ab4eaf8f-ebf7-466d-94cd-de4dcae94f5b',
   '4-6-callback-functions',
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Callback Functions',
   'Learn to pass functions as parameters for flexible and reusable code patterns',
   'standard',
@@ -719,10 +719,10 @@ Your coding tasks will be implementing your own callback functions and learning 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b7dd1b6e-5dd1-43b5-8075-e48d8c75b9b7',
+  '785cb4bd-605c-4628-a84d-05286f065255',
   '4-7-immediately-invoked-function-expressions',
-  'fcf3554a-df33-48df-8782-d110e2093a3e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f6f0583b-d37c-40d5-b522-1649d1916513',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Immediately Invoked Function Expressions (IIFE)',
   'Create private scope and avoid global pollution with self-executing functions',
   'standard',
@@ -742,19 +742,19 @@ Your coding tasks will be creating both anonymous and named IIFEs to see how the
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
   '5-arrays-objects-and-classes',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Arrays, Objects, and Classes',
   'Work with JavaScript''s essential data structures: arrays, objects, and classes',
   4
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0ceaefde-1749-4cc4-ad67-e6f9a42609b1',
+  'dedc728f-d1e2-4cd3-8ad9-eb9c0ac17444',
   '5-1-introduction-to-arrays',
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Introduction to Arrays',
   'Learn to store and manage collections of related data with JavaScript arrays',
   'standard',
@@ -774,10 +774,10 @@ Your coding tasks will be creating an array of numbers and accessing its element
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9ba5fc5c-fdd2-4184-8006-bb36ec74c127',
+  'b9a61de8-e69a-41b4-b4f3-2dce73ed8a97',
   '5-2-basic-array-methods',
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Basic Array Methods',
   'Master essential array methods for searching, checking, and validating array data',
   'standard',
@@ -797,10 +797,10 @@ Your coding tasks will be using these array methods to search for elements, chec
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ac65b882-60c8-423e-8c10-59f37b9a185a',
+  '188de460-04d7-4b87-8e87-59bad1f47a98',
   '5-3-advanced-array-methods',
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Advanced Array Methods',
   'Transform and process array data with powerful iteration methods like map, filter, and reduce',
   'standard',
@@ -820,10 +820,10 @@ Your coding tasks will be using these advanced array methods to iterate through 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f5507c81-c5a5-48b1-bfe9-971b7ac0bf2a',
+  '4b067e52-457c-4f81-a037-ffef07ba85c6',
   '5-4-introduction-to-objects',
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Introduction to Objects',
   'Organize related data with meaningful names using JavaScript objects and key-value pairs',
   'standard',
@@ -843,10 +843,10 @@ Your coding tasks will be creating objects with key-value pairs, accessing their
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '21ae2174-4373-4d07-8f21-581bed24aeed',
+  '627739e7-11e3-4cdc-940a-4342fcefeb8a',
   '5-5-object-methods',
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Object Methods',
   'Dynamically modify objects and work with built-in object methods for data manipulation',
   'standard',
@@ -866,10 +866,10 @@ Your coding tasks will be dynamically manipulating object properties using dot a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f11df821-4553-4715-a7cb-2e4292b92719',
+  'ff1ef8bc-3c7b-4555-950c-61bf46b6005e',
   '5-6-introduction-to-classes',
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Introduction to Classes',
   'Create blueprints for objects with classes and constructors for organized code structure',
   'standard',
@@ -889,10 +889,10 @@ Your coding tasks will be creating a simple class with a constructor, then creat
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '3239b50a-7c41-4a8e-924c-11fa49f068e3',
+  'c810762f-e0b4-4f2c-b134-5e8aafc6023a',
   '5-7-class-methods-and-properties',
-  'ab8522b8-0a9e-435c-9514-ce34f75379ee',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'e2c4e368-532e-41e9-9f29-088dac6d014c',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Class Methods and Properties',
   'Add behavior to classes with methods and understand how `this` works in class context',
   'standard',
@@ -912,19 +912,19 @@ Your coding tasks will be adding methods to a class that can access and manipula
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
   '6-core-javascript-concepts',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Core JavaScript Concepts',
   'Master advanced concepts including error handling, asynchronous programming, and HTTP requests',
   5
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '59eba88e-923e-4196-9916-10eb7587befd',
+  '369e377e-218d-4590-bc81-e2215e933330',
   '6-1-pass-by-value-vs-pass-by-reference',
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Pass by Value vs. Pass by Reference',
   'Understand how JavaScript handles data differently for primitives and objects when copying and passing',
   'standard',
@@ -944,10 +944,10 @@ Your coding tasks will be experimenting with copying different data types to obs
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '1f16a4ca-669b-4937-86c2-e23bc1166089',
+  'e8e00680-6bbf-4895-a772-86ade0c5cac1',
   '6-2-immutability-and-copying-data',
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Immutability and Copying Data',
   'Learn to create safe copies of data using immutability principles and modern JavaScript techniques',
   'standard',
@@ -967,10 +967,10 @@ Your coding tasks will be using spread syntax to create shallow copies of arrays
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b00a52d3-7078-408d-9710-0abb37483294',
+  'b564d3d0-547a-4112-8bfe-b67ade9505c5',
   '6-3-error-handling-with-try-catch',
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Error Handling with try...catch',
   'Master robust error handling with try-catch blocks for bulletproof applications',
   'standard',
@@ -990,10 +990,10 @@ Your coding tasks will be implementing `try...catch` blocks to handle functions 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '6f37bfa0-ba26-4f12-ba09-a0e43d3a5dbf',
+  'bcdcaa31-5725-4616-93e9-1f39908840bf',
   '6-4-understanding-synchronous-javascript',
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Understanding Synchronous JavaScript',
   'Explore how JavaScript executes code line by line and the blocking nature of synchronous operations',
   'standard',
@@ -1013,10 +1013,10 @@ Your coding tasks will be calling functions that execute thread blocking operati
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c7d93269-680f-4105-bdf4-ff34b8943cca',
+  '716932c1-8d0f-4f54-987e-db0deec70f56',
   '6-5-timeouts-and-intervals',
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Timeouts and Intervals',
   'Discover asynchronous programming with setTimeout and setInterval for non-blocking code execution',
   'standard',
@@ -1036,10 +1036,10 @@ Your coding tasks will be using `setTimeout()` for delayed execution, `setInterv
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'edeb9d0b-889f-40c6-9d2d-c3a8bd989c5f',
+  'f978d875-cd98-4d26-ba95-860c31b77525',
   '6-6-introduction-to-promises',
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Introduction to Promises',
   'Master JavaScript Promises for elegant handling of asynchronous operations that can succeed or fail',
   'standard',
@@ -1059,10 +1059,10 @@ Your coding tasks will be creating Promises using the Promise constructor with `
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '29cb5b9b-112b-484d-a9ec-c11df76a9aa3',
+  'cdb796f2-2f6b-415e-9c9a-b170282119cf',
   '6-7-fetch-api-and-http-requests',
-  '88ad44fd-41ad-4c14-9f74-ba765accce0e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  '749b252b-7cbb-41ee-ab58-98e9b6ff750f',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Fetch API and HTTP Requests',
   'Make HTTP requests to servers and APIs using the modern Fetch API with async/await',
   'standard',
@@ -1082,19 +1082,19 @@ Your coding tasks will be making real HTTP requests using `fetch()` with async/a
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
   '7-javascript-in-the-browser',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'JavaScript in the Browser',
   'Create interactive web experiences with DOM manipulation and event handling',
   6
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '24501217-5951-4c40-878b-9e1c9bb10b3c',
+  '8f7adc55-6f57-4fde-bb38-ad43575a2b0b',
   '7-1-the-document-object-model-dom',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'The Document Object Model (DOM)',
   'Discover how HTML elements become JavaScript objects that you can manipulate and control',
   'standard',
@@ -1114,10 +1114,10 @@ Your coding tasks will be connecting JavaScript to HTML using the `<script>` tag
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e3433338-4dbf-4854-a7d4-c31e26d93335',
+  'ed17d850-994e-47b2-a2b6-9a9005c05557',
   '7-2-selecting-dom-elements',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Selecting DOM Elements',
   'Master the essential methods for finding and selecting specific HTML elements in the DOM',
   'standard',
@@ -1137,10 +1137,10 @@ Your coding tasks will be selecting elements using various criteria including ID
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '6ff3f361-0450-4d2e-9081-d4089949bbdf',
+  'acaecadf-3a90-49a1-a582-2be2d17bbe7f',
   '7-3-manipulating-element-content-and-styles',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Manipulating Element Content and Styles',
   'Learn to dynamically change element content and appearance using JavaScript DOM properties',
   'standard',
@@ -1160,10 +1160,10 @@ Your coding tasks will be changing element content using different properties, m
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b3b4c498-52d7-49a3-acc4-78d28ea900a1',
+  '9c724092-ecf4-464d-a818-b2c20f3b4175',
   '7-4-working-with-element-attributes',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Working with Element Attributes',
   'Control element behavior and functionality by manipulating HTML attributes with JavaScript',
   'standard',
@@ -1183,10 +1183,10 @@ Your coding tasks will be manipulating various attribute types including standar
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '7579b5bf-4048-4687-bc88-32c867a751ad',
+  'a1dab40c-b370-44d6-b6a0-4814b377b8bb',
   '7-5-creating-and-removing-elements',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Creating and Removing Elements',
   'Build dynamic web applications by programmatically creating and removing HTML elements',
   'standard',
@@ -1206,10 +1206,10 @@ Your coding tasks will be creating new elements with properties and content, add
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0eee7fac-c385-423a-aafc-aa8484c59dfc',
+  '4a370fe3-d2ac-4216-8c06-f3c6c23b61c1',
   '7-6-handling-events',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Handling Events',
   'Transform static web pages into interactive applications by responding to user interactions',
   'standard',
@@ -1229,10 +1229,10 @@ Your coding tasks will be adding event listeners to elements for different inter
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b69c3450-1258-4295-b7d5-62929416eb03',
+  '4ec157b3-5e16-4204-8b51-e7e59c164406',
   '7-7-event-object-and-event-propagation',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Event Object and Event Propagation',
   'Master advanced event handling with event objects and control event flow through DOM propagation',
   'standard',
@@ -1252,10 +1252,10 @@ Your coding tasks will be accessing event object properties like `type` and `tar
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ba54255f-3897-42d8-b4a6-1276e7c2f80d',
+  '924a8f0c-77ee-4f33-bbeb-1a0630d99ed3',
   '7-8-default-events-and-preventing-defaults',
-  '689e8095-2c9d-4a5f-9d80-3590bb1f273e',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'bbfb6f9f-9ca0-4b27-81a9-6f6bd9aeee41',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Default Events and Preventing Defaults',
   'Take complete control of user interactions by overriding default browser behaviors with preventDefault',
   'standard',
@@ -1275,19 +1275,19 @@ Your coding tasks will be using `preventDefault()` to stop forms from submitting
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '97b132a5-e267-4c4f-a438-0a2775b46b63',
+  'c684fd58-6f0a-49ba-be65-7de3d867a6d1',
   '8-es6-and-modern-syntax',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'ES6+ & Modern Syntax',
   'Learn modern JavaScript features including destructuring, arrow functions, and enhanced syntax',
   7
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f1062d6f-1c8e-44bb-994b-07c366d4e6d9',
+  '28bd7da9-f0d4-4ef1-b299-7fbd91d908f7',
   '8-1-modern-declarations',
-  '97b132a5-e267-4c4f-a438-0a2775b46b63',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'c684fd58-6f0a-49ba-be65-7de3d867a6d1',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Modern Declarations',
   'Master the differences between const and let declarations for writing safer, more predictable code',
   'standard',
@@ -1307,10 +1307,10 @@ Your coding tasks will be identifying when variables should be `const` versus `l
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e02f6dfa-2934-454e-b0e9-8085b84bff5e',
+  'b874033c-45a3-44f0-bda9-5a6d8cac2883',
   '8-2-destructuring-assignment',
-  '97b132a5-e267-4c4f-a438-0a2775b46b63',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'c684fd58-6f0a-49ba-be65-7de3d867a6d1',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Destructuring Assignment',
   'Extract values from arrays and objects with elegant ES6 destructuring syntax',
   'standard',
@@ -1330,10 +1330,10 @@ Your coding tasks will be using object destructuring to extract properties from 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '4be905f5-59b7-4caf-8fb3-fb78a3c89b90',
+  'efd15e74-9753-4677-a0a2-d2d04b2269de',
   '8-3-arrow-functions',
-  '97b132a5-e267-4c4f-a438-0a2775b46b63',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'c684fd58-6f0a-49ba-be65-7de3d867a6d1',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Arrow Functions',
   'Write more concise and elegant functions with ES6 arrow function syntax',
   'standard',
@@ -1353,10 +1353,10 @@ Your coding tasks will be converting traditional functions to arrow function syn
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'd75857e0-ea16-4d08-a457-55ad9fe39c7d',
+  'c15a57f2-ad0d-460c-a44b-921c7424d94e',
   '8-4-enhanced-object-literals',
-  '97b132a5-e267-4c4f-a438-0a2775b46b63',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'c684fd58-6f0a-49ba-be65-7de3d867a6d1',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Enhanced Object Literals',
   'Create more elegant and powerful objects with ES6 enhanced object literal syntax',
   'standard',
@@ -1376,10 +1376,10 @@ Your coding tasks will be creating objects using property shorthand when variabl
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'cf58a154-d91d-4b93-a351-a9aed1b1d0ee',
+  '7fc163cd-b749-4efa-b5e5-cf3e0254987e',
   '8-5-async-await-syntax',
-  '97b132a5-e267-4c4f-a438-0a2775b46b63',
-  'f3a045ab-9499-470b-a06e-65311e91d1d8',
+  'c684fd58-6f0a-49ba-be65-7de3d867a6d1',
+  'f9df5e87-47e8-47e7-a10e-d7fbc948bc76',
   'Async/Await Syntax',
   'Write clean asynchronous code with modern async/await syntax that reads like synchronous code',
   'standard',
@@ -1402,7 +1402,7 @@ Your coding tasks will be converting Promise-based code to async/await syntax an
 -- 插入课程: React Fundamentals (react-fundamentals)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'react-fundamentals',
   'React Fundamentals',
   'Learn the fundamentals of React from components and JSX, to state and event handlers, effects and data fetching, hooks and performance',
@@ -1494,19 +1494,19 @@ The React fundamentals you learn here are the foundation for everything else in 
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
   '1-introduction-to-react',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Introduction to React',
   'Learn the core concepts of React including how it works, components, JSX, props, and styling',
   0
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f5110731-03d3-4737-93da-1320ece6e39a',
+  '63e60061-2db9-4bbc-85d5-c6cdf7e86bc9',
   '1-1-what-is-react',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'What is React?',
   'Learn what React is, why it was created, and its role in building modern user interfaces',
   'standard',
@@ -1527,10 +1527,10 @@ Your coding tasks will be exploring a pre-built React component to see React in 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c381e0df-a5b0-4e56-af1d-3e688e5f517e',
+  '24e66f1c-5689-4cf0-b4ef-d5e66965df81',
   '1-2-how-react-works',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'How does React work?',
   'Understand React''s internal workings including the Virtual DOM, reconciliation algorithm, and efficient rendering',
   'whiteboard',
@@ -1551,10 +1551,10 @@ This conceptual lesson will give you a solid foundation for understanding React'
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '32319009-2c90-4a94-8a3e-689a29587a0b',
+  '6f764210-faca-4466-8178-1734c41f6953',
   '1-3-setting-up-a-react-application',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Setting up a React Application',
   'Learn how to set up a basic React application with the main entry point and root element',
   'standard',
@@ -1575,10 +1575,10 @@ Your coding tasks will be importing the App component in the main index file, re
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ddb7ad7d-0e02-45e4-a039-e60fdfb86ecb',
+  '404429c6-e29f-4699-991b-bf5f9d4a4a80',
   '1-4-jsx-overview',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'JSX Overview',
   'Learn the syntax rules of JSX and how to write basic React elements',
   'standard',
@@ -1599,10 +1599,10 @@ Your coding tasks will be applying JSX syntax rules, converting HTML attributes 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b5d9c175-818e-4cad-baf1-cb4ac131e99e',
+  'fdf5d220-1172-4bc4-a78f-c35392f2d0ea',
   '1-5-jsx-iteration',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'JSX Iteration',
   'Learn how to render lists of data dynamically using JavaScript array methods in JSX',
   'standard',
@@ -1621,10 +1621,10 @@ Your coding tasks will be using array methods to transform data arrays into JSX 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '6f44fb82-cf22-440f-93bf-40e511ef691c',
+  'de672a51-10b2-4105-a2a6-b01a4b06d075',
   '1-6-jsx-conditional-rendering',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'JSX Conditional Rendering',
   'Learn how to conditionally render content in JSX using different JavaScript patterns',
   'standard',
@@ -1645,10 +1645,10 @@ Your coding tasks will be practicing different conditional rendering patterns, i
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '3d00e8f3-d689-40d3-8d2a-88ab78422829',
+  'dcce91d6-2049-4830-a079-58b529f6bc42',
   '1-7-components',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Components',
   'Learn how to create simple React components and render them in your app',
   'standard',
@@ -1669,10 +1669,10 @@ Your coding tasks will be creating simple components from scratch and rendering 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'bbc70407-aee9-40e0-9a24-4368f7085320',
+  '85938432-e9c2-4275-b2a8-13eb050895cc',
   '1-8-component-props',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Component Props',
   'Learn how to pass and use props to make components dynamic and reusable',
   'standard',
@@ -1693,10 +1693,10 @@ Your coding tasks will be passing different types of props to components, access
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'aaa37796-ce63-40df-8585-5803b630956f',
+  '88976338-dfc8-45e5-839f-eb602b176711',
   '1-9-children-props',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Children Props',
   'Learn how to use the children prop to pass content between component tags',
   'standard',
@@ -1717,10 +1717,10 @@ Your coding tasks will be passing content as children to components and accessin
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8ebd4961-0475-4b47-94f9-6a72ff85ad21',
+  '94b12062-be3f-4b3a-abb0-bf03fb04c94a',
   '1-10-fragments',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Fragments',
   'Learn how to use React Fragments to group elements without adding extra DOM nodes',
   'standard',
@@ -1741,10 +1741,10 @@ Your coding tasks will be using both the `Fragment` component from React and the
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0a97df78-c342-4287-bde8-34cc7e15565c',
+  '95472e69-b0f4-4524-ac76-3b5d395d9bf4',
   '1-11-styling-components',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Styling Components',
   'Learn different methods to style React components including CSS, CSS Modules, and inline styles',
   'standard',
@@ -1765,10 +1765,10 @@ Your coding tasks will be applying styles to paragraphs using each of the three 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'cdda53da-074d-41d6-8632-d3a1dd8d88a5',
+  '3b8cdf8e-7a3e-49e2-8a38-91ab77fd1b0e',
   '1-12-thinking-in-react',
-  '1cac47e0-be8b-408d-9829-3b285ded4323',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '2353f94f-6992-48ae-b66c-679f41d6b0f7',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Thinking in React',
   'Learn how to approach building React applications by breaking down UI into components and passing data through props',
   'standard',
@@ -1789,19 +1789,19 @@ Your coding tasks will be completing components for a sandwich builder applicati
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
   '2-state-and-event-handlers',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'State and Event Handlers',
   'Learn how to manage component state and handle events in React',
   1
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '621b9eaa-bf6c-418f-bb87-c20a9d0e7b15',
+  'b260f21f-0ad4-4d0f-bf5e-9f12293390a4',
   '2-1-the-usestate-hook',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useState Hook',
   'Learn how to use the useState hook to add state to functional components',
   'standard',
@@ -1822,10 +1822,10 @@ Your coding tasks will be declaring state variables using the `useState` hook in
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '1323459e-c442-49b6-b8e7-da66d3cdb1dc',
+  'c7b027ea-73df-4c1e-a821-743bed8c6a96',
   '2-2-component-lifecycle',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Component Lifecycle',
   'Understand the React component lifecycle including mounting, updating, and unmounting phases',
   'whiteboard',
@@ -1846,10 +1846,10 @@ Your whiteboard exploration will be visualizing the component lifecycle phases a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ac0ce07a-c062-4455-b79a-c348abe2ee9e',
+  '33949207-70f9-4c86-a74a-fdaf2f11227c',
   '2-3-state-initializers',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'State Initializers',
   'Learn different ways to initialize state in React components using useState',
   'standard',
@@ -1870,10 +1870,10 @@ Your coding tasks will be implementing different state initialization patterns i
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '7f136fb2-6810-4c64-812d-83b03a443dce',
+  '1bd4b4cb-e04c-4d1e-9f4c-2c2d31944c38',
   '2-4-updating-state',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Updating State',
   'Learn different patterns for updating state in React components',
   'standard',
@@ -1894,10 +1894,10 @@ Your coding tasks will be implementing different state update patterns in a coun
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '2a8e9761-0b22-4a5d-af92-a87e8601b7ce',
+  'adf33c44-d963-4966-8a65-93d825120af4',
   '2-5-event-handlers',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Event Handlers',
   'Learn how to handle events in React and the differences from traditional DOM event handling',
   'standard',
@@ -1918,10 +1918,10 @@ Your coding tasks will be implementing different `onClick` handler patterns in R
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '53c1e177-21be-4933-adbe-f911695e69a3',
+  'eb426914-793e-4f45-96f3-ec16210f2154',
   '2-6-handling-change-events',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Handling Change Events',
   'Learn how to handle change events in React inputs to create controlled components',
   'standard',
@@ -1942,10 +1942,10 @@ Your coding tasks will be adding an `onChange` handler to capture input changes,
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '91f7af67-c9f2-4ea1-91ef-43145856ee26',
+  '41dbd9ca-9804-4bf8-84eb-3bccc90ea677',
   '2-7-handling-submit-events',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Handling Submit Events',
   'Learn how to handle form submission events in React and access input values',
   'standard',
@@ -1966,10 +1966,10 @@ Your coding tasks will be implementing form event handlers, preventing default b
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '1384113a-f70e-4fd8-95cb-4543fcb216d0',
+  '7a4de962-65b3-40f7-898e-624153d9f58e',
   '2-8-uncontrolled-components',
-  '0d7f00c0-a44a-4f20-a9f1-011b9ee7e98e',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  '9e19d252-1f20-4691-a206-e30edbfe273b',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Uncontrolled Components',
   'Learn about uncontrolled components in React and when to use them instead of controlled components',
   'standard',
@@ -1990,19 +1990,19 @@ Your coding tasks will be observing the completed example of an uncontrolled com
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
   '3-effects-and-data-fetching',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Effects and Data Fetching',
   'Learn how to handle effects and data fetching in React',
   2
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '302d11a0-1cfe-4592-a9f3-7015b7c397b8',
+  'dc589f83-e810-422b-a8fc-30e21da8d5b2',
   '3-1-introduction-to-useeffect',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Introduction to Effects',
   'Learn about side effects in React and the basic syntax of the useEffect hook',
   'standard',
@@ -2023,10 +2023,10 @@ Your coding tasks will be observing a completed example that demonstrates the ba
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '56ad74fd-211b-4943-85ea-d18d477e7ab5',
+  '98afd73e-13d6-41fd-af67-67283d205818',
   '3-2-setup-function-in-useeffect',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Setup Function in useEffect',
   'Learn how the setup function works in useEffect',
   'standard',
@@ -2047,10 +2047,10 @@ Your coding tasks will be adding a setup function that logs the count value to t
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '05f87804-2661-4c6c-9906-4d435f52894b',
+  '75074f6b-8bfd-42c5-b832-9c77a38d1e19',
   '3-3-dependency-arrays-in-useeffect',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Dependency Arrays in useEffect',
   'Learn how to properly use the dependencies array in useEffect to avoid common pitfalls',
   'standard',
@@ -2071,10 +2071,10 @@ Your coding tasks will be fixing these pitfalls by adding missing dependencies, 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '31a7dff0-036f-424d-9f6b-938c14440038',
+  'a9898f19-492a-4f5c-bd6d-0236110c6fbf',
   '3-4-cleanup-function-in-useeffect',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Cleanup Function in useEffect',
   'Learn about the cleanup function in useEffect and why it''s important for preventing memory leaks',
   'standard',
@@ -2095,10 +2095,10 @@ Your coding task will be adding a cleanup function to an effect that uses the `r
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '78cb866e-399f-43a8-a5da-3e58e3023c84',
+  '48adc78a-5b16-4cdf-93da-d3531405c39a',
   '3-5-useeffect-with-no-dependency-array',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'useEffect with No Dependency Array',
   'Learn what happens when useEffect has no dependency array and when this pattern is useful',
   'standard',
@@ -2119,10 +2119,10 @@ Your coding task will be creating a `useEffect` hook with no dependency array th
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'deddcfa4-c2db-486b-8561-b436c5eaebbe',
+  'e49bd9c7-9251-475b-bde2-71fc5f16abd7',
   '3-6-stale-values',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Stale Values',
   'Learn how stale values occur in effects and how to avoid them using state setter callbacks',
   'standard',
@@ -2143,10 +2143,10 @@ Your coding task will be fixing a stale value issue in an interval counter by re
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '6b7560ae-d735-4374-9480-c31910b75185',
+  '5bdac937-37ed-4f8b-a30a-b87d35c447a6',
   '3-7-the-useref-hook',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useRef Hook',
   'Learn how to use the useRef hook to create mutable references that persist across renders',
   'standard',
@@ -2167,10 +2167,10 @@ Your coding tasks will be using `useRef` to create persistent references, access
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '00911624-7371-4da3-a49e-fa7942dbbf49',
+  'ad3c7ef5-e15a-46a6-9ed7-99033c94cf07',
   '3-8-data-fetching-and-displaying-data',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Data Fetching and Displaying Data',
   'Learn how to fetch data from APIs and display it in React components using effects and state',
   'standard',
@@ -2191,10 +2191,10 @@ Your coding tasks will be implementing the data fetching logic using the Fetch A
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e23bfb16-b4fe-4920-9a92-e9b289b06e05',
+  '96cd83cf-6b8f-4167-b177-2845814cbfa7',
   '3-9-data-fetching-and-handling-loading-state',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Data Fetching and Handling Loading State',
   'Learn how to handle loading states during data fetching to provide better user feedback',
   'standard',
@@ -2215,10 +2215,10 @@ Your coding tasks will be implementing loading state management by setting loadi
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '7900e5a3-8fd6-420c-892a-b39c6f09d34c',
+  '86fa2d6e-2def-4ba9-85e7-9500a614c07d',
   '3-10-data-fetching-and-handling-errors',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Data Fetching and Handling Errors',
   'Learn how to handle errors during data fetching from both client and server side',
   'standard',
@@ -2239,10 +2239,10 @@ Your coding tasks will be implementing error state management, using try-catch b
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '16b8949d-cbd8-4874-9672-2ad765fb6b6a',
+  '6aa76527-96fd-456a-92c7-642f44f9bfec',
   '3-11-data-fetching-and-handling-request-cancellation',
-  '51642817-cdfc-4d01-b03b-79581d8e98a4',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b39faca0-23d8-4272-92a9-19a837df804d',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Data Fetching and Handling Request Cancellation',
   'Learn how to cancel ongoing API requests when components unmount to prevent memory leaks and race conditions',
   'standard',
@@ -2263,19 +2263,19 @@ Your coding tasks will be implementing request cancellation using the AbortContr
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
   '4-hooks-and-performance',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Hooks and Performance',
   'Learn essential React hooks and performance optimization techniques for building efficient applications.',
   3
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ec31d33d-196d-4283-8589-acc559af1e77',
+  '95c97c49-fb97-48d9-b3e2-49fe70d96211',
   '4-1-component-re-renders',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Component Re-Renders Deep Dive',
   'Understand when and why React components re-render and how re-renders propagate through the component tree',
   'whiteboard',
@@ -2296,10 +2296,10 @@ Your whiteboard exploration will be visualizing component re-render scenarios, u
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '880e78b3-1954-4b63-8d4b-64f2d759e248',
+  'ce0bdf55-9554-4d68-94bc-f38bcf772bb0',
   '4-2-the-usememo-hook',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useMemo Hook',
   'Learn how to use the useMemo hook to optimize expensive calculations in React',
   'standard',
@@ -2320,10 +2320,10 @@ Your coding tasks will be refactoring a filter operation to use `useMemo`, demon
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '932d2578-4d50-4455-8bce-31104a83dfdc',
+  'e53ee245-e5e8-4422-8b22-e388fc191a58',
   '4-3-memoizing-components',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Memoizing Components',
   'Learn how to use memo to optimize component re-renders in React',
   'standard',
@@ -2344,10 +2344,10 @@ Your coding tasks will be wrapping a component with `memo` and implementing a cu
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '67197f90-7175-4eae-84ac-5778224c3c74',
+  'f1a3d0ea-3243-43c2-9f7b-83dfa4901ceb',
   '4-4-the-usecallback-hook',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useCallback Hook',
   'Learn how to use the useCallback hook to optimize function references in React',
   'standard',
@@ -2368,10 +2368,10 @@ Your coding tasks will be refactoring a regular function to use `useCallback`, d
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '3202c0bf-3338-471f-ac12-2b392de4ebf4',
+  'a75ed76b-3ede-4223-9fa9-f4787c4bf030',
   '4-5-memoizing-with-useeffect',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'Memoizing with useEffect',
   'Learn how to use useMemo and useCallback with useEffect to prevent unnecessary effect executions',
   'standard',
@@ -2392,10 +2392,10 @@ Your coding tasks will be memoizing a function with `useCallback` and adding it 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '46fb8961-cca4-407c-acdc-73fb58381e67',
+  '6ba6d08d-5ee2-45e5-9462-39c9bc78ebd9',
   '4-6-the-usecontext-hook',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useContext Hook',
   'Learn how to use the useContext hook to read and subscribe to context in React components',
   'standard',
@@ -2416,10 +2416,10 @@ Your coding tasks will be creating a complete context implementation including a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '09f259e4-46aa-4157-a9c3-67e17ae8e245',
+  'd815d967-33e7-4602-a6fd-eda9aece8384',
   '4-7-the-usereducer-hook',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useReducer Hook',
   'Learn how to use useReducer for more declarative and predictable state management',
   'standard',
@@ -2439,10 +2439,10 @@ Your coding tasks will be converting a component from using `useState` to `useRe
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '2484093e-82c5-4c51-9efa-c4c94a4b4ce6',
+  '5b4d3cf1-9751-44e6-815b-3725da314e19',
   '4-8-the-useactionstate-hook',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useActionState Hook',
   'Learn how to use the useActionState hook to manage form state and handle submissions',
   'standard',
@@ -2463,10 +2463,10 @@ Your coding tasks will focus on implementing the state return logic in the actio
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '36575f52-2e45-48a4-a85a-3e9b65e243a0',
+  'fa1741a4-6b04-4bdf-97cc-86932ddc9240',
   '4-9-the-uselayouteffect-hook',
-  '701c99ae-1ea8-472f-95a2-2bf38d820167',
-  '174fdeba-2187-4a1d-a0d2-152cb887d021',
+  'f93ca0fc-ee15-48ac-b523-29c8efe76081',
+  'b84273f5-eb0d-485d-a8d5-b8a6e841d748',
   'The useLayoutEffect Hook',
   'Learn how to use the useLayoutEffect hook to perform synchronous DOM mutations before the browser paints',
   'standard',
@@ -2490,7 +2490,7 @@ Your coding tasks will be replacing a `useEffect` with `useLayoutEffect` to meas
 -- 插入课程: Design Patterns in React (design-patterns-in-react)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'design-patterns-in-react',
   'Design Patterns in React',
   'Learn essential React design patterns including component architecture, custom hook patterns, and UI patterns to build scalable and maintainable applications',
@@ -2592,19 +2592,19 @@ The patterns you learn here are used in production applications at companies bui
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '7d5260de-0394-41a3-ae7d-9ac6964a9e86',
+  'bc252417-0562-4fc1-86a6-8443351fa50d',
   '1-foundational-patterns',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Foundational Patterns',
   'Learn the fundamentals of design patterns in React by practicing custom hooks, state management, and component organization',
   0
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '11ac3523-b097-47f1-bed5-2b9abc2d0f69',
+  'd0e0e199-10a0-48f9-977a-b5116448d413',
   '1-1-what-are-design-patterns',
-  '7d5260de-0394-41a3-ae7d-9ac6964a9e86',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  'bc252417-0562-4fc1-86a6-8443351fa50d',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'What are Design Patterns?',
   'Learn what design patterns are and why they are essential for building maintainable React applications',
   'standard',
@@ -2624,10 +2624,10 @@ Your coding tasks will be to explore the code editor to get familiar with the Re
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '5f1e61e5-59f0-4c55-a789-a66a4eb7e1fa',
+  '5e34bfdf-a88a-4bc7-919a-beb40be2416f',
   '1-2-custom-hooks',
-  '7d5260de-0394-41a3-ae7d-9ac6964a9e86',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  'bc252417-0562-4fc1-86a6-8443351fa50d',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Custom Hooks',
   'Learn how to create custom hooks to extract and reuse stateful logic across components',
   'standard',
@@ -2647,10 +2647,10 @@ Your coding tasks will be creating a simple custom hook that manages a counter s
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'd4a5ef54-09b2-4bc7-8acc-50e1e3b84ec0',
+  'db637d80-71d9-46d9-adc1-f05a667e27d4',
   '1-3-lifting-state-up',
-  '7d5260de-0394-41a3-ae7d-9ac6964a9e86',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  'bc252417-0562-4fc1-86a6-8443351fa50d',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Lifting State Up',
   'Learn how to share state between components by moving it to their common parent',
   'standard',
@@ -2670,10 +2670,10 @@ Your coding tasks will be moving state from a child component to a parent compon
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '7b94bd41-e31a-46d5-ad8d-a1e20f03faf2',
+  '10b99040-84e4-4433-8786-e17b0f4fc0aa',
   '1-4-colocating-state',
-  '7d5260de-0394-41a3-ae7d-9ac6964a9e86',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  'bc252417-0562-4fc1-86a6-8443351fa50d',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Colocating State',
   'Learn how to organize state by keeping it close to where it is used for better maintainability',
   'standard',
@@ -2693,10 +2693,10 @@ Your coding tasks will be moving state from a parent component down to a child c
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '6ed63255-dc80-4c36-a4ca-6ed10db6a9e0',
+  '3ad83335-4653-405a-920a-2823a4de4cdf',
   '1-5-state-machine-pattern',
-  '7d5260de-0394-41a3-ae7d-9ac6964a9e86',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  'bc252417-0562-4fc1-86a6-8443351fa50d',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'State Machine Pattern',
   'Learn how to manage complex state with a simple state machine using a single status variable',
   'standard',
@@ -2716,19 +2716,19 @@ Your coding tasks will be refactoring multiple boolean states into a single stat
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
   '2-component-patterns',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Component Patterns',
   'Learn how to build scalable component architectures with composition patterns and design principles',
   1
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'bc518ff5-b535-4166-95ab-0c77bf49f953',
+  'b034c29d-e775-4bd5-8811-5bb188b4c157',
   '2-1-single-responsibility-principle',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Single Responsibility Principle',
   'Learn how to keep components focused by ensuring each component has only one reason to change',
   'standard',
@@ -2748,10 +2748,10 @@ Your coding tasks will be refactoring a large component that violates SRP by bre
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ce9b9cfe-499e-4562-a798-4d609bd9e7a9',
+  '257584e2-53e1-48f2-a3f9-03c595f16b75',
   '2-2-presentational-vs-container-components',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Presentational vs Container Components',
   'Learn how to separate presentation logic from business logic using presentational and container components',
   'standard',
@@ -2771,10 +2771,10 @@ Your coding tasks will be extracting business logic from a mixed component into 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'bc66a87f-dadb-4c0b-882a-8ee9e8f892ea',
+  '90b7b8fe-1855-4516-a352-208e1bcb9cd3',
   '2-3-smart-vs-dumb-components',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Smart vs Dumb Components',
   'Learn the difference between UI components and feature components in application architecture',
   'standard',
@@ -2794,10 +2794,10 @@ Your coding tasks will be creating simple UI components for displaying data and 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '4da41922-aa0a-454b-b2d9-11bd3f0f8e49',
+  'd911a949-01bf-4024-8d96-dadaac2f7076',
   '2-4-children-pattern',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Children Pattern',
   'Learn how to use the children prop to create flexible and reusable layout components',
   'standard',
@@ -2817,10 +2817,10 @@ Your coding tasks will be creating layout components that use the children prop 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e6aac36c-45ae-4cc2-974f-a1e5fc992e67',
+  'f297757f-c5a8-4c39-9b21-db83e299dbc6',
   '2-5-function-children-pattern',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Function Children Pattern',
   'Learn how to pass functions as children to share data between parent and child components',
   'standard',
@@ -2840,10 +2840,10 @@ Your coding tasks will be creating a component that calls its children as a func
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'dd4bf99e-8e38-4e2f-8c28-9b12925e4301',
+  'd59eb47b-29f0-4e1f-9a1d-db0bac74ca64',
   '2-6-render-props-pattern',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Render Props Pattern',
   'Learn how to pass rendering logic as props to create flexible and reusable components',
   'standard',
@@ -2863,10 +2863,10 @@ Your coding tasks will be creating a component that takes a render function as a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '4b338623-878e-462b-a792-49e75c141492',
+  '2c1ff22b-299d-47e6-bcba-3ed018b573a0',
   '2-7-compound-components-pattern',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Compound Components Pattern',
   'Learn how to create compound components that work together to provide flexible and reusable interfaces',
   'standard',
@@ -2886,10 +2886,10 @@ Your coding tasks will be creating a simple compound component system and using 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '35ab11fb-2def-4a75-8e8f-bca3efc3d658',
+  'bd46b88c-a0ed-4b01-b9fa-78a17ad3eba0',
   '2-8-higher-order-components',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Higher-Order Components',
   'Learn about Higher-Order Components (HOCs) for component logic reuse in legacy React code',
   'standard',
@@ -2909,10 +2909,10 @@ Your coding tasks will be creating a simple `withLoading` HOC that adds loading 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0e3c866e-93d9-4d9c-8232-00430fcf7ff7',
+  '2e133ff4-d120-4308-800e-5e4f37dcd22b',
   '2-9-dynamic-component-loading',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Dynamic Component Loading',
   'Learn how to lazy load components dynamically based on user interaction to improve performance',
   'standard',
@@ -2932,10 +2932,10 @@ Your coding tasks will be converting a regular component import to a lazy import
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '2df882dd-6624-41da-92ea-f85c843c5897',
+  'b0722e7c-b667-4e03-9a04-29e4e7c1fd0a',
   '2-10-virtualization-pattern',
-  '98963cb2-87c4-4015-abfb-68ffb26fb04d',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '2bfc91e9-559f-4253-b1a0-d0492f1a5166',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Virtualization Pattern',
   'Learn how to use virtualization to efficiently render large lists with react-window',
   'standard',
@@ -2955,19 +2955,19 @@ Your coding tasks will be replacing a regular list with a virtualized `FixedSize
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
   '3-hook-patterns',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Hook Patterns',
   'Learn advanced hook patterns for efficient state management and performance optimization',
   2
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0f28195a-cd7b-464b-b9eb-be8d72a50291',
+  '2a1ae0c8-cdd1-48db-b707-340b38b0dd42',
   '3-1-deriving-state',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Deriving State',
   'Learn how to derive state from existing state instead of creating unnecessary state variables',
   'standard',
@@ -2987,10 +2987,10 @@ Your coding tasks will be removing an unnecessary state variable and `useEffect`
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c5e8f207-f608-44e7-a9e1-405935eb705e',
+  'f55f4cfa-8ab5-4cff-8afa-597ac1e9e460',
   '3-2-debounce',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Debounce',
   'Learn how to use the useDebounce hook to delay expensive operations until user input stabilizes',
   'standard',
@@ -3010,10 +3010,10 @@ Your coding tasks will be using a `useDebounce` hook to delay logging user input
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c2c049a3-9c9e-4732-b782-75892426f9e8',
+  '9d46a7c0-6198-4895-9dd2-f235ccb88f76',
   '3-3-use-deferred-value',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Prioritize rendering with useDeferredValue',
   'Learn how to use useDeferredValue to defer expensive updates and improve user experience',
   'standard',
@@ -3033,10 +3033,10 @@ Your coding tasks will be using `useDeferredValue` to defer updating an expensiv
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9fe9b526-cc89-4849-abfe-b9c8ab24ee13',
+  'e2747c76-2a6c-49f3-9a9d-6d207a66637c',
   '3-4-use-transition',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Interrupt rendering with useTransition',
   'Learn how to use useTransition to mark updates as non-urgent and show loading states',
   'standard',
@@ -3056,10 +3056,10 @@ Your coding tasks will be using `useTransition` to wrap an async state update an
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '23fdc9f4-132c-4499-a010-b180d81d7f15',
+  'f9fccf4f-04f6-492e-8ee0-f7f37a2dca94',
   '3-5-effect-separation-pattern',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Effect Separation Pattern',
   'Learn how to separate multiple concerns in useEffect by using multiple effects instead of one',
   'standard',
@@ -3079,10 +3079,10 @@ Your coding tasks will be splitting a single `useEffect` that handles both docum
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c7da4bf8-747c-4391-94e0-dbfb93a262cf',
+  '3fb48854-54de-4391-973f-d65349d476c3',
   '3-6-first-render-detection',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'First Render Detection',
   'Learn how to detect the first render using a ref instead of useEffect for better performance',
   'standard',
@@ -3102,10 +3102,10 @@ Your coding tasks will be implementing this pattern to show a welcome message on
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '630b254d-7d47-4b9d-a6aa-b53fc5ac95a6',
+  '9a185414-b827-4362-8316-25a946d44521',
   '3-7-custom-hook-composition',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Custom Hook Composition',
   'Learn how to combine multiple custom hooks into one powerful hook for complex functionality',
   'standard',
@@ -3125,10 +3125,10 @@ Your coding tasks will be creating a search functionality by composing separate 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '7e8c9820-ef07-436f-bbc4-f315849cdbd2',
+  '1d305a00-c810-4bd4-9188-991b2bd4b351',
   '3-8-context-selector',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Context Selector',
   'Learn how to use context selectors to prevent unnecessary re-renders when context values change',
   'standard',
@@ -3148,10 +3148,10 @@ Your coding tasks will be replacing regular `useContext` with `useContextSelecto
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8959210d-a8bd-48a2-ba09-70d2edd27712',
+  '13a2fca3-1bda-481b-81f0-d788698ca5b9',
   '3-9-use-imperative-handle',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'UseImperativeHandle',
   'Learn how to expose imperative methods from child components to parent components using refs',
   'standard',
@@ -3171,10 +3171,10 @@ Your coding tasks will be creating a custom input component that exposes a focus
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '5d340927-78ff-4b1e-a757-f6971c3eab57',
+  '1e34d749-89a8-4adb-bde4-4fba95079659',
   '3-10-latest-ref-pattern',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Latest Ref Pattern',
   'Learn how to use refs to access the latest values in useEffect without causing re-renders',
   'standard',
@@ -3194,10 +3194,10 @@ Your coding tasks will be implementing this pattern with an event listener that 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9810d763-c25a-4a95-a667-eaf49667837e',
+  'dd1a7069-76ce-4dd0-9cd3-1e8761cfa616',
   '3-11-abandon-render-pattern',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Abandon Render Pattern',
   'Learn the abandon render pattern as an alternative to usePrevious hooks for tracking previous values',
   'standard',
@@ -3217,10 +3217,10 @@ Your coding tasks will be implementing this pattern to track the previous count 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '2bfcef13-1f0d-45e8-a63b-4198d43cdef3',
+  'e0864885-8c3d-4acf-afdd-15c2c4b5522e',
   '3-12-use-hook-with-context',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Use Hook with Context',
   'Learn how to use the modern use hook for reading context conditionally in React 19',
   'standard',
@@ -3240,10 +3240,10 @@ Your coding tasks will be replacing `useContext` with the new `use` hook and imp
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '66f0531c-6a02-46f9-9147-9c3131216d65',
+  'bd27e083-301f-44c4-9628-8ff40148c6aa',
   '3-13-use-hook-with-promises',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Use Hook with Promises',
   'Learn how to use the use hook with promises and Suspense for handling asynchronous data',
   'standard',
@@ -3263,10 +3263,10 @@ Your coding tasks will be creating a simple promise and using the `use` hook to 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c2e52fa5-6e84-4dde-b7fe-2e5de15fb7db',
+  '03d6966c-04e8-4ea2-9f26-cf386894036a',
   '3-14-use-effect-event',
-  '3b1e6ffe-aa53-4cf1-a122-fd3b3ad3be5f',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '4366c43c-89e3-41d1-a289-2db23c4628d0',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'useEffectEvent Pattern',
   'Learn how to use useEffectEvent to read latest values in Effects without causing re-synchronization',
   'standard',
@@ -3286,19 +3286,19 @@ Your coding task will be refactoring an Effect that currently re-runs unnecessar
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
   '4-ui-patterns',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'UI Patterns',
   'Learn how to build good user experiences by mastering loading states, errors, and proven UI patterns',
   3
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '643a85e7-aa8f-419a-bd83-bb117a7904c6',
+  '75b7014c-6e5b-44a7-965f-d9d02e5f72f7',
   '4-1-error-boundary-pattern',
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Error Boundary Pattern',
   'Learn how to handle JavaScript errors in React components using error boundaries',
   'standard',
@@ -3318,10 +3318,10 @@ Your coding tasks will be wrapping a component that throws an error with an erro
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c2c84504-cb34-4e2a-98ad-17c959d0d4fa',
+  'efa08814-f20a-4c09-88fe-89610967ae6a',
   '4-2-guard-clause-rendering',
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Guard Clause Rendering',
   'Learn how to use early returns to handle loading and error states cleanly',
   'standard',
@@ -3341,10 +3341,10 @@ Your coding tasks will be adding guard clauses that return early for loading and
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9cc47ff6-46f4-4053-8d86-0af96f84c7e4',
+  '2db4b7f2-e458-40e8-b7f8-2215f67649d9',
   '4-3-skeleton-placeholder-pattern',
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Skeleton & Placeholder Pattern',
   'Learn how to show skeleton placeholders while content is loading to improve perceived performance',
   'standard',
@@ -3364,10 +3364,10 @@ Your coding tasks will be creating a simple skeleton component and displaying it
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ac3333cf-bc05-471d-b51c-58a877c9a6d0',
+  'ed41312f-5d2c-4edd-b0ac-1ba5805815dc',
   '4-4-empty-state-pattern',
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Empty State Pattern',
   'Learn how to create meaningful empty states when lists or content areas have no data',
   'standard',
@@ -3387,10 +3387,10 @@ Your coding tasks will be creating a dedicated empty state component and display
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ac9ddca2-cf04-4511-8c2b-7338928e8142',
+  'c91cd3b5-f802-4e07-92f3-c113b6498f57',
   '4-5-optimistic-ui-updates',
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Optimistic UI Updates',
   'Learn how to use useOptimistic to update the UI immediately before server responses',
   'standard',
@@ -3410,10 +3410,10 @@ Your coding tasks will be using `useOptimistic` to immediately show a new todo i
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '5db1f6f5-e361-4403-bc74-af56ae2289a6',
+  '2e49da6c-a555-4fb5-a112-af5c8b136555',
   '4-6-partial-rendering',
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Partial Rendering of Available Data',
   'Learn how to render available data gracefully even when some parts fail to load',
   'standard',
@@ -3433,10 +3433,10 @@ Your coding tasks will be creating components that gracefully handle missing or 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '22fa3eea-6dfc-4302-8130-a20537e5072e',
+  '87ed46b8-f1cf-464e-bb02-1a98e3418b12',
   '4-7-variant-pattern',
-  'dbf52bfe-9fae-46f4-9673-87eea6b8e9be',
-  '59bb2364-cb96-42a9-9cb2-a8015b03b5a2',
+  '690cb170-a93e-4399-a717-1ba89dc04245',
+  '67a1d2d8-d3a8-4824-96c0-e7b60958ad8a',
   'Variant Pattern',
   'Learn how to use variants to create flexible component styling with predefined options',
   'standard',
@@ -3459,7 +3459,7 @@ Your coding tasks will be creating a button component with variant-based styling
 -- 插入课程: React Query (react-query)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'react-query',
   'React Query',
   'Learn data fetching in React with queries, mutations, caching strategies, optimistic updates, and building performant data-driven applications',
@@ -3512,19 +3512,19 @@ This course emphasizes hands-on learning with practical examples you''ll use in 
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'b30b85eb-b3af-4016-9afa-f5908db15b05',
+  'a4615189-8dd8-4bf1-b94a-81c140b7a92f',
   '1-introduction-and-setup',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Introduction and Setup',
   'Learn what React Query is, understand traditional data fetching problems, and set up React Query in your application',
   0
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '2b839d86-eddb-471d-a674-775a88dbbbc8',
+  '2d8f17a3-2ffe-451b-aa92-1ba8a8311a01',
   '1-1-what-is-react-query',
-  'b30b85eb-b3af-4016-9afa-f5908db15b05',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'a4615189-8dd8-4bf1-b94a-81c140b7a92f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'What is React Query?',
   'Learn what React Query is, understand the problems it solves, and explore its benefits for modern React applications',
   'standard',
@@ -3543,10 +3543,10 @@ Your coding tasks will be to explore the code editor and get familiar with the R
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '956ca0e0-757b-4444-b60c-9809005f217a',
+  'ba7c4f1d-2820-4501-aab8-0bac6ac49c35',
   '1-2-fetching-data-with-useeffect',
-  'b30b85eb-b3af-4016-9afa-f5908db15b05',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'a4615189-8dd8-4bf1-b94a-81c140b7a92f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Fetching Data with useEffect',
   'Learn the traditional approach to data fetching using useEffect and understand its limitations',
   'standard',
@@ -3565,10 +3565,10 @@ Your coding tasks will be implementing a `useEffect` hook to fetch user data, ad
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'acd3e7ad-1d71-4614-b0d8-0be0bec8eab2',
+  '6d6dbed4-22a8-4060-b2aa-633385842578',
   '1-3-creating-custom-usefetch-hook',
-  'b30b85eb-b3af-4016-9afa-f5908db15b05',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'a4615189-8dd8-4bf1-b94a-81c140b7a92f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Creating a custom useFetch hook',
   'Learn to extract data fetching logic into a reusable custom hook and understand its benefits and limitations',
   'standard',
@@ -3587,10 +3587,10 @@ Your coding tasks will be creating a `useFetch` hook that returns data, loading,
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f60890cc-9712-4a61-bb3b-5c13ba311033',
+  'ad355b8d-4e9e-4223-9308-5a0db01cf838',
   '1-4-setting-up-react-query',
-  'b30b85eb-b3af-4016-9afa-f5908db15b05',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'a4615189-8dd8-4bf1-b94a-81c140b7a92f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Setting up React Query',
   'Learn how to install and configure React Query with QueryClient and QueryClientProvider in your React application',
   'standard',
@@ -3609,10 +3609,10 @@ Your coding tasks will be creating a `QueryClient` instance, wrapping your appli
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '731d7730-d043-42d2-ab97-f21293e86741',
+  '65033915-16ea-441d-9a93-447253dbec30',
   '1-5-understanding-queryclient',
-  'b30b85eb-b3af-4016-9afa-f5908db15b05',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'a4615189-8dd8-4bf1-b94a-81c140b7a92f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Understanding the QueryClient',
   'Learn about QueryClient configuration options and how to set default behavior for all queries in your application',
   'standard',
@@ -3631,10 +3631,10 @@ Your coding tasks will be configuring the `QueryClient` with default options to 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'ecbb3cd5-04b3-4e58-a025-758e80aa7f9b',
+  'fae04f65-6c51-4ad4-8063-4b8668d635e6',
   '1-6-writing-your-first-query',
-  'b30b85eb-b3af-4016-9afa-f5908db15b05',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'a4615189-8dd8-4bf1-b94a-81c140b7a92f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Writing Your First Query',
   'Learn to use the useQuery hook to fetch data and experience React Query''s automatic loading and error states',
   'standard',
@@ -3653,19 +3653,19 @@ Your coding tasks will be implementing a `useQuery` hook to fetch user data and 
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
   '2-queries-and-data-fetching',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Queries and Data Fetching',
   'Master React Query''s core concepts including query keys, functions, lifecycle, states, and advanced patterns',
   1
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c6945faa-0cae-4940-8161-b64117dbd392',
+  'bbeb237d-aa24-4ccf-b60f-0c2ecab0ec5f',
   '2-1-query-keys',
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Query Keys',
   'Learn the anatomy of query keys, why they must be arrays, and how to structure them with and without arguments',
   'standard',
@@ -3684,10 +3684,10 @@ Your coding tasks will be creating query keys for different scenarios - one simp
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c14fe487-9343-45cd-b8ec-62431f9acc24',
+  '86047316-f615-4163-8623-ae1f54f7eb5f',
   '2-2-query-functions',
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Query Functions',
   'Learn the structure and requirements of query functions, how to pass arguments, and understand they don''t have to fetch data',
   'standard',
@@ -3706,10 +3706,10 @@ Your coding tasks will be creating simple async query functions that return mock
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8c144f3b-e936-4a27-8cea-d5688660e0a3',
+  'dc238dab-ad42-49cc-9c40-e94568a41577',
   '2-3-query-lifecycle',
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'The Query Lifecycle',
   'Understand how queries progress through their lifecycle and the key properties available at each stage',
   'standard',
@@ -3728,10 +3728,10 @@ Your coding tasks will be exploring the main query properties `data`, `isLoading
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'dac89ff3-442e-4038-a585-1e2a4e21af7b',
+  '168b48d9-31a9-4669-bcea-dd43410c5217',
   '2-4-fetching-on-demand',
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Fetching on Demand',
   'Learn how to control when queries execute using the enabled option for on-demand data fetching',
   'standard',
@@ -3750,10 +3750,10 @@ Your coding tasks will be creating a query that only runs when a user clicks a b
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e791e0fe-0f01-4492-bdeb-7764a72a1f34',
+  'd13b9c3a-d771-42ed-b882-249c5758d202',
   '2-5-dependent-queries',
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Dependent Queries',
   'Learn how to create queries that depend on data from other queries',
   'standard',
@@ -3772,10 +3772,10 @@ Your coding tasks will be creating two queries where the second query depends on
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e3b3be9c-8b83-4dd6-88b6-53b32b63c30b',
+  '4cced219-46e7-41a4-ba7a-9ddd6e74df19',
   '2-6-query-custom-hooks',
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Query Custom Hooks',
   'Learn to create reusable custom hooks that wrap useQuery for better code organization and reusability',
   'standard',
@@ -3794,10 +3794,10 @@ Your coding tasks will be creating a custom `useUserQuery` hook that encapsulate
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '99e5769b-ec6e-441b-9d2c-fd0b7d4d63a4',
+  '0d609f38-c9b0-4842-aa14-6d230a0c8f80',
   '2-7-query-options',
-  '43ce5ccd-7fbf-494c-b9f7-f18bb25e1df7',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '38eac91e-9efa-4001-bb82-8d7b47a40fee',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Query Options',
   'Learn to extract and reuse query options across multiple queries while allowing customization',
   'standard',
@@ -3816,19 +3816,19 @@ Your coding tasks will be creating a base query options object and then using it
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'edbb8df3-be09-44b3-be6f-061dc9688bf1',
+  'c1f08fc9-bb75-4bb1-80b8-dfb847a77f9d',
   '3-mutations-and-query-invalidation',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Mutations and Query Invalidation',
   'Learn to modify data with mutations, handle mutation states, and keep your UI synchronized with query invalidation',
   2
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '319231f3-fcd2-4f27-b6cd-20d346f42bc9',
+  '83356702-7d5a-4e74-b519-36ee9a054210',
   '3-1-usemutation-hook',
-  'edbb8df3-be09-44b3-be6f-061dc9688bf1',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'c1f08fc9-bb75-4bb1-80b8-dfb847a77f9d',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'The useMutation hook',
   'Learn the basics of the useMutation hook for modifying data and triggering side effects',
   'standard',
@@ -3847,10 +3847,10 @@ Your coding tasks will be creating a simple mutation using `useMutation` and tri
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '5d4ef0b7-8e5e-4030-bbc1-fa5250023948',
+  '5b14112b-df39-424d-9c9e-581ecea24247',
   '3-2-mutation-states',
-  'edbb8df3-be09-44b3-be6f-061dc9688bf1',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'c1f08fc9-bb75-4bb1-80b8-dfb847a77f9d',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Mutation States',
   'Learn to track mutation progress using isPending and other state properties from useMutation',
   'standard',
@@ -3869,10 +3869,10 @@ Your coding tasks will be using the `isPending` state to provide user feedback d
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0c77e3b5-0cb1-452f-9a72-e64d13f2f905',
+  '6d4c7b83-2ea5-462d-bf18-d7c4f3358f5b',
   '3-3-mutation-callbacks',
-  'edbb8df3-be09-44b3-be6f-061dc9688bf1',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'c1f08fc9-bb75-4bb1-80b8-dfb847a77f9d',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Mutation Callbacks',
   'Learn to run code at different stages of mutations using onMutate, onSuccess, and onError callbacks',
   'standard',
@@ -3891,10 +3891,10 @@ Your coding tasks will be adding simple callback functions that update local sta
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b9c739ca-a18f-49b0-9830-b8e9589e7a36',
+  '1389edb8-3db2-4edc-9ef3-2c3adeaa32ba',
   '3-4-invalidating-queries',
-  'edbb8df3-be09-44b3-be6f-061dc9688bf1',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'c1f08fc9-bb75-4bb1-80b8-dfb847a77f9d',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Invalidating Queries',
   'Learn to refresh query data after mutations using useQueryClient and query invalidation',
   'standard',
@@ -3913,10 +3913,10 @@ Your coding tasks will be using the `useQueryClient` hook to get access to the q
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '3dad04fe-8f9a-46d3-94f2-1a09808de07b',
+  '566e5010-96e2-4254-ba16-e2a74983009c',
   '3-5-async-mutations',
-  'edbb8df3-be09-44b3-be6f-061dc9688bf1',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'c1f08fc9-bb75-4bb1-80b8-dfb847a77f9d',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Async Mutations',
   'Learn to use mutateAsync for promise-based mutations that you can await and handle with async/await syntax',
   'standard',
@@ -3935,19 +3935,19 @@ Your coding tasks will be using `mutateAsync` instead of `mutate` and handling t
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
   '4-cache-management-and-invalidation',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Cache Management and Invalidation',
   'Master React Query''s powerful caching system with fine-grained control, data access, and smart invalidation strategies',
   3
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c2e46ac8-06b1-4625-bf14-df9e86578b32',
+  '8c3370f9-96a1-478d-9014-84004f047f19',
   '4-1-understanding-query-cache',
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Understanding the Query Cache',
   'Learn how React Query''s cache works by seeing the same query used in multiple components with instant cache hits',
   'standard',
@@ -3966,10 +3966,10 @@ Your coding tasks will be creating two components that use identical queries and
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '64f9fb62-8c66-466d-9912-4593740100b4',
+  '4a84c767-8b10-4a99-87e3-966cdadc4714',
   '4-2-fine-grained-cache-control',
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Fine-grained Cache Control',
   'Learn how query keys with parameters provide fine-grained cache control for different data combinations',
   'standard',
@@ -3988,10 +3988,10 @@ Your coding tasks will be creating queries with page and limit parameters and se
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c119342b-43e6-4699-88cc-34b4e0aa4777',
+  '887c62f5-e4c8-4517-bdc5-55ad8ac9800f',
   '4-3-query-filters',
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Query Filters',
   'Learn to use query filters for targeted invalidation using partial query keys and filter patterns',
   'standard',
@@ -4010,10 +4010,10 @@ Your coding tasks will be using different invalidation patterns to target specif
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '05b1f6a6-b36a-4f90-b566-7aa60d99ced8',
+  '9a85a70f-f85e-42e5-baf3-911bf72d83a9',
   '4-4-accessing-query-data',
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Accessing Query Data',
   'Learn to access cached query data directly using queryClient.getQueryData for reading cached values',
   'standard',
@@ -4032,10 +4032,10 @@ Your coding tasks will be using `getQueryData` to access cached data and display
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f40c0f42-b2a4-4b93-9fe6-ea89cd43aa80',
+  '79b05f6c-04ac-4024-8410-632430e72934',
   '4-5-updating-query-data',
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Updating Query Data',
   'Learn to update cached query data directly using queryClient.setQueryData for optimistic updates',
   'standard',
@@ -4054,10 +4054,10 @@ Your coding tasks will be using `setQueryData` to update cached data and seeing 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0a90e8df-3333-4fc5-8532-176053e790fa',
+  '4db87e5a-0187-45b8-b65a-98eb78d5904c',
   '4-6-setting-initial-data',
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Setting Initial Data',
   'Learn to provide initial data to queries using the initialData option to avoid loading states',
   'standard',
@@ -4076,10 +4076,10 @@ Your coding tasks will be using the `initialData` option to provide immediate da
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '14a64f08-2e38-4ea0-bdbe-f7e4f91aefe9',
+  'e19d9256-7461-4552-907a-e76adc7e3eca',
   '4-7-placeholder-data',
-  'f1b30fcd-a9f8-423d-b5b4-fc07909c2446',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '565591fb-2cc2-42a2-bc7e-b03d9b2d780f',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Placeholder Data',
   'Learn the differences between placeholderData and initialData for temporary data display',
   'standard',
@@ -4098,19 +4098,19 @@ Your coding tasks will be comparing `placeholderData` with `initialData` to unde
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
   '5-advanced-react-query',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Advanced React Query',
   'Master advanced React Query patterns including optimistic updates, infinite queries, suspense, and performance optimization',
   4
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e4ceaa2c-3b1c-48fa-88f6-b8a8cd9b9372',
+  '5e52d494-c380-4a42-bb78-ab8e9c09fb6f',
   '5-1-optimistic-updates',
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Optimistic Updates',
   'Learn to implement optimistic updates using onMutate callback with proper rollback on errors',
   'standard',
@@ -4129,10 +4129,10 @@ Your coding tasks will be implementing an optimistic update for adding todos, in
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '60d010bc-67fa-4d49-8d52-4e9344f795d8',
+  'fb4a6b31-04cd-4472-9d72-ae4c8707a1a6',
   '5-2-paginated-queries',
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Paginated Queries',
   'Learn to implement paginated queries with page navigation and proper cache management for each page',
   'standard',
@@ -4151,10 +4151,10 @@ Your coding tasks will be implementing page navigation with buttons to increment
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '69895e26-5633-4e0a-906c-d0461c706e43',
+  '4aed7ff7-abed-4d13-bb87-c789fc2e27f6',
   '5-3-infinite-queries',
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Infinite Queries',
   'Learn to implement infinite queries using useInfiniteQuery',
   'standard',
@@ -4173,10 +4173,10 @@ Your coding tasks will be implementing `useInfiniteQuery` with a load more butto
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'aa7d7ad7-aaf9-4852-9320-67a1d479b3df',
+  '7e09e996-3fbd-441c-8a2d-e9e9bd8cc328',
   '5-4-prefetching-queries',
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Prefetching Queries',
   'Learn to prefetch queries using queryClient.prefetchQuery for improved user experience',
   'standard',
@@ -4195,10 +4195,10 @@ Your coding tasks will be implementing prefetching when hovering over navigation
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '2387ec23-ff29-46f7-b83d-3da5060fc8d7',
+  '505d0704-2665-4dd3-b396-811102bf6e9f',
   '5-5-suspense-queries',
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Suspense Queries',
   'Learn to use useSuspenseQuery with React Suspense boundaries for declarative loading states',
   'standard',
@@ -4217,10 +4217,10 @@ Your coding tasks will be replacing `useQuery` with `useSuspenseQuery` and wrapp
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '15a921bd-5f42-416a-a4f5-63542d4296d2',
+  '51016487-daf1-40c1-9659-11d311323ff2',
   '5-6-query-cancellation',
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Query Cancellation',
   'Learn to cancel queries using AbortController and React Query''s built-in cancellation support',
   'standard',
@@ -4239,10 +4239,10 @@ Your coding tasks will be implementing query cancellation using the abort signal
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b42c0989-9aad-4fac-98e5-11d9c11ed9ec',
+  '3311fcff-feaf-45dd-9acd-b29a95467238',
   '5-7-performance-optimization',
-  'cf3505d4-be54-43e1-849a-b553cb94c760',
-  '63087fa6-f130-41ae-8903-88dacc9faa37',
+  '8c122d9d-add6-46b3-a9e2-230a4eb1f710',
+  'bc70be88-6d0f-4b17-9901-6ec35f433ca0',
   'Performance Optimization',
   'Learn to optimize React Query performance using the select function to prevent unnecessary re-renders',
   'standard',
@@ -4264,7 +4264,7 @@ Your coding tasks will be using the select function to extract specific data fro
 -- 插入课程: TypeScript (typescript)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'typescript',
   'TypeScript',
   'Master TypeScript from fundamentals to advanced concepts with hands-on practice',
@@ -4350,19 +4350,19 @@ The TypeScript knowledge you gain here is fundamental to modern web development.
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
   '1-getting-started',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Getting Started',
   'Learn TypeScript fundamentals including type annotations, functions, objects, arrays, and core type system features',
   0
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9ad3ea28-0b6e-4e43-a395-b7856802cf73',
+  '955a4270-57ad-45a8-8d6c-8d8434d9ba0b',
   '1-1-introduction-to-typescript',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Introduction to TypeScript',
   'Understand TypeScript''s role in solving JavaScript''s type-related issues and improving code quality',
   'standard',
@@ -4383,10 +4383,10 @@ Your coding tasks will be observing unexpected JavaScript behavior in a type-uns
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'cc5664ea-24d6-4d0b-ba95-8191df801af0',
+  '677aa9e2-d567-4313-8259-e9176fedc1c5',
   '1-2-primitive-types',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Primitive Types',
   'Learn about TypeScript''s primitive types and how to annotate variables with them',
   'standard',
@@ -4407,10 +4407,10 @@ Your coding tasks will be practicing type annotations by explicitly specifying t
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8011f352-d9d7-4441-aef7-777894dc000c',
+  '63899ef0-f20c-46fd-84bc-2e1236852fc6',
   '1-3-functions',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Functions',
   'Learn how to type function parameters, return values, function types, and understand the void type',
   'standard',
@@ -4431,10 +4431,10 @@ Your coding tasks will be practicing function type annotations by specifying par
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '66996eb5-c1e4-4399-9efd-b8cce224f21d',
+  '2f7501e0-f846-483f-85f0-0abbe568669a',
   '1-4-objects',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Objects',
   'Learn how to type objects in TypeScript using object type annotations and the Record utility type',
   'standard',
@@ -4455,10 +4455,10 @@ Your coding tasks will be practicing both basic object type annotations for fixe
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '4cc04072-08ba-4f0d-b232-ccd7805f0f7c',
+  'bc97b6f3-80eb-48b5-8da6-7f6c16d67826',
   '1-5-arrays',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Arrays',
   'Learn how to type arrays in TypeScript using type annotations and generics',
   'standard',
@@ -4479,10 +4479,10 @@ Your coding tasks will be practicing array type annotations using both syntax fo
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'e33bc5f4-9c4d-4c53-8f82-892822c81df4',
+  '2a7c206b-8c68-4636-87f8-2ce905e9764a',
   '1-6-tuples',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Tuples',
   'Learn how to use tuple types to represent arrays with fixed lengths and named element types',
   'standard',
@@ -4503,10 +4503,10 @@ Your coding tasks will be practicing tuple type annotations with named elements 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'cbef5749-782b-40c0-af33-8e48c3005436',
+  'fb4e8795-0d14-473e-b1dc-7dc42140c4b0',
   '1-7-unions-and-literal-types',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Unions and Literal Types',
   'Learn how to combine literal types into unions to create more precise type definitions',
   'standard',
@@ -4527,10 +4527,10 @@ Your coding tasks will be practicing the combination of literal types into union
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '00986719-c757-4d6f-bc60-de5915e65e7c',
+  '2155cc17-5df9-43b9-b254-b1391d450ef8',
   '1-8-enums',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Enums',
   'Learn how to use enums to define a set of named constants in TypeScript',
   'standard',
@@ -4551,10 +4551,10 @@ Your coding tasks will be practicing enum declarations by creating both numeric 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'bd829c69-a2b5-4410-8d5d-cebce8456237',
+  '85a6de5f-ac53-413b-93f9-93043ba7f5ad',
   '1-9-type-aliases',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Type Aliases',
   'Learn how to create reusable type definitions using type aliases for complex types',
   'standard',
@@ -4575,10 +4575,10 @@ Your coding tasks will be practicing the extraction of complex types into reusab
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9a0deadf-5829-4aa6-9ec5-1092ca33c890',
+  '7671c4ad-0808-4d72-81fe-42bc86e19d65',
   '1-10-interfaces',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Interfaces',
   'Learn how to define object shapes using interfaces as an alternative to type aliases',
   'standard',
@@ -4599,10 +4599,10 @@ Your coding tasks will be practicing interface declarations and using them to ty
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '66f53baf-e8bc-455d-8093-ff4b9da32aba',
+  '3a411c27-f84e-46e9-a24e-ac6c7acd4ae3',
   '1-11-type-assertions',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Type Assertions',
   'Learn how to use type assertions to override TypeScript''s type inference when you know more about the type',
   'standard',
@@ -4623,10 +4623,10 @@ Your coding tasks will be practicing type assertions in common scenarios like wo
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'a23165d2-fcfa-460f-9544-daf01dbf599c',
+  'b73fe9e8-f85d-4e6a-8da2-bd8f712011ad',
   '1-12-generic-types',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Generic Types',
   'Learn how to create reusable components and functions using generic type parameters',
   'standard',
@@ -4647,10 +4647,10 @@ Your coding tasks will be practicing generic type parameters by explicitly speci
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '39d2a4b5-daab-426d-986c-ab75795354c4',
+  'e1b78fad-2a1c-408a-84d0-b95df2e711db',
   '1-13-any-and-unknown',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Any and Unknown',
   'Learn the differences between the any and unknown types and when to use each',
   'standard',
@@ -4671,10 +4671,10 @@ Your coding tasks will be observing how TypeScript handles operations on `any` a
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '8af565af-9291-4dce-93d4-36a39e766a51',
+  '4ecbab1c-cbf0-4e49-a153-f657b2be0a79',
   '1-14-never',
-  '406c2a47-b180-4592-bfe4-5c3a379f3b8a',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'abd3422a-d059-4cfb-a559-38a7ed6bb535',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Never',
   'Learn how the never type represents values that never occur and ensures exhaustive type checking',
   'standard',
@@ -4695,19 +4695,19 @@ Your coding tasks will be practicing the use of the `never` type for functions t
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
   '2-type-narrowing',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Type Narrowing',
   'Learn TypeScript''s type narrowing techniques to safely work with dynamic data and union types',
   1
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b592d31c-d2e6-4b81-a56f-586331f8d497',
+  'abea1239-af0e-4cc2-8c03-eb8f4284dbea',
   '2-1-type-guards',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Type Guards',
   'Learn how to narrow types using typeof operator to check primitive types at runtime',
   'standard',
@@ -4728,10 +4728,10 @@ Your coding tasks will be practicing `typeof` type guards to check for various p
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '0a127f7d-bd42-4f78-a8bc-965672a3cf2a',
+  'bd017d42-246d-4963-8dc2-4972dfcea559',
   '2-2-equality-narrowing',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Equality Narrowing',
   'Learn how to narrow types using equality checks like ===, !==, ==, and !=',
   'standard',
@@ -4752,10 +4752,10 @@ Your coding tasks will be practicing equality narrowing to distinguish `null` fr
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '3cc9fc77-1859-443c-b416-b9a602ad4110',
+  '20dcf204-46a6-480b-b03b-99495af76fc8',
   '2-3-type-predicates',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Type Predicates',
   'Learn how to create custom type guard functions using type predicates for complex type narrowing',
   'standard',
@@ -4776,10 +4776,10 @@ Your coding tasks will be practicing type predicates by creating a custom type g
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '3d94269c-db71-428c-ac22-bf43bc967374',
+  'a8013d4a-fd7e-4d78-8a21-4867af502a0f',
   '2-4-the-instanceof-operator',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'The instanceof operator',
   'Learn how to narrow types using instanceof operator to check class instances and built-in objects',
   'standard',
@@ -4800,10 +4800,10 @@ Your coding tasks will be practicing `instanceof` narrowing to check if a value 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '6fbaf0cd-eeaa-4ff2-941f-2468e07a478e',
+  'd748d41a-fcbf-494d-b65c-e07e892704b3',
   '2-5-the-in-operator',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'The in operator',
   'Learn how to narrow types using the in operator to check for property existence in objects',
   'standard',
@@ -4824,10 +4824,10 @@ Your coding tasks will be practicing the `in` operator to check for property exi
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'aa3e4806-161b-48e2-b22d-dae9316abda9',
+  '6c24ad33-b2b3-4a9f-a8a8-adce3e60d73b',
   '2-6-discriminated-unions',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Discriminated Unions',
   'Learn how to use discriminated unions with common literal properties for type-safe narrowing',
   'standard',
@@ -4848,10 +4848,10 @@ Your coding tasks will be practicing discriminated unions by creating a union ty
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b2d8ce63-2c86-4982-be05-db24696afcd9',
+  '434de35e-3800-4d37-88df-8465a014c797',
   '2-7-optional-chaining',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Optional Chaining',
   'Learn how to safely access nested properties and methods using the optional chaining operator',
   'standard',
@@ -4872,10 +4872,10 @@ Your coding tasks will be practicing optional chaining to safely navigate throug
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '345e42e1-cda0-49eb-a1b7-ffa6078850f1',
+  '5782420d-ef63-460c-ab5d-f663b88f895d',
   '2-8-nullish-coalescing',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Nullish Coalescing',
   'Learn how to provide default values for null or undefined using the nullish coalescing operator',
   'standard',
@@ -4896,10 +4896,10 @@ Your coding tasks will be practicing the nullish coalescing operator to provide 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '40d016a7-a8c7-4e12-928f-bbfa376d0a0c',
+  'b38c1f31-3446-4e11-b17f-abc169375c45',
   '2-9-non-null-assertion',
-  'fa9e58a5-109f-43ef-b734-829318e6c676',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  'eee9da30-e93d-4fb7-8d9f-e1eeb25c1b45',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Non-null Assertion Operator',
   'Learn how to use the non-null assertion operator to tell TypeScript a value is not null or undefined',
   'standard',
@@ -4920,19 +4920,19 @@ Your coding tasks will be practicing the non-null assertion operator in scenario
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
   '3-utility-types',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Utility Types',
   'Learn TypeScript utility types for object manipulation including Partial, Readonly, Pick, Omit, and Required',
   2
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'd9313d71-67f7-4efa-87e9-a93953cbc5ca',
+  '77c4daf9-5cda-42ee-b4a6-6d01a1ece59c',
   '3-1-intersections',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Intersections',
   'Learn how to combine multiple types into one using intersection types',
   'standard',
@@ -4953,10 +4953,10 @@ Your coding tasks will be practicing intersection types by combining existing ty
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b1dc2f95-732c-4408-92f1-676f3f242c79',
+  '1ff71546-5d77-4edd-bd84-ddb7fe6c44df',
   '3-2-extensions',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Extensions',
   'Learn how to create new interfaces that inherit properties from existing interfaces using extends',
   'standard',
@@ -4977,10 +4977,10 @@ Your coding tasks will be practicing interface extension by using the `extends` 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c32c1f65-43e1-4337-9f21-2d8683f3b5c8',
+  'e172b17d-6915-47d6-a2d7-2fbfa4062a75',
   '3-3-extensions-vs-intersections',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Extensions vs Intersections',
   'Learn the differences between interface extensions and intersection types and when to use each',
   'standard',
@@ -5001,10 +5001,10 @@ Your coding tasks will be observing how TypeScript handles type conflicts differ
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '95910249-f3ab-48f0-a475-80722cef1c07',
+  'a2b1eeeb-0021-42cd-ac77-de106f4b9f3e',
   '3-4-optional-properties-and-partial',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Optional Properties and Partial',
   'Learn how to mark properties as optional and use the Partial utility type for flexible object types',
   'standard',
@@ -5025,10 +5025,10 @@ Your coding tasks will be practicing optional property syntax and the `Partial` 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '58dc43e4-c3a4-4bbc-a454-737d4036e72d',
+  '63766856-2bfd-44dc-b5a2-9c0c7ae1dced',
   '3-5-read-only-properties-and-readonly',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Read-only Properties and Readonly',
   'Learn how to make properties immutable using readonly modifier and the Readonly utility type',
   'standard',
@@ -5049,10 +5049,10 @@ Your coding tasks will be practicing the `readonly` modifier and `Readonly` util
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '4da13c8a-6f85-4c3b-938e-0d6fe25c09ff',
+  'cda08a0a-5891-4420-8d61-9db2bde82d40',
   '3-6-keyof',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'keyof',
   'Learn how to use the keyof operator to create union types of object property names',
   'standard',
@@ -5073,10 +5073,10 @@ Your coding tasks will be practicing the `keyof` operator to restrict function p
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '50eb0ed2-25ca-4fbc-a73a-fa1df3199b14',
+  '29df11ae-206f-4243-94d6-169a225c7fbe',
   '3-7-omit',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Omit',
   'Learn how to create new types by omitting specific properties from existing types using the Omit utility type',
   'standard',
@@ -5097,10 +5097,10 @@ Your coding tasks will be practicing the `Omit` utility type to remove the `id` 
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '9edab2cc-0ce7-41f0-89a6-2a7339dc7635',
+  '93182e82-e2c2-4a54-84ac-225f42cd5dc8',
   '3-8-pick',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Pick',
   'Learn how to create new types by picking specific properties from existing types using the Pick utility type',
   'standard',
@@ -5121,10 +5121,10 @@ Your coding tasks will be practicing the `Pick` utility type to create focused t
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '99c4dc41-07f3-40a5-a9fd-686f1755e36b',
+  'b8cfbdf7-e606-4598-85f5-32be709a005d',
   '3-9-required',
-  '7b917209-9816-40b3-8a6c-39fadbbece68',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '66b071a3-23fc-469f-ace0-98bdc04cb2f7',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Required',
   'Learn how to use the Required utility type to make all properties of a type mandatory',
   'standard',
@@ -5145,19 +5145,19 @@ Your coding tasks will be practicing the `Required` utility type to enforce that
 );
 
 INSERT INTO public.modules (id, slug, course_id, name, description, order_index) VALUES (
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
   '4-advanced-typescript-features',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Advanced TypeScript Features',
   'Master advanced TypeScript features including utility types, template literal types, const assertions, the satisfies operator, mapped types, and typed classes',
   3
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '69f16b34-571e-4622-ac12-d918bdf81a52',
+  '2c44a087-33b6-4ffd-a1d8-aed394cc4b22',
   '4-1-extract-and-exclude',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Extract and Exclude',
   'Learn how to use Extract and Exclude utility types to filter union types',
   'standard',
@@ -5178,10 +5178,10 @@ Your coding tasks will be practicing the `Extract` and `Exclude` utility types t
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'f50e2d07-8e97-465e-9f3a-b0e1a147a07a',
+  '7772df2b-989a-429d-a62f-350b13062587',
   '4-2-parameters-and-returntype',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Parameters and ReturnType',
   'Learn how to extract function parameter types and return types using Parameters and ReturnType utility types',
   'standard',
@@ -5202,10 +5202,10 @@ Your coding tasks will be practicing the `Parameters` and `ReturnType` utility t
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'b2401518-3812-44c5-9db4-02c7f0d5fab9',
+  'b247b20e-e6bf-46ae-b6d1-738b765c5c3e',
   '4-3-awaited',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Awaited',
   'Learn how to use the Awaited utility type to extract the resolved type from Promises',
   'standard',
@@ -5226,10 +5226,10 @@ Your coding tasks will be practicing the `Awaited` utility type to extract the r
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '43dc2da2-690a-42c5-bf76-823a5dcf1ebe',
+  '4a5384da-871e-4b80-84fd-750a6235e345',
   '4-4-template-literal-types',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Template Literal Types',
   'Learn how to create string types using template literal syntax for more precise type definitions',
   'standard',
@@ -5250,10 +5250,10 @@ Your coding tasks will be practicing template literal types to create string pat
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'c5613bad-480d-49eb-bd77-8f9e356c7e70',
+  '8c1f7187-a43a-4ca8-9f4d-dffea95df714',
   '4-5-const-assertions',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Const Assertions',
   'Learn how to use const assertions to create deeply immutable types with literal type inference',
   'standard',
@@ -5274,10 +5274,10 @@ Your coding tasks will be practicing const assertions to create readonly objects
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '628f7f12-89d6-4df0-a131-90f3824292ab',
+  '5c45f45e-8e1d-4c66-a93b-1245334ad2db',
   '4-6-satisfies-operator',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Satisfies Operator',
   'Learn how to use the satisfies operator to validate types while preserving inferred types',
   'standard',
@@ -5298,10 +5298,10 @@ Your coding tasks will be practicing the satisfies operator to validate object s
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  'a3198a25-e92f-4895-9da4-536b888a7782',
+  'dc00768d-f95d-47ea-90b8-30be15a9769c',
   '4-7-mapped-types',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Mapped Types',
   'Learn how to create new types by transforming properties of existing types using mapped types',
   'standard',
@@ -5322,10 +5322,10 @@ Your coding tasks will be practicing mapped types by creating simple type transf
 );
 
 INSERT INTO public.lessons (id, slug, module_id, course_id, name, description, type, context, video_id, is_free, order_index, xp_reward, objectives, tasks, code_editor, resources, whiteboard) VALUES (
-  '7cfa1a73-4d66-4a3c-b8bb-11cccb87b95a',
+  '02210db7-82c8-42ff-af51-665e7ca7a18d',
   '4-8-typing-classes',
-  '6919e761-ffb9-4d56-8513-480a68149cf2',
-  '5a0ce6d5-be14-4822-a1f8-9d7111e6f9af',
+  '47308075-6c9f-48e0-8287-e6cce0e7f6d0',
+  '5da8153b-0456-42ac-adf8-41217ec3f894',
   'Typing Classes',
   'Learn how to add type annotations to classes including properties, constructors, and methods',
   'standard',
@@ -5349,7 +5349,7 @@ Your coding tasks will be creating a typed class with properties and a method, h
 -- 插入课程: React with TypeScript (react-with-typescript)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '013325ed-89c5-446a-890c-2e3d2a07dcda',
+  'be5045d5-878a-4f1c-b302-841e38153257',
   'react-with-typescript',
   'React with TypeScript',
   'Learn how React works with TypeScript, including type-safe components, props, hooks, and building robust React applications',
@@ -5368,7 +5368,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: Redux with Redux Toolkit (redux)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '180ce378-9be9-4e33-a62d-39a87828837c',
+  'f198d258-b788-4190-9bc9-4162a0aff265',
   'redux',
   'Redux with Redux Toolkit',
   'Learn global state management with actions, reducers, middleware, Redux Toolkit, and building scalable application architectures',
@@ -5387,7 +5387,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: Zustand (zustand)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '87e175ce-1b96-44d6-8747-8e778c83cbce',
+  'd04ac643-4074-4a81-b7e8-02027a031aa5',
   'zustand',
   'Zustand',
   'Manage application state with simple stores, middleware, persistence, selectors, and building lightweight, performant state solutions',
@@ -5406,7 +5406,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: React Router (Data Mode) (react-router)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '111f5f3c-76b1-472a-b8b7-559be6e70c17',
+  'd6071b44-2ad4-4a78-a663-68429ba9c63f',
   'react-router',
   'React Router (Data Mode)',
   'Learn client-side routing with navigation, nested routes, loaders, actions, protected routes, and building seamless single-page applications',
@@ -5425,7 +5425,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: Tanstack Router (tanstack-router)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  'bdc218e9-e705-437d-af6f-1f129daa4397',
+  '85836429-29d4-467a-b40f-7b89c4063a0f',
   'tanstack-router',
   'Tanstack Router',
   'Build type-safe applications with fully-typed routing, navigation, loaders, search params, and creating modern single-page experiences',
@@ -5444,7 +5444,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: React Hook Form (react-hook-form)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  'e59434a5-10e5-4974-8155-a843ee30a899',
+  '84160e26-b675-4b32-8099-dd0d98c0af7d',
   'react-hook-form',
   'React Hook Form',
   'Create powerful forms with validation, error handling, field arrays, dynamic inputs, and building performant user input experiences',
@@ -5463,7 +5463,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: TanStack Form (tanstack-form)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '075a281c-748f-4c80-ad14-3c8d6b7cb733',
+  'a439bed6-cc51-4f5c-967d-097b18ed8f61',
   'tanstack-form',
   'TanStack Form',
   'Build performant forms with type-safe validation, field arrays, dynamic inputs, and creating seamless user input experiences',
@@ -5482,7 +5482,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: Tailwind (tailwind)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '14e72581-1b14-4be1-9458-e471e6b4b365',
+  '5a1147bb-b5f4-4b8c-9eaa-ba99929e996a',
   'tailwind',
   'Tailwind',
   'Style modern applications with utility-first CSS, responsive design, custom configurations, animations, and building beautiful user interfaces',
@@ -5501,7 +5501,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: Next.js (nextjs)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '0a115da9-4945-410b-9b92-63ca48f2f7d0',
+  'fb78bc8a-9a7f-4fa9-ad8f-85f1313b5450',
   'nextjs',
   'Next.js',
   'Build full-stack React applications with server components, file-based routing, data fetching, caching, and modern web development patterns',
@@ -5520,7 +5520,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: Tanstack Start (tanstack-start)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '6e899087-0652-4171-9a26-978f7271d045',
+  'cfd20afa-3a47-49f2-b8cc-78532c162d9a',
   'tanstack-start',
   'Tanstack Start',
   'Create full-stack React applications with server-side rendering, file-based routing, streaming, data fetching, and modern SSR patterns',
@@ -5539,7 +5539,7 @@ INSERT INTO public.courses (id, slug, name, description, long_description, diffi
 -- 插入课程: React Router (Framework Mode) (react-router-framework-mode)
 -- ------------------------------------------------------
 INSERT INTO public.courses (id, slug, name, description, long_description, difficulty, duration_in_hours, status, order_index, review_count, average_rating, xp_reward, thumbnail_url) VALUES (
-  '945027cc-d7ce-4002-a476-f7cb5f584872',
+  '27f9dd73-a876-4736-9d85-9b42be347a90',
   'react-router-framework-mode',
   'React Router (Framework Mode)',
   'Learn framework-style routing with React Router, including file-based routing, layouts, server components integration, and building modern full-stack applications',

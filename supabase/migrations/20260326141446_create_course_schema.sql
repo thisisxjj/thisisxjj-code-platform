@@ -152,12 +152,10 @@ create policy "lessons_select_published" on public.lessons for select
 -- ============================================================
 -- 8. 视图 1: course_summaries (全量列表查询)
 -- ============================================================
--- ⚠️ [安全与架构妥协说明 - Security Definer Bypass]:
--- 本视图以 Definer 身份运行，故意绕过 modules/lessons 的 RLS 策略。
--- 目的：支撑前端展示 "Draft" (敬请期待) 课程的规模数据 (章节数/任务数)。
+-- 采用 security_invoker，确保视图执行时使用调用者的权限而非视图创建者权限。
 -- ============================================================
 drop view if exists public.course_summaries;
-create view public.course_summaries as
+create view public.course_summaries with (security_invoker = on) as
 with module_counts as (
   select course_id, count(*) as module_count from public.modules group by course_id
 ),

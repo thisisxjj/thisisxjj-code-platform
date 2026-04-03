@@ -34,6 +34,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      activity_logs: {
+        Row: {
+          created_at: string
+          id: string
+          lesson_id: string
+          profile_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          lesson_id: string
+          profile_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          lesson_id?: string
+          profile_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "activity_logs_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "activity_logs_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       courses: {
         Row: {
           average_rating: number
@@ -87,6 +123,54 @@ export type Database = {
           xp_reward?: number
         }
         Relationships: []
+      }
+      lesson_submissions: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          id: string
+          is_passed: boolean
+          is_ready_for_completion: boolean
+          lesson_id: string
+          profile_id: string
+          updated_at: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          is_passed?: boolean
+          is_ready_for_completion?: boolean
+          lesson_id: string
+          profile_id: string
+          updated_at?: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          is_passed?: boolean
+          is_ready_for_completion?: boolean
+          lesson_id?: string
+          profile_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_submissions_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lesson_submissions_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       lessons: {
         Row: {
@@ -320,6 +404,117 @@ export type Database = {
         }
         Relationships: []
       }
+      user_code_editors: {
+        Row: {
+          created_at: string
+          files: Json
+          id: string
+          lesson_id: string
+          profile_id: string
+          template: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          files?: Json
+          id?: string
+          lesson_id: string
+          profile_id: string
+          template?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          files?: Json
+          id?: string
+          lesson_id?: string
+          profile_id?: string
+          template?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_code_editors_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "user_code_editors_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      xp_records: {
+        Row: {
+          course_id: string | null
+          created_at: string
+          id: string
+          lesson_id: string | null
+          profile_id: string
+          source_type: Database["public"]["Enums"]["xp_source_type"]
+          xp_rewarded: number
+        }
+        Insert: {
+          course_id?: string | null
+          created_at?: string
+          id?: string
+          lesson_id?: string | null
+          profile_id: string
+          source_type: Database["public"]["Enums"]["xp_source_type"]
+          xp_rewarded: number
+        }
+        Update: {
+          course_id?: string | null
+          created_at?: string
+          id?: string
+          lesson_id?: string | null
+          profile_id?: string
+          source_type?: Database["public"]["Enums"]["xp_source_type"]
+          xp_rewarded?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "xp_records_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "course_details"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "xp_records_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "course_summaries"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "xp_records_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "courses"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "xp_records_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "xp_records_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       course_details: {
@@ -407,6 +602,59 @@ export type Database = {
         }
         Relationships: []
       }
+      profile_activity_data_view: {
+        Row: {
+          count: number | null
+          date: string | null
+          profile_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "activity_logs_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profile_course_progress_view: {
+        Row: {
+          completed_lessons: number | null
+          course_template_id: string | null
+          course_template_name: string | null
+          profile_id: string | null
+          progress_percentage: number | null
+          total_lessons: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_submissions_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profile_recent_activity_view: {
+        Row: {
+          completed_at: string | null
+          course_template: Json | null
+          id: string | null
+          lesson_template: Json | null
+          profile_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "activity_logs_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Functions: {
       calc_task_count: {
@@ -416,11 +664,21 @@ export type Database = {
         }
         Returns: number
       }
+      complete_lesson: {
+        Args: { p_lesson_id: string; p_profile_id?: string }
+        Returns: undefined
+      }
+      reset_lesson: {
+        Args: { p_lesson_id: string; p_profile_id?: string }
+        Returns: undefined
+      }
+      sync_profile_stats: { Args: { p_profile_id: string }; Returns: undefined }
     }
     Enums: {
       course_difficulty: "beginner" | "intermediate" | "advanced"
       course_status: "draft" | "published" | "archived"
       lesson_type: "standard" | "whiteboard" | "video" | "quiz"
+      xp_source_type: "lesson" | "course"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -554,6 +812,7 @@ export const Constants = {
       course_difficulty: ["beginner", "intermediate", "advanced"],
       course_status: ["draft", "published", "archived"],
       lesson_type: ["standard", "whiteboard", "video", "quiz"],
+      xp_source_type: ["lesson", "course"],
     },
   },
 } as const
