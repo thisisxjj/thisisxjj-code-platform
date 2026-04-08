@@ -1,4 +1,6 @@
 import LaunchAiLanding from "#/features/landing/LaunchAiLanding";
+import LaunchReactLanding from "#/features/landing/LaunchReactLanding";
+import { LandingPageVariant } from "#/features/landing/type";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_platform/")({
@@ -12,8 +14,14 @@ function RouteComponent() {
 
 	return (
 		<div className="lg:pt-12">
-			{landingPageVariant === "launch-ai-focused" && (
+			{landingPageVariant === LandingPageVariant.LAUNCH_AI_FOCUSED && (
 				<LaunchAiLanding
+					affiliateId={affiliateId}
+					landingPageVariant={landingPageVariant}
+				/>
+			)}
+			{landingPageVariant === LandingPageVariant.LAUNCH_REACT_FOCUSED && (
+				<LaunchReactLanding
 					affiliateId={affiliateId}
 					landingPageVariant={landingPageVariant}
 				/>
@@ -26,6 +34,6 @@ function LoaderComponent() {
 	// TODO get landingPageVariant
 	return {
 		affiliateId: undefined,
-		landingPageVariant: "launch-ai-focused",
+		landingPageVariant: LandingPageVariant.LAUNCH_REACT_FOCUSED,
 	};
 }

@@ -1,6 +1,7 @@
 import { Avatar, AvatarImage } from "#/components/ui/avatar";
 
 export default function SocialProof() {
+	// TODO: 获取真实总人数以及图像
 	// const [{ data: s }, { data: t }] = X({
 	// queries: [xe(), ue()],
 	// });

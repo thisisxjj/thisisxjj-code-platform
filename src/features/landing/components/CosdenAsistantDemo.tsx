@@ -7,7 +7,7 @@ import {
 import { ClientOnly } from "@tanstack/react-router";
 import { CodeXml, Sparkles } from "lucide-react";
 import type { ReactNode } from "react";
-import { MarkdownText } from "../video-player";
+import { MarkdownText } from "../../video-player";
 
 function CosdenAsistantExampleCard({
 	exampleNumber,

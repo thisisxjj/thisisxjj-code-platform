@@ -37,6 +37,34 @@ export const getAllCourseTemplates = createServerFn({
 	}
 });
 
+export const getAvailableCourses = createServerFn({
+	method: "GET",
+}).handler(async (): Promise<CourseSummaryDTO[]> => {
+	try {
+		const supabase = createServerSupabase();
+
+		const { data, error } = await supabase
+			.from("course_summaries")
+			.select("*")
+			.eq("status", "published")
+			.order("order_index", { ascending: true });
+
+		if (error) {
+			logger.error("api course-template getAvailableCourses ===> DB Error", {
+				error,
+			});
+			return [];
+		}
+
+		return CourseSummarySchema.array().parse(data);
+	} catch (err: any) {
+		logger.error("api course-template getAvailableCourses ===> Exception", {
+			err,
+		});
+		return [];
+	}
+});
+
 const GetCourseDetailBySlugSchema = z
 	.string()
 	.regex(/^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/, {

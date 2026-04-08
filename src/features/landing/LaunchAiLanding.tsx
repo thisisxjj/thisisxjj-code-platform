@@ -2,23 +2,19 @@ import { Badge } from "#/components/ui/badge";
 import { Button } from "#/components/ui/button";
 import { TextLink } from "#/components/ui/link";
 import { Skeleton } from "#/components/ui/skeleton";
+import { Image } from "@unpic/react";
 import { Sparkles } from "lucide-react";
 import { Suspense } from "react";
-import SocialProof from "./SocialProof";
-import { Image } from "@unpic/react";
 import { VideoPlayer, VideoSkeleton } from "../video-player";
-import { AdvantageItem } from "./AdvantageItem";
-import { PricingPlanButton } from "./PricingPlanButton";
-import CosdenAsistantDemo from "./CosdenAsistantDemo";
-import EverythingAllInOneSection from "./EverythingAllInOneSection";
-import CompareTwoCard from "./CompareTwoCard";
-import CheckedItem from "./CheckedItem";
-import DevelopmentEvaluation from "./DevelopmentEvaluation";
-
-interface LaunchAiProps {
-	affiliateId?: string;
-	landingPageVariant: string;
-}
+import { AdvantageItem } from "./components/AdvantageItem";
+import CheckedItem from "./components/CheckedItem";
+import CompareTwoCard from "./components/CompareTwoCard";
+import CosdenAsistantDemo from "./components/CosdenAsistantDemo";
+import DevelopmentEvaluation from "./components/DevelopmentEvaluation";
+import EverythingAllInOneSection from "./components/EverythingAllInOneSection";
+import { PricingPlanButton } from "./components/PricingPlanButton";
+import SocialProof from "./components/SocialProof";
+import { type LaunchAiProps } from "./type";
 
 function HeroSection() {
 	return (
