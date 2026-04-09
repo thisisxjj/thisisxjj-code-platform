@@ -31,6 +31,7 @@ import { EarnedItemsSection } from "./components/EarnedItemsSection";
 import { FragmentLearningCostItem } from "./components/FragmentLearningCostItem";
 import CheckedItem from "./components/CheckedItem";
 import { FrequentlyQuestionSection } from "./components/FrequentlyQuestionSection";
+import { ProfileInfoSection } from "./components/ProfileInfoSection";
 
 function HeroSection() {
 	return (
@@ -674,6 +675,126 @@ function GetFromCosdenCodeSection() {
 	);
 }
 
+function NeverHasToEndSection() {
+	return (
+		<section className="mx-auto max-w-6xl space-y-6 sm:space-y-8">
+			<div className="space-y-2">
+				<h2 className="text-xl font-bold sm:text-2xl lg:text-3xl">
+					Your React journey starts here,{" "}
+					<span className="text-gradient">and never has to end</span>
+				</h2>
+			</div>
+			<div className="text-muted-foreground space-y-4 text-sm sm:text-base">
+				<p>You've been searching for the right way to learn React.</p>
+				<p>Maybe you've tried before and got stuck.</p>
+				<p>
+					Maybe you've bought courses that left you with more questions than
+					answers.
+				</p>
+				<p>
+					Maybe you've spent months on YouTube only to realize you still can't
+					build anything on your own.
+				</p>
+				<p className="font-semibold">
+					It's not your fault. The resources out there weren't built for the
+					long term.
+				</p>
+				<p>
+					They were built to teach you one thing and then leave you to figure
+					out the rest.
+				</p>
+				<p>
+					They were built to be complete "as-is" even though React keeps
+					evolving.
+				</p>
+				<p>
+					They were built assuming you'd somehow piece everything together on
+					your own.
+				</p>
+				<p className="font-semibold">That's the old way of learning React.</p>
+			</div>
+			<div className="space-y-6 sm:space-y-8">
+				<h3 className="text-lg font-bold sm:text-xl lg:text-2xl">
+					Here's the new way:
+				</h3>
+				<div className="space-y-4">
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						One platform that has everything you need
+					</p>
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						One curriculum that takes you from beginner to advanced
+					</p>
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						One community that supports you the entire way
+					</p>
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						One investment that keeps paying off as content evolves
+					</p>
+				</div>
+				<div className="space-y-4">
+					<AdvantageItem
+						title="Comprehensive video instruction that actually goes deep"
+						description=""
+					/>
+					<AdvantageItem
+						title="Hands-on practice built into every single lesson"
+						description=""
+					/>
+					<AdvantageItem
+						title="Help when you're stuck (AI mentor + active community)"
+						description=""
+					/>
+					<AdvantageItem
+						title="Clear roadmap so you always know what's next"
+						description=""
+					/>
+					<AdvantageItem
+						title="Content that evolves as React evolves"
+						description=""
+					/>
+					<AdvantageItem
+						title="No more course-hopping or wondering what to learn next"
+						description=""
+					/>
+				</div>
+				<p className="text-lg font-semibold sm:text-xl">
+					This is Cosden Code. The complete React platform you'll never outgrow.
+				</p>
+			</div>
+			<div className="mx-auto max-w-6xl space-y-6 sm:space-y-8">
+				<h3 className="text-lg font-bold sm:text-xl lg:text-2xl">
+					Stop searching. Start building.
+				</h3>
+				<div className="space-y-4">
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						You don't need another random tutorial.
+					</p>
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						You don't need to buy five more courses.
+					</p>
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						You don't need to keep 'researching the best way to learn.'
+					</p>
+					<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+						You need to actually start — and keep going until you're job-ready.
+					</p>
+				</div>
+				<p className="text-muted-foreground text-sm font-semibold sm:text-base">
+					That's what this platform is built for.
+				</p>
+				<div className="flex justify-center sm:justify-start">
+					<Button asChild size="xl">
+						<TextLink variant="ghost" to="/roadmap">
+							Get Started
+							<ArrowRight className="size-4" />
+						</TextLink>
+					</Button>
+				</div>
+			</div>
+		</section>
+	);
+}
+
 export default function LaunchReactLanding({
 	affiliateId,
 	landingPageVariant,
@@ -715,7 +836,10 @@ export default function LaunchReactLanding({
 				}
 			/>
 			<GetFromCosdenCodeSection />
+			{/* TODO:增加pricing订阅功能 */}
 			<FrequentlyQuestionSection />
+			<ProfileInfoSection />
+			<NeverHasToEndSection />
 		</div>
 	);
 }
