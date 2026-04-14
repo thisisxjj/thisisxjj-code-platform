@@ -1,3 +1,5 @@
+import { Progress } from "#/components/ui/progress";
+import { cn } from "#/lib/utils";
 import { getLevelByTotalXp, getTotalXpByLevel } from "#/utils/level";
 import { Swords } from "lucide-react";
 import { createContext, use, type ReactNode } from "react";
@@ -60,6 +62,33 @@ export function LevelProvider({ children, xp }: LevelProgressProviderProps) {
 			{children}
 		</ProfileLevelProgressProvider>
 	);
+}
+
+export function CurrentLevel({ className }: { className?: string }) {
+	const { currentLevel } = useLevelProgress();
+	return (
+		<span className={cn("text-sm font-medium", className)}>
+			{"Level "}
+			{currentLevel}
+		</span>
+	);
+}
+
+export function XpNeededLevel({ className }: { className?: string }) {
+	const { xpInCurrentLevel, xpNeededForNextLevel } = useLevelProgress();
+	return (
+		<span className={className}>
+			{xpInCurrentLevel.toLocaleString()}
+			{" / "}
+			{xpNeededForNextLevel.toLocaleString()}
+			{" XP"}
+		</span>
+	);
+}
+
+export function CurrentXpProgress({ className }: { className?: string }) {
+	const { progressPercentage } = useLevelProgress();
+	return <Progress className={className} value={progressPercentage} />;
 }
 
 export function CurrentLevelIcon() {

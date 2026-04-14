@@ -6,8 +6,8 @@ export function LessonBadge({
 	lesson,
 	hasActiveSubscription,
 }: {
-	lesson: LessonOutlineDTO;
-	hasActiveSubscription: boolean;
+	lesson: Pick<LessonOutlineDTO, "id" | "slug" | "name" | "description">;
+	hasActiveSubscription?: boolean;
 }) {
 	return hasActiveSubscription ? null : lesson.isFree ? (
 		<Badge variant="outline" size="sm" className="text-green-500">

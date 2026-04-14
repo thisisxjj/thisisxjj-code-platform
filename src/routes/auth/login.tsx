@@ -5,6 +5,7 @@ import { Button } from "#/components/ui/button";
 import { useMutation } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { oauthLoginServerFn } from "#/lib/api/auth";
+import { useState } from "react";
 
 export const Route = createFileRoute("/auth/login")({
 	component: RouteComponent,
@@ -29,12 +30,16 @@ function GoogleLogin({ searchParams }: { searchParams: object }) {
 }
 
 function GithubLogin({ searchParams }: { searchParams: object }) {
+	const [isLoading, setIsLoading] = useState(false);
 	const githubLoginServer = useServerFn(oauthLoginServerFn);
-	const { mutate, isPending } = useMutation({
+	const { mutate } = useMutation({
 		mutationFn: githubLoginServer,
+		onMutate: () => {
+			setIsLoading(true);
+		},
 		onError: () => {
-			// TODO toast message
-			// toast.
+			setIsLoading(false);
+			// TODO: toast message
 		},
 	});
 	return (
@@ -43,7 +48,7 @@ function GithubLogin({ searchParams }: { searchParams: object }) {
 			variant="outline"
 			size="lg"
 			className="w-full"
-			isLoading={isPending}
+			isLoading={isLoading}
 			onClick={() =>
 				mutate({
 					data: {
@@ -61,7 +66,7 @@ function GithubLogin({ searchParams }: { searchParams: object }) {
 
 function LoginCard({ searchParams }: { searchParams: object }) {
 	return (
-		<div className="border-border w-full max-w-md space-y-8 rounded-2xl border bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-950 p-6 shadow-2xl">
+		<div className="border-border w-full max-w-md space-y-8 rounded-2xl border bg-linear-to-br from-neutral-900 via-neutral-900 to-neutral-950 p-6 shadow-2xl">
 			<div className="flex w-full flex-col items-center gap-6">
 				<div className="relative">
 					<Image
