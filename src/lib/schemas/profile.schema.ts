@@ -70,16 +70,15 @@ const RawProfileCourseProgressSchema = z.object({
 	progress_percentage: z.number().nullable(),
 }) satisfies z.ZodType<ProfileCourseProgressRow>;
 
-export const ProfileCourseProgressSchema = RawProfileCourseProgressSchema.transform(
-	(row) => ({
+export const ProfileCourseProgressSchema =
+	RawProfileCourseProgressSchema.transform((row) => ({
 		profileId: row.profile_id,
 		courseTemplateId: row.course_template_id,
 		courseTemplateName: row.course_template_name,
 		completedLessons: row.completed_lessons,
 		totalLessons: row.total_lessons,
 		progressPercentage: row.progress_percentage,
-	}),
-);
+	}));
 
 export type ProfileCourseProgressDTO = z.infer<
 	typeof ProfileCourseProgressSchema
@@ -107,17 +106,18 @@ const RawProfileRecentActivitySchema = z.object({
 	course_template: RawCourseTemplateSchema.nullable(),
 }) satisfies z.ZodType<ProfileRecentActivityRow>;
 
-export const ProfileRecentActivitySchema = RawProfileRecentActivitySchema.transform(
-	(row) => ({
+export const ProfileRecentActivitySchema =
+	RawProfileRecentActivitySchema.transform((row) => ({
 		id: row.id,
 		profileId: row.profile_id,
 		completedAt: row.completed_at,
 		lessonTemplate: row.lesson_template,
 		courseTemplate: row.course_template,
-	}),
-);
+	}));
 
-export type ProfileRecentActivityDTO = z.infer<typeof ProfileRecentActivitySchema>;
+export type ProfileRecentActivityDTO = z.infer<
+	typeof ProfileRecentActivitySchema
+>;
 
 const RawProfileSchema = z.object({
 	id: z.string(),

@@ -1,7 +1,6 @@
 import { createServerSupabase } from "@/lib/supabase/server";
 import { logger } from "@/utils/logger.server";
 import { createServerFn } from "@tanstack/react-start";
-import { ERROR_MESSAGE } from "../constants";
 import { CurrentUserSchema, type CurrentUserDTO } from "../schemas/user.schema";
 
 export const getCurrentUser = createServerFn({ method: "GET" }).handler(
@@ -16,19 +15,22 @@ export const getCurrentUser = createServerFn({ method: "GET" }).handler(
 			} = await supabase.auth.getUser();
 
 			// 抛出错误,由外层捕获
+			if (error?.name === "AuthSessionMissingError") {
+				return null;
+			}
+
 			if (error) {
 				throw error;
 			}
 
 			if (!user) {
-				throw Error(ERROR_MESSAGE);
+				return null;
 			}
 
 			// 返回干净的 DTO 对象，没有任何多余的包装！
 			return CurrentUserSchema.parse(user);
 		} catch (err: any) {
 			logger.error("api auth ===> Get current user failed", { err });
-			// 抛出错误
 			throw err;
 		}
 	},

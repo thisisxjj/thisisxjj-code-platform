@@ -89,3 +89,37 @@ export const LessonDetailSchema = RawLessonDetailSchema.transform((row) => ({
 }));
 
 export type LessonDetailDTO = z.infer<typeof LessonDetailSchema>;
+
+export type LessonSubmissionRow = {
+	id: string;
+	is_ready_for_completion: boolean;
+	is_passed: boolean;
+	lesson_id: string;
+	profile_id: string;
+	created_at: string;
+	updated_at: string;
+};
+
+const RawLessonSubmissionSchema = z.object({
+	id: z.string().uuid(),
+	is_ready_for_completion: z.boolean(),
+	is_passed: z.boolean(),
+	lesson_id: z.string().uuid(),
+	profile_id: z.string().uuid(),
+	created_at: z.string(),
+	updated_at: z.string(),
+}) satisfies z.ZodType<LessonSubmissionRow>;
+
+export const LessonSubmissionSchema = RawLessonSubmissionSchema.transform(
+	(row) => ({
+		id: row.id,
+		isReadyForCompletion: row.is_ready_for_completion,
+		isPassed: row.is_passed,
+		lessonTemplateId: row.lesson_id,
+		profileId: row.profile_id,
+		createdAt: row.created_at,
+		updatedAt: row.updated_at,
+	}),
+);
+
+export type LessonSubmissionDTO = z.infer<typeof LessonSubmissionSchema>;
