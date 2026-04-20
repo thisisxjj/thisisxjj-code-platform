@@ -203,8 +203,8 @@ function CourseDetailHeaderSection({
 					<TextLink
 						to="/courses/$courseTemplateId/lessons/$lessonTemplateId"
 						params={{
-							courseTemplateId: courseTemplate.id,
-							lessonTemplateId: lesson.id,
+							courseTemplateId: courseTemplate.slug,
+							lessonTemplateId: lesson.slug,
 						}}
 						variant="ghost"
 					>

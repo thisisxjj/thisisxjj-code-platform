@@ -17,6 +17,7 @@ import { Route as PlatformCoursesIndexRouteImport } from './routes/_platform/cou
 import { Route as ApiAuthCallbackRouteImport } from './routes/api/auth/callback'
 import { Route as PlatformUserUsernameRouteImport } from './routes/_platform/user/$username'
 import { Route as PlatformCoursesCourseTemplateIdRouteImport } from './routes/_platform/courses/$courseTemplateId'
+import { Route as PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRouteImport } from './routes/_playground/courses/$courseTemplateId/lessons/$lessonTemplateId'
 
 const PlatformRoute = PlatformRouteImport.update({
   id: '/_platform',
@@ -58,6 +59,12 @@ const PlatformCoursesCourseTemplateIdRoute =
     path: '/courses/$courseTemplateId',
     getParentRoute: () => PlatformRoute,
   } as any)
+const PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute =
+  PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRouteImport.update({
+    id: '/_playground/courses/$courseTemplateId/lessons/$lessonTemplateId',
+    path: '/courses/$courseTemplateId/lessons/$lessonTemplateId',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof PlatformIndexRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/user/$username': typeof PlatformUserUsernameRoute
   '/api/auth/callback': typeof ApiAuthCallbackRoute
   '/courses/': typeof PlatformCoursesIndexRoute
+  '/courses/$courseTemplateId/lessons/$lessonTemplateId': typeof PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute
 }
 export interface FileRoutesByTo {
   '/user': typeof PlatformUserRouteWithChildren
@@ -76,6 +84,7 @@ export interface FileRoutesByTo {
   '/user/$username': typeof PlatformUserUsernameRoute
   '/api/auth/callback': typeof ApiAuthCallbackRoute
   '/courses': typeof PlatformCoursesIndexRoute
+  '/courses/$courseTemplateId/lessons/$lessonTemplateId': typeof PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -87,6 +96,7 @@ export interface FileRoutesById {
   '/_platform/user/$username': typeof PlatformUserUsernameRoute
   '/api/auth/callback': typeof ApiAuthCallbackRoute
   '/_platform/courses/': typeof PlatformCoursesIndexRoute
+  '/_playground/courses/$courseTemplateId/lessons/$lessonTemplateId': typeof PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/user/$username'
     | '/api/auth/callback'
     | '/courses/'
+    | '/courses/$courseTemplateId/lessons/$lessonTemplateId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/user'
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/user/$username'
     | '/api/auth/callback'
     | '/courses'
+    | '/courses/$courseTemplateId/lessons/$lessonTemplateId'
   id:
     | '__root__'
     | '/_platform'
@@ -117,12 +129,14 @@ export interface FileRouteTypes {
     | '/_platform/user/$username'
     | '/api/auth/callback'
     | '/_platform/courses/'
+    | '/_playground/courses/$courseTemplateId/lessons/$lessonTemplateId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   PlatformRoute: typeof PlatformRouteWithChildren
   AuthLoginRoute: typeof AuthLoginRoute
   ApiAuthCallbackRoute: typeof ApiAuthCallbackRoute
+  PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute: typeof PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -183,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlatformCoursesCourseTemplateIdRouteImport
       parentRoute: typeof PlatformRoute
     }
+    '/_playground/courses/$courseTemplateId/lessons/$lessonTemplateId': {
+      id: '/_playground/courses/$courseTemplateId/lessons/$lessonTemplateId'
+      path: '/courses/$courseTemplateId/lessons/$lessonTemplateId'
+      fullPath: '/courses/$courseTemplateId/lessons/$lessonTemplateId'
+      preLoaderRoute: typeof PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -220,6 +241,8 @@ const rootRouteChildren: RootRouteChildren = {
   PlatformRoute: PlatformRouteWithChildren,
   AuthLoginRoute: AuthLoginRoute,
   ApiAuthCallbackRoute: ApiAuthCallbackRoute,
+  PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute:
+    PlaygroundCoursesCourseTemplateIdLessonsLessonTemplateIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
