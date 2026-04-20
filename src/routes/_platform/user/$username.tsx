@@ -480,13 +480,17 @@ function CourseProgressItem({ course }: { course: ProfileCourseProgressDTO }) {
 		<div className="space-y-2">
 			<div className="flex items-center justify-between">
 				<div>
-					<TextLink
-						to="/courses/$courseTemplateId"
-						params={{ courseTemplateId: course.courseTemplateId! }}
-						className="font-semibold"
-					>
-						{course.courseTemplateName}
-					</TextLink>
+					{course.courseTemplateSlug ? (
+						<TextLink
+							to="/courses/$courseTemplateId"
+							params={{ courseTemplateId: course.courseTemplateSlug }}
+							className="font-semibold"
+						>
+							{course.courseTemplateName}
+						</TextLink>
+					) : (
+						<p className="font-semibold">{course.courseTemplateName}</p>
+					)}
 					<p className="text-muted-foreground text-sm">
 						{course.completedLessons}
 						{" of "}
@@ -522,7 +526,10 @@ function CourseProgressCard({
 						</p>
 					) : (
 						courseProgress.map((item) => (
-							<CourseProgressItem key={item.courseTemplateId} course={item} />
+							<CourseProgressItem
+								key={item.courseTemplateId ?? item.courseTemplateSlug}
+								course={item}
+							/>
 						))
 					)}
 				</div>
@@ -548,8 +555,8 @@ function RecentActivityItem({
 					className="font-semibold"
 					to="/courses/$courseTemplateId/lessons/$lessonTemplateId"
 					params={{
-						courseTemplateId: activity.courseTemplate?.id,
-						lessonTemplateId: activity.lessonTemplate?.id,
+						courseTemplateId: activity.courseTemplate?.slug,
+						lessonTemplateId: activity.lessonTemplate?.slug,
 					}}
 				>
 					{activity.lessonTemplate?.name}

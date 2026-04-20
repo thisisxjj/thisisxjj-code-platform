@@ -64,6 +64,7 @@ export type ProfileActivityDataDTO = z.infer<typeof ProfileActivityDataSchema>;
 const RawProfileCourseProgressSchema = z.object({
 	profile_id: z.string().uuid().nullable(),
 	course_template_id: z.string().uuid().nullable(),
+	course_template_slug: z.string().nullable(),
 	course_template_name: z.string().nullable(),
 	completed_lessons: z.number().nullable(),
 	total_lessons: z.number().nullable(),
@@ -74,6 +75,7 @@ export const ProfileCourseProgressSchema =
 	RawProfileCourseProgressSchema.transform((row) => ({
 		profileId: row.profile_id,
 		courseTemplateId: row.course_template_id,
+		courseTemplateSlug: row.course_template_slug,
 		courseTemplateName: row.course_template_name,
 		completedLessons: row.completed_lessons,
 		totalLessons: row.total_lessons,

@@ -622,6 +622,7 @@ export type Database = {
 				Row: {
 					completed_lessons: number | null;
 					course_template_id: string | null;
+					course_template_slug: string | null;
 					course_template_name: string | null;
 					profile_id: string | null;
 					progress_percentage: number | null;
