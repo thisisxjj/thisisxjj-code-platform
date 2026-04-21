@@ -299,6 +299,13 @@ export type Database = {
 						referencedRelation: "courses";
 						referencedColumns: ["id"];
 					},
+					{
+						foreignKeyName: "modules_course_id_fkey";
+						columns: ["course_id"];
+						isOneToOne: false;
+						referencedRelation: "profile_course_progress_view";
+						referencedColumns: ["course_template_id"];
+					},
 				];
 			};
 			profile_details: {
@@ -500,6 +507,13 @@ export type Database = {
 						referencedColumns: ["id"];
 					},
 					{
+						foreignKeyName: "xp_records_course_id_fkey";
+						columns: ["course_id"];
+						isOneToOne: false;
+						referencedRelation: "profile_course_progress_view";
+						referencedColumns: ["course_template_id"];
+					},
+					{
 						foreignKeyName: "xp_records_lesson_id_fkey";
 						columns: ["lesson_id"];
 						isOneToOne: false;
@@ -622,8 +636,8 @@ export type Database = {
 				Row: {
 					completed_lessons: number | null;
 					course_template_id: string | null;
-					course_template_slug: string | null;
 					course_template_name: string | null;
+					course_template_slug: string | null;
 					profile_id: string | null;
 					progress_percentage: number | null;
 					total_lessons: number | null;
@@ -668,6 +682,10 @@ export type Database = {
 			complete_lesson: {
 				Args: { p_lesson_id: string; p_profile_id?: string };
 				Returns: undefined;
+			};
+			get_roadmap_data: {
+				Args: Record<PropertyKey, never>;
+				Returns: Json;
 			};
 			reset_lesson: {
 				Args: { p_lesson_id: string; p_profile_id?: string };

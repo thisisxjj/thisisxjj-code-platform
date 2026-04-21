@@ -1,0 +1,112 @@
+{
+	"roadmapCategories": [
+		{
+			"id": "foundations",
+			"name": "Foundations",
+			"description": "Master the core language primitives that power every modern JavaScript and TypeScript application",
+			"courseIds": ["javascript", "typescript"],
+			"projectIds": ["tic-tac-toe", "calculator", "quiz-app"],
+			"order": 1
+		},
+		{
+			"id": "react",
+			"name": "React",
+			"description": "Build a rock-solid understanding of React fundamentals, then level up with architecture and design patterns used in production apps",
+			"courseIds": ["react-fundamentals", "design-patterns-in-react", "react-with-typescript"],
+			"projectIds": ["todo-app", "social-media-feed"],
+			"order": 2
+		},
+		{
+			"id": "data-fetching",
+			"name": "Data Fetching",
+			"description": "Learn to manage asynchronous data like a pro, from querying remote APIs to caching and synchronising complex state",
+			"courseIds": ["react-query"],
+			"projectIds": ["weather-app"],
+			"order": 3
+		},
+		{
+			"id": "state-management",
+			"name": "State Management",
+			"description": "Control app state with confidence by exploring both enterprise-grade and lightweight approaches to managing data flows",
+			"courseIds": ["redux", "zustand"],
+			"projectIds": ["coming-soon"],
+			"order": 4
+		},
+		{
+			"id": "navigation",
+			"name": "Navigation",
+			"description": "Deliver seamless user journeys by understanding routing strategies across traditional and cutting-edge navigation stacks",
+			"courseIds": ["react-router", "tanstack-router"],
+			"projectIds": ["coming-soon"],
+			"order": 5
+		},
+		{
+			"id": "forms",
+			"name": "Forms",
+			"description": "Build resilient forms with validation, error handling, and seamless user input experiences",
+			"courseIds": ["react-hook-form", "tanstack-form"],
+			"projectIds": ["coming-soon"],
+			"order": 6
+		},
+		{
+			"id": "styling",
+			"name": "Styling",
+			"description": "Style modern applications with utility-first CSS and build beautiful user interfaces",
+			"courseIds": ["tailwind"],
+			"projectIds": ["coming-soon"],
+			"order": 7
+		},
+		{
+			"id": "frameworks",
+			"name": "Frameworks",
+			"description": "Adopt the frameworks that ship modern React apps-from server-side rendering to full-stack meta frameworks",
+			"courseIds": ["nextjs", "tanstack-start", "react-router-framework-mode"],
+			"projectIds": ["coming-soon"],
+			"order": 8
+		}
+	],
+	"projects": [
+		{
+			"id": "tic-tac-toe",
+			"name": "Tic Tac Toe",
+			"description": "Build a Tic Tac Toe game with HTML, CSS, and JavaScript",
+			"releaseDate": "Coming Soon"
+		},
+		{
+			"id": "calculator",
+			"name": "Calculator",
+			"description": "Build a calculator with HTML, CSS, and JavaScript",
+			"releaseDate": "Coming Soon"
+		},
+		{
+			"id": "quiz-app",
+			"name": "Quiz App",
+			"description": "Build a quiz app with HTML, CSS, and TypeScript",
+			"releaseDate": "Coming Soon"
+		},
+		{
+			"id": "todo-app",
+			"name": "Todo App",
+			"description": "Build a todo app with React",
+			"releaseDate": "Coming Soon"
+		},
+		{
+			"id": "social-media-feed",
+			"name": "Social Media Feed",
+			"description": "Build a social media feed with React",
+			"releaseDate": "Coming Soon"
+		},
+		{
+			"id": "weather-app",
+			"name": "Weather App",
+			"description": "Build a weather app with React and React Query",
+			"releaseDate": "Coming Soon"
+		},
+		{
+			"id": "coming-soon",
+			"name": "Coming Soon",
+			"description": "This project is coming soon",
+			"releaseDate": "Coming Soon"
+		}
+	]
+}

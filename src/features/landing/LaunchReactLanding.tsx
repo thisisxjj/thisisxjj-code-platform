@@ -26,12 +26,18 @@ import CompareTwoCard from "./components/CompareTwoCard";
 import CosdenAsistantDemo from "./components/CosdenAsistantDemo";
 import EverythingAllInOneSection from "./components/EverythingAllInOneSection";
 import DevelopmentEvaluation from "./components/DevelopmentEvaluation";
-import { AvailableCourseList, CourseListSkeleton } from "../roadmap-section";
+import {
+	AvailableCourseList,
+	CourseListSkeleton,
+	RoadmapSection,
+	RoadmapSkeleton,
+} from "../roadmap-section";
 import { EarnedItemsSection } from "./components/EarnedItemsSection";
 import { FragmentLearningCostItem } from "./components/FragmentLearningCostItem";
 import CheckedItem from "./components/CheckedItem";
 import { FrequentlyQuestionSection } from "./components/FrequentlyQuestionSection";
 import { ProfileInfoSection } from "./components/ProfileInfoSection";
+import { RoadmapToggle } from "./components/RoadmapToogle";
 
 function HeroSection() {
 	return (
@@ -602,7 +608,14 @@ function ReactRoadmapSection() {
 			<Suspense fallback={<CourseListSkeleton />}>
 				<AvailableCourseList showHeader={false} />
 			</Suspense>
-			{/* TODO: 添加Roadmap */}
+			<RoadmapToggle
+				trigger="View complete roadmap"
+				content={
+					<Suspense fallback={<RoadmapSkeleton />}>
+						<RoadmapSection />
+					</Suspense>
+				}
+			/>
 		</section>
 	);
 }

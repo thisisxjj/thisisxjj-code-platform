@@ -1,6 +1,7 @@
 // supabase/scripts/generate-seed.ts
 import * as path from "path";
 import { generateCoursesSql } from "./seeders/courses-seeder";
+import { generateRoadmapSql } from "./seeders/roadmap-seeder";
 import { loadJsonData, writeSqlFile } from "./utils/io-helpers";
 // import { generateProjectsSql } from './seeders/projects-seeder';
 
@@ -23,6 +24,17 @@ const SEED_TASKS: SeedTask[] = [
 		tablesToTruncate: ["public.courses", "public.modules", "public.lessons"],
 		dataPath: "supabase/data/courses.json",
 		generator: generateCoursesSql
+	},
+	{
+		domain: "Roadmap",
+		tablesToTruncate: [
+			"public.roadmap_categories",
+			"public.roadmap_projects",
+			"public.roadmap_category_courses",
+			"public.roadmap_category_projects"
+		],
+		dataPath: "supabase/data/roadmap.json",
+		generator: generateRoadmapSql
 	}
 ];
 
