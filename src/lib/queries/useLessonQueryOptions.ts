@@ -1,5 +1,8 @@
 import { queryOptions } from "@tanstack/react-query";
-import { getLessonSubmissionsByLessonIds } from "../api/lesson";
+import {
+	getLessonDetailByLessonSlug,
+	getLessonSubmissionsByLessonIds,
+} from "../api/lesson";
 
 export const lessonKeys = {
 	lessonTemplate: {
@@ -19,6 +22,16 @@ export function useLessonSubmissionsByLessonIds(lessonIds: string[]) {
 		queryFn: () =>
 			getLessonSubmissionsByLessonIds({
 				data: lessonIds,
+			}),
+	});
+}
+
+export function useLessonDetailByLessonSlugQueryOptions(lessonSlug: string) {
+	return queryOptions({
+		queryKey: lessonKeys.lessonTemplate.byId(lessonSlug),
+		queryFn: () =>
+			getLessonDetailByLessonSlug({
+				data: lessonSlug,
 			}),
 	});
 }

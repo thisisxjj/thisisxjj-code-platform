@@ -13,12 +13,10 @@ export type ObjectiveRow = z.infer<typeof ObjectiveSchema>;
 // 2. Tasks (任务列表)
 // ============================================================================
 // 数据示例: [{ "id": "1-1-what-is-react-task-1", "name": "Submit the code editor..." }]
-export const TaskSchema = z
-	.object({
-		id: z.string(),
-		name: z.string(),
-	})
-	.passthrough(); // 使用 passthrough 允许未来加入更多属性 (如 isCompleted)
+export const TaskSchema = z.object({
+	id: z.string(),
+	name: z.string(),
+});
 export type TaskRow = z.infer<typeof TaskSchema>;
 
 // ============================================================================
@@ -55,11 +53,9 @@ export type WhiteboardRow = z.infer<typeof WhiteboardSchema>;
 // ============================================================================
 // 5. Resources (拓展资源)
 // ============================================================================
-export const ResourceSchema = z
-	.object({
-		title: z.string().optional(),
-		url: z.string().url().optional(),
-		type: z.string().optional(),
-	})
-	.passthrough();
+export const ResourceSchema = z.object({
+	title: z.string().optional(),
+	url: z.string().url().optional(),
+	type: z.string().optional(),
+});
 export type ResourceRow = z.infer<typeof ResourceSchema>;

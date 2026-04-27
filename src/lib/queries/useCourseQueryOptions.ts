@@ -23,7 +23,7 @@ export function useAllCourseTemplatesQueryOptions() {
 
 export function useCourseDetailQueryOptions(slug: string) {
 	return queryOptions({
-		queryKey: courseKeys.courseTemplates.byLessonTemplateId(slug),
+		queryKey: courseKeys.courseTemplates.byId(slug),
 		queryFn: () => getCourseDetailBySlug({ data: slug }),
 	});
 }

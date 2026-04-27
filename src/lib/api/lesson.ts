@@ -3,9 +3,12 @@ import { logger } from "@/utils/logger.server";
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import {
+	LessonDetailSchema,
 	LessonSubmissionSchema,
+	type LessonDetailDTO,
 	type LessonSubmissionDTO,
 } from "../schemas/lesson.schema";
+import { notFound } from "@tanstack/react-router";
 
 const GetLessonSubmissionsByLessonIdsSchema = z.array(z.string().uuid());
 const FIRST_COURSE_SLUG = "javascript";
@@ -125,3 +128,37 @@ export const completeFirstLessonForDevBootstrap = createServerFn({
 		});
 	}
 });
+
+const GetLessonDetailBySlugSchema = z
+	.string()
+	.regex(/^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/, {
+		message: "Invalid course slug format",
+	});
+
+export const getLessonDetailByLessonSlug = createServerFn({ method: "GET" })
+	.inputValidator((data: unknown) => GetLessonDetailBySlugSchema.parse(data))
+	.handler(async ({ data: lessonSlug }): Promise<LessonDetailDTO> => {
+		try {
+			const supabase = createServerSupabase();
+
+			const { data, error } = await supabase
+				.from("lessons")
+				.select("*")
+				.eq("slug", lessonSlug)
+				.single();
+
+			if (error || !data) {
+				logger.error("api lesson getLessonDetailByLessonId ===> DB Error", {
+					error,
+				});
+				throw notFound();
+			}
+
+			return LessonDetailSchema.parse(data);
+		} catch (err: any) {
+			logger.error("api lesson getLessonDetailByLessonId ===> Exception", {
+				err,
+			});
+			throw notFound();
+		}
+	});

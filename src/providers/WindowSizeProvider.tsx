@@ -36,7 +36,7 @@ export function WindowSizeProvider({
 	);
 }
 // 4. 改造供外部使用的 Hook
-export function useWindowSize<T>(selector: (state: WindowSizeState) => T): T {
+export function useWindowSize<T>(selector: (state: WindowSizeState) => T) {
 	// 使用 useContextSelector 替代原有的 R7，实现精准的按需重渲染
 	const selectedValue = useContextSelector(WindowSizeContext, (state) => {
 		if (!state) {
